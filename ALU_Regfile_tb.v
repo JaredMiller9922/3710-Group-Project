@@ -75,6 +75,102 @@ module ALU_Regfile_tb;
 		  end
 		  
 		  
+		  #50
+		  
+		  
+		  // Test AND
+		  begin
+		  // Write all 1's to reg 0 and reg 1
+		  begin
+			  wa = 0;
+			  regwrite = 1;
+			  wd = 16'b1111111111111111;
+			  
+			  #20
+			  
+			  wa = 1;
+			  regwrite = 1;
+			  wd = 16'b1111111111111111;
+			  
+			  #50
+			  ra1 = 0;
+			  ra2 = 1;
+		  end
+		  
+		  
+		  
+		  //AND
+		  aluop = 2'b11;
+		  funct = 6'b000101;
+		  #20
+		  $display("r1 = %d, r2 = %d", rd1, rd2);
+		  $display("AND: %d", data);
+		  end
+		  
+		  
+		  #50
+		  
+		  // Test OR
+		  begin
+		  // Write all 1's to reg 0 and reg 1
+		  begin
+			  wa = 0;
+			  regwrite = 1;
+			  wd = 16'b1111110111011111;
+			  
+			  #20
+			  
+			  wa = 1;
+			  regwrite = 1;
+			  wd = 16'b0101111110111101;
+			  
+			  #50
+			  ra1 = 0;
+			  ra2 = 1;
+		  end
+		  
+		  
+		  
+		  //OR
+		  aluop = 2'b11;
+		  funct = 6'b000101;
+		  #20
+		  $display("r1 = %d, r2 = %d", rd1, rd2);
+		  $display("OR: %d", data);
+		  end
+		  
+		  
+		  #50
+		  
+		  // Test XOR
+		  begin
+		  // Write all 1's to reg 0 and reg 1
+		  begin
+			  wa = 0;
+			  regwrite = 1;
+			  wd = 16'b1111111111111111;
+			  
+			  #20
+			  
+			  wa = 1;
+			  regwrite = 1;
+			  wd = 16'b1111111111111111;
+			  
+			  #50
+			  ra1 = 0;
+			  ra2 = 1;
+		  end
+		  
+		  
+		  
+		  //XOR
+		  aluop = 2'b11;
+		  funct = 6'b000101;
+		  #20
+		  $display("r1 = %d, r2 = %d", rd1, rd2);
+		  $display("XOR: %d", data);
+		  end
+		  
 		  
 		  #50
 		  
