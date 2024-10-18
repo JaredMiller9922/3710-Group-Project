@@ -8,14 +8,12 @@ module alu #(parameter WIDTH = 16)
 
    assign b2 = alucont[2] ? ~b:b; 
    assign sum = a + b2 + alucont[2];
-   // slt should be 1 if most significant bit of sum is 1
-   assign slt = sum[WIDTH-1];
 
    always@(*)
-      case(alucont[1:0])
+      case(alucont[2:0])
          2'b00: result <= a & b;  // logical AND
          2'b01: result <= a | b;  // logical OR
          2'b10: result <= sum;    // Add/Sub
-         2'b11: result <= slt;    // set-less-than
+         2'b11: result <= a ^ b;  // set-less-than
       endcase
 endmodule
