@@ -1,0 +1,15 @@
+module GroupProject3710 (
+	input clk50MHz, clr, // system clock and clear
+	input [2:0] switches,
+	input L_input, R_input, HAZ_input,
+	output [7:0] red, blue, green,
+	output hSync, vSync, sync,// sync signals to the VGA interface
+	output [10:0] hCount, vCount,
+	output bright, clkDvd // asserted when the pixel is bright
+);
+
+
+
+
+
+endmodule
