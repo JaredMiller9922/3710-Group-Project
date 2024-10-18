@@ -52,7 +52,8 @@ module ALU_Regfile_tb;
         // global reset
         #100;
 		  
-		  
+		  // Test Regfile
+		  begin
 		  wa = 3;
 		  regwrite = 1;
 		  wd = 16'b0000000000001010;
@@ -71,11 +72,340 @@ module ALU_Regfile_tb;
 		  #50
 		  
 		  $display("r[3] = %d", rd1);
-		  
+		  end
 		  
 		  
 		  
 		  #50
+		  
+		  // Test Flags
+		  
+		  
+		  // Carry Flag
+		  begin
+		  // Write all 1's to reg 0 and reg 1
+		  begin
+			  wa = 0;
+			  regwrite = 1;
+			  wd = 16'b1111111111111111;
+			  
+			  #20
+			  
+			  wa = 1;
+			  regwrite = 1;
+			  wd = 16'b1111111111111111;
+			  
+			  #50
+			  ra1 = 0;
+			  ra2 = 1;
+		  end
+		  
+		  
+		  
+		  //Add
+		  aluop = 2'b00;
+		  funct = 6'b000101;
+		  #20
+		  $display("r1 = %d, r2 = %d", rd1, rd2);
+		  $display("add: %d", data);
+		  
+		  // Check Carry Flag
+		  //$display("carryFlag: %d", carryflag);
+		  end
+		  #50
+		  
+		  // Not Carry Flag
+		  begin
+		  // Write 1 to reg 0 and reg 1
+		  begin
+			  wa = 0;
+			  regwrite = 1;
+			  wd = 16'b0000000000000001;
+			  
+			  #50
+			  
+			  wa = 1;
+			  regwrite = 1;
+			  wd = 16'b0000000000000001;
+			  
+			  #50
+			  ra1 = 0;
+			  ra2 = 1;
+		  end
+		  
+		  //Add
+		  aluop = 2'b00;
+		  funct = 6'b000101;
+		  #20
+		  $display("r1 = %d, r2 = %d", rd1, rd2);
+		  $display("add: %d", data);
+		  
+		  // Check Carry Flag
+		  //$display("carryFlag: %d", carryflag);
+		  end
+		  #50
+		  
+		  //Low Flag
+		  begin
+		  // Write all 1's to reg 0 and reg 1
+		  begin
+			  wa = 0;
+			  regwrite = 1;
+			  wd = 16'b0000000000000001;
+			  
+			  #20
+			  
+			  wa = 1;
+			  regwrite = 1;
+			  wd = 16'b1111111111111111;
+			  
+			  #50
+			  ra1 = 0;
+			  ra2 = 1;
+		  end
+		  
+		  
+		  
+		  //CMP
+		  aluop = 2'b10;
+		  funct = 6'b000101;
+		  #20
+		  $display("r1 = %d, r2 = %d", rd1, rd2);
+		  $display("cmp: %d", data);
+		  
+		  // Check Low Flag
+		  //$display("Low Flag: %d", lowFlag);
+		  end
+		  #50
+		  
+		  // Not Low Flag
+		  begin
+		  // Write 1 to reg 0 and reg 1
+		  begin
+			  wa = 0;
+			  regwrite = 1;
+			  wd = 16'b1111111111111111;
+			  
+			  #50
+			  
+			  wa = 1;
+			  regwrite = 1;
+			  wd = 16'b0000000000000001;
+			  
+			  #50
+			  ra1 = 0;
+			  ra2 = 1;
+		  end
+		  
+		  //CMP
+		  aluop = 2'b01;
+		  funct = 6'b000101;
+		  #20
+		  $display("r1 = %d, r2 = %d", rd1, rd2);
+		  $display("CMP: %d", data);
+		  
+		  // Check Low Flag
+		  //$display("lowFlag: %d", lowFlag);
+		  end
+		  
+		  #50
+		  
+		  //Negative Flag
+		  begin
+		  // Write all 1's to reg 0 and reg 1
+		  begin
+			  wa = 0;
+			  regwrite = 1;
+			  wd = 16'b1111111111111111;
+			  
+			  #20
+			  
+			  wa = 1;
+			  regwrite = 1;
+			  wd = 16'b0000000000000001;
+			  
+			  #50
+			  ra1 = 0;
+			  ra2 = 1;
+		  end
+		  
+		  
+		  
+		  //CMP
+		  aluop = 2'b10;
+		  funct = 6'b000101;
+		  #20
+		  $display("r1 = %d, r2 = %d", rd1, rd2);
+		  $display("cmp: %d", data);
+		  
+		  // Check Negative Flag
+		  //$display("Negative Flag: %d", negativeflag);
+		  end
+		  #50
+		  
+		  // Not Negative Flag
+		  begin
+		  // Write 1 to reg 0 and reg 1
+		  begin
+			  wa = 0;
+			  regwrite = 1;
+			  wd = 16'b0000000000000001;
+			  
+			  #50
+			  
+			  wa = 1;
+			  regwrite = 1;
+			  wd = 16'b1111111111111111;
+			  
+			  #50
+			  ra1 = 0;
+			  ra2 = 1;
+		  end
+		  
+		  //CMP
+		  aluop = 2'b01;
+		  funct = 6'b000101;
+		  #20
+		  $display("r1 = %d, r2 = %d", rd1, rd2);
+		  $display("CMP: %d", data);
+		  
+		  // Check Negative Flag
+		  //$display("Negative Flag: %d", negativeflag);
+		  end
+		  
+		  #50
+		  
+		  
+		  //Zero Flag
+		  begin
+		  // Write equal value to reg 0 and reg 1
+		  begin
+			  wa = 0;
+			  regwrite = 1;
+			  wd = 16'b0000000000000001;
+			  
+			  #20
+			  
+			  wa = 1;
+			  regwrite = 1;
+			  wd = 16'b0000000000000001;
+			  
+			  #50
+			  ra1 = 0;
+			  ra2 = 1;
+		  end
+		  
+		  
+		  
+		  //CMP
+		  aluop = 2'b10;
+		  funct = 6'b000101;
+		  #20
+		  $display("r1 = %d, r2 = %d", rd1, rd2);
+		  $display("cmp: %d", data);
+		  
+		  // Check Zero Flag
+		  //$display("Zero Flag: %d", zeroflag);
+		  end
+		  #50
+		  
+		  // Not Zero Flag
+		  begin
+		  // Write non equal value to reg 0 and reg 1
+		  begin
+			  wa = 0;
+			  regwrite = 1;
+			  wd = 16'b0000000000000001;
+			  
+			  #50
+			  
+			  wa = 1;
+			  regwrite = 1;
+			  wd = 16'b1111111111111111;
+			  
+			  #50
+			  ra1 = 0;
+			  ra2 = 1;
+		  end
+		  
+		  //CMP
+		  aluop = 2'b01;
+		  funct = 6'b000101;
+		  #20
+		  $display("r1 = %d, r2 = %d", rd1, rd2);
+		  $display("CMP: %d", data);
+		  
+		  // Check Zero Flag
+		  //$display("Zero Flag: %d", zeroflag);
+		  end
+		  
+		  #50
+		  
+		  
+		  // F Flag
+		  begin
+		  // Write all 1's to reg 0 and reg 1
+		  begin
+			  wa = 0;
+			  regwrite = 1;
+			  wd = 16'b1111111111111111;
+			  
+			  #20
+			  
+			  wa = 1;
+			  regwrite = 1;
+			  wd = 16'b1111111111111111;
+			  
+			  #50
+			  ra1 = 0;
+			  ra2 = 1;
+		  end
+		  
+		  
+		  
+		  //Sub
+		  aluop = 2'b10;
+		  funct = 6'b000101;
+		  #20
+		  $display("r1 = %d, r2 = %d", rd1, rd2);
+		  $display("add: %d", data);
+		  
+		  // Check F Flag
+		  //$display("F Flag: %d", fflag);
+		  end
+		  #50
+		  
+		  // Not F Flag
+		  begin
+		  // Write 1 to reg 0 and reg 1
+		  begin
+			  wa = 0;
+			  regwrite = 1;
+			  wd = 16'b0000000000000001;
+			  
+			  #50
+			  
+			  wa = 1;
+			  regwrite = 1;
+			  wd = 16'b0000000000000001;
+			  
+			  #50
+			  ra1 = 0;
+			  ra2 = 1;
+		  end
+		  
+		  //SUB
+		  aluop = 2'b10;
+		  funct = 6'b000101;
+		  #20
+		  $display("r1 = %d, r2 = %d", rd1, rd2);
+		  $display("add: %d", data);
+		  
+		  // Check F Flag
+		  //$display("F Flag: %d", fflag);
+		  end
+		  #50
+		  
 		  
 		  /*
 		  aluop = 2'b00;
