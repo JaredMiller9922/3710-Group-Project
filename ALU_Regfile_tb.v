@@ -10,6 +10,7 @@ module ALU_Regfile_tb;
 	
 	reg [3:0] ra1, ra2, wa;
 	reg [15:0] wd;
+	wire [5:0] PSR;
 	
 	 
    // Outputs
@@ -24,9 +25,10 @@ module ALU_Regfile_tb;
    );
 	 
 	alu alu (
-		.Rsrc(rd1), .Rdes(rd2),
+		.Rsrc(rd1), .Rdest(rd2),
 		.alucont(alucont), 
-		.result(data)
+		.result(data),
+		.PSR(PSR)
    );
 	
 	 regfile registers (
@@ -183,6 +185,7 @@ module ALU_Regfile_tb;
 			  wd = 16'b0101111110111101;
 			  
 			  #50
+			  regwrite = 0;
 			  ra1 = 1;
 			  ra2 = 2;
 		  end
@@ -221,6 +224,7 @@ module ALU_Regfile_tb;
 			  wd = 16'b1111111111111111;
 			  
 			  #50
+			  regwrite = 0;
 			  ra1 = 1;
 			  ra2 = 2;
 		  end
@@ -244,7 +248,11 @@ module ALU_Regfile_tb;
 		  
 		  #50
 		  
+		  
+		  
 		  // Test Flags
+		  
+		  
 		  
 		  
 		  // Carry Flag
@@ -262,6 +270,7 @@ module ALU_Regfile_tb;
 			  wd = 16'b1111111111111111;
 			  
 			  #50
+			  regwrite = 0;
 			  ra1 = 1;
 			  ra2 = 2;
 		  end
@@ -270,12 +279,12 @@ module ALU_Regfile_tb;
 		  
 		  //Add
 		  aluop = 4'b0101;
-		  #20
+		  #50
 		  $display("r1 = %d, r2 = %d", rd1, rd2);
 		  $display("add: %d", data);
 		  
 		  // Check Carry Flag
-		  //$display("carryFlag: %d", carryflag);
+		  $display("carryFlag: %d", PSR[0]);
 		  end
 		  #50
 		  
@@ -294,18 +303,19 @@ module ALU_Regfile_tb;
 			  wd = 16'b0000000000000001;
 			  
 			  #50
+			  regwrite = 0;
 			  ra1 = 1;
 			  ra2 = 2;
 		  end
 		  
 		  //Add
 		  aluop = 4'b0101;
-		  #20
+		  #50
 		  $display("r1 = %d, r2 = %d", rd1, rd2);
 		  $display("add: %d", data);
 		  
 		  // Check Carry Flag
-		  //$display("carryFlag: %d", carryflag);
+		  $display("carryFlag: %d", PSR[0]);
 		  end
 		  #50
 		  
@@ -315,15 +325,16 @@ module ALU_Regfile_tb;
 		  begin
 			  wa = 1;
 			  regwrite = 1;
-			  wd = 16'b0000000000000001;
+			  wd = 16'b1111111111111111;
 			  
 			  #20
 			  
 			  wa = 2;
 			  regwrite = 1;
-			  wd = 16'b1111111111111111;
+			  wd = 16'b0000000000000001;
 			  
 			  #50
+			  regwrite = 0;
 			  ra1 = 1;
 			  ra2 = 2;
 		  end
@@ -331,13 +342,13 @@ module ALU_Regfile_tb;
 		  
 		  
 		  //CMP
-		  aluop = 4'b0101;
-		  #20
+		  aluop = 4'b1001;
+		  #50
 		  $display("r1 = %d, r2 = %d", rd1, rd2);
 		  $display("cmp: %d", data);
 		  
 		  // Check Low Flag
-		  //$display("Low Flag: %d", lowFlag);
+		  $display("Low Flag: %d, $time", PSR[2]);
 		  end
 		  #50
 		  
@@ -347,27 +358,28 @@ module ALU_Regfile_tb;
 		  begin
 			  wa = 1;
 			  regwrite = 1;
-			  wd = 16'b1111111111111111;
+			  wd = 16'b0000000000000001;
 			  
 			  #50
 			  
 			  wa = 2;
 			  regwrite = 1;
-			  wd = 16'b0000000000000001;
+			  wd = 16'b1111111111111111;
 			  
 			  #50
+			  regwrite = 0;
 			  ra1 = 1;
 			  ra2 = 2;
 		  end
 		  
 		  //CMP
 		  aluop = 4'b1001;
-		  #20
+		  #50
 		  $display("r1 = %d, r2 = %d", rd1, rd2);
 		  $display("CMP: %d", data);
 		  
 		  // Check Low Flag
-		  //$display("lowFlag: %d", lowFlag);
+		  $display("lowFlag: %d", PSR[2]);
 		  end
 		  
 		  #50
@@ -387,6 +399,7 @@ module ALU_Regfile_tb;
 			  wd = 16'b0000000000000001;
 			  
 			  #50
+			  regwrite = 0;
 			  ra1 = 1;
 			  ra2 = 2;
 		  end
@@ -395,12 +408,12 @@ module ALU_Regfile_tb;
 		  
 		  //CMP
 		  aluop = 4'b1001;
-		  #20
+		  #50
 		  $display("r1 = %d, r2 = %d", rd1, rd2);
 		  $display("cmp: %d", data);
 		  
 		  // Check Negative Flag
-		  //$display("Negative Flag: %d", negativeflag);
+		  $display("Negative Flag: %d", PSR[4]);
 		  end
 		  #50
 		  
@@ -419,18 +432,19 @@ module ALU_Regfile_tb;
 			  wd = 16'b1111111111111111;
 			  
 			  #50
+			  regwrite = 0;
 			  ra1 = 1;
 			  ra2 = 2;
 		  end
 		  
 		  //CMP
 		  aluop = 4'b1001;
-		  #20
+		  #50
 		  $display("r1 = %d, r2 = %d", rd1, rd2);
 		  $display("CMP: %d", data);
 		  
 		  // Check Negative Flag
-		  //$display("Negative Flag: %d", negativeflag);
+		  $display("Negative Flag: %d", PSR[4]);
 		  end
 		  
 		  #50
@@ -451,6 +465,7 @@ module ALU_Regfile_tb;
 			  wd = 16'b0000000000000001;
 			  
 			  #50
+			  regwrite = 0;
 			  ra1 = 1;
 			  ra2 = 2;
 		  end
@@ -459,12 +474,12 @@ module ALU_Regfile_tb;
 		  
 		  //CMP
 		  aluop = 4'b1001;
-		  #20
+		  #50
 		  $display("r1 = %d, r2 = %d", rd1, rd2);
 		  $display("cmp: %d", data);
 		  
 		  // Check Zero Flag
-		  //$display("Zero Flag: %d", zeroflag);
+		  $display("Zero Flag: %d", PSR[3]);
 		  end
 		  #50
 		  
@@ -483,18 +498,19 @@ module ALU_Regfile_tb;
 			  wd = 16'b1111111111111111;
 			  
 			  #50
+			  regwrite = 0;
 			  ra1 = 1;
 			  ra2 = 2;
 		  end
 		  
 		  //CMP
 		  aluop = 4'b1001;
-		  #20
+		  #50
 		  $display("r1 = %d, r2 = %d", rd1, rd2);
 		  $display("CMP: %d", data);
 		  
 		  // Check Zero Flag
-		  //$display("Zero Flag: %d", zeroflag);
+		  $display("Zero Flag: %d", PSR[3]);
 		  end
 		  
 		  #50
@@ -506,29 +522,30 @@ module ALU_Regfile_tb;
 		  begin
 			  wa = 1;
 			  regwrite = 1;
-			  wd = 16'b1111111111111111;
+			  wd = 16'b0111111111111111;
 			  
 			  #20
 			  
 			  wa = 2;
 			  regwrite = 1;
-			  wd = 16'b1111111111111111;
+			  wd = 16'b0000000000000100;
 			  
 			  #50
+			  regwrite = 0;
 			  ra1 = 1;
 			  ra2 = 2;
 		  end
 		  
 		  
 		  
-		  //Sub
-		  aluop = 4'b1001;
-		  #20
+		  //Add
+		  aluop = 4'b0101;
+		  #50
 		  $display("r1 = %d, r2 = %d", rd1, rd2);
 		  $display("add: %d", data);
 		  
 		  // Check F Flag
-		  //$display("F Flag: %d", fflag);
+		  $display("F Flag: %d", PSR[1]);
 		  end
 		  #50
 		  
@@ -547,18 +564,19 @@ module ALU_Regfile_tb;
 			  wd = 16'b0000000000000001;
 			  
 			  #50
+			  regwrite = 0;
 			  ra1 = 1;
 			  ra2 = 2;
 		  end
 		  
 		  //SUB
 		  aluop = 4'b1001;
-		  #20
+		  #50
 		  $display("r1 = %d, r2 = %d", rd1, rd2);
 		  $display("add: %d", data);
 		  
 		  // Check F Flag
-		  //$display("F Flag: %d", fflag);
+		  $display("F Flag: %d", PSR[1]);
 		  end
 		  #50
 		  ra1 = 1;

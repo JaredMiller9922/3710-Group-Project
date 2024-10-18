@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition"
 
-// DATE "10/18/2024 15:31:11"
+// DATE "10/18/2024 16:38:55"
 
 // 
 // Device: Altera 5CSEMA5F31C6 Package FBGA896
@@ -39,7 +39,7 @@ module GroupProject3710 (
 	wa,
 	wd,
 	Rsrc,
-	Rdes);
+	Rdest);
 input 	[3:0] opcode;
 input 	[3:0] opext;
 input 	clk;
@@ -49,7 +49,7 @@ input 	[3:0] ra2;
 input 	[3:0] wa;
 input 	[15:0] wd;
 input 	[15:0] Rsrc;
-input 	[15:0] Rdes;
+input 	[15:0] Rdest;
 
 // Design Ports Information
 // opcode[0]	=>  Location: PIN_AF26,	 I/O Standard: 2.5 V,	 Current Strength: Default
@@ -106,22 +106,22 @@ input 	[15:0] Rdes;
 // Rsrc[13]	=>  Location: PIN_AH4,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // Rsrc[14]	=>  Location: PIN_B13,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // Rsrc[15]	=>  Location: PIN_AG30,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// Rdes[0]	=>  Location: PIN_J10,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// Rdes[1]	=>  Location: PIN_AE16,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// Rdes[2]	=>  Location: PIN_AJ10,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// Rdes[3]	=>  Location: PIN_Y26,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// Rdes[4]	=>  Location: PIN_W25,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// Rdes[5]	=>  Location: PIN_AE18,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// Rdes[6]	=>  Location: PIN_C9,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// Rdes[7]	=>  Location: PIN_D10,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// Rdes[8]	=>  Location: PIN_F11,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// Rdes[9]	=>  Location: PIN_AC9,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// Rdes[10]	=>  Location: PIN_C3,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// Rdes[11]	=>  Location: PIN_AG6,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// Rdes[12]	=>  Location: PIN_AD26,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// Rdes[13]	=>  Location: PIN_AB23,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// Rdes[14]	=>  Location: PIN_H13,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// Rdes[15]	=>  Location: PIN_AH30,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Rdest[0]	=>  Location: PIN_J10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Rdest[1]	=>  Location: PIN_AE16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Rdest[2]	=>  Location: PIN_AJ10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Rdest[3]	=>  Location: PIN_Y26,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Rdest[4]	=>  Location: PIN_W25,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Rdest[5]	=>  Location: PIN_AE18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Rdest[6]	=>  Location: PIN_C9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Rdest[7]	=>  Location: PIN_D10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Rdest[8]	=>  Location: PIN_F11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Rdest[9]	=>  Location: PIN_AC9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Rdest[10]	=>  Location: PIN_C3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Rdest[11]	=>  Location: PIN_AG6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Rdest[12]	=>  Location: PIN_AD26,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Rdest[13]	=>  Location: PIN_AB23,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Rdest[14]	=>  Location: PIN_H13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Rdest[15]	=>  Location: PIN_AH30,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 wire gnd;
@@ -189,22 +189,22 @@ wire \Rsrc[12]~input_o ;
 wire \Rsrc[13]~input_o ;
 wire \Rsrc[14]~input_o ;
 wire \Rsrc[15]~input_o ;
-wire \Rdes[0]~input_o ;
-wire \Rdes[1]~input_o ;
-wire \Rdes[2]~input_o ;
-wire \Rdes[3]~input_o ;
-wire \Rdes[4]~input_o ;
-wire \Rdes[5]~input_o ;
-wire \Rdes[6]~input_o ;
-wire \Rdes[7]~input_o ;
-wire \Rdes[8]~input_o ;
-wire \Rdes[9]~input_o ;
-wire \Rdes[10]~input_o ;
-wire \Rdes[11]~input_o ;
-wire \Rdes[12]~input_o ;
-wire \Rdes[13]~input_o ;
-wire \Rdes[14]~input_o ;
-wire \Rdes[15]~input_o ;
+wire \Rdest[0]~input_o ;
+wire \Rdest[1]~input_o ;
+wire \Rdest[2]~input_o ;
+wire \Rdest[3]~input_o ;
+wire \Rdest[4]~input_o ;
+wire \Rdest[5]~input_o ;
+wire \Rdest[6]~input_o ;
+wire \Rdest[7]~input_o ;
+wire \Rdest[8]~input_o ;
+wire \Rdest[9]~input_o ;
+wire \Rdest[10]~input_o ;
+wire \Rdest[11]~input_o ;
+wire \Rdest[12]~input_o ;
+wire \Rdest[13]~input_o ;
+wire \Rdest[14]~input_o ;
+wire \Rdest[15]~input_o ;
 wire \~QUARTUS_CREATED_GND~I_combout ;
 
 
@@ -803,179 +803,179 @@ defparam \Rsrc[15]~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: IOIBUF_X4_Y81_N1
-cyclonev_io_ibuf \Rdes[0]~input (
-	.i(Rdes[0]),
+cyclonev_io_ibuf \Rdest[0]~input (
+	.i(Rdest[0]),
 	.ibar(gnd),
 	.dynamicterminationcontrol(gnd),
-	.o(\Rdes[0]~input_o ));
+	.o(\Rdest[0]~input_o ));
 // synopsys translate_off
-defparam \Rdes[0]~input .bus_hold = "false";
-defparam \Rdes[0]~input .simulate_z_as = "z";
+defparam \Rdest[0]~input .bus_hold = "false";
+defparam \Rdest[0]~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: IOIBUF_X52_Y0_N35
-cyclonev_io_ibuf \Rdes[1]~input (
-	.i(Rdes[1]),
+cyclonev_io_ibuf \Rdest[1]~input (
+	.i(Rdest[1]),
 	.ibar(gnd),
 	.dynamicterminationcontrol(gnd),
-	.o(\Rdes[1]~input_o ));
+	.o(\Rdest[1]~input_o ));
 // synopsys translate_off
-defparam \Rdes[1]~input .bus_hold = "false";
-defparam \Rdes[1]~input .simulate_z_as = "z";
+defparam \Rdest[1]~input .bus_hold = "false";
+defparam \Rdest[1]~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: IOIBUF_X34_Y0_N92
-cyclonev_io_ibuf \Rdes[2]~input (
-	.i(Rdes[2]),
+cyclonev_io_ibuf \Rdest[2]~input (
+	.i(Rdest[2]),
 	.ibar(gnd),
 	.dynamicterminationcontrol(gnd),
-	.o(\Rdes[2]~input_o ));
+	.o(\Rdest[2]~input_o ));
 // synopsys translate_off
-defparam \Rdes[2]~input .bus_hold = "false";
-defparam \Rdes[2]~input .simulate_z_as = "z";
+defparam \Rdest[2]~input .bus_hold = "false";
+defparam \Rdest[2]~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: IOIBUF_X89_Y25_N4
-cyclonev_io_ibuf \Rdes[3]~input (
-	.i(Rdes[3]),
+cyclonev_io_ibuf \Rdest[3]~input (
+	.i(Rdest[3]),
 	.ibar(gnd),
 	.dynamicterminationcontrol(gnd),
-	.o(\Rdes[3]~input_o ));
+	.o(\Rdest[3]~input_o ));
 // synopsys translate_off
-defparam \Rdes[3]~input .bus_hold = "false";
-defparam \Rdes[3]~input .simulate_z_as = "z";
+defparam \Rdest[3]~input .bus_hold = "false";
+defparam \Rdest[3]~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: IOIBUF_X89_Y20_N44
-cyclonev_io_ibuf \Rdes[4]~input (
-	.i(Rdes[4]),
+cyclonev_io_ibuf \Rdest[4]~input (
+	.i(Rdest[4]),
 	.ibar(gnd),
 	.dynamicterminationcontrol(gnd),
-	.o(\Rdes[4]~input_o ));
+	.o(\Rdest[4]~input_o ));
 // synopsys translate_off
-defparam \Rdes[4]~input .bus_hold = "false";
-defparam \Rdes[4]~input .simulate_z_as = "z";
+defparam \Rdest[4]~input .bus_hold = "false";
+defparam \Rdest[4]~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: IOIBUF_X66_Y0_N41
-cyclonev_io_ibuf \Rdes[5]~input (
-	.i(Rdes[5]),
+cyclonev_io_ibuf \Rdest[5]~input (
+	.i(Rdest[5]),
 	.ibar(gnd),
 	.dynamicterminationcontrol(gnd),
-	.o(\Rdes[5]~input_o ));
+	.o(\Rdest[5]~input_o ));
 // synopsys translate_off
-defparam \Rdes[5]~input .bus_hold = "false";
-defparam \Rdes[5]~input .simulate_z_as = "z";
+defparam \Rdest[5]~input .bus_hold = "false";
+defparam \Rdest[5]~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: IOIBUF_X28_Y81_N52
-cyclonev_io_ibuf \Rdes[6]~input (
-	.i(Rdes[6]),
+cyclonev_io_ibuf \Rdest[6]~input (
+	.i(Rdest[6]),
 	.ibar(gnd),
 	.dynamicterminationcontrol(gnd),
-	.o(\Rdes[6]~input_o ));
+	.o(\Rdest[6]~input_o ));
 // synopsys translate_off
-defparam \Rdes[6]~input .bus_hold = "false";
-defparam \Rdes[6]~input .simulate_z_as = "z";
+defparam \Rdest[6]~input .bus_hold = "false";
+defparam \Rdest[6]~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: IOIBUF_X34_Y81_N58
-cyclonev_io_ibuf \Rdes[7]~input (
-	.i(Rdes[7]),
+cyclonev_io_ibuf \Rdest[7]~input (
+	.i(Rdest[7]),
 	.ibar(gnd),
 	.dynamicterminationcontrol(gnd),
-	.o(\Rdes[7]~input_o ));
+	.o(\Rdest[7]~input_o ));
 // synopsys translate_off
-defparam \Rdes[7]~input .bus_hold = "false";
-defparam \Rdes[7]~input .simulate_z_as = "z";
+defparam \Rdest[7]~input .bus_hold = "false";
+defparam \Rdest[7]~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: IOIBUF_X18_Y81_N41
-cyclonev_io_ibuf \Rdes[8]~input (
-	.i(Rdes[8]),
+cyclonev_io_ibuf \Rdest[8]~input (
+	.i(Rdest[8]),
 	.ibar(gnd),
 	.dynamicterminationcontrol(gnd),
-	.o(\Rdes[8]~input_o ));
+	.o(\Rdest[8]~input_o ));
 // synopsys translate_off
-defparam \Rdes[8]~input .bus_hold = "false";
-defparam \Rdes[8]~input .simulate_z_as = "z";
+defparam \Rdest[8]~input .bus_hold = "false";
+defparam \Rdest[8]~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: IOIBUF_X4_Y0_N1
-cyclonev_io_ibuf \Rdes[9]~input (
-	.i(Rdes[9]),
+cyclonev_io_ibuf \Rdest[9]~input (
+	.i(Rdest[9]),
 	.ibar(gnd),
 	.dynamicterminationcontrol(gnd),
-	.o(\Rdes[9]~input_o ));
+	.o(\Rdest[9]~input_o ));
 // synopsys translate_off
-defparam \Rdes[9]~input .bus_hold = "false";
-defparam \Rdes[9]~input .simulate_z_as = "z";
+defparam \Rdest[9]~input .bus_hold = "false";
+defparam \Rdest[9]~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: IOIBUF_X14_Y81_N35
-cyclonev_io_ibuf \Rdes[10]~input (
-	.i(Rdes[10]),
+cyclonev_io_ibuf \Rdest[10]~input (
+	.i(Rdest[10]),
 	.ibar(gnd),
 	.dynamicterminationcontrol(gnd),
-	.o(\Rdes[10]~input_o ));
+	.o(\Rdest[10]~input_o ));
 // synopsys translate_off
-defparam \Rdes[10]~input .bus_hold = "false";
-defparam \Rdes[10]~input .simulate_z_as = "z";
+defparam \Rdest[10]~input .bus_hold = "false";
+defparam \Rdest[10]~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: IOIBUF_X12_Y0_N52
-cyclonev_io_ibuf \Rdes[11]~input (
-	.i(Rdes[11]),
+cyclonev_io_ibuf \Rdest[11]~input (
+	.i(Rdest[11]),
 	.ibar(gnd),
 	.dynamicterminationcontrol(gnd),
-	.o(\Rdes[11]~input_o ));
+	.o(\Rdest[11]~input_o ));
 // synopsys translate_off
-defparam \Rdes[11]~input .bus_hold = "false";
-defparam \Rdes[11]~input .simulate_z_as = "z";
+defparam \Rdest[11]~input .bus_hold = "false";
+defparam \Rdest[11]~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: IOIBUF_X89_Y16_N4
-cyclonev_io_ibuf \Rdes[12]~input (
-	.i(Rdes[12]),
+cyclonev_io_ibuf \Rdest[12]~input (
+	.i(Rdest[12]),
 	.ibar(gnd),
 	.dynamicterminationcontrol(gnd),
-	.o(\Rdes[12]~input_o ));
+	.o(\Rdest[12]~input_o ));
 // synopsys translate_off
-defparam \Rdes[12]~input .bus_hold = "false";
-defparam \Rdes[12]~input .simulate_z_as = "z";
+defparam \Rdest[12]~input .bus_hold = "false";
+defparam \Rdest[12]~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: IOIBUF_X89_Y9_N21
-cyclonev_io_ibuf \Rdes[13]~input (
-	.i(Rdes[13]),
+cyclonev_io_ibuf \Rdest[13]~input (
+	.i(Rdest[13]),
 	.ibar(gnd),
 	.dynamicterminationcontrol(gnd),
-	.o(\Rdes[13]~input_o ));
+	.o(\Rdest[13]~input_o ));
 // synopsys translate_off
-defparam \Rdes[13]~input .bus_hold = "false";
-defparam \Rdes[13]~input .simulate_z_as = "z";
+defparam \Rdest[13]~input .bus_hold = "false";
+defparam \Rdest[13]~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: IOIBUF_X20_Y81_N1
-cyclonev_io_ibuf \Rdes[14]~input (
-	.i(Rdes[14]),
+cyclonev_io_ibuf \Rdest[14]~input (
+	.i(Rdest[14]),
 	.ibar(gnd),
 	.dynamicterminationcontrol(gnd),
-	.o(\Rdes[14]~input_o ));
+	.o(\Rdest[14]~input_o ));
 // synopsys translate_off
-defparam \Rdes[14]~input .bus_hold = "false";
-defparam \Rdes[14]~input .simulate_z_as = "z";
+defparam \Rdest[14]~input .bus_hold = "false";
+defparam \Rdest[14]~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: IOIBUF_X89_Y16_N38
-cyclonev_io_ibuf \Rdes[15]~input (
-	.i(Rdes[15]),
+cyclonev_io_ibuf \Rdest[15]~input (
+	.i(Rdest[15]),
 	.ibar(gnd),
 	.dynamicterminationcontrol(gnd),
-	.o(\Rdes[15]~input_o ));
+	.o(\Rdest[15]~input_o ));
 // synopsys translate_off
-defparam \Rdes[15]~input .bus_hold = "false";
-defparam \Rdes[15]~input .simulate_z_as = "z";
+defparam \Rdest[15]~input .bus_hold = "false";
+defparam \Rdest[15]~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: LABCELL_X81_Y29_N0
