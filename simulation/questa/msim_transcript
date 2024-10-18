@@ -24,35 +24,67 @@
 # Copying c:/intelfpga_lite/23.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
+# vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 15:32:10 on Oct 18,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project" C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v 
+# -- Compiling module alucontrol
+# 
+# Top level modules:
+# 	alucontrol
+# End time: 15:32:10 on Oct 18,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 15:32:10 on Oct 18,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project" C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 15:32:10 on Oct 18,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 15:32:11 on Oct 18,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project" C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v 
+# -- Compiling module GroupProject3710
+# 
+# Top level modules:
+# 	GroupProject3710
+# End time: 15:32:11 on Oct 18,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 12:44:01 on Oct 18,2024
+# Start time: 15:32:11 on Oct 18,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project" C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v 
 # -- Compiling module regfile
 # 
 # Top level modules:
 # 	regfile
-# End time: 12:44:01 on Oct 18,2024, Elapsed time: 0:00:00
+# End time: 15:32:11 on Oct 18,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/ALU_Regfile_tb.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 12:44:02 on Oct 18,2024
+# Start time: 15:32:11 on Oct 18,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project" C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/ALU_Regfile_tb.v 
 # -- Compiling module ALU_Regfile_tb
 # 
 # Top level modules:
 # 	ALU_Regfile_tb
-# End time: 12:44:02 on Oct 18,2024, Elapsed time: 0:00:00
+# End time: 15:32:11 on Oct 18,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  ALU_Regfile_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" ALU_Regfile_tb 
-# Start time: 12:44:02 on Oct 18,2024
+# Start time: 15:32:11 on Oct 18,2024
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # Loading work.ALU_Regfile_tb(fast)
+# Loading work.alucontrol(fast)
+# Loading work.alu(fast)
 # Loading work.regfile(fast)
 # 
 # add wave *
@@ -66,9 +98,35 @@
 # No such file or directory. (errno = ENOENT)    : C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v(21)
 #    Time: 0 ps  Iteration: 0  Instance: /ALU_Regfile_tb/registers
 # done with RF load
-# r[3] =    10
-# ** Note: $stop    : C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/ALU_Regfile_tb.v(174)
-#    Time: 300 ps  Iteration: 0  Instance: /ALU_Regfile_tb
-# Break in Module ALU_Regfile_tb at C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/ALU_Regfile_tb.v line 174
-# End time: 12:44:54 on Oct 18,2024, Elapsed time: 0:00:52
+# Testing Regfile: Test1
+# Horray!! The Regfile is working correctly!
+# Testing Regfile: Test2
+# Horray!! The Regfile is working correctly!
+# Testing ALU: AND
+# Horray!! AND is working correctly!
+# Testing ALU: OR
+# Horray!! OR is working correctly!
+# Testing ALU: XOR
+# Horray!! XOR is working correctly!
+# r1 = 65535, r2 = 65535
+# add: 65534
+# r1 =     1, r2 =     1
+# add:     2
+# r1 =     1, r2 = 65535
+# cmp:     0
+# r1 = 65535, r2 =     1
+# CMP: 65533
+# r1 = 65535, r2 =     1
+# cmp: 65533
+# r1 =     1, r2 = 65535
+# CMP:     1
+# r1 =     1, r2 =     1
+# cmp: 65535
+# r1 =     1, r2 = 65535
+# CMP:     1
+# r1 = 65535, r2 = 65535
+# add: 65535
+# r1 =     1, r2 =     1
+# add: 65535
+# End time: 15:33:01 on Oct 18,2024, Elapsed time: 0:00:50
 # Errors: 0, Warnings: 2

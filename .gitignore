@@ -1,0 +1,5 @@
+# Ignore everything in the db file
+db/
+
+# Ignore the qws file because its just user preferences
+GroupProject3710.qws

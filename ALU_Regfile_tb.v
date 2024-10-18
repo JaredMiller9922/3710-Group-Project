@@ -3,10 +3,10 @@ module ALU_Regfile_tb;
     // Inputs
    reg clk50MHz;
 	reg regwrite = 0;
-	reg [1:0] aluop; 
-	reg [5:0] funct;
-	reg [2:0] alucont;
-	reg [15:0] data;
+	reg [3:0] aluop; 
+	reg [3:0] opext;
+	wire [2:0] alucont;
+	wire [15:0] data;
 	
 	reg [3:0] ra1, ra2, wa;
 	reg [15:0] wd;
@@ -16,19 +16,19 @@ module ALU_Regfile_tb;
    wire [15:0] rd1, rd2;
 
     // Instantiate the Unit Under Test (UUT)
-	 /*
-	alucontrol alucont (
-		.aluop(aluop), 
-		.funct(funct), 
+	 
+	alucontrol alucon (
+		.opcode(aluop), 
+		.opext(opext), 
 		.alucont(alucont)
    );
 	 
-	alucontrol alu (
-		.a(rd1), .b(rd2)
+	alu alu (
+		.Rsrc(rd1), .Rdes(rd2),
 		.alucont(alucont), 
 		.result(data)
    );
-	*/
+	
 	 regfile registers (
 		.clk(clk50MHz), 
 		.regwrite(regwrite), 
@@ -48,6 +48,7 @@ module ALU_Regfile_tb;
     initial begin
         // Initialize Clear
 		  regwrite = 0;
+		  opext = 0;
 
         // global reset
         #100;
@@ -67,11 +68,58 @@ module ALU_Regfile_tb;
 		  #50
 		  
 		  ra1 = 3;
+		  ra2 = 2;
+		  regwrite = 0;
+		  
+		  #50
+		  $display("Testing Regfile: Test1");
+		  if(rd1 != 16'b0000000000001010) begin
+				$display("rd1 got: %b, should be: %b", rd1, 16'b0000000000001010);
+		  end
+		  else if(rd2 != 16'b0000000000001010) begin
+				$display("rd2 got: %b, should be: %b", rd2, 16'b0000000000001010);
+		  end
+		  else begin
+				$display("Horray!! The Regfile is working correctly!");
+		  end
+		  
+		  end
+		  
+		  
+		  #50
+		  
+		  // Test Regfile
+		  begin
+		  wa = 1;
+		  regwrite = 1;
+		  wd = 16'b0000011111111111;
+		  
+		  #50
+		  
+		  wa = 2;
+		  regwrite = 1;
+		  wd = 16'b0000001111111111;
+		  
+		  #50
+		  
+		  ra1 = 1;
+		  ra2 = 2;
 		  regwrite = 0;
 		  
 		  #50
 		  
-		  $display("r[3] = %d", rd1);
+		  $display("Testing Regfile: Test2");
+		  if(rd1 != 16'b0000011111111111) begin
+				$display("rd1 got: %b, should be: %b", rd1, 16'b0000011111111111);
+		  end
+		  else if(rd2 != 16'b0000001111111111) begin
+				$display("rd2 got: %b, should be: %b", rd2, 16'b0000001111111111);
+		  end
+		  else begin
+				$display("Horray!! The Regfile is working correctly!");
+		  end
+		  
+		  //$display("r[2] = %d, r[1] = %d", rd1, rd2);
 		  end
 		  
 		  
@@ -82,29 +130,39 @@ module ALU_Regfile_tb;
 		  begin
 		  // Write all 1's to reg 0 and reg 1
 		  begin
-			  wa = 0;
-			  regwrite = 1;
-			  wd = 16'b1111111111111111;
-			  
-			  #20
-			  
 			  wa = 1;
 			  regwrite = 1;
 			  wd = 16'b1111111111111111;
 			  
 			  #50
-			  ra1 = 0;
-			  ra2 = 1;
+			  
+			  wa = 2;
+			  regwrite = 1;
+			  wd = 16'b1111111111111111;
+			  
+			  #50
+			  regwrite = 0;
+			  ra1 = 1;
+			  ra2 = 2;
+			  			  
+			  
 		  end
 		  
+		  #50
 		  
 		  
 		  //AND
-		  aluop = 2'b11;
-		  funct = 6'b000101;
+		  aluop = 4'b0001;
 		  #20
-		  $display("r1 = %d, r2 = %d", rd1, rd2);
-		  $display("AND: %d", data);
+		  $display("Testing ALU: AND");
+		  if(data != 16'b1111111111111111) begin
+				$display("ALU got: %b, should be: %b", data, 16'b1111111111111111);
+		  end
+		  else begin
+				$display("Horray!! AND is working correctly!");
+		  end
+		  //$display("r1 = %d, r2 = %d", rd1, rd2);
+		  //$display("AND: %d", data);
 		  end
 		  
 		  
@@ -114,29 +172,35 @@ module ALU_Regfile_tb;
 		  begin
 		  // Write all 1's to reg 0 and reg 1
 		  begin
-			  wa = 0;
+			  wa = 1;
 			  regwrite = 1;
 			  wd = 16'b1111110111011111;
 			  
 			  #20
 			  
-			  wa = 1;
+			  wa = 2;
 			  regwrite = 1;
 			  wd = 16'b0101111110111101;
 			  
 			  #50
-			  ra1 = 0;
-			  ra2 = 1;
+			  ra1 = 1;
+			  ra2 = 2;
 		  end
 		  
 		  
 		  
 		  //OR
-		  aluop = 2'b11;
-		  funct = 6'b000101;
+		  aluop = 4'b0010;
 		  #20
-		  $display("r1 = %d, r2 = %d", rd1, rd2);
-		  $display("OR: %d", data);
+		  $display("Testing ALU: OR");
+		  if(data != 16'b1111111111111111) begin
+				$display("ALU got: %b, should be: %b", data, 16'b1111111111111111);
+		  end
+		  else begin
+				$display("Horray!! OR is working correctly!");
+		  end
+		  //$display("r1 = %d, r2 = %d", rd1, rd2);
+		  //$display("OR: %d", data);
 		  end
 		  
 		  
@@ -146,29 +210,35 @@ module ALU_Regfile_tb;
 		  begin
 		  // Write all 1's to reg 0 and reg 1
 		  begin
-			  wa = 0;
+			  wa = 1;
 			  regwrite = 1;
 			  wd = 16'b1111111111111111;
 			  
 			  #20
 			  
-			  wa = 1;
+			  wa = 2;
 			  regwrite = 1;
 			  wd = 16'b1111111111111111;
 			  
 			  #50
-			  ra1 = 0;
-			  ra2 = 1;
+			  ra1 = 1;
+			  ra2 = 2;
 		  end
 		  
 		  
 		  
 		  //XOR
-		  aluop = 2'b11;
-		  funct = 6'b000101;
+		  aluop = 4'b0011;
 		  #20
-		  $display("r1 = %d, r2 = %d", rd1, rd2);
-		  $display("XOR: %d", data);
+		  $display("Testing ALU: XOR");
+		  if(data != 16'b0000000000000000) begin
+				$display("ALU got: %b, should be: %b", data, 16'b0000000000000000);
+		  end
+		  else begin
+				$display("Horray!! XOR is working correctly!");
+		  end
+		  //$display("r1 = %d, r2 = %d", rd1, rd2);
+		  //$display("XOR: %d", data);
 		  end
 		  
 		  
@@ -181,26 +251,25 @@ module ALU_Regfile_tb;
 		  begin
 		  // Write all 1's to reg 0 and reg 1
 		  begin
-			  wa = 0;
+			  wa = 1;
 			  regwrite = 1;
 			  wd = 16'b1111111111111111;
 			  
 			  #20
 			  
-			  wa = 1;
+			  wa = 2;
 			  regwrite = 1;
 			  wd = 16'b1111111111111111;
 			  
 			  #50
-			  ra1 = 0;
-			  ra2 = 1;
+			  ra1 = 1;
+			  ra2 = 2;
 		  end
 		  
 		  
 		  
 		  //Add
-		  aluop = 2'b00;
-		  funct = 6'b000101;
+		  aluop = 4'b0101;
 		  #20
 		  $display("r1 = %d, r2 = %d", rd1, rd2);
 		  $display("add: %d", data);
@@ -214,24 +283,23 @@ module ALU_Regfile_tb;
 		  begin
 		  // Write 1 to reg 0 and reg 1
 		  begin
-			  wa = 0;
-			  regwrite = 1;
-			  wd = 16'b0000000000000001;
-			  
-			  #50
-			  
 			  wa = 1;
 			  regwrite = 1;
 			  wd = 16'b0000000000000001;
 			  
 			  #50
-			  ra1 = 0;
-			  ra2 = 1;
+			  
+			  wa = 2;
+			  regwrite = 1;
+			  wd = 16'b0000000000000001;
+			  
+			  #50
+			  ra1 = 1;
+			  ra2 = 2;
 		  end
 		  
 		  //Add
-		  aluop = 2'b00;
-		  funct = 6'b000101;
+		  aluop = 4'b0101;
 		  #20
 		  $display("r1 = %d, r2 = %d", rd1, rd2);
 		  $display("add: %d", data);
@@ -245,26 +313,25 @@ module ALU_Regfile_tb;
 		  begin
 		  // Write all 1's to reg 0 and reg 1
 		  begin
-			  wa = 0;
+			  wa = 1;
 			  regwrite = 1;
 			  wd = 16'b0000000000000001;
 			  
 			  #20
 			  
-			  wa = 1;
+			  wa = 2;
 			  regwrite = 1;
 			  wd = 16'b1111111111111111;
 			  
 			  #50
-			  ra1 = 0;
-			  ra2 = 1;
+			  ra1 = 1;
+			  ra2 = 2;
 		  end
 		  
 		  
 		  
 		  //CMP
-		  aluop = 2'b10;
-		  funct = 6'b000101;
+		  aluop = 4'b0101;
 		  #20
 		  $display("r1 = %d, r2 = %d", rd1, rd2);
 		  $display("cmp: %d", data);
@@ -278,24 +345,23 @@ module ALU_Regfile_tb;
 		  begin
 		  // Write 1 to reg 0 and reg 1
 		  begin
-			  wa = 0;
+			  wa = 1;
 			  regwrite = 1;
 			  wd = 16'b1111111111111111;
 			  
 			  #50
 			  
-			  wa = 1;
+			  wa = 2;
 			  regwrite = 1;
 			  wd = 16'b0000000000000001;
 			  
 			  #50
-			  ra1 = 0;
-			  ra2 = 1;
+			  ra1 = 1;
+			  ra2 = 2;
 		  end
 		  
 		  //CMP
-		  aluop = 2'b01;
-		  funct = 6'b000101;
+		  aluop = 4'b1001;
 		  #20
 		  $display("r1 = %d, r2 = %d", rd1, rd2);
 		  $display("CMP: %d", data);
@@ -310,26 +376,25 @@ module ALU_Regfile_tb;
 		  begin
 		  // Write all 1's to reg 0 and reg 1
 		  begin
-			  wa = 0;
+			  wa = 1;
 			  regwrite = 1;
 			  wd = 16'b1111111111111111;
 			  
 			  #20
 			  
-			  wa = 1;
+			  wa = 2;
 			  regwrite = 1;
 			  wd = 16'b0000000000000001;
 			  
 			  #50
-			  ra1 = 0;
-			  ra2 = 1;
+			  ra1 = 1;
+			  ra2 = 2;
 		  end
 		  
 		  
 		  
 		  //CMP
-		  aluop = 2'b10;
-		  funct = 6'b000101;
+		  aluop = 4'b1001;
 		  #20
 		  $display("r1 = %d, r2 = %d", rd1, rd2);
 		  $display("cmp: %d", data);
@@ -343,24 +408,23 @@ module ALU_Regfile_tb;
 		  begin
 		  // Write 1 to reg 0 and reg 1
 		  begin
-			  wa = 0;
+			  wa = 1;
 			  regwrite = 1;
 			  wd = 16'b0000000000000001;
 			  
 			  #50
 			  
-			  wa = 1;
+			  wa = 2;
 			  regwrite = 1;
 			  wd = 16'b1111111111111111;
 			  
 			  #50
-			  ra1 = 0;
-			  ra2 = 1;
+			  ra1 = 1;
+			  ra2 = 2;
 		  end
 		  
 		  //CMP
-		  aluop = 2'b01;
-		  funct = 6'b000101;
+		  aluop = 4'b1001;
 		  #20
 		  $display("r1 = %d, r2 = %d", rd1, rd2);
 		  $display("CMP: %d", data);
@@ -376,26 +440,25 @@ module ALU_Regfile_tb;
 		  begin
 		  // Write equal value to reg 0 and reg 1
 		  begin
-			  wa = 0;
+			  wa = 1;
 			  regwrite = 1;
 			  wd = 16'b0000000000000001;
 			  
 			  #20
 			  
-			  wa = 1;
+			  wa = 2;
 			  regwrite = 1;
 			  wd = 16'b0000000000000001;
 			  
 			  #50
-			  ra1 = 0;
-			  ra2 = 1;
+			  ra1 = 1;
+			  ra2 = 2;
 		  end
 		  
 		  
 		  
 		  //CMP
-		  aluop = 2'b10;
-		  funct = 6'b000101;
+		  aluop = 4'b1001;
 		  #20
 		  $display("r1 = %d, r2 = %d", rd1, rd2);
 		  $display("cmp: %d", data);
@@ -409,24 +472,23 @@ module ALU_Regfile_tb;
 		  begin
 		  // Write non equal value to reg 0 and reg 1
 		  begin
-			  wa = 0;
+			  wa = 1;
 			  regwrite = 1;
 			  wd = 16'b0000000000000001;
 			  
 			  #50
 			  
-			  wa = 1;
+			  wa = 2;
 			  regwrite = 1;
 			  wd = 16'b1111111111111111;
 			  
 			  #50
-			  ra1 = 0;
-			  ra2 = 1;
+			  ra1 = 1;
+			  ra2 = 2;
 		  end
 		  
 		  //CMP
-		  aluop = 2'b01;
-		  funct = 6'b000101;
+		  aluop = 4'b1001;
 		  #20
 		  $display("r1 = %d, r2 = %d", rd1, rd2);
 		  $display("CMP: %d", data);
@@ -442,26 +504,25 @@ module ALU_Regfile_tb;
 		  begin
 		  // Write all 1's to reg 0 and reg 1
 		  begin
-			  wa = 0;
+			  wa = 1;
 			  regwrite = 1;
 			  wd = 16'b1111111111111111;
 			  
 			  #20
 			  
-			  wa = 1;
+			  wa = 2;
 			  regwrite = 1;
 			  wd = 16'b1111111111111111;
 			  
 			  #50
-			  ra1 = 0;
-			  ra2 = 1;
+			  ra1 = 1;
+			  ra2 = 2;
 		  end
 		  
 		  
 		  
 		  //Sub
-		  aluop = 2'b10;
-		  funct = 6'b000101;
+		  aluop = 4'b1001;
 		  #20
 		  $display("r1 = %d, r2 = %d", rd1, rd2);
 		  $display("add: %d", data);
@@ -475,24 +536,23 @@ module ALU_Regfile_tb;
 		  begin
 		  // Write 1 to reg 0 and reg 1
 		  begin
-			  wa = 0;
-			  regwrite = 1;
-			  wd = 16'b0000000000000001;
-			  
-			  #50
-			  
 			  wa = 1;
 			  regwrite = 1;
 			  wd = 16'b0000000000000001;
 			  
 			  #50
-			  ra1 = 0;
-			  ra2 = 1;
+			  
+			  wa = 2;
+			  regwrite = 1;
+			  wd = 16'b0000000000000001;
+			  
+			  #50
+			  ra1 = 1;
+			  ra2 = 2;
 		  end
 		  
 		  //SUB
-		  aluop = 2'b10;
-		  funct = 6'b000101;
+		  aluop = 4'b1001;
 		  #20
 		  $display("r1 = %d, r2 = %d", rd1, rd2);
 		  $display("add: %d", data);
@@ -501,19 +561,18 @@ module ALU_Regfile_tb;
 		  //$display("F Flag: %d", fflag);
 		  end
 		  #50
+		  ra1 = 1;
 		  
 		  
 		  /*
-		  aluop = 2'b00;
-		  funct = 6'b000101;
+		  aluop = 4'b0101;
 		  
 		  $display("r1 = %d, r2 = %d", rd1, rd2);
 		  $display("add: %d", data);
 		  
 		  #50
 		  
-		  aluop = 2'b00;
-		  funct = 6'b001001;
+		  aluop = 4'b1001;
 		  
 		  $display("r1 = %d, r2 = %d", rd1, rd2);
 		  $display("sub: %d", data);
@@ -521,8 +580,7 @@ module ALU_Regfile_tb;
 		  #50
 
 		  
-		  aluop = 2'b00;
-		  funct = 6'b001011;
+		  aluop = 4'b1001;
 		  
 		  $display("r1 = %d, r2 = %d", rd1, rd2);
 		  $display("cmp: %d  !!!Check Flags", data);
@@ -530,8 +588,7 @@ module ALU_Regfile_tb;
 		  #50
 		  
 		  
-		  aluop = 2'b00;
-		  funct = 6'b000001;
+		  aluop = 4'b0001;
 		  
 		  $display("r1 = %d, r2 = %d", rd1, rd2);
 		  $display("and: %d", data);
@@ -539,8 +596,7 @@ module ALU_Regfile_tb;
 		  #50
 		  
 		  
-		  aluop = 2'b00;
-		  funct = 6'b000010;
+		  aluop = 4'b0010;
 		  
 		  $display("r1 = %d, r2 = %d", rd1, rd2);
 		  $display("or: %d", data);
@@ -549,8 +605,7 @@ module ALU_Regfile_tb;
 		  
 		  
 		  
-		  aluop = 2'b00;
-		  funct = 6'b000011;
+		  aluop = 4'b0011;
 		  
 		  $display("r1 = %d, r2 = %d", rd1, rd2);
 		  $display("xor: %d", data);
@@ -559,7 +614,7 @@ module ALU_Regfile_tb;
 		  
 		  
 		  aluop = 2'b00;
-		  funct = 6'b001101;
+		  opext = 6'b001101;
 		  
 		  $display("r1 = %d, r2 = %d", rd1, rd2);
 		  $display("mov: %d", data);
@@ -568,7 +623,7 @@ module ALU_Regfile_tb;
 		  
 		  
 		  aluop = 2'b00;
-		  funct = 6'b000100;
+		  opext = 6'b000100;
 		  
 		  $display("r1 = %d, r2 = %d", rd1, rd2);
 		  $display("LSH: %d", data);
@@ -577,7 +632,7 @@ module ALU_Regfile_tb;
 		  
 		  
 		  aluop = 2'b00;
-		  funct = 6'b000001;
+		  opext = 6'b000001;
 		  
 		  $display("r1 = %d, r2 = %d", rd1, rd2);
 		  $display("and: %d", data);
@@ -587,7 +642,7 @@ module ALU_Regfile_tb;
 		  
 		  //aluop = 2'b1111
 		  aluop = 2'b00;
-		  funct = 6'b000000;
+		  opext = 6'b000000;
 		  
 		  $display("r1 = %d, r2 = %d", rd1, rd2);
 		  $display("LUI: %d", data);
@@ -597,7 +652,6 @@ module ALU_Regfile_tb;
 		
 
         // Stop simulation
-        $stop;
     end
 
     // Monitor signals
