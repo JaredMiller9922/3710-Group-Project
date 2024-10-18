@@ -5,7 +5,7 @@ module alucontrol(input 	  [3:0] opcode,
                   output reg [2:0] alucont);
 
    always @(*)
-      case(opcode): // I-Type Instructions
+      case(opcode) // I-Type Instructions
          4'b0101: alucont <= 3'b000; // add (for addi)
          4'b1001: alucont <= 3'b001; // sub (for subi)
 			4'b0001: alucont <= 3'b010; // and (for andi)
