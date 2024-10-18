@@ -1,5 +1,5 @@
 Analysis & Synthesis report for GroupProject3710
-Fri Oct 18 12:43:02 2024
+Fri Oct 18 13:43:38 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -14,10 +14,14 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |regfile
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |GroupProject3710
+ 10. Parameter Settings for User Entity Instance: regfile:regfile1
+ 11. Parameter Settings for User Entity Instance: alu:alu1
+ 12. Port Connectivity Checks: "alu:alu1"
+ 13. Port Connectivity Checks: "regfile:regfile1"
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -44,14 +48,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Oct 18 12:43:02 2024          ;
+; Analysis & Synthesis Status     ; Successful - Fri Oct 18 13:43:38 2024          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; GroupProject3710                               ;
-; Top-level Entity Name           ; regfile                                        ;
+; Top-level Entity Name           ; GroupProject3710                               ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 256                                            ;
-; Total pins                      ; 62                                             ;
+; Total registers                 ; 0                                              ;
+; Total pins                      ; 70                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
 ; Total DSP Blocks                ; 0                                              ;
@@ -70,10 +74,9 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; regfile            ; GroupProject3710   ;
+; Top-level entity name                                                           ; GroupProject3710   ; GroupProject3710   ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
-; Maximum processors allowed for parallel compilation                             ; All                ; All                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
 ; Enable compact report table                                                     ; Off                ; Off                ;
 ; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
@@ -157,8 +160,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -168,14 +171,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                        ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                          ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
-; reg.dat                          ; yes             ; User Unspecified File  ; C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/reg.dat   ;         ;
-; regfile.v                        ; yes             ; User Verilog HDL File  ; C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                           ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
+; reg.dat                          ; yes             ; User Unspecified File  ; C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/reg.dat            ;         ;
+; regfile.v                        ; yes             ; User Verilog HDL File  ; C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/regfile.v          ;         ;
+; alucontrol.v                     ; yes             ; User Verilog HDL File  ; C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/alucontrol.v       ;         ;
+; alu.v                            ; yes             ; User Verilog HDL File  ; C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/alu.v              ;         ;
+; GroupProject3710.v               ; yes             ; User Verilog HDL File  ; C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -183,35 +189,35 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 233       ;
+; Estimate of Logic utilization (ALMs needed) ; 0         ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 178       ;
-;     -- 7 input functions                    ; 32        ;
-;     -- 6 input functions                    ; 128       ;
-;     -- 5 input functions                    ; 16        ;
-;     -- 4 input functions                    ; 2         ;
+; Combinational ALUT usage for logic          ; 0         ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 0         ;
+;     -- 5 input functions                    ; 0         ;
+;     -- 4 input functions                    ; 0         ;
 ;     -- <=3 input functions                  ; 0         ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 256       ;
+; Dedicated logic registers                   ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 62        ;
+; I/O pins                                    ; 70        ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 256       ;
-; Total fan-out                               ; 1942      ;
-; Average fan-out                             ; 3.48      ;
+; Maximum fan-out node                        ; opcode[0] ;
+; Maximum fan-out                             ; 1         ;
+; Total fan-out                               ; 70        ;
+; Average fan-out                             ; 0.50      ;
 +---------------------------------------------+-----------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |regfile                   ; 178 (178)           ; 256 (256)                 ; 0                 ; 0          ; 62   ; 0            ; |regfile            ; regfile     ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name      ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+------------------+--------------+
+; |GroupProject3710          ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 70   ; 0            ; |GroupProject3710   ; GroupProject3710 ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -220,46 +226,77 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 256   ;
+; Total registers                              ; 0     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 256   ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |regfile ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; WIDTH          ; 16    ; Signed Integer                                 ;
-; REGBITS        ; 4     ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |GroupProject3710 ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                                          ;
+; REGBITS        ; 4     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:regfile1 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                       ;
+; REGBITS        ; 4     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:alu1 ;
++----------------+-------+------------------------------+
+; Parameter Name ; Value ; Type                         ;
++----------------+-------+------------------------------+
+; WIDTH          ; 16    ; Signed Integer               ;
++----------------+-------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:alu1"                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; result ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "regfile:regfile1"                                                                   ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; rd1  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; rd2  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 256                         ;
-;     ENA               ; 256                         ;
-; arriav_lcell_comb     ; 178                         ;
-;     extend            ; 32                          ;
-;         7 data inputs ; 32                          ;
-;     normal            ; 146                         ;
-;         4 data inputs ; 2                           ;
-;         5 data inputs ; 16                          ;
-;         6 data inputs ; 128                         ;
-; boundary_port         ; 62                          ;
-;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.88                        ;
-+-----------------------+-----------------------------+
++-------------------+---------------------------------+
+; Type              ; Count                           ;
++-------------------+---------------------------------+
+; boundary_port     ; 70                              ;
+;                   ;                                 ;
+; Max LUT depth     ; 0.00                            ;
+; Average LUT depth ; 0.00                            ;
++-------------------+---------------------------------+
 
 
 +-------------------------------+
@@ -277,33 +314,106 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Fri Oct 18 12:42:54 2024
+    Info: Processing started: Fri Oct 18 13:43:32 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GroupProject3710 -c GroupProject3710
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file regfile.v
-    Info (12023): Found entity 1: regfile File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v Line: 9
+    Info (12023): Found entity 1: regfile File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/regfile.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file alucontrol.v
-    Info (12023): Found entity 1: alucontrol File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file alu_regfile_tb.v
-    Info (12023): Found entity 1: ALU_Regfile_tb File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/ALU_Regfile_tb.v Line: 1
-Info (12127): Elaborating entity "regfile" for the top level hierarchy
-Info (10648): Verilog HDL Display System Task info at regfile.v(19): Loading register file File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v Line: 19
-Info (10648): Verilog HDL Display System Task info at regfile.v(22): done with RF load File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v Line: 22
-Warning (10230): Verilog HDL assignment warning at regfile.v(32): truncated value with size 32 to match size of target (16) File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v Line: 32
-Warning (10230): Verilog HDL assignment warning at regfile.v(33): truncated value with size 32 to match size of target (16) File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v Line: 33
-Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "RAM" is uninferred due to asynchronous read logic File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v Line: 16
-Info (286030): Timing-Driven Synthesis is running
+    Info (12023): Found entity 1: alucontrol File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/alucontrol.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file alu.v
+    Info (12023): Found entity 1: alu File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/alu.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file groupproject3710.v
+    Info (12023): Found entity 1: GroupProject3710 File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 1
+Info (12127): Elaborating entity "GroupProject3710" for the top level hierarchy
+Info (12128): Elaborating entity "regfile" for hierarchy "regfile:regfile1" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 24
+Info (10648): Verilog HDL Display System Task info at regfile.v(19): Loading register file File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/regfile.v Line: 19
+Info (10648): Verilog HDL Display System Task info at regfile.v(22): done with RF load File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/regfile.v Line: 22
+Warning (10230): Verilog HDL assignment warning at regfile.v(32): truncated value with size 32 to match size of target (16) File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/regfile.v Line: 32
+Warning (10230): Verilog HDL assignment warning at regfile.v(33): truncated value with size 32 to match size of target (16) File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/regfile.v Line: 33
+Info (12128): Elaborating entity "alucontrol" for hierarchy "alucontrol:alucontrol1" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 31
+Info (12128): Elaborating entity "alu" for hierarchy "alu:alu1" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 40
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 496 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 30 input pins
-    Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 434 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4822 megabytes
-    Info: Processing ended: Fri Oct 18 12:43:02 2024
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:18
+Warning (21074): Design contains 70 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "opcode[0]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 2
+    Warning (15610): No output dependent on input pin "opcode[1]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 2
+    Warning (15610): No output dependent on input pin "opcode[2]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 2
+    Warning (15610): No output dependent on input pin "opcode[3]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 2
+    Warning (15610): No output dependent on input pin "opext[0]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 3
+    Warning (15610): No output dependent on input pin "opext[1]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 3
+    Warning (15610): No output dependent on input pin "opext[2]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 3
+    Warning (15610): No output dependent on input pin "opext[3]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 3
+    Warning (15610): No output dependent on input pin "clk" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 4
+    Warning (15610): No output dependent on input pin "regwrite" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 4
+    Warning (15610): No output dependent on input pin "ra1[0]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "ra1[1]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "ra1[2]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "ra1[3]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "ra2[0]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "ra2[1]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "ra2[2]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "ra2[3]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "wa[0]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "wa[1]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "wa[2]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "wa[3]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "wd[0]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[1]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[2]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[3]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[4]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[5]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[6]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[7]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[8]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[9]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[10]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[11]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[12]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[13]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[14]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[15]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "Rsrc[0]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 7
+    Warning (15610): No output dependent on input pin "Rsrc[1]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 7
+    Warning (15610): No output dependent on input pin "Rsrc[2]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 7
+    Warning (15610): No output dependent on input pin "Rsrc[3]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 7
+    Warning (15610): No output dependent on input pin "Rsrc[4]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 7
+    Warning (15610): No output dependent on input pin "Rsrc[5]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 7
+    Warning (15610): No output dependent on input pin "Rsrc[6]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 7
+    Warning (15610): No output dependent on input pin "Rsrc[7]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 7
+    Warning (15610): No output dependent on input pin "Rsrc[8]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 7
+    Warning (15610): No output dependent on input pin "Rsrc[9]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 7
+    Warning (15610): No output dependent on input pin "Rsrc[10]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 7
+    Warning (15610): No output dependent on input pin "Rsrc[11]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 7
+    Warning (15610): No output dependent on input pin "Rsrc[12]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 7
+    Warning (15610): No output dependent on input pin "Rsrc[13]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 7
+    Warning (15610): No output dependent on input pin "Rsrc[14]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 7
+    Warning (15610): No output dependent on input pin "Rsrc[15]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 7
+    Warning (15610): No output dependent on input pin "Rdes[0]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 8
+    Warning (15610): No output dependent on input pin "Rdes[1]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 8
+    Warning (15610): No output dependent on input pin "Rdes[2]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 8
+    Warning (15610): No output dependent on input pin "Rdes[3]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 8
+    Warning (15610): No output dependent on input pin "Rdes[4]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 8
+    Warning (15610): No output dependent on input pin "Rdes[5]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 8
+    Warning (15610): No output dependent on input pin "Rdes[6]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 8
+    Warning (15610): No output dependent on input pin "Rdes[7]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 8
+    Warning (15610): No output dependent on input pin "Rdes[8]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 8
+    Warning (15610): No output dependent on input pin "Rdes[9]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 8
+    Warning (15610): No output dependent on input pin "Rdes[10]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 8
+    Warning (15610): No output dependent on input pin "Rdes[11]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 8
+    Warning (15610): No output dependent on input pin "Rdes[12]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 8
+    Warning (15610): No output dependent on input pin "Rdes[13]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 8
+    Warning (15610): No output dependent on input pin "Rdes[14]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 8
+    Warning (15610): No output dependent on input pin "Rdes[15]" File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v Line: 8
+Info (21057): Implemented 70 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 70 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 74 warnings
+    Info: Peak virtual memory: 4803 megabytes
+    Info: Processing ended: Fri Oct 18 13:43:38 2024
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:10
 
 
