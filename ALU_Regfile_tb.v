@@ -549,6 +549,40 @@ module ALU_Regfile_tb;
 		  end
 		  #50
 		  
+		  
+		  // F Flag
+		  begin
+		  // Write all 1's to reg 0 and reg 1
+		  begin
+			  wa = 1;
+			  regwrite = 1;
+			  wd = 16'b1111111111111111;
+			  
+			  #20
+			  
+			  wa = 2;
+			  regwrite = 1;
+			  wd = 16'b0000000000000010;
+			  
+			  #50
+			  regwrite = 0;
+			  ra1 = 1;
+			  ra2 = 2;
+		  end
+		  
+		  
+		  
+		  //SUB
+		  aluop = 4'b1001;
+		  #50
+		  $display("r1 = %d, r2 = %d", rd1, rd2);
+		  $display("add: %d", data);
+		  
+		  // Check F Flag
+		  $display("F Flag: %d", PSR[1]);
+		  end
+		  #50
+		  
 		  // Not F Flag
 		  begin
 		  // Write 1 to reg 0 and reg 1

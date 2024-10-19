@@ -12,10 +12,10 @@ Z0 !s99 nomlopt
 cModel Technology
 Z1 dC:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/simulation/questa
 T_opt
-!s110 1729291153
-VQ<UP=bz5eig5]PB3iOUN`2
+!s110 1729291597
+V>dCmjMgObkB19KbnchL<C1
 04 14 4 work ALU_Regfile_tb fast 0
-=1-d8bbc1200d82-6712e390-322-24b4
+=1-d8bbc1200d82-6712e54d-2ae-2510
 R0
 !s12b OEM100
 !s124 OEM10U4 
@@ -25,7 +25,7 @@ n@_opt
 OL;O;2023.3;77
 valu
 2C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v
-Z3 !s110 1729291151
+Z3 !s110 1729291596
 !i10b 1
 !s100 abWPjEaO`TYbA_;;E9G;G2
 I^JEW10@?WChOJGk>EJkLM1
@@ -40,7 +40,7 @@ Z5 OL;L;2023.3;77
 r1
 !s85 0
 31
-Z6 !s108 1729291151.000000
+Z6 !s108 1729291596.000000
 !s107 C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project|C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v|
 !i113 0
@@ -49,22 +49,22 @@ Z8 !s92 -vlog01compat -work work {+incdir+C:/Users/Jesse/Documents/GitHub/ECE 37
 R2
 vALU_Regfile_tb
 2C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/ALU_Regfile_tb.v
-!s110 1729291152
+R3
 !i10b 1
-!s100 ]4MaS[GY[EbLdMRRdZafh3
-ICbK@`CI:0jiS_:mVZZm3E2
+!s100 5aDBd_8@l`<D]RQ?Y?JK:1
+I`e2XSTZ8NG7;KIaz=@^Q^0
 R1
-w1729291089
+w1729291528
 8C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/ALU_Regfile_tb.v
 FC:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/ALU_Regfile_tb.v
 !i122 4
-L0 1 679
+L0 1 713
 R4
 R5
 r1
 !s85 0
 31
-!s108 1729291152.000000
+R6
 !s107 C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/ALU_Regfile_tb.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project|C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/ALU_Regfile_tb.v|
 !i113 0

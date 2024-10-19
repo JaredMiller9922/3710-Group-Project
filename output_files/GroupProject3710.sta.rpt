@@ -1,5 +1,5 @@
 Timing Analyzer report for GroupProject3710
-Fri Oct 18 16:38:53 2024
+Fri Oct 18 16:46:15 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -432,7 +432,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Fri Oct 18 16:38:51 2024
+    Info: Processing started: Fri Oct 18 16:46:13 2024
 Info: Command: quartus_sta GroupProject3710 -c GroupProject3710
 Info: qsta_default_script.tcl version: #1
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -491,8 +491,8 @@ Info (332140): No Minimum Pulse Width paths to report
 Info (332101): Design is fully constrained for setup requirements
 Info (332101): Design is fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 5105 megabytes
-    Info: Processing ended: Fri Oct 18 16:38:53 2024
+    Info: Peak virtual memory: 5109 megabytes
+    Info: Processing ended: Fri Oct 18 16:46:15 2024
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:03
 
