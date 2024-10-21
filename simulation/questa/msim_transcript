@@ -26,59 +26,59 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 16:46:36 on Oct 18,2024
+# Start time: 11:42:43 on Oct 21,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project" C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v 
 # -- Compiling module alucontrol
 # 
 # Top level modules:
 # 	alucontrol
-# End time: 16:46:36 on Oct 18,2024, Elapsed time: 0:00:00
+# End time: 11:42:43 on Oct 21,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 16:46:36 on Oct 18,2024
+# Start time: 11:42:44 on Oct 21,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project" C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v 
 # -- Compiling module alu
 # 
 # Top level modules:
 # 	alu
-# End time: 16:46:36 on Oct 18,2024, Elapsed time: 0:00:00
+# End time: 11:42:44 on Oct 21,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 16:46:36 on Oct 18,2024
+# Start time: 11:42:44 on Oct 21,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project" C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v 
 # -- Compiling module GroupProject3710
 # 
 # Top level modules:
 # 	GroupProject3710
-# End time: 16:46:36 on Oct 18,2024, Elapsed time: 0:00:00
+# End time: 11:42:44 on Oct 21,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 16:46:36 on Oct 18,2024
+# Start time: 11:42:44 on Oct 21,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project" C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v 
 # -- Compiling module regfile
 # 
 # Top level modules:
 # 	regfile
-# End time: 16:46:36 on Oct 18,2024, Elapsed time: 0:00:00
+# End time: 11:42:44 on Oct 21,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/ALU_Regfile_tb.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 16:46:36 on Oct 18,2024
+# Start time: 11:42:44 on Oct 21,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project" C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/ALU_Regfile_tb.v 
 # -- Compiling module ALU_Regfile_tb
 # 
 # Top level modules:
 # 	ALU_Regfile_tb
-# End time: 16:46:36 on Oct 18,2024, Elapsed time: 0:00:00
+# End time: 11:42:44 on Oct 21,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  ALU_Regfile_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" ALU_Regfile_tb 
-# Start time: 16:46:36 on Oct 18,2024
+# Start time: 11:42:44 on Oct 21,2024
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
@@ -99,50 +99,20 @@
 #    Time: 0 ps  Iteration: 0  Instance: /ALU_Regfile_tb/registers
 # done with RF load
 # Testing Regfile: Test1
-# Horray!! The Regfile is working correctly!
 # Testing Regfile: Test2
-# Horray!! The Regfile is working correctly!
 # Testing ALU: AND
-# Horray!! AND is working correctly!
 # Testing ALU: OR
-# Horray!! OR is working correctly!
 # Testing ALU: XOR
-# Horray!! XOR is working correctly!
-# r1 = 65535, r2 = 65535
-# add: 65534
-# carryFlag: 1
-# r1 =     1, r2 =     1
-# add:     2
-# carryFlag: 0
-# r1 = 65535, r2 =     1
-# cmp: 65534
-# Low Flag: 1, $time
-# r1 =     1, r2 = 65535
-# CMP:     2
-# lowFlag: 0
-# r1 = 65535, r2 =     1
-# cmp: 65534
-# Negative Flag: 1
-# r1 =     1, r2 = 65535
-# CMP:     2
-# Negative Flag: 0
-# r1 =     1, r2 =     1
-# cmp:     0
-# Zero Flag: 1
-# r1 =     1, r2 = 65535
-# CMP:     2
-# Zero Flag: 0
-# r1 = 32767, r2 =     4
-# add: 32771
-# F Flag: 1
-# r1 = 65535, r2 =     2
-# add: 65533
-# F Flag: 1
-# r1 =     1, r2 =     1
-# add:     0
-# F Flag: 0
-# A time value could not be extracted from the current line
-# A time value could not be extracted from the current line
-# A time value could not be extracted from the current line
-# End time: 16:51:53 on Oct 18,2024, Elapsed time: 0:05:17
+# Testing Flags: Carry Flag 1
+# Testing Flags: Carry Flag 0
+# Testing Flags: Low Flag 1
+# Testing Flags: Low Flag 0
+# Testing Flags: Negative Flag 1
+# Testing Flags: Negative Flag 0
+# Testing Flags: Zero Flag 1
+# Testing Flags: Zero Flag 0
+# Testing Flags: F Flag ADD 1
+# Testing Flags: F Flag SUB 1
+# Testing Flags: F Flag 0
+# End time: 11:43:27 on Oct 21,2024, Elapsed time: 0:00:43
 # Errors: 0, Warnings: 2

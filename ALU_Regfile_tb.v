@@ -81,9 +81,6 @@ module ALU_Regfile_tb;
 		  else if(rd2 != 16'b0000000000001010) begin
 				$display("rd2 got: %b, should be: %b", rd2, 16'b0000000000001010);
 		  end
-		  else begin
-				$display("Horray!! The Regfile is working correctly!");
-		  end
 		  
 		  end
 		  
@@ -117,11 +114,7 @@ module ALU_Regfile_tb;
 		  else if(rd2 != 16'b0000001111111111) begin
 				$display("rd2 got: %b, should be: %b", rd2, 16'b0000001111111111);
 		  end
-		  else begin
-				$display("Horray!! The Regfile is working correctly!");
-		  end
 		  
-		  //$display("r[2] = %d, r[1] = %d", rd1, rd2);
 		  end
 		  
 		  
@@ -160,11 +153,6 @@ module ALU_Regfile_tb;
 		  if(data != 16'b1111111111111111) begin
 				$display("ALU got: %b, should be: %b", data, 16'b1111111111111111);
 		  end
-		  else begin
-				$display("Horray!! AND is working correctly!");
-		  end
-		  //$display("r1 = %d, r2 = %d", rd1, rd2);
-		  //$display("AND: %d", data);
 		  end
 		  
 		  
@@ -199,11 +187,6 @@ module ALU_Regfile_tb;
 		  if(data != 16'b1111111111111111) begin
 				$display("ALU got: %b, should be: %b", data, 16'b1111111111111111);
 		  end
-		  else begin
-				$display("Horray!! OR is working correctly!");
-		  end
-		  //$display("r1 = %d, r2 = %d", rd1, rd2);
-		  //$display("OR: %d", data);
 		  end
 		  
 		  
@@ -238,11 +221,6 @@ module ALU_Regfile_tb;
 		  if(data != 16'b0000000000000000) begin
 				$display("ALU got: %b, should be: %b", data, 16'b0000000000000000);
 		  end
-		  else begin
-				$display("Horray!! XOR is working correctly!");
-		  end
-		  //$display("r1 = %d, r2 = %d", rd1, rd2);
-		  //$display("XOR: %d", data);
 		  end
 		  
 		  
@@ -255,7 +233,7 @@ module ALU_Regfile_tb;
 		  
 		  
 		  
-		  // Carry Flag
+		  // Test Carry Flag
 		  begin
 		  // Write all 1's to reg 0 and reg 1
 		  begin
@@ -280,15 +258,16 @@ module ALU_Regfile_tb;
 		  //Add
 		  aluop = 4'b0101;
 		  #50
-		  $display("r1 = %d, r2 = %d", rd1, rd2);
-		  $display("add: %d", data);
-		  
 		  // Check Carry Flag
-		  $display("carryFlag: %d", PSR[0]);
+		  $display("Testing Flags: Carry Flag 1");
+		  if(PSR[0] != 1) begin
+				$display("Carry Flag got: %b, should be: %b", PSR[0], 1);
+		  end
+		  
 		  end
 		  #50
 		  
-		  // Not Carry Flag
+		  // Test Not Carry Flag
 		  begin
 		  // Write 1 to reg 0 and reg 1
 		  begin
@@ -311,15 +290,15 @@ module ALU_Regfile_tb;
 		  //Add
 		  aluop = 4'b0101;
 		  #50
-		  $display("r1 = %d, r2 = %d", rd1, rd2);
-		  $display("add: %d", data);
-		  
 		  // Check Carry Flag
-		  $display("carryFlag: %d", PSR[0]);
+		  $display("Testing Flags: Carry Flag 0");
+		  if(PSR[0] != 0) begin
+				$display("Carry Flag got: %b, should be: %b", PSR[0], 0);
+		  end
 		  end
 		  #50
 		  
-		  //Low Flag
+		  // Test Low Flag
 		  begin
 		  // Write all 1's to reg 0 and reg 1
 		  begin
@@ -344,15 +323,15 @@ module ALU_Regfile_tb;
 		  //CMP
 		  aluop = 4'b1001;
 		  #50
-		  $display("r1 = %d, r2 = %d", rd1, rd2);
-		  $display("cmp: %d", data);
-		  
 		  // Check Low Flag
-		  $display("Low Flag: %d, $time", PSR[2]);
+		  $display("Testing Flags: Low Flag 1");
+		  if(PSR[2] != 1) begin
+				$display("Low Flag got: %b, should be: %b", PSR[2], 1);
+		  end
 		  end
 		  #50
 		  
-		  // Not Low Flag
+		  // Test Not Low Flag
 		  begin
 		  // Write 1 to reg 0 and reg 1
 		  begin
@@ -375,16 +354,16 @@ module ALU_Regfile_tb;
 		  //CMP
 		  aluop = 4'b1001;
 		  #50
-		  $display("r1 = %d, r2 = %d", rd1, rd2);
-		  $display("CMP: %d", data);
-		  
 		  // Check Low Flag
-		  $display("lowFlag: %d", PSR[2]);
+		  $display("Testing Flags: Low Flag 0");
+		  if(PSR[2] != 0) begin
+				$display("Low Flag got: %b, should be: %b", PSR[2], 0);
+		  end
 		  end
 		  
 		  #50
 		  
-		  //Negative Flag
+		  // Test Negative Flag
 		  begin
 		  // Write all 1's to reg 0 and reg 1
 		  begin
@@ -409,15 +388,15 @@ module ALU_Regfile_tb;
 		  //CMP
 		  aluop = 4'b1001;
 		  #50
-		  $display("r1 = %d, r2 = %d", rd1, rd2);
-		  $display("cmp: %d", data);
+		  $display("Testing Flags: Negative Flag 1");
+		  if(PSR[4] != 1) begin
+				$display("Negative Flag got: %b, should be: %b", PSR[4], 1);
+		  end
 		  
-		  // Check Negative Flag
-		  $display("Negative Flag: %d", PSR[4]);
 		  end
 		  #50
 		  
-		  // Not Negative Flag
+		  // Test Not Negative Flag
 		  begin
 		  // Write 1 to reg 0 and reg 1
 		  begin
@@ -440,17 +419,16 @@ module ALU_Regfile_tb;
 		  //CMP
 		  aluop = 4'b1001;
 		  #50
-		  $display("r1 = %d, r2 = %d", rd1, rd2);
-		  $display("CMP: %d", data);
-		  
-		  // Check Negative Flag
-		  $display("Negative Flag: %d", PSR[4]);
+		  $display("Testing Flags: Negative Flag 0");
+		  if(PSR[4] != 0) begin
+				$display("Negative Flag got: %b, should be: %b", PSR[4], 0);
+		  end
 		  end
 		  
 		  #50
 		  
 		  
-		  //Zero Flag
+		  // Test Zero Flag
 		  begin
 		  // Write equal value to reg 0 and reg 1
 		  begin
@@ -475,15 +453,15 @@ module ALU_Regfile_tb;
 		  //CMP
 		  aluop = 4'b1001;
 		  #50
-		  $display("r1 = %d, r2 = %d", rd1, rd2);
-		  $display("cmp: %d", data);
+		  $display("Testing Flags: Zero Flag 1");
+		  if(PSR[3] != 1) begin
+				$display("Zero Flag got: %b, should be: %b", PSR[3], 1);
+		  end
 		  
-		  // Check Zero Flag
-		  $display("Zero Flag: %d", PSR[3]);
 		  end
 		  #50
 		  
-		  // Not Zero Flag
+		  // Test Not Zero Flag
 		  begin
 		  // Write non equal value to reg 0 and reg 1
 		  begin
@@ -506,17 +484,17 @@ module ALU_Regfile_tb;
 		  //CMP
 		  aluop = 4'b1001;
 		  #50
-		  $display("r1 = %d, r2 = %d", rd1, rd2);
-		  $display("CMP: %d", data);
-		  
-		  // Check Zero Flag
-		  $display("Zero Flag: %d", PSR[3]);
+		  $display("Testing Flags: Zero Flag 0");
+		  if(PSR[3] != 0) begin
+				$display("Zero Flag got: %b, should be: %b", PSR[3], 0);
+		  end
+
 		  end
 		  
 		  #50
 		  
 		  
-		  // F Flag
+		  // Test F Flag ADD
 		  begin
 		  // Write all 1's to reg 0 and reg 1
 		  begin
@@ -541,16 +519,16 @@ module ALU_Regfile_tb;
 		  //Add
 		  aluop = 4'b0101;
 		  #50
-		  $display("r1 = %d, r2 = %d", rd1, rd2);
-		  $display("add: %d", data);
-		  
-		  // Check F Flag
-		  $display("F Flag: %d", PSR[1]);
+		  $display("Testing Flags: F Flag ADD 1");
+		  if(PSR[1] != 1) begin
+				$display("F Flag got: %b, should be: %b", PSR[1], 1);
+		  end
+
 		  end
 		  #50
 		  
 		  
-		  // F Flag
+		  // Test F Flag Sub
 		  begin
 		  // Write all 1's to reg 0 and reg 1
 		  begin
@@ -575,15 +553,15 @@ module ALU_Regfile_tb;
 		  //SUB
 		  aluop = 4'b1001;
 		  #50
-		  $display("r1 = %d, r2 = %d", rd1, rd2);
-		  $display("add: %d", data);
+		  $display("Testing Flags: F Flag SUB 1");
+		  if(PSR[1] != 1) begin
+				$display("F Flag got: %b, should be: %b", PSR[1], 1);
+		  end
 		  
-		  // Check F Flag
-		  $display("F Flag: %d", PSR[1]);
 		  end
 		  #50
 		  
-		  // Not F Flag
+		  // Test Not F Flag
 		  begin
 		  // Write 1 to reg 0 and reg 1
 		  begin
@@ -606,101 +584,17 @@ module ALU_Regfile_tb;
 		  //SUB
 		  aluop = 4'b1001;
 		  #50
-		  $display("r1 = %d, r2 = %d", rd1, rd2);
-		  $display("add: %d", data);
-		  
-		  // Check F Flag
-		  $display("F Flag: %d", PSR[1]);
+		  $display("Testing Flags: F Flag 0");
+		  if(PSR[1] != 0) begin
+				$display("F Flag got: %b, should be: %b", PSR[1], 0);
+		  end
+
 		  end
 		  #50
 		  ra1 = 1;
 		  
 		  
-		  /*
-		  aluop = 4'b0101;
-		  
-		  $display("r1 = %d, r2 = %d", rd1, rd2);
-		  $display("add: %d", data);
-		  
-		  #50
-		  
-		  aluop = 4'b1001;
-		  
-		  $display("r1 = %d, r2 = %d", rd1, rd2);
-		  $display("sub: %d", data);
-		  
-		  #50
 
-		  
-		  aluop = 4'b1001;
-		  
-		  $display("r1 = %d, r2 = %d", rd1, rd2);
-		  $display("cmp: %d  !!!Check Flags", data);
-		  
-		  #50
-		  
-		  
-		  aluop = 4'b0001;
-		  
-		  $display("r1 = %d, r2 = %d", rd1, rd2);
-		  $display("and: %d", data);
-		  
-		  #50
-		  
-		  
-		  aluop = 4'b0010;
-		  
-		  $display("r1 = %d, r2 = %d", rd1, rd2);
-		  $display("or: %d", data);
-		  
-		  #50
-		  
-		  
-		  
-		  aluop = 4'b0011;
-		  
-		  $display("r1 = %d, r2 = %d", rd1, rd2);
-		  $display("xor: %d", data);
-		  
-		  #50
-		  
-		  
-		  aluop = 2'b00;
-		  opext = 6'b001101;
-		  
-		  $display("r1 = %d, r2 = %d", rd1, rd2);
-		  $display("mov: %d", data);
-		  
-		  #50
-		  
-		  
-		  aluop = 2'b00;
-		  opext = 6'b000100;
-		  
-		  $display("r1 = %d, r2 = %d", rd1, rd2);
-		  $display("LSH: %d", data);
-		  
-		  #50
-		  
-		  
-		  aluop = 2'b00;
-		  opext = 6'b000001;
-		  
-		  $display("r1 = %d, r2 = %d", rd1, rd2);
-		  $display("and: %d", data);
-		  
-		  #50
-		  
-		  
-		  //aluop = 2'b1111
-		  aluop = 2'b00;
-		  opext = 6'b000000;
-		  
-		  $display("r1 = %d, r2 = %d", rd1, rd2);
-		  $display("LUI: %d", data);
-		  
-		  #50
-		  */
 		
 
         // Stop simulation
