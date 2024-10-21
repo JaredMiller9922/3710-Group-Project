@@ -1,0 +1,51 @@
+module ALU_Regfile_tb;
+
+    // Inputs
+    reg clk50MHz;
+    reg clr;
+
+    // Outputs
+    wire hSync;
+    wire vSync;
+    wire bright;
+    wire [9:0] hCount;
+    wire [9:0] vCount;
+
+    // Instantiate the Unit Under Test (UUT)
+    VGA uut (
+        .clk50MHz(clk50MHz),
+        .clr(clr),
+        .hSync(hSync),
+        .vSync(vSync),
+        .bright(bright),
+        .hCount(hCount),
+        .vCount(vCount)
+    );
+
+    // Clock generation
+    initial begin
+        clk50MHz = 0;
+        forever #10 clk50MHz = ~clk50MHz; // 50MHz clock
+    end
+
+    // Test sequence
+    initial begin
+        // Initialize Clear
+        clr = 0;
+
+        // global reset
+        #100;
+        clr = 1; // Stop clear
+
+        // Run VGA for 2500 clock cycles
+        #50000;
+
+        // Stop simulation
+        $stop;
+    end
+
+    // Monitor signals
+    initial begin
+        $monitor("hSync=%b, vSync=%b, bright=%b, hCount=%d, vCount=%d", hSync, vSync, bright, hCount, vCount);
+    end
+endmodule
