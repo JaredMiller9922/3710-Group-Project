@@ -1,5 +1,5 @@
 Timing Analyzer report for GroupProject3710
-Mon Oct 21 11:42:02 2024
+Mon Oct 21 11:45:43 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -99,7 +99,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.2%      ;
+;     Processors 2-4         ;   0.3%      ;
 +----------------------------+-------------+
 
 
@@ -432,7 +432,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Mon Oct 21 11:41:59 2024
+    Info: Processing started: Mon Oct 21 11:45:40 2024
 Info: Command: quartus_sta GroupProject3710 -c GroupProject3710
 Info: qsta_default_script.tcl version: #1
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -492,7 +492,7 @@ Info (332101): Design is fully constrained for setup requirements
 Info (332101): Design is fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 5109 megabytes
-    Info: Processing ended: Mon Oct 21 11:42:02 2024
+    Info: Processing ended: Mon Oct 21 11:45:43 2024
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 
