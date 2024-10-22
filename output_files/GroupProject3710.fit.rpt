@@ -1,5 +1,5 @@
 Fitter report for GroupProject3710
-Mon Oct 21 14:49:08 2024
+Mon Oct 21 21:11:22 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -58,7 +58,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +---------------------------------+------------------------------------------------+
-; Fitter Status                   ; Successful - Mon Oct 21 14:49:08 2024          ;
+; Fitter Status                   ; Successful - Mon Oct 21 21:11:22 2024          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; GroupProject3710                               ;
 ; Top-level Entity Name           ; GroupProject3710                               ;
@@ -90,6 +90,7 @@ https://fpgasoftware.intel.com/eula.
 ; Minimum Core Junction Temperature                                  ; 0                                     ;                                       ;
 ; Maximum Core Junction Temperature                                  ; 85                                    ;                                       ;
 ; Use smart compilation                                              ; Off                                   ; Off                                   ;
+; Maximum processors allowed for parallel compilation                ; All                                   ; All                                   ;
 ; Enable parallel Assembler and Timing Analyzer during compilation   ; On                                    ; On                                    ;
 ; Enable compact report table                                        ; Off                                   ; Off                                   ;
 ; Router Timing Optimization Level                                   ; Normal                                ; Normal                                ;
@@ -153,9 +154,9 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.3%      ;
-;     Processor 3            ;   0.3%      ;
-;     Processor 4            ;   0.3%      ;
+;     Processor 2            ;   0.2%      ;
+;     Processor 3            ;   0.2%      ;
+;     Processor 4            ;   0.2%      ;
 +----------------------------+-------------+
 
 
@@ -197,7 +198,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/output_files/GroupProject3710.pin.
+The pin-out file can be found in C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/output_files/GroupProject3710.pin.
 
 
 +------------------------------------------------------------------------------------------+
@@ -2125,7 +2126,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (119006): Selected device 5CSEMA5F31C6 for design "GroupProject3710"
 Info (21077): Low junction temperature is 0 degrees C
@@ -2160,23 +2160,23 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.30 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.21 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
-Info (144001): Generated suppressed messages file C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/output_files/GroupProject3710.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 6510 megabytes
-    Info: Processing ended: Mon Oct 21 14:49:08 2024
-    Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:52
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
+Info (144001): Generated suppressed messages file C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/output_files/GroupProject3710.fit.smsg
+Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 6512 megabytes
+    Info: Processing ended: Mon Oct 21 21:11:23 2024
+    Info: Elapsed time: 00:00:27
+    Info: Total CPU time (on all processors): 00:00:45
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/output_files/GroupProject3710.fit.smsg.
+The suppressed messages can be found in C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/output_files/GroupProject3710.fit.smsg.
 
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for GroupProject3710
-Mon Oct 21 14:48:42 2024
+Mon Oct 21 21:10:55 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -50,7 +50,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Oct 21 14:48:42 2024          ;
+; Analysis & Synthesis Status     ; Successful - Mon Oct 21 21:10:55 2024          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; GroupProject3710                               ;
 ; Top-level Entity Name           ; GroupProject3710                               ;
@@ -79,6 +79,7 @@ https://fpgasoftware.intel.com/eula.
 ; Top-level entity name                                                           ; GroupProject3710   ; GroupProject3710   ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
+; Maximum processors allowed for parallel compilation                             ; All                ; All                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
 ; Enable compact report table                                                     ; Off                ; Off                ;
 ; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
@@ -173,17 +174,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                  ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                    ; Library ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
-; reg.dat                          ; yes             ; User Unspecified File  ; C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/reg.dat            ;         ;
-; regfile.v                        ; yes             ; User Verilog HDL File  ; C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/regfile.v          ;         ;
-; alucontrol.v                     ; yes             ; User Verilog HDL File  ; C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alucontrol.v       ;         ;
-; alu.v                            ; yes             ; User Verilog HDL File  ; C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alu.v              ;         ;
-; GroupProject3710.v               ; yes             ; User Verilog HDL File  ; C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v ;         ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                 ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                   ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------+---------+
+; reg.dat                          ; yes             ; User Unspecified File  ; C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/reg.dat            ;         ;
+; regfile.v                        ; yes             ; User Verilog HDL File  ; C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v          ;         ;
+; alucontrol.v                     ; yes             ; User Verilog HDL File  ; C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v       ;         ;
+; alu.v                            ; yes             ; User Verilog HDL File  ; C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v              ;         ;
+; GroupProject3710.v               ; yes             ; User Verilog HDL File  ; C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------------------------+
@@ -337,83 +338,82 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Mon Oct 21 14:48:33 2024
+    Info: Processing started: Mon Oct 21 21:10:47 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GroupProject3710 -c GroupProject3710
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file alu_regfile_tb.v
-    Info (12023): Found entity 1: ALU_Regfile_tb File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/ALU_Regfile_tb.v Line: 1
+    Info (12023): Found entity 1: ALU_Regfile_tb File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/ALU_Regfile_tb.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file regfile.v
-    Info (12023): Found entity 1: regfile File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/regfile.v Line: 9
+    Info (12023): Found entity 1: regfile File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file alucontrol.v
-    Info (12023): Found entity 1: alucontrol File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alucontrol.v Line: 3
+    Info (12023): Found entity 1: alucontrol File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: alu File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alu.v Line: 2
+    Info (12023): Found entity 1: alu File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file groupproject3710.v
-    Info (12023): Found entity 1: GroupProject3710 File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 1
+    Info (12023): Found entity 1: GroupProject3710 File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 1
 Info (12127): Elaborating entity "GroupProject3710" for the top level hierarchy
-Info (12128): Elaborating entity "regfile" for hierarchy "regfile:regfile1" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 24
-Info (10648): Verilog HDL Display System Task info at regfile.v(19): Loading register file File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/regfile.v Line: 19
-Info (10648): Verilog HDL Display System Task info at regfile.v(22): done with RF load File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/regfile.v Line: 22
-Warning (10230): Verilog HDL assignment warning at regfile.v(32): truncated value with size 32 to match size of target (16) File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/regfile.v Line: 32
-Warning (10230): Verilog HDL assignment warning at regfile.v(33): truncated value with size 32 to match size of target (16) File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/regfile.v Line: 33
-Info (12128): Elaborating entity "alucontrol" for hierarchy "alucontrol:alucontrol1" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 31
-Info (12128): Elaborating entity "alu" for hierarchy "alu:alu1" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 40
-Warning (10240): Verilog HDL Always Construct warning at alu.v(12): inferring latch(es) for variable "PSR", which holds its previous value in one or more paths through the always construct File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alu.v Line: 12
-Warning (10034): Output port "PSR[5]" at alu.v(7) has no driver File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alu.v Line: 7
-Info (10041): Inferred latch for "PSR[0]" at alu.v(12) File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alu.v Line: 12
-Info (10041): Inferred latch for "PSR[1]" at alu.v(12) File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alu.v Line: 12
-Info (10041): Inferred latch for "PSR[2]" at alu.v(12) File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alu.v Line: 12
+Info (12128): Elaborating entity "regfile" for hierarchy "regfile:regfile1" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 24
+Info (10648): Verilog HDL Display System Task info at regfile.v(19): Loading register file File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v Line: 19
+Info (10648): Verilog HDL Display System Task info at regfile.v(22): done with RF load File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v Line: 22
+Warning (10230): Verilog HDL assignment warning at regfile.v(32): truncated value with size 32 to match size of target (16) File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v Line: 32
+Warning (10230): Verilog HDL assignment warning at regfile.v(33): truncated value with size 32 to match size of target (16) File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v Line: 33
+Info (12128): Elaborating entity "alucontrol" for hierarchy "alucontrol:alucontrol1" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 31
+Info (12128): Elaborating entity "alu" for hierarchy "alu:alu1" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 40
+Warning (10240): Verilog HDL Always Construct warning at alu.v(12): inferring latch(es) for variable "PSR", which holds its previous value in one or more paths through the always construct File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v Line: 12
+Warning (10034): Output port "PSR[5]" at alu.v(7) has no driver File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v Line: 7
+Info (10041): Inferred latch for "PSR[0]" at alu.v(12) File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v Line: 12
+Info (10041): Inferred latch for "PSR[1]" at alu.v(12) File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v Line: 12
+Info (10041): Inferred latch for "PSR[2]" at alu.v(12) File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v Line: 12
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/output_files/GroupProject3710.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/output_files/GroupProject3710.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 30 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 4
-    Warning (15610): No output dependent on input pin "regwrite" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 4
-    Warning (15610): No output dependent on input pin "ra1[0]" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 5
-    Warning (15610): No output dependent on input pin "ra1[1]" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 5
-    Warning (15610): No output dependent on input pin "ra1[2]" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 5
-    Warning (15610): No output dependent on input pin "ra1[3]" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 5
-    Warning (15610): No output dependent on input pin "ra2[0]" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 5
-    Warning (15610): No output dependent on input pin "ra2[1]" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 5
-    Warning (15610): No output dependent on input pin "ra2[2]" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 5
-    Warning (15610): No output dependent on input pin "ra2[3]" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 5
-    Warning (15610): No output dependent on input pin "wa[0]" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 5
-    Warning (15610): No output dependent on input pin "wa[1]" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 5
-    Warning (15610): No output dependent on input pin "wa[2]" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 5
-    Warning (15610): No output dependent on input pin "wa[3]" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 5
-    Warning (15610): No output dependent on input pin "wd[0]" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 6
-    Warning (15610): No output dependent on input pin "wd[1]" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 6
-    Warning (15610): No output dependent on input pin "wd[2]" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 6
-    Warning (15610): No output dependent on input pin "wd[3]" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 6
-    Warning (15610): No output dependent on input pin "wd[4]" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 6
-    Warning (15610): No output dependent on input pin "wd[5]" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 6
-    Warning (15610): No output dependent on input pin "wd[6]" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 6
-    Warning (15610): No output dependent on input pin "wd[7]" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 6
-    Warning (15610): No output dependent on input pin "wd[8]" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 6
-    Warning (15610): No output dependent on input pin "wd[9]" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 6
-    Warning (15610): No output dependent on input pin "wd[10]" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 6
-    Warning (15610): No output dependent on input pin "wd[11]" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 6
-    Warning (15610): No output dependent on input pin "wd[12]" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 6
-    Warning (15610): No output dependent on input pin "wd[13]" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 6
-    Warning (15610): No output dependent on input pin "wd[14]" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 6
-    Warning (15610): No output dependent on input pin "wd[15]" File: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "clk" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 4
+    Warning (15610): No output dependent on input pin "regwrite" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 4
+    Warning (15610): No output dependent on input pin "ra1[0]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "ra1[1]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "ra1[2]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "ra1[3]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "ra2[0]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "ra2[1]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "ra2[2]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "ra2[3]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "wa[0]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "wa[1]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "wa[2]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "wa[3]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "wd[0]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[1]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[2]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[3]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[4]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[5]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[6]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[7]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[8]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[9]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[10]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[11]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[12]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[13]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[14]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[15]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
 Info (21057): Implemented 127 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 70 input pins
     Info (21059): Implemented 16 output pins
     Info (21061): Implemented 41 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 37 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 36 warnings
     Info: Peak virtual memory: 4811 megabytes
-    Info: Processing ended: Mon Oct 21 14:48:42 2024
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:22
+    Info: Processing ended: Mon Oct 21 21:10:55 2024
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:18
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/output_files/GroupProject3710.map.smsg.
+The suppressed messages can be found in C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/output_files/GroupProject3710.map.smsg.
 
 

@@ -10,12 +10,12 @@ Z0 !s99 nomlopt
 !i10e 25
 !i10f 100
 cModel Technology
-Z1 dC:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/simulation/questa
+Z1 dC:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/simulation/questa
 T_opt
-!s110 1729544148
-V8LPU8?KRe3j9VECZn1R`?0
+!s110 1729566391
+VJX^;[U^mQNCF8h1hF32Q73
 04 14 4 work ALU_Regfile_tb fast 0
-=1-909c4abfaa31-6716bfd3-316-12a0
+=1-d8bbc1200d82-671716b6-24d-63a4
 R0
 !s12b OEM100
 !s124 OEM10U4 
@@ -24,15 +24,15 @@ Z2 tCvgOpt 0
 n@_opt
 OL;O;2023.3;77
 valu
-2C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alu.v
-Z3 !s110 1729544145
+2C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v
+Z3 !s110 1729566389
 !i10b 1
 !s100 abWPjEaO`TYbA_;;E9G;G2
-I2zSemn03MiZ6GTTThABEa1
+I^JEW10@?WChOJGk>EJkLM1
 R1
-Z4 w1729543463
-8C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alu.v
-FC:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alu.v
+Z4 w1729532674
+8C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v
+FC:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v
 !i122 1
 L0 2 46
 Z5 VDg1SIo80bB@j0V0VzS_@n1
@@ -40,23 +40,23 @@ Z6 OL;L;2023.3;77
 r1
 !s85 0
 31
-Z7 !s108 1729544145.000000
-!s107 C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alu.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project|C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alu.v|
+Z7 !s108 1729566389.000000
+!s107 C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project|C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v|
 !i113 0
 Z8 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z9 !s92 -vlog01compat -work work +incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z9 !s92 -vlog01compat -work work {+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R2
 vALU_Regfile_tb
-2C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/ALU_Regfile_tb.v
-Z10 !s110 1729544146
+2C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/ALU_Regfile_tb.v
+R3
 !i10b 1
 !s100 8UGT_8m8;FbNM6bf@]Lni1
-I_bPo_85fP<0kP2OH8`RWL2
+IfMRlNPB>Oa_gc=ldfgkoK3
 R1
 R4
-8C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/ALU_Regfile_tb.v
-FC:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/ALU_Regfile_tb.v
+8C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/ALU_Regfile_tb.v
+FC:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/ALU_Regfile_tb.v
 !i122 4
 L0 1 607
 R5
@@ -64,24 +64,24 @@ R6
 r1
 !s85 0
 31
-Z11 !s108 1729544146.000000
-!s107 C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/ALU_Regfile_tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project|C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/ALU_Regfile_tb.v|
+R7
+!s107 C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/ALU_Regfile_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project|C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/ALU_Regfile_tb.v|
 !i113 0
 R8
 R9
 R2
 n@a@l@u_@regfile_tb
 valucontrol
-2C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alucontrol.v
+2C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v
 R3
 !i10b 1
 !s100 U4EkPjc_e9F48f>8DK[L^3
-IK3PQ8H3nBh4^m>dg_YDTK0
+IUP=8g6TYYo10H8<j[T[AF1
 R1
 R4
-8C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alucontrol.v
-FC:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alucontrol.v
+8C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v
+FC:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v
 !i122 0
 L0 3 21
 R5
@@ -90,22 +90,22 @@ r1
 !s85 0
 31
 R7
-!s107 C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alucontrol.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project|C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alucontrol.v|
+!s107 C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project|C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v|
 !i113 0
 R8
 R9
 R2
 vGroupProject3710
-2C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v
-R10
+2C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v
+R3
 !i10b 1
 !s100 G277[aLf3<Bbz8U]=]S`@2
-I<ATlSlU<]R]^MPd;:NXi62
+IR9iU^4k7F@D[K0>P7OK9d2
 R1
-w1729543533
-8C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v
-FC:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v
+w1729544298
+8C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v
+FC:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v
 !i122 2
 L0 1 42
 R5
@@ -113,24 +113,24 @@ R6
 r1
 !s85 0
 31
-R11
-!s107 C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project|C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v|
+R7
+!s107 C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project|C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v|
 !i113 0
 R8
 R9
 R2
 n@group@project3710
 vregfile
-2C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/regfile.v
-R10
+2C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v
+R3
 !i10b 1
 !s100 _MG8SPYOCZLk?R8i^:mJe1
-IE=_`iR2C1XYB@SUAOeTMb3
+IdlJPe9VlRKTVC:A3hQ8lz0
 R1
-w1729267168
-8C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/regfile.v
-FC:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/regfile.v
+w1729267148
+8C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v
+FC:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v
 !i122 3
 L0 9 26
 R5
@@ -138,9 +138,9 @@ R6
 r1
 !s85 0
 31
-R11
-!s107 C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/regfile.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project|C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/regfile.v|
+R7
+!s107 C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project|C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v|
 !i113 0
 R8
 R9

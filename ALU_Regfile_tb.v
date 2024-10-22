@@ -16,7 +16,7 @@ module ALU_Regfile_tb;
    // Outputs
    wire [15:0] rd1, rd2;
 
-    // Instantiate the Unit Under Test (UUT)
+    // Instantiate the alu and register file
 	 
 	alucontrol alucon (
 		.opcode(aluop), 
@@ -57,23 +57,25 @@ module ALU_Regfile_tb;
 		  
 		  // Test Regfile
 		  begin
+		  // write binary 1010 to register 3
 		  wa = 3;
 		  regwrite = 1;
 		  wd = 16'b0000000000001010;
 		  
 		  #50
-		  
+		  // write binary 1010 to register 2
 		  wa = 2;
 		  regwrite = 1;
 		  wd = 16'b0000000000001010;
 		  
 		  #50
-		  
+		  // Read register 2 and 3
 		  ra1 = 3;
 		  ra2 = 2;
 		  regwrite = 0;
 		  
 		  #50
+		  // Check values of register 3 and 2
 		  $display("Testing Regfile: Test1");
 		  if(rd1 != 16'b0000000000001010) begin
 				$display("rd1 got: %b, should be: %b", rd1, 16'b0000000000001010);
@@ -89,24 +91,25 @@ module ALU_Regfile_tb;
 		  
 		  // Test Regfile
 		  begin
+		  // Write binary 11111111111 to register 1
 		  wa = 1;
 		  regwrite = 1;
 		  wd = 16'b0000011111111111;
 		  
 		  #50
-		  
+		  // Write binary 11111111111 to register 2
 		  wa = 2;
 		  regwrite = 1;
 		  wd = 16'b0000001111111111;
 		  
 		  #50
-		  
+		  // Read register 1 and 2
 		  ra1 = 1;
 		  ra2 = 2;
 		  regwrite = 0;
 		  
 		  #50
-		  
+		  // Check values of register 1 and 2
 		  $display("Testing Regfile: Test2");
 		  if(rd1 != 16'b0000011111111111) begin
 				$display("rd1 got: %b, should be: %b", rd1, 16'b0000011111111111);
