@@ -1,0 +1,5 @@
+We start by setting RegWrite high to write to the registers using Write Address and Write Data.
+We then then set RegWrite low and both Read Addresses to the desired register and get the data back into the Read Data values. 
+When we test the ALU instead of the register file, we set the aluop and opext to the instruction we want to test.
+Then we read from the ALU "Output Data" instead of Read Data.
+Then we rinse and repeat using the same method.
