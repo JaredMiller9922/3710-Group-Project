@@ -10,9 +10,9 @@ vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/
 vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v}
 vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v}
 
-vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/ALU_Regfile_tb.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/Datapath_Memory_tb.v}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  ALU_Regfile_tb
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  Datapath_Memory_tb
 
 add wave *
 view structure

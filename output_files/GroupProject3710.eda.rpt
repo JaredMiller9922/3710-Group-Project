@@ -1,5 +1,5 @@
 EDA Netlist Writer report for GroupProject3710
-Mon Oct 21 21:11:38 2024
+Tue Oct 22 18:01:27 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Oct 21 21:11:38 2024 ;
+; EDA Netlist Writer Status ; Successful - Tue Oct 22 18:01:27 2024 ;
 ; Revision Name             ; GroupProject3710                      ;
 ; Top-level Entity Name     ; GroupProject3710                      ;
 ; Family                    ; Cyclone V                             ;
@@ -81,12 +81,12 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Mon Oct 21 21:11:37 2024
+    Info: Processing started: Tue Oct 22 18:01:26 2024
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off GroupProject3710 -c GroupProject3710
 Info (204019): Generated file GroupProject3710.vo in folder "C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/simulation/questa/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4719 megabytes
-    Info: Processing ended: Mon Oct 21 21:11:38 2024
+    Info: Processing ended: Tue Oct 22 18:01:27 2024
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
