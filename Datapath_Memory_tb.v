@@ -44,6 +44,16 @@ module Datapath_Memory_tb;
 		  if( extended != 16'b1111111111111111) begin
 				$display("Error: extended got %b. Should be %b.", extended, 16'b1111111111111111);
 		  end
+		  
+		  #20
+		  
+		  $display("Testing Shifter: Right");
+		  immediate = 8'b11111111;
+		  s = 1;
+		  #20
+		  if( extended != 16'b1111111111111111) begin
+				$display("Error: extended got %b. Should be %b.", extended, 16'b1111111111111111);
+		  end
 		
 
         // Stop simulation

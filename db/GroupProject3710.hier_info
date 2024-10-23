@@ -69,22 +69,22 @@ Rdest[12] => Rdest[12].IN1
 Rdest[13] => Rdest[13].IN1
 Rdest[14] => Rdest[14].IN1
 Rdest[15] => Rdest[15].IN1
-result[0] <= alu:alu1.result
-result[1] <= alu:alu1.result
-result[2] <= alu:alu1.result
-result[3] <= alu:alu1.result
-result[4] <= alu:alu1.result
-result[5] <= alu:alu1.result
-result[6] <= alu:alu1.result
-result[7] <= alu:alu1.result
-result[8] <= alu:alu1.result
-result[9] <= alu:alu1.result
-result[10] <= alu:alu1.result
-result[11] <= alu:alu1.result
-result[12] <= alu:alu1.result
-result[13] <= alu:alu1.result
-result[14] <= alu:alu1.result
-result[15] <= alu:alu1.result
+result[0] << alu:alu1.result
+result[1] << alu:alu1.result
+result[2] << alu:alu1.result
+result[3] << alu:alu1.result
+result[4] << alu:alu1.result
+result[5] << alu:alu1.result
+result[6] << alu:alu1.result
+result[7] << alu:alu1.result
+result[8] << alu:alu1.result
+result[9] << alu:alu1.result
+result[10] << alu:alu1.result
+result[11] << alu:alu1.result
+result[12] << alu:alu1.result
+result[13] << alu:alu1.result
+result[14] << alu:alu1.result
+result[15] << alu:alu1.result
 
 
 |GroupProject3710|regfile:regfile1
