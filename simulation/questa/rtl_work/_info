@@ -12,10 +12,10 @@ Z0 !s99 nomlopt
 cModel Technology
 Z1 dC:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/simulation/questa
 T_opt
-!s110 1729788361
-VJALliGgKMZeJj2ALahY3_0
+!s110 1729788630
+Vjao[?8Tnzj<A[E?lUZ_e53
 04 18 4 work Datapath_Memory_tb fast 0
-=1-d8bbc1200d82-671a79c9-1be-5c80
+=1-d8bbc1200d82-671a7ad6-27f-6a74
 R0
 !s12b OEM100
 !s124 OEM10U3 
@@ -25,7 +25,7 @@ n@_opt
 OL;O;2023.3;77
 valu
 2C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v
-Z3 !s110 1729788360
+Z3 !s110 1729788629
 !i10b 1
 !s100 abWPjEaO`TYbA_;;E9G;G2
 I^JEW10@?WChOJGk>EJkLM1
@@ -40,7 +40,7 @@ Z6 OL;L;2023.3;77
 r1
 !s85 0
 31
-Z7 !s108 1729788360.000000
+Z7 !s108 1729788629.000000
 !s107 C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project|C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v|
 !i113 0
@@ -49,7 +49,7 @@ Z9 !s92 -vlog01compat -work work {+incdir+C:/Users/Jesse/Documents/GitHub/ECE 37
 R2
 valucontrol
 2C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v
-!s110 1729788359
+R3
 !i10b 1
 !s100 U4EkPjc_e9F48f>8DK[L^3
 IUP=8g6TYYo10H8<j[T[AF1
@@ -64,7 +64,7 @@ R6
 r1
 !s85 0
 31
-!s108 1729788359.000000
+R7
 !s107 C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project|C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v|
 !i113 0
@@ -78,7 +78,7 @@ R3
 !s100 ifj^IXZl0@MTai5CC`KbK2
 I?E2PVKYZ8M4[A]SAZLSFl3
 R1
-w1729788242
+Z10 w1729788482
 8C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/Datapath_Memory_tb.v
 FC:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/Datapath_Memory_tb.v
 !i122 5
@@ -97,13 +97,13 @@ R9
 R2
 n@datapath_@memory_tb
 vGroupProject3710
-Z10 2C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v
+Z11 2C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v
 R3
 !i10b 1
 !s100 6RgUW?]Ek319ai]mi4f;01
 IS>Y8f^fgFeZ3YKK^FY`Sn2
 R1
-Z11 w1729788132
+R10
 Z12 8C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v
 Z13 FC:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v
 !i122 2
@@ -152,7 +152,7 @@ R3
 !s100 aiiYA^R<OdC:zLkC0GMAM0
 IoRUcOdFGbjiKCRQ>b]=eQ3
 R1
-w1729787698
+R10
 8C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/shifter.v
 FC:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/shifter.v
 !i122 3
@@ -170,13 +170,13 @@ R8
 R9
 R2
 vsignextend
-R10
+R11
 R3
 !i10b 1
 !s100 >R`UmXjO[6<ao7oU9OWiO1
 IE68zW=T27WfLd8@V:l9HY3
 R1
-R11
+R10
 R12
 R13
 !i122 2
