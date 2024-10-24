@@ -8,6 +8,7 @@ vmap work rtl_work
 vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v}
 vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v}
 vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/shifter.v}
 vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v}
 
 vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/Datapath_Memory_tb.v}

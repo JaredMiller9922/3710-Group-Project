@@ -5,6 +5,11 @@ module Datapath_Memory_tb;
 	reg [7:0] immediate;
 	reg s;
 	
+	reg [15:0] value;
+	reg [15:0] amount;
+	reg dir;
+	wire [15:0] shifted;
+	
 	 
    // Outputs
    wire [15:0] extended;
@@ -15,6 +20,13 @@ module Datapath_Memory_tb;
 		.imm(immediate),
 		.sign(s),
 		.y(extended)
+	);
+	
+	shifter #(16) shift (
+		.imm(value),
+		.amount(amount),
+		.dir(dir),
+		.y(shifted)
 	);
 
     // Clock generation
@@ -47,12 +59,26 @@ module Datapath_Memory_tb;
 		  
 		  #20
 		  
-		  $display("Testing Shifter: Right");
-		  immediate = 8'b11111111;
-		  s = 1;
+		  $display("Testing Shifter: Left");
+		  value = 16'b0000000000000010;
+		  amount = 16'b0000000000000010;
+		  dir = 0;
+		  
 		  #20
-		  if( extended != 16'b1111111111111111) begin
-				$display("Error: extended got %b. Should be %b.", extended, 16'b1111111111111111);
+		  if( shifted != 16'b0000000000001000) begin
+				$display("Error: extended got %b. Should be %b.", shifted, 16'b0000000000001000);
+		  end
+		  
+		  #20
+		  
+		  $display("Testing Shifter: Right");
+		  value = 16'b0000000000000010;
+		  amount = 16'b0000000000000001;
+		  dir = 1;
+		  
+		  #20
+		  if( shifted != 16'b0000000000000001) begin
+				$display("Error: extended got %b. Should be %b.", shifted, 16'b0000000000000001);
 		  end
 		
 

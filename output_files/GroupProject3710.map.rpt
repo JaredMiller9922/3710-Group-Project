@@ -1,5 +1,5 @@
 Analysis & Synthesis report for GroupProject3710
-Tue Oct 22 18:30:56 2024
+Thu Oct 24 10:44:12 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -18,12 +18,13 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
  10. Parameter Settings for User Entity Instance: Top-level Entity: |GroupProject3710
  11. Parameter Settings for User Entity Instance: regfile:regfile1
  12. Parameter Settings for User Entity Instance: alu:alu1
- 13. Port Connectivity Checks: "alu:alu1"
- 14. Port Connectivity Checks: "regfile:regfile1"
- 15. Post-Synthesis Netlist Statistics for Top Partition
- 16. Elapsed Time Per Partition
- 17. Analysis & Synthesis Messages
- 18. Analysis & Synthesis Suppressed Messages
+ 13. Parameter Settings for User Entity Instance: shifter:shift
+ 14. Port Connectivity Checks: "alu:alu1"
+ 15. Port Connectivity Checks: "regfile:regfile1"
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
+ 19. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -50,7 +51,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 22 18:30:56 2024          ;
+; Analysis & Synthesis Status     ; Successful - Thu Oct 24 10:44:12 2024          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; GroupProject3710                               ;
 ; Top-level Entity Name           ; GroupProject3710                               ;
@@ -184,6 +185,7 @@ https://fpgasoftware.intel.com/eula.
 ; alucontrol.v                     ; yes             ; User Verilog HDL File  ; C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v       ;         ;
 ; alu.v                            ; yes             ; User Verilog HDL File  ; C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v              ;         ;
 ; GroupProject3710.v               ; yes             ; User Verilog HDL File  ; C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v ;         ;
+; shifter.v                        ; yes             ; User Verilog HDL File  ; C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/shifter.v          ;         ;
 +----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------+---------+
 
 
@@ -283,6 +285,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: shifter:shift ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 16    ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "alu:alu1"                                                                                                ;
 +------+--------+----------+----------------------------------------------------------------------------------------------------------+
@@ -338,7 +350,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Tue Oct 22 18:30:47 2024
+    Info: Processing started: Thu Oct 24 10:44:04 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GroupProject3710 -c GroupProject3710
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file alu_regfile_tb.v
@@ -351,7 +363,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file alu.v
     Info (12023): Found entity 1: alu File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v Line: 2
 Info (12021): Found 2 design units, including 2 entities, in source file groupproject3710.v
     Info (12023): Found entity 1: GroupProject3710 File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 1
-    Info (12023): Found entity 2: signextend File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 50
+    Info (12023): Found entity 2: signextend File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 58
 Info (12021): Found 1 design units, including 1 entities, in source file datapath_memory_tb.v
     Info (12023): Found entity 1: Datapath_Memory_tb File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/Datapath_Memory_tb.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file shifter.v
@@ -369,6 +381,7 @@ Warning (10034): Output port "PSR[5]" at alu.v(7) has no driver File: C:/Users/J
 Info (10041): Inferred latch for "PSR[0]" at alu.v(12) File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v Line: 12
 Info (10041): Inferred latch for "PSR[1]" at alu.v(12) File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v Line: 12
 Info (10041): Inferred latch for "PSR[2]" at alu.v(12) File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v Line: 12
+Info (12128): Elaborating entity "shifter" for hierarchy "shifter:shift" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 48
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/output_files/GroupProject3710.map.smsg
@@ -411,9 +424,9 @@ Info (21057): Implemented 127 device resources after synthesis - the final resou
     Info (21061): Implemented 41 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 36 warnings
     Info: Peak virtual memory: 4811 megabytes
-    Info: Processing ended: Tue Oct 22 18:30:56 2024
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Processing ended: Thu Oct 24 10:44:12 2024
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:18
 
 
 +------------------------------------------+

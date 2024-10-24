@@ -39,6 +39,14 @@ alu alu1 (
 
 );	
 
+//Because it won't compile correctly otherwise
+shifter #(16) shift (
+	.imm(),
+	.amount(),
+	.dir(),
+	.y()
+);
+
 //In Datapath
 //flopenr     #(8)      instrmem(clk, reset, irwrite, memdata, instr);		 
 
@@ -52,4 +60,5 @@ module signextend #(parameter WIDTH = 8)
 						  input 				  sign,
                     output [WIDTH+WIDTH-1:0] y);
    assign y = sign ? {{8{imm[7]}}, imm} : {{8{1'b0}}, imm};
-endmodule	
+endmodule
+
