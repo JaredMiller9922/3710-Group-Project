@@ -10,12 +10,12 @@ Z0 !s99 nomlopt
 !i10e 25
 !i10f 100
 cModel Technology
-Z1 dC:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/simulation/questa
+Z1 dC:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/simulation/questa
 T_opt
-!s110 1729788630
-Vjao[?8Tnzj<A[E?lUZ_e53
+!s110 1729791205
+VNJe^Hl8MSa<4m5I3YE]3n2
 04 18 4 work Datapath_Memory_tb fast 0
-=1-d8bbc1200d82-671a7ad6-27f-6a74
+=1-909c4abfaa31-671a84e5-11a-21c0
 R0
 !s12b OEM100
 !s124 OEM10U3 
@@ -24,15 +24,15 @@ Z2 tCvgOpt 0
 n@_opt
 OL;O;2023.3;77
 valu
-2C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v
-Z3 !s110 1729788629
+2C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alu.v
+Z3 !s110 1729791203
 !i10b 1
 !s100 abWPjEaO`TYbA_;;E9G;G2
-I^JEW10@?WChOJGk>EJkLM1
+I2zSemn03MiZ6GTTThABEa1
 R1
-Z4 w1729532674
-8C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v
-FC:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v
+Z4 w1729543463
+8C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alu.v
+FC:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alu.v
 !i122 1
 L0 2 46
 Z5 VDg1SIo80bB@j0V0VzS_@n1
@@ -40,23 +40,23 @@ Z6 OL;L;2023.3;77
 r1
 !s85 0
 31
-Z7 !s108 1729788629.000000
-!s107 C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project|C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v|
+Z7 !s108 1729791203.000000
+!s107 C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project|C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alu.v|
 !i113 0
 Z8 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z9 !s92 -vlog01compat -work work {+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z9 !s92 -vlog01compat -work work +incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R2
 valucontrol
-2C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v
+2C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alucontrol.v
 R3
 !i10b 1
 !s100 U4EkPjc_e9F48f>8DK[L^3
-IUP=8g6TYYo10H8<j[T[AF1
+IK3PQ8H3nBh4^m>dg_YDTK0
 R1
 R4
-8C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v
-FC:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v
+8C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alucontrol.v
+FC:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alucontrol.v
 !i122 0
 L0 3 21
 R5
@@ -65,130 +65,202 @@ r1
 !s85 0
 31
 R7
-!s107 C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project|C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v|
+!s107 C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alucontrol.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project|C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alucontrol.v|
+!i113 0
+R8
+R9
+R2
+vbram
+2C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/bram.v
+Z10 !s110 1729791204
+!i10b 1
+!s100 gYNizi@8l`Z]jN1e9oR>f3
+ILL_8mde4FWb]AFK0WS1NY1
+R1
+w1729790855
+8C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/bram.v
+FC:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/bram.v
+!i122 7
+L0 4 48
+R5
+R6
+r1
+!s85 0
+31
+Z11 !s108 1729791204.000000
+!s107 C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/bram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project|C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/bram.v|
 !i113 0
 R8
 R9
 R2
 vDatapath_Memory_tb
-2C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/Datapath_Memory_tb.v
-R3
+2C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/Datapath_Memory_tb.v
+R10
 !i10b 1
 !s100 ifj^IXZl0@MTai5CC`KbK2
-I?E2PVKYZ8M4[A]SAZLSFl3
+I6zP9BfXK^:?WNhPENd:c`0
 R1
-Z10 w1729788482
-8C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/Datapath_Memory_tb.v
-FC:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/Datapath_Memory_tb.v
-!i122 5
+Z12 w1729790652
+8C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/Datapath_Memory_tb.v
+FC:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/Datapath_Memory_tb.v
+!i122 8
 L0 1 92
 R5
 R6
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/Datapath_Memory_tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project|C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/Datapath_Memory_tb.v|
+R11
+!s107 C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/Datapath_Memory_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project|C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/Datapath_Memory_tb.v|
 !i113 0
 R8
 R9
 R2
 n@datapath_@memory_tb
+vflopenr
+2C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/flops.v
+R10
+!i10b 1
+!s100 YKC91P^CY>ZeiXM3`>5]<0
+IlbZRKHoOT3BH=gdMocje]3
+R1
+w1729790886
+8C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/flops.v
+FC:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/flops.v
+!i122 4
+L0 1 9
+R5
+R6
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/flops.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project|C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/flops.v|
+!i113 0
+R8
+R9
+R2
 vGroupProject3710
-Z11 2C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v
+Z13 2C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v
 R3
 !i10b 1
-!s100 6RgUW?]Ek319ai]mi4f;01
-IS>Y8f^fgFeZ3YKK^FY`Sn2
+!s100 ;;64XHb?=3`gZ:9DIn2L>0
+I:6lc6PYSK]1CdU7mJ^fL=3
 R1
-R10
-Z12 8C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v
-Z13 FC:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v
+Z14 w1729791108
+Z15 8C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v
+Z16 FC:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v
 !i122 2
-L0 1 53
+L0 1 84
 R5
 R6
 r1
 !s85 0
 31
 R7
-Z14 !s107 C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v|
-Z15 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project|C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v|
+Z17 !s107 C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v|
+Z18 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project|C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v|
 !i113 0
 R8
 R9
 R2
 n@group@project3710
+vmux2
+2C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/muxes.v
+R10
+!i10b 1
+!s100 9UcW53V^jc=6[1N@b054?1
+InV]eT;kBNA>9>d9jB1PF70
+R1
+w1729790910
+8C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/muxes.v
+FC:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/muxes.v
+!i122 5
+Z19 L0 1 7
+R5
+R6
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/muxes.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project|C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/muxes.v|
+!i113 0
+R8
+R9
+R2
 vregfile
-2C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v
-R3
+2C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/regfile.v
+R10
 !i10b 1
 !s100 _MG8SPYOCZLk?R8i^:mJe1
-IdlJPe9VlRKTVC:A3hQ8lz0
+IE=_`iR2C1XYB@SUAOeTMb3
 R1
-w1729267148
-8C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v
-FC:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v
-!i122 4
+w1729267168
+8C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/regfile.v
+FC:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/regfile.v
+!i122 6
 L0 9 26
 R5
 R6
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project|C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v|
+R11
+!s107 C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/regfile.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project|C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/regfile.v|
 !i113 0
 R8
 R9
 R2
 vshifter
-2C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/shifter.v
-R3
+2C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/shifter.v
+R10
 !i10b 1
 !s100 aiiYA^R<OdC:zLkC0GMAM0
-IoRUcOdFGbjiKCRQ>b]=eQ3
+I`IA@Ka1F1LH8G7jFU^Yna3
 R1
-R10
-8C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/shifter.v
-FC:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/shifter.v
+R12
+8C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/shifter.v
+FC:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/shifter.v
 !i122 3
-L0 1 7
+R19
 R5
 R6
 r1
 !s85 0
 31
 R7
-!s107 C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/shifter.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project|C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/shifter.v|
+!s107 C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/shifter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project|C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/shifter.v|
 !i113 0
 R8
 R9
 R2
 vsignextend
-R11
+R13
 R3
 !i10b 1
-!s100 >R`UmXjO[6<ao7oU9OWiO1
-IE68zW=T27WfLd8@V:l9HY3
+!s100 O:6h57677Z>Nz;HC7j2?c3
+IF[Pahf5[h02[f]LQD?`Ji3
 R1
-R10
-R12
-R13
+R14
+R15
+R16
 !i122 2
-L0 58 6
+L0 89 6
 R5
 R6
 r1
 !s85 0
 31
 R7
-R14
-R15
+R17
+R18
 !i113 0
 R8
 R9
