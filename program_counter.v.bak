@@ -1,0 +1,41 @@
+module program_counter (
+    input wire clk,                   // Clock signal
+    input wire reset,                 // Reset signal
+    input wire [1:0] pc_src,          // (the normal case)
+    input wire [15:0] pc_offset,      // (for branches)
+    input wire [15:0] jump_addr,      // (for jumps)
+    input wire [15:0] link_reg,       // (for JAL)
+    output reg [15:0] pc,             // Current PC value
+    output reg [15:0] next_pc         // PC + 1 value for JAL instruction
+);
+
+    // Define possible values for pc_src
+    localparam PC_INCREMENT = 2'b00;
+    localparam PC_BRANCH = 2'b01;
+    localparam PC_JUMP = 2'b10;
+    localparam PC_JAL = 2'b11;
+
+    // Calculate next_pc for the JAL instruction (PC + 1)
+    always @(*) begin
+        next_pc = pc + 16'd1;
+    end
+
+    // Update the PC value based on control signals
+    always @(posedge clk or posedge reset) begin
+        if (reset) begin
+            pc <= 16'b0;  // Reset the PC to 0 on reset signal
+        end else begin
+            case (pc_src)
+                PC_INCREMENT: pc <= pc + 16'd1;                      // Increment the PC by 1
+                PC_BRANCH: pc <= pc + pc_offset;                     // Add sign-extended offset for branch
+                PC_JUMP: pc <= jump_addr;                            // Load address from jump register
+                PC_JAL: begin
+                    pc <= jump_addr;                                // Jump to the target address
+                    // next_pc is calculated separately for storing in the link register
+                end
+                default: pc <= pc + 16'd1;  // Default to increment if no control signal matches
+            endcase
+        end
+    end
+
+endmodule
