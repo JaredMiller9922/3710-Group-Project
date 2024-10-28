@@ -24,107 +24,107 @@
 # Copying c:/intelfpga_lite/23.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project {C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alucontrol.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 16:44:17 on Oct 24,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project" C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alucontrol.v 
+# Start time: 10:57:33 on Oct 28,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project" C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v 
 # -- Compiling module alucontrol
 # 
 # Top level modules:
 # 	alucontrol
-# End time: 16:44:17 on Oct 24,2024, Elapsed time: 0:00:00
+# End time: 10:57:33 on Oct 28,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project {C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alu.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 16:44:17 on Oct 24,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project" C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/alu.v 
+# Start time: 10:57:33 on Oct 28,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project" C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v 
 # -- Compiling module alu
 # 
 # Top level modules:
 # 	alu
-# End time: 16:44:17 on Oct 24,2024, Elapsed time: 0:00:00
+# End time: 10:57:33 on Oct 28,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project {C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 16:44:17 on Oct 24,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project" C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/GroupProject3710.v 
+# Start time: 10:57:33 on Oct 28,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project" C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v 
 # -- Compiling module GroupProject3710
 # -- Compiling module signextend
 # 
 # Top level modules:
 # 	GroupProject3710
 # 	signextend
-# End time: 16:44:17 on Oct 24,2024, Elapsed time: 0:00:00
+# End time: 10:57:33 on Oct 28,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project {C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/shifter.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/shifter.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 16:44:17 on Oct 24,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project" C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/shifter.v 
+# Start time: 10:57:34 on Oct 28,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project" C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/shifter.v 
 # -- Compiling module shifter
 # 
 # Top level modules:
 # 	shifter
-# End time: 16:44:17 on Oct 24,2024, Elapsed time: 0:00:00
+# End time: 10:57:34 on Oct 28,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project {C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/flops.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/flops.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 16:44:17 on Oct 24,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project" C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/flops.v 
+# Start time: 10:57:34 on Oct 28,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project" C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/flops.v 
 # -- Compiling module flopenr
 # 
 # Top level modules:
 # 	flopenr
-# End time: 16:44:17 on Oct 24,2024, Elapsed time: 0:00:00
+# End time: 10:57:34 on Oct 28,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project {C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/muxes.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/muxes.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 16:44:17 on Oct 24,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project" C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/muxes.v 
+# Start time: 10:57:34 on Oct 28,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project" C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/muxes.v 
 # -- Compiling module mux2
 # 
 # Top level modules:
 # 	mux2
-# End time: 16:44:18 on Oct 24,2024, Elapsed time: 0:00:01
+# End time: 10:57:34 on Oct 28,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project {C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/regfile.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 16:44:18 on Oct 24,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project" C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/regfile.v 
+# Start time: 10:57:34 on Oct 28,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project" C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v 
 # -- Compiling module regfile
 # 
 # Top level modules:
 # 	regfile
-# End time: 16:44:18 on Oct 24,2024, Elapsed time: 0:00:00
+# End time: 10:57:34 on Oct 28,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project {C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/bram.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/bram.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 16:44:18 on Oct 24,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project" C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/bram.v 
+# Start time: 10:57:34 on Oct 28,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project" C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/bram.v 
 # -- Compiling module bram
 # 
 # Top level modules:
 # 	bram
-# End time: 16:44:18 on Oct 24,2024, Elapsed time: 0:00:00
+# End time: 10:57:34 on Oct 28,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project {C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/Datapath_Memory_tb.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/Datapath_Memory_tb.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 16:44:18 on Oct 24,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project" C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/Datapath_Memory_tb.v 
+# Start time: 10:57:34 on Oct 28,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project" C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/Datapath_Memory_tb.v 
 # -- Compiling module Datapath_Memory_tb
-# ** Warning: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/Datapath_Memory_tb.v(181): (vlog-2182) 'State' might be read before written in always_comb or always @* block.
+# ** Warning: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/Datapath_Memory_tb.v(183): (vlog-2182) 'State' might be read before written in always_comb or always @* block.
 # 
 # Top level modules:
 # 	Datapath_Memory_tb
-# End time: 16:44:18 on Oct 24,2024, Elapsed time: 0:00:00
+# End time: 10:57:34 on Oct 28,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  Datapath_Memory_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" Datapath_Memory_tb 
-# Start time: 16:44:18 on Oct 24,2024
+# Start time: 10:57:34 on Oct 28,2024
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
-# ** Warning: C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/Datapath_Memory_tb.v(181): (vopt-2182) 'State' might be read before written in always_comb or always @* block.
+# ** Warning: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/Datapath_Memory_tb.v(183): (vopt-2182) 'State' might be read before written in always_comb or always @* block.
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
 # Loading work.Datapath_Memory_tb(fast)
 # Loading work.signextend(fast)
@@ -139,7 +139,7 @@
 # run 100 ns
 # Loading memory
 # ** Warning: (vsim-7) Failed to open readmem file "program.dat" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/Blake/Documents/CS3710/groupwork/3710-Group-Project/bram.v(19)
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/bram.v(19)
 #    Time: 0 ps  Iteration: 0  Instance: /Datapath_Memory_tb/bram
 # done loading
 # Testing Non-Sign Extend
@@ -149,5 +149,5 @@
 # Testing WRITE
 # Testing READ
 # Testing WRITE to change prev values
-# End time: 16:46:01 on Oct 24,2024, Elapsed time: 0:01:43
+# End time: 11:44:18 on Oct 28,2024, Elapsed time: 0:46:44
 # Errors: 0, Warnings: 3
