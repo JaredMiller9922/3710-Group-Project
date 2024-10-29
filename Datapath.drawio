@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.8.2">
   <diagram name="Page-1" id="LI1cqc4f5GoJ5b9z3YXY">
-    <mxGraphModel dx="1900" dy="620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2085" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -43,10 +43,10 @@
         <mxCell id="9H-k_ZPfXgQ5hOs1PysZ-2" value="&lt;div&gt;Memory&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="347.5" y="180" width="70" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="9H-k_ZPfXgQ5hOs1PysZ-5" value="ALU &lt;br&gt;MUXA" style="shadow=0;dashed=0;align=center;html=1;strokeWidth=1;shape=mxgraph.electrical.abstract.mux2;whiteSpace=wrap;selectorPins=2;" parent="1" vertex="1">
+        <mxCell id="9H-k_ZPfXgQ5hOs1PysZ-5" value="ALUA&lt;br&gt;MUX" style="shadow=0;dashed=0;align=center;html=1;strokeWidth=1;shape=mxgraph.electrical.abstract.mux2;whiteSpace=wrap;selectorPins=2;" parent="1" vertex="1">
           <mxGeometry x="882" y="399" width="80" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="9H-k_ZPfXgQ5hOs1PysZ-6" value="ALU&lt;br&gt;&lt;div&gt;MUXB&lt;/div&gt;" style="shadow=0;dashed=0;align=center;html=1;strokeWidth=1;shape=mxgraph.electrical.abstract.mux2;whiteSpace=wrap;" parent="1" vertex="1">
+        <mxCell id="9H-k_ZPfXgQ5hOs1PysZ-6" value="ALUB&lt;br&gt;&lt;div&gt;MUX&lt;/div&gt;" style="shadow=0;dashed=0;align=center;html=1;strokeWidth=1;shape=mxgraph.electrical.abstract.mux2;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="882" y="590" width="80" height="120" as="geometry" />
         </mxCell>
         <mxCell id="9H-k_ZPfXgQ5hOs1PysZ-8" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.10833333333333334;entryDx=0;entryDy=3;entryPerimeter=0;" parent="1" target="9H-k_ZPfXgQ5hOs1PysZ-5" edge="1">
@@ -100,11 +100,11 @@
             <mxPoint x="1102" y="520" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="9H-k_ZPfXgQ5hOs1PysZ-26" value="ALU MUXA OUT" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=0;" parent="1" vertex="1">
-          <mxGeometry x="1017" y="460" width="110" height="30" as="geometry" />
+        <mxCell id="9H-k_ZPfXgQ5hOs1PysZ-26" value="ALUA OUT" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=0;" parent="1" vertex="1">
+          <mxGeometry x="1032" y="460" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="9H-k_ZPfXgQ5hOs1PysZ-27" value="ALU MUXB OUT" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=0;" parent="1" vertex="1">
-          <mxGeometry x="1017" y="635" width="110" height="30" as="geometry" />
+        <mxCell id="9H-k_ZPfXgQ5hOs1PysZ-27" value="ALUB OUT" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=0;" parent="1" vertex="1">
+          <mxGeometry x="1032" y="635" width="80" height="30" as="geometry" />
         </mxCell>
         <mxCell id="9H-k_ZPfXgQ5hOs1PysZ-29" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.4583333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="9z99N92EfXgimf6kSds7-67" target="9z99N92EfXgimf6kSds7-43" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -539,7 +539,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="6MfpcIub4zpqX_089b_M-6" value="SHFT OUT" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="899" y="842" width="80" height="30" as="geometry" />
+          <mxGeometry x="920" y="835" width="80" height="30" as="geometry" />
         </mxCell>
         <mxCell id="6MfpcIub4zpqX_089b_M-7" value="SHFT OUT" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="450" y="634" width="80" height="30" as="geometry" />

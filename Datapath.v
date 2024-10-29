@@ -1,8 +1,8 @@
 // This is the datapath module
-module datapath #(paramter REGBITS = 3)
+module datapath #(paramter WIDTH = 16, REGBITS = 3)
 (
 	// Create localparams
-	localparam CONST_ZERO = 8'b0;
+	localparam CONST_ZERO = 16'b0;
 	
 	// Create wires
 	
@@ -13,11 +13,12 @@ module datapath #(paramter REGBITS = 3)
 	flopenr #(WIDTH) pcreg(clk, reset, pcen, nextpc, pc); // Program Counter
 	// TODO: Should the PSR be here
 	
-	// datapath muxes
+	// datapath muxes all of the _s variables are control signals
 	mux2 #(WIDTH) wa_mux(Rsrc, Rdest, wa_s, wa);
 	mux4 #(WIDTH) wd_mux(Imm, Rsrc, im_out, CONST_ZERO, wd_s, wd); // CONST_ZERO is a placeholder for no connection
 	mux2 #(WIDTH) pc_mux(Rsrc, alu_out, pc_s, pc_out);
 	mux2 #(WIDTH) shft_mux(Rsrc, Imm, shft_s, shft_out);
+	mux4 #(WIDTH) alua_mux(Rsrc, pc_out, imm, CONST_ZERO, alua_s, alua_out); // CONST_ZERO is a placeholder for no connection
 	
 	// Instantiate the register file and the alu
 );
