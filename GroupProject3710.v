@@ -43,14 +43,6 @@ alu alu1 (
 
 );	
 
-//Because it won't compile correctly otherwise
-shifter #(16) shift (
-	.imm(),
-	.amount(),
-	.dir(),
-	.y()
-);
-
 // Instantiate bram
 bram MEM (
 	.data_a(data_a),
@@ -82,14 +74,3 @@ mux2 mux_b(q_b, switches, io_b, readMemData_b);
 //flopenr     #(8)      instrmem(clk, reset, irwrite, memdata, instr);		 
 
 endmodule
-
-
-
-
-module signextend #(parameter WIDTH = 8)
-                   (input [WIDTH-1:0] imm,
-						  input 				  sign,
-                    output [WIDTH+WIDTH-1:0] y);
-   assign y = sign ? {{8{imm[7]}}, imm} : {{8{1'b0}}, imm};
-endmodule
-

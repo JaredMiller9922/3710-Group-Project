@@ -1,3 +1,4 @@
+// TODO: we need to implment shift logic
 // the ALU performs the arithmetic functions. 
 module alu #(parameter WIDTH = 16)
             (input      [WIDTH-1:0] Rsrc, Rdest, 
