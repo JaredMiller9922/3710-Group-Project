@@ -717,6 +717,12 @@ y[14] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[15] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|GroupProject3710|FSM:mem_fsm
+State => Decoder0.IN0
+we_a <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+we_b <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |GroupProject3710|bram:MEM
 data_a[0] => ram.data_a[0].DATAIN
 data_a[0] => ram.DATAIN
