@@ -3,6 +3,7 @@ module datapath #(parameter WIDTH = 16, REGBITS = 3, IMM = 8)
 					  (input clk, reset,
 					   input wa_s, pc_s, alub_s, // Selector bits for all mux2
 						input [1:0] wd_s, alua_s, // Selector bits for all mux4
+						input pcen,
 						                          // TODO: Finite state machine codes
 						input [2:0] alucont
 );
@@ -12,6 +13,27 @@ module datapath #(parameter WIDTH = 16, REGBITS = 3, IMM = 8)
 	localparam CONST_ONE = 16'b0;
 	
 	// Create wires
+	wire [IMM-1:0] imm;
+	wire signext_sign;
+	wire [WIDTH-1:0] imm_ext;
+	wire [WIDTH-1:0] pc_out;
+	wire [WIDTH-1:0] pc;
+	wire [WIDTH-1:0] rd1;
+	wire [WIDTH-1:0] Rsrc;
+	wire [WIDTH-1:0] rd2;
+	wire [WIDTH-1:0] Rdest;
+	wire [WIDTH-1:0] wa;
+	wire [WIDTH-1:0] Imm;
+	wire [WIDTH-1:0] mem_out;
+	wire [WIDTH-1:0] alu_out;
+	wire [WIDTH-1:0] wd;
+	wire [WIDTH-1:0] alua_out;
+	wire [WIDTH-1:0] alub_out;
+	wire [WIDTH-1:0] regwrite;
+	wire [WIDTH-1:0] ra1;
+	wire [WIDTH-1:0] ra2;
+	wire [WIDTH-1:0] src1;
+	wire [WIDTH-1:0] src2;
 	
 	// Instruction register TODO: Next checkpoint
 	// flopenr #(WIDTH) instrmem(clk, reset, irwrite, memdata, instr);	
@@ -21,7 +43,7 @@ module datapath #(parameter WIDTH = 16, REGBITS = 3, IMM = 8)
    // mux2       #(REGBITS) regmux(instr[REGBITS+15:16], instr[REGBITS+10:11], regdst, wa);
 	
 	// create a sign extender
-	signextend #(IMM) (imm, signext_sign, imm_ext); 
+	signextend #(IMM) extend(imm, signext_sign, imm_ext); 
 
 	// datapath registers
 	flopenr #(WIDTH) pcreg(clk, reset, pcen, pc_out, pc); // Program Counter

@@ -1,1 +1,6 @@
-Warning (10268): Verilog HDL information at alu.v(13): always construct contains both blocking and non-blocking assignments File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/alu.v Line: 13
+Info (10281): Verilog HDL Declaration information at datapath.v(2): object "IMM" differs only in case from object "imm" in the same scope File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/datapath.v Line: 2
+Info (10281): Verilog HDL Declaration information at datapath.v(2): object "IMM" differs only in case from object "Imm" in the same scope File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/datapath.v Line: 2
+Info (10281): Verilog HDL Declaration information at datapath.v(16): object "imm" differs only in case from object "Imm" in the same scope File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/datapath.v Line: 16
+Info (10281): Verilog HDL Declaration information at datapath.v(22): object "Rsrc" differs only in case from object "rsrc" in the same scope File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/datapath.v Line: 22
+Info (10281): Verilog HDL Declaration information at datapath.v(24): object "Rdest" differs only in case from object "rdest" in the same scope File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/datapath.v Line: 24
+Warning (10268): Verilog HDL information at alu.v(13): always construct contains both blocking and non-blocking assignments File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v Line: 13
