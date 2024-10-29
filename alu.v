@@ -3,13 +3,14 @@ module alu #(parameter WIDTH = 16)
             (input      [WIDTH-1:0] Rsrc, Rdest, 
              input      [2:0]       alucont, 
              output reg [WIDTH-1:0] result,
-                 output reg [5:0] PSR // C F L Z N
+                 output reg [4:0] PSR // C F L Z N
                  );						  // 0 1 2 3 4 
 
    wire [WIDTH-1:0] b2, sum, slt;
 	reg cary;
 
    always@(*) begin
+		PSR = 5'b0;
       case(alucont)
             3'b000: // Addition
             begin
@@ -41,7 +42,7 @@ module alu #(parameter WIDTH = 16)
 					 // Set Zero flag (Z) if the result is zero.
 					result <= Rsrc - Rdest;
 					PSR[3] <= (Rsrc - Rdest == 0);
-					PSR[0] <= (Rdest < Rsrc);
+					PSR[4] <= (Rdest < Rsrc);
 				end
             default: result <= 0; // Should never happen
       endcase

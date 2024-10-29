@@ -1,5 +1,5 @@
 Analysis & Synthesis report for GroupProject3710
-Tue Oct 29 15:41:40 2024
+Tue Oct 29 17:38:37 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 29 15:41:40 2024          ;
+; Analysis & Synthesis Status     ; Successful - Tue Oct 29 17:38:37 2024          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; GroupProject3710                               ;
 ; Top-level Entity Name           ; GroupProject3710                               ;
@@ -97,7 +97,6 @@ https://fpgasoftware.intel.com/eula.
 ; Top-level entity name                                                           ; GroupProject3710   ; GroupProject3710   ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
-; Maximum processors allowed for parallel compilation                             ; All                ; All                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
 ; Enable compact report table                                                     ; Off                ; Off                ;
 ; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
@@ -182,7 +181,7 @@ https://fpgasoftware.intel.com/eula.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -192,63 +191,63 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                      ;
-+----------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path             ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                             ; Library ;
-+----------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------------------------+---------+
-; reg.dat                                      ; yes             ; User Unspecified File                                 ; C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/reg.dat                                      ;         ;
-; regfile.v                                    ; yes             ; User Verilog HDL File                                 ; C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v                                    ;         ;
-; alucontrol.v                                 ; yes             ; User Verilog HDL File                                 ; C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v                                 ;         ;
-; alu.v                                        ; yes             ; User Verilog HDL File                                 ; C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v                                        ;         ;
-; GroupProject3710.v                           ; yes             ; User Verilog HDL File                                 ; C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v                           ;         ;
-; shifter.v                                    ; yes             ; User Verilog HDL File                                 ; C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/shifter.v                                    ;         ;
-; bram.v                                       ; yes             ; User Verilog HDL File                                 ; C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/bram.v                                       ;         ;
-; flops.v                                      ; yes             ; User Verilog HDL File                                 ; C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/flops.v                                      ;         ;
-; muxes.v                                      ; yes             ; User Verilog HDL File                                 ; C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/muxes.v                                      ;         ;
-; program.dat                                  ; yes             ; User Unspecified File                                 ; C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/program.dat                                  ;         ;
-; FSM.v                                        ; yes             ; User Verilog HDL File                                 ; C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/FSM.v                                        ;         ;
-; altsyncram.tdf                               ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.tdf                                 ;         ;
-; stratix_ram_block.inc                        ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/stratix_ram_block.inc                          ;         ;
-; lpm_mux.inc                                  ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_mux.inc                                    ;         ;
-; lpm_decode.inc                               ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_decode.inc                                 ;         ;
-; aglobal231.inc                               ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/aglobal231.inc                                 ;         ;
-; a_rdenreg.inc                                ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/a_rdenreg.inc                                  ;         ;
-; altrom.inc                                   ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altrom.inc                                     ;         ;
-; altram.inc                                   ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altram.inc                                     ;         ;
-; altdpram.inc                                 ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altdpram.inc                                   ;         ;
-; db/altsyncram_jf62.tdf                       ; yes             ; Auto-Generated Megafunction                           ; C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/db/altsyncram_jf62.tdf                       ;         ;
-; db/groupproject3710.ram0_bram_337df6.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/db/groupproject3710.ram0_bram_337df6.hdl.mif ;         ;
-+----------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                    ;
++----------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path             ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                           ; Library ;
++----------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------+---------+
+; reg.dat                                      ; yes             ; User Unspecified File                                 ; C:/Users/tim/Documents/3710-Group-Project/reg.dat                                      ;         ;
+; regfile.v                                    ; yes             ; User Verilog HDL File                                 ; C:/Users/tim/Documents/3710-Group-Project/regfile.v                                    ;         ;
+; alucontrol.v                                 ; yes             ; User Verilog HDL File                                 ; C:/Users/tim/Documents/3710-Group-Project/alucontrol.v                                 ;         ;
+; alu.v                                        ; yes             ; User Verilog HDL File                                 ; C:/Users/tim/Documents/3710-Group-Project/alu.v                                        ;         ;
+; GroupProject3710.v                           ; yes             ; User Verilog HDL File                                 ; C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v                           ;         ;
+; shifter.v                                    ; yes             ; User Verilog HDL File                                 ; C:/Users/tim/Documents/3710-Group-Project/shifter.v                                    ;         ;
+; bram.v                                       ; yes             ; User Verilog HDL File                                 ; C:/Users/tim/Documents/3710-Group-Project/bram.v                                       ;         ;
+; flops.v                                      ; yes             ; User Verilog HDL File                                 ; C:/Users/tim/Documents/3710-Group-Project/flops.v                                      ;         ;
+; muxes.v                                      ; yes             ; User Verilog HDL File                                 ; C:/Users/tim/Documents/3710-Group-Project/muxes.v                                      ;         ;
+; program.dat                                  ; yes             ; User Unspecified File                                 ; C:/Users/tim/Documents/3710-Group-Project/program.dat                                  ;         ;
+; FSM.v                                        ; yes             ; User Verilog HDL File                                 ; C:/Users/tim/Documents/3710-Group-Project/FSM.v                                        ;         ;
+; altsyncram.tdf                               ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.tdf               ;         ;
+; stratix_ram_block.inc                        ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/stratix_ram_block.inc        ;         ;
+; lpm_mux.inc                                  ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_mux.inc                  ;         ;
+; lpm_decode.inc                               ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_decode.inc               ;         ;
+; aglobal231.inc                               ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/aglobal231.inc               ;         ;
+; a_rdenreg.inc                                ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/a_rdenreg.inc                ;         ;
+; altrom.inc                                   ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altrom.inc                   ;         ;
+; altram.inc                                   ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altram.inc                   ;         ;
+; altdpram.inc                                 ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altdpram.inc                 ;         ;
+; db/altsyncram_jf62.tdf                       ; yes             ; Auto-Generated Megafunction                           ; C:/Users/tim/Documents/3710-Group-Project/db/altsyncram_jf62.tdf                       ;         ;
+; db/groupproject3710.ram0_bram_337df6.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/tim/Documents/3710-Group-Project/db/groupproject3710.ram0_bram_337df6.hdl.mif ;         ;
++----------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                    ;
-+---------------------------------------------+----------------------------------+
-; Resource                                    ; Usage                            ;
-+---------------------------------------------+----------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 29                               ;
-;                                             ;                                  ;
-; Combinational ALUT usage for logic          ; 42                               ;
-;     -- 7 input functions                    ; 0                                ;
-;     -- 6 input functions                    ; 16                               ;
-;     -- 5 input functions                    ; 18                               ;
-;     -- 4 input functions                    ; 4                                ;
-;     -- <=3 input functions                  ; 4                                ;
-;                                             ;                                  ;
-; Dedicated logic registers                   ; 0                                ;
-;                                             ;                                  ;
-; I/O pins                                    ; 151                              ;
-; Total MLAB memory bits                      ; 0                                ;
-; Total block memory bits                     ; 32                               ;
-;                                             ;                                  ;
-; Total DSP Blocks                            ; 0                                ;
-;                                             ;                                  ;
-; Maximum fan-out node                        ; alucontrol:alucontrol1|WideOr1~0 ;
-; Maximum fan-out                             ; 18                               ;
-; Total fan-out                               ; 490                              ;
-; Average fan-out                             ; 1.36                             ;
-+---------------------------------------------+----------------------------------+
++-----------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                 ;
++---------------------------------------------+-------------------------------+
+; Resource                                    ; Usage                         ;
++---------------------------------------------+-------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 31                            ;
+;                                             ;                               ;
+; Combinational ALUT usage for logic          ; 44                            ;
+;     -- 7 input functions                    ; 16                            ;
+;     -- 6 input functions                    ; 1                             ;
+;     -- 5 input functions                    ; 18                            ;
+;     -- 4 input functions                    ; 6                             ;
+;     -- <=3 input functions                  ; 3                             ;
+;                                             ;                               ;
+; Dedicated logic registers                   ; 0                             ;
+;                                             ;                               ;
+; I/O pins                                    ; 151                           ;
+; Total MLAB memory bits                      ; 0                             ;
+; Total block memory bits                     ; 32                            ;
+;                                             ;                               ;
+; Total DSP Blocks                            ; 0                             ;
+;                                             ;                               ;
+; Maximum fan-out node                        ; alucontrol:alucontrol1|Mux2~0 ;
+; Maximum fan-out                             ; 19                            ;
+; Total fan-out                               ; 517                           ;
+; Average fan-out                             ; 1.43                          ;
++---------------------------------------------+-------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -256,8 +255,8 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                            ; Entity Name      ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------+------------------+--------------+
-; |GroupProject3710                         ; 42 (1)              ; 0 (0)                     ; 32                ; 0          ; 151  ; 0            ; |GroupProject3710                                                              ; GroupProject3710 ; work         ;
-;    |alu:alu1|                             ; 33 (33)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |GroupProject3710|alu:alu1                                                     ; alu              ; work         ;
+; |GroupProject3710                         ; 44 (1)              ; 0 (0)                     ; 32                ; 0          ; 151  ; 0            ; |GroupProject3710                                                              ; GroupProject3710 ; work         ;
+;    |alu:alu1|                             ; 35 (35)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |GroupProject3710|alu:alu1                                                     ; alu              ; work         ;
 ;    |alucontrol:alucontrol1|               ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |GroupProject3710|alucontrol:alucontrol1                                       ; alucontrol       ; work         ;
 ;    |bram:MEM|                             ; 0 (0)               ; 0 (0)                     ; 32                ; 0          ; 0    ; 0            ; |GroupProject3710|bram:MEM                                                     ; bram             ; work         ;
 ;       |altsyncram:ram_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 32                ; 0          ; 0    ; 0            ; |GroupProject3710|bram:MEM|altsyncram:ram_rtl_0                                ; altsyncram       ; work         ;
@@ -286,16 +285,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+----------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                     ;
-+---------------------+---------------------------+---------------------------------------------------------------+
-; Register name       ; Reason for Removal        ; Registers Removed due to This Register                        ;
-+---------------------+---------------------------+---------------------------------------------------------------+
-; flopenr:flop_a|q[1] ; Stuck at GND              ; flopenr:flop_a|q[5], flopenr:flop_a|q[7], flopenr:flop_a|q[8] ;
-;                     ; due to stuck port data_in ;                                                               ;
-; flopenr:flop_a|q[3] ; Stuck at GND              ; flopenr:flop_a|q[6]                                           ;
-;                     ; due to stuck port data_in ;                                                               ;
-+---------------------+---------------------------+---------------------------------------------------------------+
++--------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                ;
++---------------------+---------------------------+------------------------------------------+
+; Register name       ; Reason for Removal        ; Registers Removed due to This Register   ;
++---------------------+---------------------------+------------------------------------------+
+; flopenr:flop_a|q[2] ; Stuck at GND              ; flopenr:flop_a|q[4], flopenr:flop_a|q[5] ;
+;                     ; due to stuck port data_in ;                                          ;
+; flopenr:flop_b|q[0] ; Stuck at GND              ; flopenr:flop_a|q[8]                      ;
+;                     ; due to stuck port data_in ;                                          ;
+; flopenr:flop_b|q[2] ; Stuck at GND              ; flopenr:flop_a|q[9]                      ;
+;                     ; due to stuck port data_in ;                                          ;
+; flopenr:flop_a|q[0] ; Stuck at GND              ; flopenr:flop_a|q[3]                      ;
+;                     ; due to stuck port data_in ;                                          ;
++---------------------+---------------------------+------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -328,7 +331,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; 8:1                ; 16 bits   ; 80 LEs        ; 64 LEs               ; 16 LEs                 ; No         ; |GroupProject3710|alu:alu1|Mux8               ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; No         ; |GroupProject3710|alu:alu1|Add0               ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 48 LEs               ; 32 LEs                 ; No         ; |GroupProject3710|alu:alu1|Mux8               ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |GroupProject3710|alu:alu1|Add0               ;
 ; 16:1               ; 3 bits    ; 30 LEs        ; 12 LEs               ; 18 LEs                 ; No         ; |GroupProject3710|alucontrol:alucontrol1|Mux2 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
 
@@ -590,21 +595,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 42                          ;
+; arriav_lcell_comb     ; 44                          ;
 ;     arith             ; 17                          ;
 ;         3 data inputs ; 1                           ;
 ;         5 data inputs ; 16                          ;
-;     normal            ; 25                          ;
+;     extend            ; 16                          ;
+;         7 data inputs ; 16                          ;
+;     normal            ; 11                          ;
 ;         0 data inputs ; 1                           ;
-;         3 data inputs ; 2                           ;
-;         4 data inputs ; 4                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 6                           ;
 ;         5 data inputs ; 2                           ;
-;         6 data inputs ; 16                          ;
+;         6 data inputs ; 1                           ;
 ; boundary_port         ; 151                         ;
 ; stratixv_ram_block    ; 16                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.60                        ;
-; Average LUT depth     ; 2.65                        ;
+; Average LUT depth     ; 2.66                        ;
 +-----------------------+-----------------------------+
 
 
@@ -613,7 +620,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -623,251 +630,251 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Tue Oct 29 15:41:32 2024
+    Info: Processing started: Tue Oct 29 17:38:20 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GroupProject3710 -c GroupProject3710
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file program_counter.v
+    Info (12023): Found entity 1: program_counter File: C:/Users/tim/Documents/3710-Group-Project/program_counter.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_regfile_tb.v
-    Info (12023): Found entity 1: ALU_Regfile_tb File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/ALU_Regfile_tb.v Line: 1
+    Info (12023): Found entity 1: ALU_Regfile_tb File: C:/Users/tim/Documents/3710-Group-Project/ALU_Regfile_tb.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file regfile.v
-    Info (12023): Found entity 1: regfile File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v Line: 9
+    Info (12023): Found entity 1: regfile File: C:/Users/tim/Documents/3710-Group-Project/regfile.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file alucontrol.v
-    Info (12023): Found entity 1: alucontrol File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v Line: 3
+    Info (12023): Found entity 1: alucontrol File: C:/Users/tim/Documents/3710-Group-Project/alucontrol.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: alu File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v Line: 2
+    Info (12023): Found entity 1: alu File: C:/Users/tim/Documents/3710-Group-Project/alu.v Line: 2
 Info (12021): Found 2 design units, including 2 entities, in source file groupproject3710.v
-    Info (12023): Found entity 1: GroupProject3710 File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 1
-    Info (12023): Found entity 2: signextend File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 90
+    Info (12023): Found entity 1: GroupProject3710 File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 1
+    Info (12023): Found entity 2: signextend File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 90
 Info (12021): Found 1 design units, including 1 entities, in source file datapath_memory_tb.v
-    Info (12023): Found entity 1: Datapath_Memory_tb File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/Datapath_Memory_tb.v Line: 1
+    Info (12023): Found entity 1: Datapath_Memory_tb File: C:/Users/tim/Documents/3710-Group-Project/Datapath_Memory_tb.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file shifter.v
-    Info (12023): Found entity 1: shifter File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/shifter.v Line: 1
+    Info (12023): Found entity 1: shifter File: C:/Users/tim/Documents/3710-Group-Project/shifter.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file bram.v
-    Info (12023): Found entity 1: bram File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/bram.v Line: 4
+    Info (12023): Found entity 1: bram File: C:/Users/tim/Documents/3710-Group-Project/bram.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file flops.v
-    Info (12023): Found entity 1: flopenr File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/flops.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file muxes.v
-    Info (12023): Found entity 1: mux2 File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/muxes.v Line: 1
+    Info (12023): Found entity 1: flopenr File: C:/Users/tim/Documents/3710-Group-Project/flops.v Line: 1
+Info (12021): Found 2 design units, including 2 entities, in source file muxes.v
+    Info (12023): Found entity 1: mux2 File: C:/Users/tim/Documents/3710-Group-Project/muxes.v Line: 1
+    Info (12023): Found entity 2: mux4 File: C:/Users/tim/Documents/3710-Group-Project/muxes.v Line: 9
 Info (12021): Found 0 design units, including 0 entities, in source file datapath.v
 Info (12021): Found 1 design units, including 1 entities, in source file fsm.v
-    Info (12023): Found entity 1: FSM File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/FSM.v Line: 1
+    Info (12023): Found entity 1: FSM File: C:/Users/tim/Documents/3710-Group-Project/FSM.v Line: 1
 Info (12127): Elaborating entity "GroupProject3710" for the top level hierarchy
-Info (12128): Elaborating entity "regfile" for hierarchy "regfile:regfile1" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 28
-Info (10648): Verilog HDL Display System Task info at regfile.v(19): Loading register file File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v Line: 19
-Info (10648): Verilog HDL Display System Task info at regfile.v(22): done with RF load File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v Line: 22
-Warning (10230): Verilog HDL assignment warning at regfile.v(32): truncated value with size 32 to match size of target (16) File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v Line: 32
-Warning (10230): Verilog HDL assignment warning at regfile.v(33): truncated value with size 32 to match size of target (16) File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v Line: 33
-Info (12128): Elaborating entity "alucontrol" for hierarchy "alucontrol:alucontrol1" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 35
-Info (12128): Elaborating entity "alu" for hierarchy "alu:alu1" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 44
-Warning (10240): Verilog HDL Always Construct warning at alu.v(12): inferring latch(es) for variable "PSR", which holds its previous value in one or more paths through the always construct File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v Line: 12
-Warning (10034): Output port "PSR[5]" at alu.v(7) has no driver File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v Line: 7
-Info (10041): Inferred latch for "PSR[0]" at alu.v(12) File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v Line: 12
-Info (10041): Inferred latch for "PSR[1]" at alu.v(12) File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v Line: 12
-Info (10041): Inferred latch for "PSR[2]" at alu.v(12) File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v Line: 12
-Info (12128): Elaborating entity "shifter" for hierarchy "shifter:shift" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 52
-Info (12128): Elaborating entity "FSM" for hierarchy "FSM:mem_fsm" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 53
-Info (12128): Elaborating entity "bram" for hierarchy "bram:MEM" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 66
-Info (10648): Verilog HDL Display System Task info at bram.v(18): Loading memory File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/bram.v Line: 18
-Info (10648): Verilog HDL Display System Task info at bram.v(20): done loading File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/bram.v Line: 20
-Info (12128): Elaborating entity "flopenr" for hierarchy "flopenr:flop_a" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 72
-Info (12128): Elaborating entity "mux2" for hierarchy "mux2:mux_a" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 73
+Info (12128): Elaborating entity "regfile" for hierarchy "regfile:regfile1" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 28
+Info (10648): Verilog HDL Display System Task info at regfile.v(19): Loading register file File: C:/Users/tim/Documents/3710-Group-Project/regfile.v Line: 19
+Info (10648): Verilog HDL Display System Task info at regfile.v(22): done with RF load File: C:/Users/tim/Documents/3710-Group-Project/regfile.v Line: 22
+Warning (10230): Verilog HDL assignment warning at regfile.v(32): truncated value with size 32 to match size of target (16) File: C:/Users/tim/Documents/3710-Group-Project/regfile.v Line: 32
+Warning (10230): Verilog HDL assignment warning at regfile.v(33): truncated value with size 32 to match size of target (16) File: C:/Users/tim/Documents/3710-Group-Project/regfile.v Line: 33
+Info (12128): Elaborating entity "alucontrol" for hierarchy "alucontrol:alucontrol1" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 35
+Info (12128): Elaborating entity "alu" for hierarchy "alu:alu1" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 44
+Warning (10240): Verilog HDL Always Construct warning at alu.v(13): inferring latch(es) for variable "cary", which holds its previous value in one or more paths through the always construct File: C:/Users/tim/Documents/3710-Group-Project/alu.v Line: 13
+Info (12128): Elaborating entity "shifter" for hierarchy "shifter:shift" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 52
+Info (12128): Elaborating entity "FSM" for hierarchy "FSM:mem_fsm" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 53
+Info (12128): Elaborating entity "bram" for hierarchy "bram:MEM" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 66
+Info (10648): Verilog HDL Display System Task info at bram.v(18): Loading memory File: C:/Users/tim/Documents/3710-Group-Project/bram.v Line: 18
+Info (10648): Verilog HDL Display System Task info at bram.v(20): done loading File: C:/Users/tim/Documents/3710-Group-Project/bram.v Line: 20
+Info (12128): Elaborating entity "flopenr" for hierarchy "flopenr:flop_a" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 72
+Info (12128): Elaborating entity "mux2" for hierarchy "mux2:mux_a" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 73
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "data_a[15]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[14]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[13]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[12]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[11]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[10]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[9]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[8]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[7]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[6]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[5]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[4]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[3]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[2]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[1]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[0]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[15]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[14]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[13]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[12]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[11]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[10]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[9]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[8]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[7]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[6]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[5]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[4]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[3]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[2]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[1]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[0]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[15]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[14]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[13]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[12]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[11]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[10]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[9]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[8]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[7]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[6]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[5]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[4]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[3]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[2]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[1]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[0]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[15]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[14]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[13]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[12]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[11]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[10]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[9]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[8]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[7]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[6]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[5]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[4]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[3]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[2]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[1]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[0]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "data_a[15]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[14]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[13]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[12]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[11]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[10]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[9]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[8]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[7]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[6]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[5]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[4]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[3]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[2]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[1]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[0]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[15]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[14]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[13]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[12]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[11]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[10]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[9]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[8]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[7]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[6]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[5]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[4]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[3]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[2]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[1]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[0]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[15]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[14]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[13]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[12]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[11]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[10]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[9]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[8]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[7]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[6]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[5]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[4]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[3]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[2]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[1]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[0]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[15]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[14]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[13]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[12]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[11]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[10]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[9]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[8]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[7]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[6]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[5]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[4]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[3]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[2]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[1]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[0]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "data_a[15]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[14]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[13]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[12]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[11]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[10]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[9]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[8]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[7]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[6]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[5]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[4]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[3]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[2]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[1]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[0]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[15]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[14]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[13]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[12]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[11]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[10]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[9]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[8]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[7]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[6]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[5]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[4]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[3]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[2]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[1]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[0]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[15]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[14]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[13]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[12]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[11]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[10]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[9]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[8]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[7]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[6]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[5]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[4]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[3]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[2]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[1]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[0]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[15]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[14]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[13]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[12]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[11]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[10]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[9]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[8]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[7]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[6]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[5]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[4]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[3]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[2]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[1]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[0]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "data_a[15]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[14]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[13]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[12]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[11]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[10]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[9]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[8]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[7]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[6]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[5]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[4]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[3]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[2]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[1]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[0]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[15]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[14]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[13]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[12]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[11]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[10]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[9]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[8]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[7]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[6]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[5]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[4]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[3]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[2]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[1]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[0]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[15]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[14]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[13]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[12]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[11]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[10]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[9]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[8]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[7]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[6]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[5]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[4]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[3]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[2]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[1]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[0]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[15]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[14]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[13]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[12]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[11]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[10]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[9]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[8]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[7]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[6]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[5]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[4]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[3]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[2]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[1]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[0]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "data_a[15]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[14]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[13]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[12]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[11]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[10]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[9]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[8]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[7]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[6]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[5]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[4]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[3]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[2]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[1]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[0]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[15]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[14]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[13]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[12]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[11]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[10]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[9]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[8]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[7]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[6]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[5]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[4]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[3]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[2]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[1]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[0]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[15]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[14]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[13]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[12]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[11]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[10]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[9]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[8]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[7]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[6]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[5]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[4]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[3]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[2]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[1]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[0]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[15]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[14]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[13]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[12]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[11]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[10]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[9]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[8]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[7]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[6]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[5]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[4]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[3]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[2]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[1]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[0]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "data_a[15]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[14]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[13]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[12]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[11]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[10]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[9]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[8]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[7]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[6]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[5]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[4]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[3]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[2]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[1]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_a[0]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[15]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[14]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[13]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[12]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[11]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[10]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[9]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[8]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[7]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[6]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[5]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[4]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[3]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[2]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[1]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
-    Warning (12110): Net "data_b[0]" is missing source, defaulting to GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[15]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[14]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[13]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[12]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[11]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[10]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[9]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[8]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[7]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[6]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[5]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[4]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[3]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[2]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[1]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_a[0]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[15]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[14]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[13]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[12]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[11]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[10]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[9]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[8]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[7]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[6]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[5]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[4]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[3]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[2]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[1]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
+    Warning (12110): Net "data_b[0]" is missing source, defaulting to GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 13
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "bram:MEM|ram_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to BIDIR_DUAL_PORT
@@ -911,90 +918,90 @@ Info (12133): Instantiated megafunction "bram:MEM|altsyncram:ram_rtl_0" with the
     Info (12134): Parameter "INIT_FILE" = "db/GroupProject3710.ram0_bram_337df6.hdl.mif"
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_jf62.tdf
-    Info (12023): Found entity 1: altsyncram_jf62 File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/db/altsyncram_jf62.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_jf62 File: C:/Users/tim/Documents/3710-Group-Project/db/altsyncram_jf62.tdf Line: 28
 Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDs_a[0]" is stuck at GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 9
-    Warning (13410): Pin "LEDs_a[1]" is stuck at GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 9
-    Warning (13410): Pin "LEDs_a[2]" is stuck at GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 9
-    Warning (13410): Pin "LEDs_a[3]" is stuck at GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 9
-    Warning (13410): Pin "LEDs_a[4]" is stuck at GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 9
-    Warning (13410): Pin "LEDs_a[5]" is stuck at GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 9
-    Warning (13410): Pin "LEDs_a[6]" is stuck at GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 9
-    Warning (13410): Pin "LEDs_a[7]" is stuck at GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 9
-    Warning (13410): Pin "LEDs_a[8]" is stuck at GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 9
-    Warning (13410): Pin "LEDs_a[9]" is stuck at GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 9
-    Warning (13410): Pin "LEDs_b[0]" is stuck at GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 9
-    Warning (13410): Pin "LEDs_b[1]" is stuck at GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 9
-    Warning (13410): Pin "LEDs_b[2]" is stuck at GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 9
-    Warning (13410): Pin "LEDs_b[3]" is stuck at GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 9
-    Warning (13410): Pin "LEDs_b[4]" is stuck at GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 9
-    Warning (13410): Pin "LEDs_b[5]" is stuck at GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 9
-    Warning (13410): Pin "LEDs_b[6]" is stuck at GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 9
-    Warning (13410): Pin "LEDs_b[7]" is stuck at GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 9
-    Warning (13410): Pin "LEDs_b[8]" is stuck at GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 9
-    Warning (13410): Pin "LEDs_b[9]" is stuck at GND File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 9
+    Warning (13410): Pin "LEDs_a[0]" is stuck at GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 9
+    Warning (13410): Pin "LEDs_a[1]" is stuck at GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 9
+    Warning (13410): Pin "LEDs_a[2]" is stuck at GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 9
+    Warning (13410): Pin "LEDs_a[3]" is stuck at GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 9
+    Warning (13410): Pin "LEDs_a[4]" is stuck at GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 9
+    Warning (13410): Pin "LEDs_a[5]" is stuck at GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 9
+    Warning (13410): Pin "LEDs_a[6]" is stuck at GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 9
+    Warning (13410): Pin "LEDs_a[7]" is stuck at GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 9
+    Warning (13410): Pin "LEDs_a[8]" is stuck at GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 9
+    Warning (13410): Pin "LEDs_a[9]" is stuck at GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 9
+    Warning (13410): Pin "LEDs_b[0]" is stuck at GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 9
+    Warning (13410): Pin "LEDs_b[1]" is stuck at GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 9
+    Warning (13410): Pin "LEDs_b[2]" is stuck at GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 9
+    Warning (13410): Pin "LEDs_b[3]" is stuck at GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 9
+    Warning (13410): Pin "LEDs_b[4]" is stuck at GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 9
+    Warning (13410): Pin "LEDs_b[5]" is stuck at GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 9
+    Warning (13410): Pin "LEDs_b[6]" is stuck at GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 9
+    Warning (13410): Pin "LEDs_b[7]" is stuck at GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 9
+    Warning (13410): Pin "LEDs_b[8]" is stuck at GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 9
+    Warning (13410): Pin "LEDs_b[9]" is stuck at GND File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 9
 Info (286030): Timing-Driven Synthesis is running
-Info (17036): Removed 9 MSB VCC or GND address nodes from RAM block "bram:MEM|altsyncram:ram_rtl_0|altsyncram_jf62:auto_generated|ALTSYNCRAM" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/db/altsyncram_jf62.tdf Line: 41
-Info (144001): Generated suppressed messages file C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/output_files/GroupProject3710.map.smsg
+Info (17036): Removed 9 MSB VCC or GND address nodes from RAM block "bram:MEM|altsyncram:ram_rtl_0|altsyncram_jf62:auto_generated|ALTSYNCRAM" File: C:/Users/tim/Documents/3710-Group-Project/db/altsyncram_jf62.tdf Line: 41
+Info (144001): Generated suppressed messages file C:/Users/tim/Documents/3710-Group-Project/output_files/GroupProject3710.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 40 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "regwrite" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 4
-    Warning (15610): No output dependent on input pin "reset" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 4
-    Warning (15610): No output dependent on input pin "ra1[0]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 5
-    Warning (15610): No output dependent on input pin "ra1[1]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 5
-    Warning (15610): No output dependent on input pin "ra1[2]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 5
-    Warning (15610): No output dependent on input pin "ra1[3]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 5
-    Warning (15610): No output dependent on input pin "ra2[0]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 5
-    Warning (15610): No output dependent on input pin "ra2[1]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 5
-    Warning (15610): No output dependent on input pin "ra2[2]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 5
-    Warning (15610): No output dependent on input pin "ra2[3]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 5
-    Warning (15610): No output dependent on input pin "wa[0]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 5
-    Warning (15610): No output dependent on input pin "wa[1]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 5
-    Warning (15610): No output dependent on input pin "wa[2]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 5
-    Warning (15610): No output dependent on input pin "wa[3]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 5
-    Warning (15610): No output dependent on input pin "wd[0]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
-    Warning (15610): No output dependent on input pin "wd[1]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
-    Warning (15610): No output dependent on input pin "wd[2]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
-    Warning (15610): No output dependent on input pin "wd[3]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
-    Warning (15610): No output dependent on input pin "wd[4]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
-    Warning (15610): No output dependent on input pin "wd[5]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
-    Warning (15610): No output dependent on input pin "wd[6]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
-    Warning (15610): No output dependent on input pin "wd[7]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
-    Warning (15610): No output dependent on input pin "wd[8]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
-    Warning (15610): No output dependent on input pin "wd[9]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
-    Warning (15610): No output dependent on input pin "wd[10]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
-    Warning (15610): No output dependent on input pin "wd[11]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
-    Warning (15610): No output dependent on input pin "wd[12]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
-    Warning (15610): No output dependent on input pin "wd[13]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
-    Warning (15610): No output dependent on input pin "wd[14]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
-    Warning (15610): No output dependent on input pin "wd[15]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 6
-    Warning (15610): No output dependent on input pin "switches[0]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 8
-    Warning (15610): No output dependent on input pin "switches[1]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 8
-    Warning (15610): No output dependent on input pin "switches[2]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 8
-    Warning (15610): No output dependent on input pin "switches[3]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 8
-    Warning (15610): No output dependent on input pin "switches[4]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 8
-    Warning (15610): No output dependent on input pin "switches[5]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 8
-    Warning (15610): No output dependent on input pin "switches[6]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 8
-    Warning (15610): No output dependent on input pin "switches[7]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 8
-    Warning (15610): No output dependent on input pin "switches[8]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 8
-    Warning (15610): No output dependent on input pin "switches[9]" File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v Line: 8
-Info (21057): Implemented 209 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "regwrite" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 4
+    Warning (15610): No output dependent on input pin "reset" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 4
+    Warning (15610): No output dependent on input pin "ra1[0]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "ra1[1]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "ra1[2]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "ra1[3]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "ra2[0]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "ra2[1]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "ra2[2]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "ra2[3]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "wa[0]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "wa[1]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "wa[2]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "wa[3]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 5
+    Warning (15610): No output dependent on input pin "wd[0]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[1]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[2]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[3]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[4]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[5]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[6]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[7]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[8]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[9]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[10]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[11]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[12]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[13]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[14]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "wd[15]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 6
+    Warning (15610): No output dependent on input pin "switches[0]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 8
+    Warning (15610): No output dependent on input pin "switches[1]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 8
+    Warning (15610): No output dependent on input pin "switches[2]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 8
+    Warning (15610): No output dependent on input pin "switches[3]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 8
+    Warning (15610): No output dependent on input pin "switches[4]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 8
+    Warning (15610): No output dependent on input pin "switches[5]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 8
+    Warning (15610): No output dependent on input pin "switches[6]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 8
+    Warning (15610): No output dependent on input pin "switches[7]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 8
+    Warning (15610): No output dependent on input pin "switches[8]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 8
+    Warning (15610): No output dependent on input pin "switches[9]" File: C:/Users/tim/Documents/3710-Group-Project/GroupProject3710.v Line: 8
+Info (21057): Implemented 211 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 83 input pins
     Info (21059): Implemented 68 output pins
-    Info (21061): Implemented 42 logic cells
+    Info (21061): Implemented 44 logic cells
     Info (21064): Implemented 16 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 265 warnings
-    Info: Peak virtual memory: 4821 megabytes
-    Info: Processing ended: Tue Oct 29 15:41:40 2024
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Peak virtual memory: 13278 megabytes
+    Info: Processing ended: Tue Oct 29 17:38:37 2024
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:40
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/output_files/GroupProject3710.map.smsg.
+The suppressed messages can be found in C:/Users/tim/Documents/3710-Group-Project/output_files/GroupProject3710.map.smsg.
 
 

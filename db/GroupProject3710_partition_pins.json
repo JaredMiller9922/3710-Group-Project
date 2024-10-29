@@ -196,11 +196,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "Rsrc[0]",
+					"name" : "opcode[3]",
 					"strict" : false
 				},
 				{
-					"name" : "Rdest[0]",
+					"name" : "opcode[0]",
+					"strict" : false
+				},
+				{
+					"name" : "opcode[2]",
+					"strict" : false
+				},
+				{
+					"name" : "opcode[1]",
 					"strict" : false
 				},
 				{
@@ -220,19 +228,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "opcode[0]",
+					"name" : "Rsrc[0]",
 					"strict" : false
 				},
 				{
-					"name" : "opcode[1]",
-					"strict" : false
-				},
-				{
-					"name" : "opcode[2]",
-					"strict" : false
-				},
-				{
-					"name" : "opcode[3]",
+					"name" : "Rdest[0]",
 					"strict" : false
 				},
 				{
@@ -244,15 +244,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "Rsrc[2]",
-					"strict" : false
-				},
-				{
 					"name" : "Rdest[2]",
 					"strict" : false
 				},
 				{
-					"name" : "Rsrc[3]",
+					"name" : "Rsrc[2]",
 					"strict" : false
 				},
 				{
@@ -260,7 +256,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "Rsrc[4]",
+					"name" : "Rsrc[3]",
 					"strict" : false
 				},
 				{
@@ -268,7 +264,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "Rdest[5]",
+					"name" : "Rsrc[4]",
 					"strict" : false
 				},
 				{
@@ -276,11 +272,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "Rdest[6]",
+					"name" : "Rdest[5]",
 					"strict" : false
 				},
 				{
 					"name" : "Rsrc[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Rdest[6]",
 					"strict" : false
 				},
 				{
@@ -300,15 +300,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "Rsrc[9]",
-					"strict" : false
-				},
-				{
 					"name" : "Rdest[9]",
 					"strict" : false
 				},
 				{
-					"name" : "Rsrc[10]",
+					"name" : "Rsrc[9]",
 					"strict" : false
 				},
 				{
@@ -316,11 +312,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "Rsrc[11]",
+					"name" : "Rsrc[10]",
 					"strict" : false
 				},
 				{
 					"name" : "Rdest[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Rsrc[11]",
 					"strict" : false
 				},
 				{

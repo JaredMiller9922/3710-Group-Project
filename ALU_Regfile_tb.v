@@ -10,7 +10,7 @@ module ALU_Regfile_tb;
 	
 	reg [3:0] ra1, ra2, wa;
 	reg [15:0] wd;
-	wire [5:0] PSR;
+	wire [4:0] PSR;
 	
 	 
    // Outputs
@@ -323,7 +323,7 @@ module ALU_Regfile_tb;
 		  
 		  
 		  
-		  //CMP
+		  //SUB
 		  aluop = 4'b1001;
 		  #50
 		  // Check Low Flag
@@ -355,7 +355,7 @@ module ALU_Regfile_tb;
 		  end
 		  
 		  //CMP
-		  aluop = 4'b1001;
+		  aluop = 4'b1011;
 		  #50
 		  // Check Low Flag
 		  $display("Testing Flags: Low Flag 0");
@@ -389,7 +389,7 @@ module ALU_Regfile_tb;
 		  
 		  
 		  //CMP
-		  aluop = 4'b1001;
+		  aluop = 4'b1011;
 		  #50
 		  $display("Testing Flags: Negative Flag 1");
 		  if(PSR[4] != 1) begin
@@ -420,7 +420,7 @@ module ALU_Regfile_tb;
 		  end
 		  
 		  //CMP
-		  aluop = 4'b1001;
+		  aluop = 4'b1011;
 		  #50
 		  $display("Testing Flags: Negative Flag 0");
 		  if(PSR[4] != 0) begin
@@ -454,7 +454,7 @@ module ALU_Regfile_tb;
 		  
 		  
 		  //CMP
-		  aluop = 4'b1001;
+		  aluop = 4'b1011;
 		  #50
 		  $display("Testing Flags: Zero Flag 1");
 		  if(PSR[3] != 1) begin
@@ -485,7 +485,7 @@ module ALU_Regfile_tb;
 		  end
 		  
 		  //CMP
-		  aluop = 4'b1001;
+		  aluop = 4'b1011;
 		  #50
 		  $display("Testing Flags: Zero Flag 0");
 		  if(PSR[3] != 0) begin
