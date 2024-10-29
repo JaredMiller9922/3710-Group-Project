@@ -50,6 +50,7 @@ shifter #(16) shift (
 	.dir(),
 	.y()
 );
+FSM mem_fsm();
 
 // Instantiate bram
 bram MEM (

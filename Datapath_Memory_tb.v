@@ -12,7 +12,7 @@ module Datapath_Memory_tb;
     
     reg [15:0] write_data_a, write_data_b;
     reg [9:0] addr_a, addr_b;
-    reg we_a, we_b;
+    wire we_a, we_b;
      
     // Outputs
     wire [15:0] extended;
@@ -43,9 +43,17 @@ module Datapath_Memory_tb;
         .q_a(read_data_a),
 		  .q_b(read_data_b)
     );
+	 
+	 
 
     // State encoding
     reg [1:0] State;
+	 
+	 FSM mem_fsm(
+		 State,
+		 we_a,
+		 we_b
+	 );
 
     // Different States for FSM
     parameter
@@ -179,20 +187,6 @@ module Datapath_Memory_tb;
     end
 	 
 	 
-	 always @(*) begin
-		case (State)
-				WRITE: begin
-					 we_a <= 1; // Enable writing
-					 we_b <= 1;
-				end
-				READ: begin
-					 we_a <= 0; // Disable writing
-					 we_b <= 0;
-				end
-				default: begin
-					 State <= WRITE; // Default case, go back to WRITE state
-				end
-		  endcase
-	 end
+	 
 
 endmodule

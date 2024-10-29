@@ -68,27 +68,6 @@ set_global_assignment -name EDA_TEST_BENCH_NAME ALU_Regfile_tb -section_id eda_s
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id ALU_Regfile_tb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "100 ns" -section_id ALU_Regfile_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ALU_Regfile_tb -section_id ALU_Regfile_tb
-set_location_assignment PIN_AB12 -to Rdest[0]
-set_location_assignment PIN_AC12 -to Rdest[1]
-set_location_assignment PIN_AF9 -to Rdest[2]
-set_location_assignment PIN_AF10 -to Rsrc[0]
-set_location_assignment PIN_AD11 -to Rsrc[1]
-set_location_assignment PIN_AD12 -to Rsrc[2]
-set_location_assignment PIN_A9 -to clk
-set_location_assignment PIN_AE11 -to opext[0]
-set_location_assignment PIN_AC9 -to opext[1]
-set_location_assignment PIN_AD10 -to opext[2]
-set_location_assignment PIN_AE12 -to opext[3]
-set_location_assignment PIN_V16 -to result[0]
-set_location_assignment PIN_W16 -to result[1]
-set_location_assignment PIN_V17 -to result[2]
-set_location_assignment PIN_V18 -to result[3]
-set_location_assignment PIN_W17 -to result[4]
-set_location_assignment PIN_W19 -to result[5]
-set_location_assignment PIN_Y19 -to result[6]
-set_location_assignment PIN_W20 -to result[7]
-set_location_assignment PIN_W21 -to result[8]
-set_location_assignment PIN_Y21 -to result[9]
 set_global_assignment -name VERILOG_FILE Datapath_Memory_tb.v
 set_global_assignment -name EDA_TEST_BENCH_FILE ALU_Regfile_tb.v -section_id ALU_Regfile_tb
 set_global_assignment -name EDA_TEST_BENCH_NAME Datapath_Memory_tb -section_id eda_simulation
@@ -104,5 +83,27 @@ set_global_assignment -name VERILOG_FILE bram.v
 set_global_assignment -name VERILOG_FILE flops.v
 set_global_assignment -name VERILOG_FILE muxes.v
 set_global_assignment -name LICENSE_FILE program.dat
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name VERILOG_FILE Datapath.v
+set_global_assignment -name VERILOG_FILE FSM.v
+set_location_assignment PIN_AB12 -to switches[0]
+set_location_assignment PIN_AC12 -to switches[1]
+set_location_assignment PIN_AF9 -to switches[2]
+set_location_assignment PIN_AF10 -to switches[3]
+set_location_assignment PIN_AD11 -to switches[4]
+set_location_assignment PIN_AD12 -to switches[5]
+set_location_assignment PIN_AE11 -to switches[6]
+set_location_assignment PIN_AC9 -to switches[7]
+set_location_assignment PIN_AD10 -to switches[8]
+set_location_assignment PIN_AE12 -to switches[9]
+set_location_assignment PIN_V16 -to LEDs_a[0]
+set_location_assignment PIN_W16 -to LEDs_a[1]
+set_location_assignment PIN_V17 -to LEDs_a[2]
+set_location_assignment PIN_V18 -to LEDs_a[3]
+set_location_assignment PIN_W17 -to LEDs_a[4]
+set_location_assignment PIN_W19 -to LEDs_a[5]
+set_location_assignment PIN_Y19 -to LEDs_a[6]
+set_location_assignment PIN_W20 -to LEDs_a[7]
+set_location_assignment PIN_W21 -to LEDs_a[8]
+set_location_assignment PIN_Y21 -to LEDs_a[9]
+set_location_assignment PIN_Y16 -to we_a
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
