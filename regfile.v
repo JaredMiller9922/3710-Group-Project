@@ -29,6 +29,6 @@ module regfile #(parameter WIDTH = 16, REGBITS = 4)
       if (regwrite) RAM[wa] <= wd;
 	
    // register 0 is hardwired to 0
-   assign rd1 = ra1 ? RAM[ra1] : 0;
-   assign rd2 = ra2 ? RAM[ra2] : 0;
+   assign rd1 = RAM[ra1];
+   assign rd2 = RAM[ra2];
 endmodule
