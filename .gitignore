@@ -1,5 +1,6 @@
-# Ignore everything in the db file
+# Ignore everything in the db file and output_files
 db/
+output_files/
 
 # Ignore the qws file because its just user preferences
 GroupProject3710.qws
