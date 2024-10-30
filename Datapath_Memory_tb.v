@@ -183,60 +183,6 @@ module Datapath_Memory_tb;
 			  
 		  #20;
 		  
-		  reset = 0;
-		  
-		  #20;
-		  
-		  reset = 1;
-		  
-		  #20;
-		  
-		  // Test Datapath
-		  
-		  // test Add instruction
-			wa_s = 1;
-			pc_s = 0;
-			alub_s = 0;
-			mem_s = 0;
-			wd_s = 2'b11;
-			alua_s = 2'b00;
-			pcen = 0;
-			signext_sign = 0;
-			opcode = 4'b0000;
-			opext = 4'b0101;
-			mem_out = 0;
-			
-			//Rsrc
-			//mem_addr
-			
-			#100;
-			
-			$display("alu_out: %b, Rdest: %b, alua_out: %b, rd1: %b, Rsrc: %b. %b", path.alu_out, path.Rdest, path.alua_out, path.rd1, path.Rsrc, path.alucont);
-		  
-		  
-		  
-		  // test Addi instruction
-		  
-		  
-		  // test Mov instruction
-		  
-		  
-		  // test Load instruction
-		  
-		  
-		  // test Store instruction
-		  
-		  
-		  // test Bcond instruction 
-		  
-		  
-		  // test Jcond instruction
-		  
-		  
-		  // test Jal instruction
-		  
-		  
-		  
 		  
 		  
     end

@@ -5,10 +5,11 @@ module datapath #(parameter WIDTH = 16, REGBITS = 3, IMM = 8, REG_ADD = 4)
 						input [1:0] wd_s, alua_s, 			// Selector bits for all mux4
 						input pcen,
 						input signext_sign,
+						input regwrite,
 						input [2:0] alucont,
 						input [IMM-1:0] imm,
 						input [WIDTH-1:0] mem_out, 
-						input [WIDTH-1:0] rsrc_addr, rdest_addr, wa, // TODO: These shouldn't be inputs
+						input [WIDTH-1:0] rsrc_addr, rdest_addr, // TODO: These shouldn't be inputs
 						output [WIDTH-1:0] Rsrc,
 						output [WIDTH-1:0] mem_addr
 );
@@ -18,10 +19,10 @@ module datapath #(parameter WIDTH = 16, REGBITS = 3, IMM = 8, REG_ADD = 4)
 	localparam CONST_ONE = 16'b0;
 	
 	// Create wires
-	wire regwrite;
 
 	wire [WIDTH-1:0] imm_ext, pc_out, pc, rd1, rd2, Rdest, alu_out, wd, alua_out, alub_out;
 	// wire [REG_ADD-1:0] wa, rsrc_addr, rdest_addr;
+	wire [REG_ADD-1:0] wa;
 	
 	// Instruction register TODO: Next checkpoint
 	// flopenr #(WIDTH) instrmem(clk, reset, irwrite, memdata, instr);	
