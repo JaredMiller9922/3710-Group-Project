@@ -7,7 +7,7 @@ module datapath #(parameter WIDTH = 16, REGBITS = 3, IMM = 8, REG_ADD = 4)
 						input signext_sign,
 						input [2:0] alucont,
 						input [WIDTH-1:0] mem_out, 
-						output [2:0] Rsrc,
+						output [WIDTH-1:0] Rsrc,
 						output [WIDTH-1:0] mem_addr
 );
 
@@ -18,7 +18,7 @@ module datapath #(parameter WIDTH = 16, REGBITS = 3, IMM = 8, REG_ADD = 4)
 	// Create wires
 	wire regwrite;
 	wire [IMM-1:0] imm;
-	wire [WIDTH-1:0] imm_ext, pc_out, pc, rd1, rd2, Rdest, alu_out, wd, alua_out, alub_out, src1, src2;
+	wire [WIDTH-1:0] imm_ext, pc_out, pc, rd1, rd2, Rdest, alu_out, wd, alua_out, alub_out;
 	wire [REG_ADD-1:0] wa, ra1, ra2;
 	
 	// Instruction register TODO: Next checkpoint
@@ -47,5 +47,5 @@ module datapath #(parameter WIDTH = 16, REGBITS = 3, IMM = 8, REG_ADD = 4)
 	
 	// Instantiate the register file and the alu
    regfile    #(WIDTH,REGBITS) rf(clk, regwrite, ra1, ra2, wa, wd, rd1, rd2);
-   alu        #(WIDTH) 			 alunit(src1, src2, alucont, alu_out);
+   alu        #(WIDTH) 			 alunit(Rsrc, Rdest, alucont, alu_out);
 endmodule 

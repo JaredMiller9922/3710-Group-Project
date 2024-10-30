@@ -18,7 +18,7 @@ module regfile #(parameter WIDTH = 16, REGBITS = 4)
 	initial begin
 	$display("Loading register file");
 	// you'll need to change the path to this file!
-	$readmemb("reg.dat", RAM);
+	$readmemb("C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/reg.dat", RAM);
 	$display("done with RF load");
 	end
 

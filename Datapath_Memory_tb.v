@@ -4,6 +4,7 @@ module Datapath_Memory_tb;
     reg clk50MHz;
     reg [7:0] immediate;
     reg s;
+	 reg reset;
     
     reg [15:0] value;
     reg [15:0] amount;
@@ -25,13 +26,6 @@ module Datapath_Memory_tb;
         .y(extended)
     );
 
-    shifter #(16) shift (
-        .imm(value),
-        .amount(amount),
-        .dir(dir),
-        .y(shifted)
-    );
-
     bram #(16,10) bram (
         .data_a(write_data_a),
 		  .data_b(write_data_b),
@@ -43,6 +37,38 @@ module Datapath_Memory_tb;
         .q_a(read_data_a),
 		  .q_b(read_data_b)
     );
+	 
+		localparam WIDTH = 16;
+		
+		reg wa_s, pc_s, alub_s, mem_s; // Selector bits for all mux2
+		reg [1:0] wd_s, alua_s; 			// Selector bits for all mux4
+		reg pcen;
+		reg signext_sign;
+		wire [2:0] alucont;
+		reg [WIDTH-1:0] mem_out;
+		wire [WIDTH-1:0] Rsrc;
+		wire [WIDTH-1:0] mem_addr;
+	 
+	 datapath #(16, 3, 8, 4) path (
+		clk50MHz, reset,
+		wa_s, pc_s, alub_s, mem_s, // Selector bits for all mux2
+		wd_s, alua_s, 			// Selector bits for all mux4
+		pcen,
+		signext_sign,
+		alucont,
+		mem_out, 
+		Rsrc,
+		mem_addr
+	  );
+	  
+	  reg [3:0] opcode;
+	  reg [3:0] opext;
+	  
+	  alucontrol alucontrol1(
+		opcode,
+		opext, 
+		alucont
+		);
 
     // State encoding
     reg [1:0] State;
@@ -75,27 +101,7 @@ module Datapath_Memory_tb;
         #20;
         if (extended != 16'b1111111111111111) 
             $display("Error: extended got %b. Should be %b.", extended, 16'b1111111111111111);
-
-        #20;
-
-        $display("Testing Shifter: Left");
-        value = 16'b0000000000000010;
-        amount = 16'b0000000000000010;
-        dir = 0;
-        #20;
-        if (shifted != 16'b0000000000001000) 
-            $display("Error: shifted got %b. Should be %b.", shifted, 16'b0000000000001000);
-
-        #20;
-
-        $display("Testing Shifter: Right");
-        value = 16'b0000000000000010;
-        amount = 16'b0000000000000001;
-        dir = 1;
-        #20;
-        if (shifted != 16'b0000000000000001) 
-            $display("Error: shifted got %b. Should be %b.", shifted, 16'b0000000000000001);
-
+				
         #200;
 		  
 		  // TEST MEMORY
@@ -175,7 +181,64 @@ module Datapath_Memory_tb;
 		  if (read_data_b != 16'b0011111111110000)
 			  $display("Modify Error: Address 0x001 expected: 0011111111110000 but got: %b", read_data_b);
 			  
-			  
+		  #20;
+		  
+		  reset = 0;
+		  
+		  #20;
+		  
+		  reset = 1;
+		  
+		  #20;
+		  
+		  // Test Datapath
+		  
+		  // test Add instruction
+			wa_s = 1;
+			pc_s = 0;
+			alub_s = 0;
+			mem_s = 0;
+			wd_s = 2'b11;
+			alua_s = 2'b00;
+			pcen = 0;
+			signext_sign = 0;
+			opcode = 4'b0000;
+			opext = 4'b0101;
+			mem_out = 0;
+			
+			//Rsrc
+			//mem_addr
+			
+			#100;
+			
+			$display("alu_out: %b, Rdest: %b, alua_out: %b, rd1: %b, Rsrc: %b. %b", path.alu_out, path.Rdest, path.alua_out, path.rd1, path.Rsrc, path.alucont);
+		  
+		  
+		  
+		  // test Addi instruction
+		  
+		  
+		  // test Mov instruction
+		  
+		  
+		  // test Load instruction
+		  
+		  
+		  // test Store instruction
+		  
+		  
+		  // test Bcond instruction 
+		  
+		  
+		  // test Jcond instruction
+		  
+		  
+		  // test Jal instruction
+		  
+		  
+		  
+		  
+		  
     end
 	 
 	 

@@ -56,6 +56,13 @@ bram MEM (
 	.q_b(q_b)  // output
 );
 
+
+// For testing don't delete
+datapath path ();
+signextend extend ();
+
+
+
 // Memory-Mapped I/O for a
 assign io_a = addr_a[9] & addr_a[8];
 assign a_enable = io_a & we_a;
