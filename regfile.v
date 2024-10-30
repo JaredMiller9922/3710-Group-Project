@@ -6,19 +6,19 @@
 // Quartus, so it can be initialized with a $readmemb function.
 // In this case, all the values in the ram.dat file are 0
 // to clear the registers to 0 on initialization
-module regfile #(parameter WIDTH = 16, REGBITS = 4)
+module regfile #(parameter WIDTH = 16, REGBITS = 3)
                 (input                clk, 
                  input                regwrite, 
                  input  [REGBITS-1:0] ra1, ra2, wa, 
                  input  [WIDTH-1:0]   wd, 
                  output [WIDTH-1:0]   rd1, rd2);
 
-   reg  [WIDTH-1:0] RAM [(1<<REGBITS)-1:0];
+   reg  [WIDTH-1:0] RAM [(2<<REGBITS)-1:0];
 	
 	initial begin
 	$display("Loading register file");
 	// you'll need to change the path to this file!
-	$readmemb("C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/reg.dat", RAM);
+	$readmemb("C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/reg.dat", RAM);
 	$display("done with RF load");
 	end
 

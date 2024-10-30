@@ -6,7 +6,9 @@ module datapath #(parameter WIDTH = 16, REGBITS = 3, IMM = 8, REG_ADD = 4)
 						input pcen,
 						input signext_sign,
 						input [2:0] alucont,
+						input [IMM-1:0] imm,
 						input [WIDTH-1:0] mem_out, 
+						input [WIDTH-1:0] rsrc_addr, rdest_addr, wa, // TODO: These shouldn't be inputs
 						output [WIDTH-1:0] Rsrc,
 						output [WIDTH-1:0] mem_addr
 );
@@ -17,16 +19,19 @@ module datapath #(parameter WIDTH = 16, REGBITS = 3, IMM = 8, REG_ADD = 4)
 	
 	// Create wires
 	wire regwrite;
-	wire [IMM-1:0] imm;
+
 	wire [WIDTH-1:0] imm_ext, pc_out, pc, rd1, rd2, Rdest, alu_out, wd, alua_out, alub_out;
-	wire [REG_ADD-1:0] wa, ra1, ra2;
+	// wire [REG_ADD-1:0] wa, rsrc_addr, rdest_addr;
 	
 	// Instruction register TODO: Next checkpoint
 	// flopenr #(WIDTH) instrmem(clk, reset, irwrite, memdata, instr);	
 	// register file address fields
-   // assign ra1 = instr[REGBITS+20:21];
-   // assign ra2 = instr[REGBITS+15:16];
+   // assign rsrc_addr = instr[REGBITS+20:21];
+   // assign rdest_addr = instr[REGBITS+15:16];
    // mux2       #(REGBITS) regmux(instr[REGBITS+15:16], instr[REGBITS+10:11], regdst, wa);
+	
+	// assign rsrc_addr = 4'b0101;
+	// assign rdest_addr = 4'b1001;
 	
 	// create a sign extender
 	signextend #(IMM) extend(imm, signext_sign, imm_ext); 
@@ -35,7 +40,6 @@ module datapath #(parameter WIDTH = 16, REGBITS = 3, IMM = 8, REG_ADD = 4)
 	flopenr #(WIDTH) pcreg(clk, reset, pcen, pc_out, pc); // Program Counter
 	flopr   #(WIDTH) rsrc(clk, reset, rd1, Rsrc);	
    flopr   #(WIDTH) rdest(clk, reset, rd2, Rdest);
-	// TODO: Should the PSR be here
 	
 	// datapath muxes all of the _s variables are control signals
 	mux2 #(WIDTH) wa_mux(Rsrc, Rdest, wa_s, wa);
@@ -46,6 +50,6 @@ module datapath #(parameter WIDTH = 16, REGBITS = 3, IMM = 8, REG_ADD = 4)
 	mux2 #(WIDTH) alub_mux(Rdest, CONST_ONE, alub_s, alub_out);
 	
 	// Instantiate the register file and the alu
-   regfile    #(WIDTH,REGBITS) rf(clk, regwrite, ra1, ra2, wa, wd, rd1, rd2);
+   regfile    #(WIDTH,REGBITS) rf(clk, regwrite, rsrc_addr, rdest_addr, wa, wd, rd1, rd2);
    alu        #(WIDTH) 			 alunit(Rsrc, Rdest, alucont, alu_out);
 endmodule 

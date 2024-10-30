@@ -10,12 +10,12 @@ Z0 !s99 nomlopt
 !i10e 25
 !i10f 100
 cModel Technology
-Z1 dC:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/simulation/questa
+Z1 dC:/Users/jared/Desktop/Fall 2024/3710-Group-Project/simulation/questa
 T_opt
-!s110 1730248357
-VF_KDmHFKNIOj86jIPbVmF3
+!s110 1730249888
+V9odi[nLTE2C6eWf`<R[iA2
 04 11 4 work Datapath_tb fast 0
-=1-d8bbc1200d82-67217ea4-2ed-6b78
+=1-ec2e98157875-672184a0-14b-5488
 R0
 !s12b OEM100
 !s124 OEM10U15 
@@ -24,292 +24,292 @@ Z2 tCvgOpt 0
 n@_opt
 OL;O;2023.3;77
 valu
-2C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v
-Z3 !s110 1730248355
+2C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/alu.v
+Z3 !s110 1730249886
 !i10b 1
 !s100 ]h=b7Sd_58hWziTE4c?o52
-IZ0RRK;A1HUd9WFMYVIWn53
+I[Q@Ln<AIjZiV:FeG?a:8<2
 R1
-Z4 w1730238962
-8C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v
-FC:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v
+w1730234926
+8C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/alu.v
+FC:/Users/jared/Desktop/Fall 2024/3710-Group-Project/alu.v
 !i122 2
 L0 3 46
-Z5 VDg1SIo80bB@j0V0VzS_@n1
-Z6 OL;L;2023.3;77
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2023.3;77
 r1
 !s85 0
 31
-Z7 !s108 1730248355.000000
-!s107 C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project|C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v|
+Z6 !s108 1730249886.000000
+!s107 C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jared/Desktop/Fall 2024/3710-Group-Project|C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/alu.v|
 !i113 0
-Z8 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z9 !s92 -vlog01compat -work work {+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z7 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 !s92 -vlog01compat -work work {+incdir+C:/Users/jared/Desktop/Fall 2024/3710-Group-Project} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R2
 valucontrol
-2C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v
+2C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/alucontrol.v
 R3
 !i10b 1
 !s100 U4EkPjc_e9F48f>8DK[L^3
-IUP=8g6TYYo10H8<j[T[AF1
+I3I`QNfoWYf^YjJX>@4CCH2
 R1
-Z10 w1730238951
-8C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v
-FC:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v
+w1729632994
+8C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/alucontrol.v
+FC:/Users/jared/Desktop/Fall 2024/3710-Group-Project/alucontrol.v
 !i122 1
 L0 3 21
+R4
 R5
-R6
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project|C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v|
+R6
+!s107 C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/alucontrol.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jared/Desktop/Fall 2024/3710-Group-Project|C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/alucontrol.v|
 !i113 0
+R7
 R8
-R9
 R2
 vbram
-2C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/bram.v
-R3
+2C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/bram.v
+Z9 !s110 1730249887
 !i10b 1
 !s100 gYNizi@8l`Z]jN1e9oR>f3
-I6fnT5=nlQo0NJ_g^IiJ6:1
+Ig?2dj@27GMl;dLCom3hb70
 R1
-R10
-8C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/bram.v
-FC:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/bram.v
+w1730153061
+8C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/bram.v
+FC:/Users/jared/Desktop/Fall 2024/3710-Group-Project/bram.v
 !i122 8
 L0 4 48
+R4
 R5
-R6
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/bram.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project|C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/bram.v|
+Z10 !s108 1730249887.000000
+!s107 C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/bram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jared/Desktop/Fall 2024/3710-Group-Project|C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/bram.v|
 !i113 0
+R7
 R8
-R9
 R2
 vdatapath
-2C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/datapath.v
-!s110 1730248354
+2C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/datapath.v
+R3
 !i10b 1
-!s100 3Oab9icRF9M3U2jFVE_N<3
-Ic54JmT;hClGaR?H5gMGW;0
+!s100 >9T`;ZOO<j_D>QG>Toj:M1
+IbojKi_bEY6EfjSiOUiz1^2
 R1
-w1730247202
-8C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/datapath.v
-FC:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/datapath.v
+w1730249366
+8C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/datapath.v
+FC:/Users/jared/Desktop/Fall 2024/3710-Group-Project/datapath.v
 !i122 0
-L0 2 50
+L0 2 53
+R4
 R5
-R6
 r1
 !s85 0
 31
-!s108 1730248354.000000
-!s107 C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/datapath.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project|C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/datapath.v|
+R6
+!s107 C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/datapath.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jared/Desktop/Fall 2024/3710-Group-Project|C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/datapath.v|
 !i113 0
+R7
 R8
-R9
 R2
 vDatapath_tb
-2C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/Datapath_tb.v
-!s110 1730248356
+2C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/Datapath_tb.v
+R9
 !i10b 1
-!s100 2]c6a[M98jF0@lJRk0IC33
-Icf;aVfFlQMeZSCdF0Va9f1
+!s100 f@bk9HR1;EWXkkM=?`_GT1
+Il?BQ[oa0?_n^KG`ID<6M92
 R1
-w1730248179
-8C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/Datapath_tb.v
-FC:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/Datapath_tb.v
+w1730249440
+8C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/Datapath_tb.v
+FC:/Users/jared/Desktop/Fall 2024/3710-Group-Project/Datapath_tb.v
 !i122 9
-L0 1 117
+L0 1 100
+R4
 R5
-R6
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/Datapath_tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project|C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/Datapath_tb.v|
+R10
+!s107 C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/Datapath_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jared/Desktop/Fall 2024/3710-Group-Project|C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/Datapath_tb.v|
 !i113 0
+R7
 R8
-R9
 R2
 n@datapath_tb
 vflopenr
-Z11 2C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/flops.v
-R3
+Z11 2C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/flops.v
+R9
 !i10b 1
 !s100 YKC91P^CY>ZeiXM3`>5]<0
-IAA4z[aCF6eFF2L1n^ccEV3
+IbA6OKV1VCA1J9ni:J@PM^2
 R1
-R4
-Z12 8C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/flops.v
-Z13 FC:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/flops.v
+Z12 w1730231853
+Z13 8C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/flops.v
+Z14 FC:/Users/jared/Desktop/Fall 2024/3710-Group-Project/flops.v
 !i122 4
 L0 1 9
+R4
 R5
-R6
 r1
 !s85 0
 31
-R7
-Z14 !s107 C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/flops.v|
-Z15 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project|C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/flops.v|
+R10
+Z15 !s107 C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/flops.v|
+Z16 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jared/Desktop/Fall 2024/3710-Group-Project|C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/flops.v|
 !i113 0
+R7
 R8
-R9
 R2
 vflopr
 R11
-R3
+R9
 !i10b 1
 !s100 ZIH7;VgOBR@Q8jS7BQXJM3
-Ie9DRWoRcNiN:^?gn579Kg1
+InQOjMPoUJQS;2aR[fkMlD1
 R1
-R4
 R12
 R13
+R14
 !i122 4
 L0 11 9
+R4
 R5
-R6
 r1
 !s85 0
 31
-R7
-R14
+R10
 R15
+R16
 !i113 0
+R7
 R8
-R9
 R2
 vGroupProject3710
-2C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v
-R3
+2C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v
+R9
 !i10b 1
 !s100 T5Y5Ej;9N96R<g<>fdPco3
-Ik36@PELG>B6]Yd^N?D4Cm2
+I@OVNOfE6XC<Vj586zZ1Ok2
 R1
-w1730245707
-8C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v
-FC:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v
+w1730248399
+8C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v
+FC:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v
 !i122 3
 L0 1 83
+R4
 R5
-R6
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project|C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v|
+R10
+!s107 C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jared/Desktop/Fall 2024/3710-Group-Project|C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v|
 !i113 0
+R7
 R8
-R9
 R2
 n@group@project3710
 vmux2
-Z16 2C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/muxes.v
-R3
+Z17 2C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/muxes.v
+R9
 !i10b 1
 !s100 9UcW53V^jc=6[1N@b054?1
-Ij_L]31Nf2fafc8_1>eD3P2
+IdVYzDWEk5A3JV;?>nXZeF1
 R1
-R4
-Z17 8C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/muxes.v
-Z18 FC:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/muxes.v
+Z18 w1730225819
+Z19 8C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/muxes.v
+Z20 FC:/Users/jared/Desktop/Fall 2024/3710-Group-Project/muxes.v
 !i122 5
 L0 1 7
+R4
 R5
-R6
 r1
 !s85 0
 31
-R7
-Z19 !s107 C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/muxes.v|
-Z20 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project|C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/muxes.v|
+R10
+Z21 !s107 C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/muxes.v|
+Z22 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jared/Desktop/Fall 2024/3710-Group-Project|C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/muxes.v|
 !i113 0
+R7
 R8
-R9
 R2
 vmux4
-R16
-R3
+R17
+R9
 !i10b 1
 !s100 hOkN]2[Y@OOVlBeYFaYMW1
-ImCl9GA=kYEAK@UUFblVQT0
+IF]8ji`57fS45`Cj9Tdh3R0
 R1
-R4
-R17
 R18
-!i122 5
-L0 9 13
-R5
-R6
-r1
-!s85 0
-31
-R7
 R19
 R20
+!i122 5
+L0 9 13
+R4
+R5
+r1
+!s85 0
+31
+R10
+R21
+R22
 !i113 0
+R7
 R8
-R9
 R2
 vregfile
-2C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v
-R3
+2C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/regfile.v
+R9
 !i10b 1
-!s100 gkVZXB<?e;AKGlY4zMM:e3
-I7dRHk9HCilmk5C0<]ZRmV3
+!s100 J=gz=YCk:dTjT=aK7=8_?1
+IIocV7D<J>ekV?JBLCDD<n2
 R1
-w1730248334
-8C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v
-FC:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v
+w1730249851
+8C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/regfile.v
+FC:/Users/jared/Desktop/Fall 2024/3710-Group-Project/regfile.v
 !i122 7
 L0 9 26
+R4
 R5
-R6
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project|C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v|
+R10
+!s107 C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/regfile.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jared/Desktop/Fall 2024/3710-Group-Project|C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/regfile.v|
 !i113 0
+R7
 R8
-R9
 R2
 vsignextend
-2C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/signextend.v
-R3
+2C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/signextend.v
+R9
 !i10b 1
 !s100 Gk6X`aiRG:O>iI@EZ;=Y12
-IdDigGCbJ4^mI[?RIWVWAb2
+IN_FUoWY@jlIW=[7Y:AQ?43
 R1
-R4
-8C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/signextend.v
-FC:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/signextend.v
+w1730236022
+8C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/signextend.v
+FC:/Users/jared/Desktop/Fall 2024/3710-Group-Project/signextend.v
 !i122 6
 L0 1 6
+R4
 R5
-R6
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/signextend.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project|C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/signextend.v|
+R10
+!s107 C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/signextend.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jared/Desktop/Fall 2024/3710-Group-Project|C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/signextend.v|
 !i113 0
+R7
 R8
-R9
 R2

@@ -24,115 +24,115 @@
 # Copying c:/intelfpga_lite/23.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/datapath.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/jared/Desktop/Fall\ 2024/3710-Group-Project {C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/datapath.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 18:32:34 on Oct 29,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project" C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/datapath.v 
+# Start time: 18:58:06 on Oct 29,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/jared/Desktop/Fall 2024/3710-Group-Project" C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/datapath.v 
 # -- Compiling module datapath
 # 
 # Top level modules:
 # 	datapath
-# End time: 18:32:34 on Oct 29,2024, Elapsed time: 0:00:00
+# End time: 18:58:06 on Oct 29,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/jared/Desktop/Fall\ 2024/3710-Group-Project {C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/alucontrol.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 18:32:35 on Oct 29,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project" C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alucontrol.v 
+# Start time: 18:58:06 on Oct 29,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/jared/Desktop/Fall 2024/3710-Group-Project" C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/alucontrol.v 
 # -- Compiling module alucontrol
 # 
 # Top level modules:
 # 	alucontrol
-# End time: 18:32:35 on Oct 29,2024, Elapsed time: 0:00:00
+# End time: 18:58:06 on Oct 29,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/jared/Desktop/Fall\ 2024/3710-Group-Project {C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/alu.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 18:32:35 on Oct 29,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project" C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/alu.v 
+# Start time: 18:58:06 on Oct 29,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/jared/Desktop/Fall 2024/3710-Group-Project" C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/alu.v 
 # -- Compiling module alu
 # 
 # Top level modules:
 # 	alu
-# End time: 18:32:35 on Oct 29,2024, Elapsed time: 0:00:00
+# End time: 18:58:06 on Oct 29,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/jared/Desktop/Fall\ 2024/3710-Group-Project {C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 18:32:35 on Oct 29,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project" C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/GroupProject3710.v 
+# Start time: 18:58:07 on Oct 29,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/jared/Desktop/Fall 2024/3710-Group-Project" C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/GroupProject3710.v 
 # -- Compiling module GroupProject3710
 # 
 # Top level modules:
 # 	GroupProject3710
-# End time: 18:32:35 on Oct 29,2024, Elapsed time: 0:00:00
+# End time: 18:58:07 on Oct 29,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/flops.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/jared/Desktop/Fall\ 2024/3710-Group-Project {C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/flops.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 18:32:35 on Oct 29,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project" C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/flops.v 
+# Start time: 18:58:07 on Oct 29,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/jared/Desktop/Fall 2024/3710-Group-Project" C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/flops.v 
 # -- Compiling module flopenr
 # -- Compiling module flopr
 # 
 # Top level modules:
 # 	flopenr
 # 	flopr
-# End time: 18:32:35 on Oct 29,2024, Elapsed time: 0:00:00
+# End time: 18:58:07 on Oct 29,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/muxes.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/jared/Desktop/Fall\ 2024/3710-Group-Project {C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/muxes.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 18:32:35 on Oct 29,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project" C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/muxes.v 
+# Start time: 18:58:07 on Oct 29,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/jared/Desktop/Fall 2024/3710-Group-Project" C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/muxes.v 
 # -- Compiling module mux2
 # -- Compiling module mux4
 # 
 # Top level modules:
 # 	mux2
 # 	mux4
-# End time: 18:32:35 on Oct 29,2024, Elapsed time: 0:00:00
+# End time: 18:58:07 on Oct 29,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/signextend.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/jared/Desktop/Fall\ 2024/3710-Group-Project {C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/signextend.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 18:32:35 on Oct 29,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project" C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/signextend.v 
+# Start time: 18:58:07 on Oct 29,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/jared/Desktop/Fall 2024/3710-Group-Project" C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/signextend.v 
 # -- Compiling module signextend
 # 
 # Top level modules:
 # 	signextend
-# End time: 18:32:35 on Oct 29,2024, Elapsed time: 0:00:00
+# End time: 18:58:07 on Oct 29,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/jared/Desktop/Fall\ 2024/3710-Group-Project {C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/regfile.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 18:32:35 on Oct 29,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project" C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v 
+# Start time: 18:58:07 on Oct 29,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/jared/Desktop/Fall 2024/3710-Group-Project" C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/regfile.v 
 # -- Compiling module regfile
 # 
 # Top level modules:
 # 	regfile
-# End time: 18:32:35 on Oct 29,2024, Elapsed time: 0:00:00
+# End time: 18:58:07 on Oct 29,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/bram.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/jared/Desktop/Fall\ 2024/3710-Group-Project {C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/bram.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 18:32:35 on Oct 29,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project" C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/bram.v 
+# Start time: 18:58:07 on Oct 29,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/jared/Desktop/Fall 2024/3710-Group-Project" C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/bram.v 
 # -- Compiling module bram
 # 
 # Top level modules:
 # 	bram
-# End time: 18:32:35 on Oct 29,2024, Elapsed time: 0:00:00
+# End time: 18:58:07 on Oct 29,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/Jesse/Documents/GitHub/ECE\ 3710/3710-Group-Project {C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/Datapath_tb.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/jared/Desktop/Fall\ 2024/3710-Group-Project {C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/Datapath_tb.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 18:32:35 on Oct 29,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project" C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/Datapath_tb.v 
+# Start time: 18:58:07 on Oct 29,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/jared/Desktop/Fall 2024/3710-Group-Project" C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/Datapath_tb.v 
 # -- Compiling module Datapath_tb
 # 
 # Top level modules:
 # 	Datapath_tb
-# End time: 18:32:36 on Oct 29,2024, Elapsed time: 0:00:01
+# End time: 18:58:07 on Oct 29,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  Datapath_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" Datapath_tb 
-# Start time: 18:32:36 on Oct 29,2024
+# Start time: 18:58:07 on Oct 29,2024
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
@@ -146,19 +146,19 @@
 # Loading work.regfile(fast)
 # Loading work.alu(fast)
 # Loading work.alucontrol(fast)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (4) for port 'y'. The port definition is at: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/muxes.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /Datapath_tb/path/wa_mux File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/datapath.v Line: 41
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'd0'. The port definition is at: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/muxes.v(10).
-#    Time: 0 ps  Iteration: 0  Instance: /Datapath_tb/path/wd_mux File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/datapath.v Line: 43
-# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'ra1'. The port definition is at: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v(12).
-#    Time: 0 ps  Iteration: 0  Instance: /Datapath_tb/path/rf File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/datapath.v Line: 49
-# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'ra2'. The port definition is at: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v(12).
-#    Time: 0 ps  Iteration: 0  Instance: /Datapath_tb/path/rf File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/datapath.v Line: 49
-# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'wa'. The port definition is at: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v(12).
-#    Time: 0 ps  Iteration: 0  Instance: /Datapath_tb/path/rf File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/datapath.v Line: 49
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (4) for port 'y'. The port definition is at: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/muxes.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /Datapath_tb/path/wa_mux File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/datapath.v Line: 44
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'd0'. The port definition is at: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/muxes.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /Datapath_tb/path/wd_mux File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/datapath.v Line: 46
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'ra1'. The port definition is at: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/regfile.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /Datapath_tb/path/rf File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/datapath.v Line: 52
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'ra2'. The port definition is at: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/regfile.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /Datapath_tb/path/rf File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/datapath.v Line: 52
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'wa'. The port definition is at: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/regfile.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /Datapath_tb/path/rf File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/datapath.v Line: 52
 # ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'alunit'.  Expected 5, found 4.
-#    Time: 0 ps  Iteration: 0  Instance: /Datapath_tb/path/alunit File: C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/datapath.v Line: 50
-# ** Warning: (vsim-3722) C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/datapath.v(50): [TFMPC] - Missing connection for port 'PSR'.
+#    Time: 0 ps  Iteration: 0  Instance: /Datapath_tb/path/alunit File: C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/datapath.v Line: 53
+# ** Warning: (vsim-3722) C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/datapath.v(53): [TFMPC] - Missing connection for port 'PSR'.
 # 
 # add wave *
 # view structure
@@ -167,9 +167,5 @@
 # .main_pane.objects.interior.cs.body.tree
 # run 100 ns
 # Loading register file
-# ** Warning: (vsim-PLI-3407) Too many data words read on line 9 of file "C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/reg.dat". (Current address [8], address range [0:7])    : C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/regfile.v(21)
-#    Time: 0 ps  Iteration: 0  Instance: /Datapath_tb/path/rf
 # done with RF load
-# alu_out: xxxxxxxxxxxxxxxx, Rdest: xxxxxxxxxxxxxxxx, alua_out: xxxxxxxxxxxxxxxx, rd1: xxxxxxxxxxxxxxxx, Rsrc: xxxxxxxxxxxxxxxx. 000
-# End time: 18:32:48 on Oct 29,2024, Elapsed time: 0:00:12
-# Errors: 0, Warnings: 9
+# alu_out: 0000000000000000, Rdest: 0000000000000000, alua_out: 0000000000000000, rd1: 0000000000000000, Rsrc: 0000000000000000. 000

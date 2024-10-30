@@ -45,8 +45,8 @@ alu alu1 (
 
 // Instantiate bram
 bram MEM (
-	.data_a(data_a),
-	.data_b(data_b),
+	// .data_a(data_a),
+	// .data_b(data_b),
 	.addr_a(addr_a), 
 	.addr_b(addr_b),
 	.we_a(we_a), 
