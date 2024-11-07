@@ -43,13 +43,6 @@ alu alu1 (
 
 );	
 
-//Because it won't compile correctly otherwise
-shifter #(16) shift (
-	.imm(),
-	.amount(),
-	.dir(),
-	.y()
-);
 FSM mem_fsm();
 
 // Instantiate bram
