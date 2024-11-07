@@ -54,8 +54,8 @@ FSM mem_fsm();
 
 // Instantiate bram
 bram MEM (
-	.data_a(data_a),
-	.data_b(data_b),
+	// .data_a(data_a),
+	// .data_b(data_b),
 	.addr_a(addr_a), 
 	.addr_b(addr_b),
 	.we_a(we_a), 
@@ -64,6 +64,13 @@ bram MEM (
 	.q_a(q_a), // output
 	.q_b(q_b)  // output
 );
+
+
+// For testing don't delete
+datapath path ();
+signextend extend ();
+
+
 
 // Memory-Mapped I/O for a
 assign io_a = addr_a[9] & addr_a[8];
@@ -83,14 +90,3 @@ mux2 mux_b(q_b, switches, io_b, readMemData_b);
 //flopenr     #(8)      instrmem(clk, reset, irwrite, memdata, instr);		 
 
 endmodule
-
-
-
-
-module signextend #(parameter WIDTH = 8)
-                   (input [WIDTH-1:0] imm,
-						  input 				  sign,
-                    output [WIDTH+WIDTH-1:0] y);
-   assign y = sign ? {{8{imm[7]}}, imm} : {{8{1'b0}}, imm};
-endmodule
-
