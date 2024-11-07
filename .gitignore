@@ -1,5 +1,8 @@
 # Ignore everything in the db file
 db/
+incremental_db/
+output_files/
+simulation/
 
 # Ignore the qws file because its just user preferences
 GroupProject3710.qws
