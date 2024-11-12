@@ -1,0 +1,16 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.8.4">
+  <diagram name="Page-1" id="N74kqfwAAFA2t6-CvJYL">
+    <mxGraphModel dx="913" dy="539" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tbVzbEOtK2ctBwKia0T_-1" value="1. WA_S = 0&lt;div&gt;&lt;div&gt;2. WD_S = 00&lt;/div&gt;&lt;div&gt;3. ALU_A = 00&lt;/div&gt;&lt;div&gt;4. ALU_B = 0&lt;/div&gt;&lt;div&gt;5. PC_S = 0&lt;/div&gt;&lt;div&gt;6. PC_EN = 0&lt;/div&gt;&lt;div&gt;7. MEM_S = 0&lt;/div&gt;&lt;div&gt;8. SIGN_EXT_S = 0&lt;/div&gt;&lt;div&gt;9. REG_WR_EN = 0&lt;/div&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="310" y="90" width="180" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="tbVzbEOtK2ctBwKia0T_-2" value="Instruction Fetch" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#6c8ebf;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="345" y="50" width="110" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
