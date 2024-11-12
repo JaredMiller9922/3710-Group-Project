@@ -34,6 +34,8 @@ module datapath #(parameter WIDTH = 16, REGBITS = 3, IMM = 8, REG_ADD = 4)
 	// assign rsrc_addr = 4'b0101;
 	// assign rdest_addr = 4'b1001;
 	
+	// TODO: Create a flip flop for alu_out
+	// TODO: Create a flip flop for the instruction decoder
 	// create a sign extender
 	signextend #(IMM) extend(imm, signext_sign, imm_ext); 
 
