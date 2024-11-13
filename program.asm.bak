@@ -1,0 +1,3 @@
+ADD %r1 %r2
+SUB %r1 %r2
+ADD %r3 %r4
