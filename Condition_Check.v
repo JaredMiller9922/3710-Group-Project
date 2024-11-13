@@ -1,7 +1,7 @@
-module Condition_Check (
+module conditionCheck (
 		input [3:0] branch_cond,
 		input [4:0] PSR, // C F L Z N
-		output branch
+		output reg branch
 		);
 
 	// Condition codes

@@ -1,17 +1,24 @@
 module controller(input            clk, reset, 
-                  input      [5:0] op, 
+                  input      [3:0] op, 
+						input      [3:0] op_ext,
                   input            zero,
-						input		  [3:0] branch_cond, 
-                  output [1:0] WD_S, ALU_A, ALU_B <= 2'b00;
-						PC_S <= 0;
-						PC_EN <= 0;
-						MEM_S <= 0;
-						REG_WR_EN <= 0;
-						INSTR_EN <= 0;
-						ALU_OUT_EN <= 0;
-						MEM_REG_EN <= 0;
-						MEM_WR_S <= 0;
-						SE_SIGN <= 1;);
+						input		  [3:0] branch_cond,
+						input 	  [4:0] PSR,
+						// TODO (JM): I commented this out but didn't delete it just in case Jesse wanted it
+                  // output [1:0] WD_S, ALU_A, ALU_B <= 2'b00;
+						output reg [1:0] WD_S, ALU_A, ALU_B,
+						output reg PC_S, PC_EN, MEM_s, REG_WR_EN, INSTR_EN, ALU_OUT_EN, MEM_REG_EN, MEM_WR_S, MEM_S, SE_SIGN
+						);
+// TODO (JM): I commented this out but didn't delete it just in case Jesse wanted it
+//	PC_S <= 0;
+//	PC_EN <= 0;
+//	MEM_S <= 0;
+//	REG_WR_EN <= 0;
+//	INSTR_EN <= 0;
+//	ALU_OUT_EN <= 0;
+//	MEM_REG_EN <= 0;
+//	MEM_WR_S <= 0;
+//	SE_SIGN <= 1;
 
 	// Paramaters used for state names allows for easy 
 	// changing of state encodings
@@ -49,13 +56,8 @@ module controller(input            clk, reset,
 	parameter   XORI		=  4'b0011;
 	parameter   MOVI		=  4'b1101;
 	
+	conditionCheck cond_check(branch_cond, PSR, branch);
 	
-	
-	//Condition_Check(branch_cond, branch);
-	
-
-	
-
    reg [3:0] state, nextstate;       // state register and nextstate value
    reg       pcwrite, pcwritecond;   // Write to the PC? 
 
@@ -70,15 +72,28 @@ module controller(input            clk, reset,
          case(state)
             FETCH:  nextstate <= DECODE;
             DECODE:  case(op)
-                        OP_EXT:	case(op_ext)	//TODO add op_ext
+                        OP_EXT:	case(op_ext)	// TODO add op_ext
 										SB:		nextstate <= SB_MEM;
 										LB:		nextstate <= LB_MEM;
-										JCOND:	nextstate <= COND;
+										JCOND:
+											begin
+												case(branch)
+													1 : nextstate <= JUMP;
+													default : nextstate <= PC_UP;
+												endcase
+											end
 										JAL:		nextstate <= CALC_RLINK;
 										default: nextstate <= PURGATORY; // should never happen
 										endcase
                         RTYPE:   nextstate <= RTYPE_EX;
-                        BCOND:     nextstate <= COND;
+                        BCOND:     nextstate <= CALC_DISP;
+								BCOND: 											
+									begin
+										case(branch)
+											1 : nextstate <= JUMP;
+											default : nextstate <= PC_UP;
+										endcase
+									end
                         default: nextstate <= PURGATORY; // should never happen
                      endcase
             RTYPE_EX:  case(op_ext)
@@ -112,103 +127,94 @@ module controller(input            clk, reset,
 	// This combinational block generates the outputs from each state. 
    always @(*)
       begin
-            // set all outputs to zero, then conditionally assert just the appropriate ones
-            irwrite <= 4'b0000;
-            pcwrite <= 0; pcwritecond <= 0;
-            regwrite <= 0; regdst <= 0;
-            memwrite <= 0;
-            alusrca <= 0; alusrcb <= 2'b00; aluop <= 2'b00;
-            pcsource <= 2'b00;
-            iord <= 0; memtoreg <= 0;
+			// set all outputs to zero, then conditionally assert just the appropriate ones
+			WD_S <= 2'b00;
+			ALU_A <= 2'b00;
+			ALU_B <= 2'b00;
+			PC_S <= 0;
+			PC_EN <= 0;
+			MEM_S <= 0;
+			REG_WR_EN <= 0;
+			INSTR_EN <= 0;
+			ALU_OUT_EN <= 0;
+			MEM_REG_EN <= 0;
+			MEM_WR_S <= 0;
+			SE_SIGN <= 1;
 				
 				
-				WD_S <= 2'b00;
-				ALU_A <= 2'b00;
-				ALU_B <= 2'b00;
-				PC_S <= 0;
-				PC_EN <= 0;
-				MEM_S <= 0;
-				REG_WR_EN <= 0;
-				INSTR_EN <= 0;
-				ALU_OUT_EN <= 0;
-				MEM_REG_EN <= 0;
-				MEM_WR_S <= 0;
-				SE_SIGN <= 1;
-				
-				
-            case(state)
-               FETCH: 
-                  begin
-                     MEM_S <= 1;
-							INSTR_EN <= 1;
-                  end
-               DECODE: 
-                  begin
-                     
-                  end
-               RTYPE_EX:
-                  begin
-                     ALU_OUT_EN <= 1;
-                  end
-               WRITE:
-                  begin
-                     WD_S <= 2'b11;
-							REG_WR_EN <= 1;
-                  end
-               PC_UP:
-						begin
-							ALU_A <= 2'b01;
-							ALU_B <= 2'b10;
-							PC_S <= 1;
-							PC_EN <= 1;
-						end
-               ITYPE_EX:
-                  begin
-                     ALU_A <= 2'b01;
-                     ALU_OUT_EN <= 1;
-							case(op)			// DO 0 EXTEND ON THESE I-TYPE INSTRUCTIONS AND SIGN EXTEND FOR EVERYTHING ELSE
-									ANDI:		SE_SIGN <= 0;
-									ORI:		SE_SIGN <= 0;
-									XORI:		SE_SIGN <= 0;
-									MOVI:		SE_SIGN <= 0;
-									default: SE_SIGN <= 1; // should happen
-                     endcase
-                  end
-               LB_MEM:
-                  begin
-                     MEM_REG_EN <= 1;
-                  end
-               LB_LOAD:
-                  begin
-                     WD_S <= 2'b10;
-                  end
-               SB_MEM:
-                  begin
-                     MEM_WR_S <= 1;
-                  end
-               CALC_DISP: 
-                  begin
-                     ALU_A <= 2'b01;
-							ALU_B <= 2'b01;
-							PC_S <= 1;
-							PC_EN <= 1;
-                  end
-               JUMP:
-                  begin
-                     PC_EN <= 1;
-                  end
-               CALC_RLINK:
-                  begin
-                     ALU_A <= 2'b01;
-							ALU_OUT_EN <= 1;
-                  end
-               WR_RLINK_J:
-                  begin
-                     WD_S <= 2'b11;
-							PC_EN <= 1;
-							REG_WR_EN <= 1;
-                  end
+         case(state)
+			FETCH: 
+				begin
+				MEM_S <= 1;
+				INSTR_EN <= 1;
+				end
+         DECODE: 
+			begin
+			end
+			RTYPE_EX:
+				begin
+				ALU_OUT_EN <= 1;
+				end
+			WRITE:
+			begin
+				WD_S <= 2'b11;
+				REG_WR_EN <= 1;
+			end
+			PC_UP:
+				begin
+				ALU_A <= 2'b01;
+				ALU_B <= 2'b10;
+				PC_S <= 1;
+				PC_EN <= 1;
+				end
+			ITYPE_EX:
+				begin
+				ALU_A <= 2'b01;
+				ALU_OUT_EN <= 1;
+				case(op)			// DO 0 EXTEND ON THESE I-TYPE INSTRUCTIONS AND SIGN EXTEND FOR EVERYTHING ELSE
+					ANDI:		SE_SIGN <= 0;
+					ORI:		SE_SIGN <= 0;
+					XORI:		SE_SIGN <= 0;
+					MOVI:		SE_SIGN <= 0;
+					default: SE_SIGN <= 1; // should happen
+            endcase
+            end
+				LB_MEM:
+				begin
+					MEM_REG_EN <= 1;
+				end
+				LB_LOAD:
+					begin
+					WD_S <= 2'b10;
+					end
+            SB_MEM:
+					begin
+					MEM_WR_S <= 1;
+					end
+				CALC_DISP: 
+					begin
+					ALU_A <= 2'b01;
+					ALU_B <= 2'b01;
+					PC_S <= 1;
+					PC_EN <= 1;
+               end
+				JUMP:
+					begin
+					PC_EN <= 1;
+					end
+				CALC_RLINK:
+					begin
+					ALU_A <= 2'b01;
+					ALU_OUT_EN <= 1;
+					end
+             WR_RLINK_J:
+					begin
+					WD_S <= 2'b11;
+					PC_EN <= 1;
+					REG_WR_EN <= 1;
+               end
          endcase
       end
-   assign pcen = pcwrite | (pcwritecond & zero); // program counter enable
+	// TODO (JM): I commented this out but didn't delete it just in case Jesse wanted it
+   // assign pcen = pcwrite | (pcwritecond & zero);
 endmodule
