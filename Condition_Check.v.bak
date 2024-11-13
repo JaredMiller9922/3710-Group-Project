@@ -1,0 +1,4 @@
+case(branch_cond)
+									EQ:      nextstate <= PC_UP;
+									default: nextstate <= WRITE; // should happen
+                     endcase
