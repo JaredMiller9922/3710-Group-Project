@@ -11,8 +11,8 @@ module CPU #(parameter WIDTH = 16, REGBITS = 3, IMM = 8, REG_ADD = 4, PSRL = 5)
 	);
 	
 	
-	wire [3:0] op;
-	wire [3:0] op_ext;
+	wire [3:0] OP_CODE;
+	wire [3:0] OP_EXT;
 	wire [3:0] branch_cond;
 	wire [4:0] PSR_OUT;
 	// TODO (JM): I commented this out but didn't delete it just in case Jesse wanted it
@@ -22,8 +22,8 @@ module CPU #(parameter WIDTH = 16, REGBITS = 3, IMM = 8, REG_ADD = 4, PSRL = 5)
 	
 	controller cont(
 				  clk, reset, 
-              op, 
-				  op_ext,
+              OP_CODE, 
+				  OP_EXT,
 				  branch_cond,
 				  PSR_OUT,
 				  WD_S, ALUA_S, ALUB_S,
@@ -48,7 +48,10 @@ module CPU #(parameter WIDTH = 16, REGBITS = 3, IMM = 8, REG_ADD = 4, PSRL = 5)
 				.MEM_OUT(mem_out),			// Inputs for MEM_OUT and instr
 				.Rsrc(writedata), 			// Values that allow memory access
 				.MEM_ADDR(mem_addr),			// Values that allow memory access
-				.PSR_OUT(PSR_OUT)
+				.PSR_OUT(PSR_OUT),
+				.OP_CODE(OP_CODE),
+				.OP_EXT(OP_EXT),
+				.Rdest_addr(branch_cond)
 				);
 
 	

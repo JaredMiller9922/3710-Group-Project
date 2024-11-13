@@ -45,12 +45,12 @@ module controller(input            clk, reset,
 	parameter   XORI		=  4'b0011;
 	parameter   MOVI		=  4'b1101;
 	
+	wire branch;
+	
 	conditionCheck cond_check(branch_cond, PSR, branch);
 	
    reg [3:0] state, nextstate;       // state register and nextstate value
    reg       pcwrite, pcwritecond;   // Write to the PC? 
-	
-	wire branch;
 
    // state register
    always @(posedge clk)
@@ -84,7 +84,7 @@ module controller(input            clk, reset,
 											default : nextstate <= PC_UP;
 										endcase
 									end
-                        default: nextstate <= PURGATORY; // should never happen
+                        default: nextstate <= ITYPE_EX; // should often happen
                      endcase
             RTYPE_EX:  case(op_ext)
 									CMP:      nextstate <= PC_UP;
@@ -110,6 +110,7 @@ module controller(input            clk, reset,
             JUMP:     nextstate <= FETCH;
 				CALC_RLINK: nextstate <= WR_RLINK_J;
             WR_RLINK_J: nextstate <= FETCH;
+				PC_UP: nextstate <= FETCH;
             default: nextstate <= PURGATORY; // should never happen
          endcase
       end
@@ -161,7 +162,7 @@ module controller(input            clk, reset,
 				end
 			ITYPE_EX:
 				begin
-				ALUA_S <= 2'b01;
+				ALUA_S <= 2'b10;
 				ALU_OUT_EN <= 1;
 				PSR_EN <= 1;
 				case(op)			// DO 0 EXTEND ON THESE I-TYPE INSTRUCTIONS AND SIGN EXTEND FOR EVERYTHING ELSE
