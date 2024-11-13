@@ -2,35 +2,35 @@
 // that ALU is performing based on the opcode
 module CPU #(parameter WIDTH = 16, REGBITS = 3, IMM = 8, REG_ADD = 4, PSRL = 5)
 	(
-	input clk,                  // 50MHz clock
-	input reset,                // active-low reset
-	input [WIDTH-1:0] mem_out,        // data that is read from memory
-   output memwrite,            // write-enable to memory
-   output [WIDTH-1:0] mem_addr,           // address to memory
-   output [WIDTH-1:0] writedata      // write data to memory
+	input clk,                  	// 50MHz clock
+	input reset,                	// active-low reset
+	input [WIDTH-1:0] mem_out,  	// data that is read from memory
+   output MEM_WR_S,            	// write-enable to memory
+   output [WIDTH-1:0] mem_addr,  // address to memory
+   output [WIDTH-1:0] writedata  // write data to memory
 	);
 	
 	
 	wire [3:0] op;
 	wire [3:0] op_ext;
 	wire [3:0] branch_cond;
-	wire [4:0] PSR;
+	wire [4:0] PSR_OUT;
 	// TODO (JM): I commented this out but didn't delete it just in case Jesse wanted it
 	// output [1:0] WD_S, ALUA_S, ALUB_S <= 2'b00;
 	wire [1:0] WD_S, ALUA_S, ALUB_S;
-	wire PC_S, PC_EN, REG_WR, INSTR_EN, ALU_OUT_EN, MEM_REG_EN, MEM_WR_S, MEM_S, SE_SIGN;
+	wire PC_S, PC_EN, REG_WR, INSTR_EN, ALU_OUT_EN, MEM_REG_EN, MEM_S, SE_SIGN, PSR_EN;
 	
-	controller(
+	controller cont(
 				  clk, reset, 
               op, 
 				  op_ext,
 				  branch_cond,
-				  PSR,
+				  PSR_OUT,
 				  WD_S, ALUA_S, ALUB_S,
 				  PC_S, PC_EN, REG_WR, INSTR_EN, ALU_OUT_EN, MEM_REG_EN, MEM_WR_S, MEM_S, SE_SIGN
 				  );
 				  
-	datapath(
+	datapath dp(
 				.clk(clk), 
 				.reset(reset),
 				.PC_S(PC_S), 					// Selector bits for all mux2

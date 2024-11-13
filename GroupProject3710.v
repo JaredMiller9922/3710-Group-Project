@@ -14,7 +14,7 @@ module GroupProject3710 #(parameter WIDTH = 16, REGBITS = 4) (
 		.clk(clk),              	// 50MHz clock
 		.reset(reset),             // active-low reset
 		.mem_out(readMemData_a),   // data that is read from memory
-		.memwrite(we_a),           // write-enable to memory
+		.MEM_WR_S(we_a),           // write-enable to memory
 		.mem_addr(addr_a),         // address to memory
 		.writedata(data_a)      	// write data to memory
 		);

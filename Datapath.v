@@ -7,7 +7,7 @@ module datapath #(parameter WIDTH = 16, REGBITS = 3, IMML = 8, REG_ADD = 4, PSRL
 						input PSR_EN,												// Flopenr bits
 						
 						input SE_SIGN, REG_WR, 									// Control Signals
-						input [WIDTH-1:0] MEM_OUT, INSTR,					// Inputs for MEM_OUT and INSTR
+						input [WIDTH-1:0] MEM_OUT,								// Inputs for MEM_OUT and INSTR
 						
 						output [WIDTH-1:0] Rsrc, MEM_ADDR,					// Values that allow memory access
 						output [PSRL-1:0] PSR_OUT
@@ -18,7 +18,9 @@ module datapath #(parameter WIDTH = 16, REGBITS = 3, IMML = 8, REG_ADD = 4, PSRL
 	localparam CONST_ONE = 16'b0;
 	
 	// Create wires
-	wire [WIDTH-1:0] IMM_EXT, PC_OUT, PC, Rdest, ALU_RES, WD, ALUA_OUT, ALUB_OUT, MEM_DATA_OUT, ALU_OUT_VAL;
+	wire [WIDTH-1:0] IMM_EXT, PC_OUT, PC, Rdest, ALU_RES, WD, ALUA_OUT, ALUB_OUT, MEM_DATA_OUT, ALU_OUT_VAL, INSTR, rd1, rd2;
+	wire [REGBITS-1:0] alucont;
+	wire [PSRL-1:0] PSR;
 	
 	// Create wires for INSTRuction decoding
 	wire[REG_ADD-1:0] Rsrc_addr, Rdest_addr, OP_CODE, OP_EXT;

@@ -8,16 +8,6 @@ module controller(input            clk, reset,
 						output reg [1:0] WD_S, ALUA_S, ALUB_S,
 						output reg PC_S, PC_EN, REG_WR_EN, INSTR_EN, ALU_OUT_EN, MEM_REG_EN, MEM_WR_S, MEM_S, SE_SIGN, PSR_EN
 						);
-// TODO (JM): I commented this out but didn't delete it just in case Jesse wanted it
-//	PC_S <= 0;
-//	PC_EN <= 0;
-//	MEM_S <= 0;
-//	REG_WR_EN <= 0;
-//	INSTR_EN <= 0;
-//	ALU_OUT_EN <= 0;
-//	MEM_REG_EN <= 0;
-//	MEM_WR_S <= 0;
-//	SE_SIGN <= 1;
 
 	// Paramaters used for state names allows for easy 
 	// changing of state encodings
@@ -59,6 +49,8 @@ module controller(input            clk, reset,
 	
    reg [3:0] state, nextstate;       // state register and nextstate value
    reg       pcwrite, pcwritecond;   // Write to the PC? 
+	
+	wire branch;
 
    // state register
    always @(posedge clk)
@@ -85,11 +77,10 @@ module controller(input            clk, reset,
 										default: nextstate <= PURGATORY; // should never happen
 										endcase
                         RTYPE:   nextstate <= RTYPE_EX;
-                        BCOND:     nextstate <= CALC_DISP;
 								BCOND: 											
 									begin
 										case(branch)
-											1 : nextstate <= JUMP;
+											1 : nextstate <= CALC_DISP;
 											default : nextstate <= PC_UP;
 										endcase
 									end
@@ -139,6 +130,7 @@ module controller(input            clk, reset,
 			MEM_REG_EN <= 0;
 			MEM_WR_S <= 0;
 			SE_SIGN <= 1;
+			PSR_EN <= 0;
 				
 				
          case(state)
@@ -153,6 +145,7 @@ module controller(input            clk, reset,
 			RTYPE_EX:
 				begin
 				ALU_OUT_EN <= 1;
+				PSR_EN <= 1;
 				end
 			WRITE:
 			begin
@@ -170,6 +163,7 @@ module controller(input            clk, reset,
 				begin
 				ALUA_S <= 2'b01;
 				ALU_OUT_EN <= 1;
+				PSR_EN <= 1;
 				case(op)			// DO 0 EXTEND ON THESE I-TYPE INSTRUCTIONS AND SIGN EXTEND FOR EVERYTHING ELSE
 					ANDI:		SE_SIGN <= 0;
 					ORI:		SE_SIGN <= 0;
@@ -212,6 +206,10 @@ module controller(input            clk, reset,
 					PC_EN <= 1;
 					REG_WR_EN <= 1;
                end
+				default: 
+					begin
+					
+					end
          endcase
       end
 	// TODO (JM): I commented this out but didn't delete it just in case Jesse wanted it

@@ -12,6 +12,8 @@ module alu #(parameter WIDTH = 16)
 
    always@(*) begin
 		PSR = 5'b0;
+		carry = 0;
+		
       case(alucont)
             3'b000: // Addition
             begin
@@ -25,7 +27,7 @@ module alu #(parameter WIDTH = 16)
                PSR[0] = carry;
 					PSR[1] <= (Rdest[WIDTH-1] != Rsrc[WIDTH-1]) && (result[WIDTH-1] != Rdest[WIDTH-1]); // Set F flag for signed overflow in subtraction.
 					PSR[2] <= (Rdest < Rsrc); // Set L flag if Rdest is less than Rsrc (unsigned comparison).
-         end
+				end
             3'b010: // Logical AND
             begin
                result <= Rsrc & Rdest; 
@@ -48,7 +50,7 @@ module alu #(parameter WIDTH = 16)
             default:
 				begin
 					result <= 0; // Should never happen
-					carry <= 0;
+					carry <= 0; // Should never happen
 				end
       endcase
     end
