@@ -19,7 +19,7 @@ module datapath #(parameter WIDTH = 16, REGBITS = 3, IMML = 8, REG_ADD = 4, PSRL
 	localparam CONST_ONE = 16'b0;
 	
 	// Create wires
-	wire [WIDTH-1:0] IMM_EXT, PC_OUT, PC, Rdest, ALU_RES, WD, ALUA_OUT, ALUB_OUT, MEM_DATA_OUT, ALU_OUT_VAL, INSTR; //, rd1, rd2;
+	wire [WIDTH-1:0] IMM_EXT, PC_OUT, PC, Rdest, ALU_RES, WD, ALUA_OUT, ALUB_OUT, MEM_DATA_OUT, ALU_OUT_VAL, INSTR, rd1, rd2;
 	wire [REGBITS-1:0] alucont;
 	wire [PSRL-1:0] PSR;
 	
@@ -38,23 +38,23 @@ module datapath #(parameter WIDTH = 16, REGBITS = 3, IMML = 8, REG_ADD = 4, PSRL
 	signextend #(IMML) extend(IMM, SE_SIGN, IMM_EXT);
 	
 	// datapath registers
-	flopenr #(WIDTH) pcreg(clk, reset, PC_EN, PC_OUT, PC);
+	flopenr #(WIDTH) pcreg(clk, reset, PC_EN, PC, PC_OUT);
 	flopenr #(WIDTH) instr_reg(clk, reset, INSTR_EN, MEM_OUT, INSTR);
 	flopenr #(WIDTH) alu_out(clk, reset, ALU_OUT_EN, ALU_RES, ALU_OUT_VAL);
 	flopenr #(WIDTH) mem_data_reg(clk, reset, MEM_REG_EN, MEM_OUT, MEM_DATA_OUT);
 	flopenr #(WIDTH) psr_reg(clk, reset, PSR_EN, PSR, PSR_OUT);
-	//flopr   #(WIDTH) rsrc(clk, reset, rd1, Rsrc);	
-   //flopr   #(WIDTH) rdest(clk, reset, rd2, Rdest);
+	flopr   #(WIDTH) rsrc(clk, reset, rd1, Rsrc);	
+   flopr   #(WIDTH) rdest(clk, reset, rd2, Rdest);
 	
 	// datapath muxes all of the _s variables are control signals
 	mux2 #(WIDTH) mem_mux(Rdest, PC_OUT, MEM_S, MEM_ADDR);
-	mux2 #(WIDTH) pc_mux(Rsrc, ALU_RES, PC_S, PC_OUT);
+	mux2 #(WIDTH) pc_mux(Rsrc, ALU_RES, PC_S, PC);
 	mux4 #(WIDTH) wd_mux(IMM_EXT, Rsrc, MEM_OUT, ALU_OUT_VAL, WD_S, WD); // CONST_ZERO is a placeholder for no connection
 	mux4 #(WIDTH) alua_mux(Rsrc, PC_OUT, IMM_EXT, CONST_ZERO, ALUA_S, ALUA_OUT); // CONST_ZERO is a placeholder for no connection
 	mux4 #(WIDTH) alub_mux(Rdest, IMM_EXT, CONST_ONE, CONST_ZERO, ALUB_S, ALUB_OUT);
 	
 	// Instantiate the register file, the alu, the alucont
-   regfile    #(WIDTH,REGBITS) rf(clk, REG_WR, Rsrc_addr, Rdest_addr, Rdest_addr, WD, Rsrc, Rdest);
+   regfile    #(WIDTH,REGBITS) rf(clk, REG_WR, Rsrc_addr, Rdest_addr, Rdest_addr, WD, rd1, rd2);
    alu        #(WIDTH) 			 alunit(ALUA_OUT, ALUB_OUT, alucont, ALU_RES, PSR);
 	alucontrol alu_cont(OP_CODE, OP_EXT, alucont);
 						

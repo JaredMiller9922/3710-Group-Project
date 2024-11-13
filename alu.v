@@ -23,10 +23,12 @@ module alu #(parameter WIDTH = 16)
             end
             3'b001: // Subtraction
             begin
-               {carry, result} = Rsrc - Rdest;
-               PSR[0] = carry;
-					PSR[1] <= (Rdest[WIDTH-1] != Rsrc[WIDTH-1]) && (result[WIDTH-1] != Rdest[WIDTH-1]); // Set F flag for signed overflow in subtraction.
-					PSR[2] <= (Rdest < Rsrc); // Set L flag if Rdest is less than Rsrc (unsigned comparison).
+               {carry, result} = Rdest - Rsrc;
+               PSR[0] = carry;		// Tim's Code
+					//PSR[1] <= (Rdest[WIDTH-1] != Rsrc[WIDTH-1]) && (result[WIDTH-1] != Rdest[WIDTH-1]); // Set F flag for signed overflow in subtraction.
+					//PSR[2] <= (Rdest < Rsrc); // Set L flag if Rdest is less than Rsrc (unsigned comparison).
+					PSR[1] <= (Rsrc[WIDTH-1] != Rdest[WIDTH-1]) && (result[WIDTH-1] != Rsrc[WIDTH-1]); // Set F flag for signed overflow in subtraction.
+					PSR[2] <= (Rsrc < Rdest); // Set L flag if Rdest is less than Rsrc (unsigned comparison).
 				end
             3'b010: // Logical AND
             begin
@@ -43,9 +45,11 @@ module alu #(parameter WIDTH = 16)
 				3'b101: // Compare
 				begin
 					 // Set Zero flag (Z) if the result is zero.
-					result <= Rsrc - Rdest;
-					PSR[3] <= (Rsrc - Rdest == 0);
-					PSR[4] <= (Rdest < Rsrc);
+					result <= Rdest - Rsrc;
+					//PSR[3] <= (Rsrc - Rdest == 0);    // Tim's Code
+					//PSR[4] <= (Rdest < Rsrc);
+					PSR[3] <= (Rdest - Rsrc == 0);
+					PSR[4] <= (Rsrc < Rdest);
 				end
 				3'b110: // MOV
             begin
