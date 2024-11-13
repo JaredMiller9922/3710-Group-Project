@@ -2,11 +2,16 @@ module controller(input            clk, reset,
                   input      [5:0] op, 
                   input            zero,
 						input		  [3:0] branch_cond, 
-                  output reg       memwrite, alusrca, memtoreg, iord, 
-                  output           pcen, 
-                  output reg       regwrite, regdst, 
-                  output reg [1:0] pcsource, alusrcb, aluop, 
-                  output reg [3:0] irwrite);
+                  output [1:0] WD_S, ALU_A, ALU_B <= 2'b00;
+						PC_S <= 0;
+						PC_EN <= 0;
+						MEM_S <= 0;
+						REG_WR_EN <= 0;
+						INSTR_EN <= 0;
+						ALU_OUT_EN <= 0;
+						MEM_REG_EN <= 0;
+						MEM_WR_S <= 0;
+						SE_SIGN <= 1;);
 
 	// Paramaters used for state names allows for easy 
 	// changing of state encodings
@@ -38,6 +43,12 @@ module controller(input            clk, reset,
 	
    parameter   RTYPE		=  4'b0000;
    parameter   BCOND		=  4'b1100;
+	
+	parameter   ANDI		=  4'b0001;
+	parameter   ORI		=  4'b0010;
+	parameter   XORI		=  4'b0011;
+	parameter   MOVI		=  4'b1101;
+	
 	
 	
 	//Condition_Check(branch_cond, branch);
@@ -122,6 +133,7 @@ module controller(input            clk, reset,
 				ALU_OUT_EN <= 0;
 				MEM_REG_EN <= 0;
 				MEM_WR_S <= 0;
+				SE_SIGN <= 1;
 				
 				
             case(state)
@@ -154,6 +166,13 @@ module controller(input            clk, reset,
                   begin
                      ALU_A <= 2'b01;
                      ALU_OUT_EN <= 1;
+							case(op)			// DO 0 EXTEND ON THESE I-TYPE INSTRUCTIONS AND SIGN EXTEND FOR EVERYTHING ELSE
+									ANDI:		SE_SIGN <= 0;
+									ORI:		SE_SIGN <= 0;
+									XORI:		SE_SIGN <= 0;
+									MOVI:		SE_SIGN <= 0;
+									default: SE_SIGN <= 1; // should happen
+                     endcase
                   end
                LB_MEM:
                   begin

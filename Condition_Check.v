@@ -1,4 +1,8 @@
-
+module Condition_Check (
+		input [3:0] branch_cond,
+		input [4:0] PSR, // C F L Z N
+		output branch
+		);
 
 	// Condition codes
 	parameter   EQ	=  4'b0000;
@@ -16,9 +20,90 @@
 	parameter   FC	=  4'b1001;
 	parameter   LT	=  4'b1100;
 	parameter   UC	=  4'b1110;
+	
 
-
-case(branch_cond)
-									EQ:      nextstate <= PC_UP;
-									default: nextstate <= WRITE; // should happen
-                     endcase
+	always @(*)
+      begin
+		branch <= 0;
+		case(branch_cond)
+				EQ:	begin
+							if (PSR[3] == 1) begin
+								branch <= 1;
+							end
+						end
+				NE:	begin
+							if (PSR[3] == 0) begin
+								branch <= 1;
+							end
+						end
+				GE:	begin  // C F L Z N
+							if (PSR[3] == 1 || PSR[4] == 1) begin
+								branch <= 1;
+							end
+						end
+				CS:	begin
+							if (PSR[1] == 1) begin
+								branch <= 1;
+							end
+						end
+				CC:	begin
+							if (PSR[1] == 0) begin
+								branch <= 1;
+							end
+						end
+				HI:	begin
+							if (PSR[2] == 1) begin
+								branch <= 1;
+							end
+						end
+				LS:	begin		// C F L Z N
+							if (PSR[2] == 0) begin
+								branch <= 1;
+							end
+						end
+				LO:	begin
+							if (PSR[2] == 0 && PSR[3] == 0) begin
+								branch <= 1;
+							end
+						end
+				HS:	begin
+							if (PSR[2] == 1 || PSR[3] == 1) begin
+								branch <= 1;
+							end
+						end
+				GT:	begin
+							if (PSR[4] == 1) begin
+								branch <= 1;
+							end
+						end
+				LE:	begin
+							if (PSR[4] == 0) begin
+								branch <= 1;
+							end
+						end
+				FS:	begin
+							if (PSR[1] == 1) begin
+								branch <= 1;
+							end
+						end
+				FC:	begin
+							if (PSR[1] == 0) begin
+								branch <= 1;
+							end
+						end
+				LT:	begin
+							if (PSR[4] == 0 && PSR[3] == 0) begin
+								branch <= 1;
+							end
+						end
+				UC:	begin
+							branch <= 1;
+						end
+				
+				
+				default: branch <= 0; // should never happen
+		endcase
+		end
+	
+	
+endmodule
