@@ -1,13 +1,12 @@
 module controller(input            clk, reset, 
                   input      [3:0] op, 
 						input      [3:0] op_ext,
-                  input            zero,
 						input		  [3:0] branch_cond,
 						input 	  [4:0] PSR,
 						// TODO (JM): I commented this out but didn't delete it just in case Jesse wanted it
-                  // output [1:0] WD_S, ALU_A, ALU_B <= 2'b00;
-						output reg [1:0] WD_S, ALU_A, ALU_B,
-						output reg PC_S, PC_EN, MEM_s, REG_WR_EN, INSTR_EN, ALU_OUT_EN, MEM_REG_EN, MEM_WR_S, MEM_S, SE_SIGN
+                  // output [1:0] WD_S, ALUA_S, ALUB_S <= 2'b00;
+						output reg [1:0] WD_S, ALUA_S, ALUB_S,
+						output reg PC_S, PC_EN, REG_WR_EN, INSTR_EN, ALU_OUT_EN, MEM_REG_EN, MEM_WR_S, MEM_S, SE_SIGN, PSR_EN
 						);
 // TODO (JM): I commented this out but didn't delete it just in case Jesse wanted it
 //	PC_S <= 0;
@@ -129,8 +128,8 @@ module controller(input            clk, reset,
       begin
 			// set all outputs to zero, then conditionally assert just the appropriate ones
 			WD_S <= 2'b00;
-			ALU_A <= 2'b00;
-			ALU_B <= 2'b00;
+			ALUA_S <= 2'b00;
+			ALUB_S <= 2'b00;
 			PC_S <= 0;
 			PC_EN <= 0;
 			MEM_S <= 0;
@@ -162,14 +161,14 @@ module controller(input            clk, reset,
 			end
 			PC_UP:
 				begin
-				ALU_A <= 2'b01;
-				ALU_B <= 2'b10;
+				ALUA_S <= 2'b01;
+				ALUB_S <= 2'b10;
 				PC_S <= 1;
 				PC_EN <= 1;
 				end
 			ITYPE_EX:
 				begin
-				ALU_A <= 2'b01;
+				ALUA_S <= 2'b01;
 				ALU_OUT_EN <= 1;
 				case(op)			// DO 0 EXTEND ON THESE I-TYPE INSTRUCTIONS AND SIGN EXTEND FOR EVERYTHING ELSE
 					ANDI:		SE_SIGN <= 0;
@@ -193,8 +192,8 @@ module controller(input            clk, reset,
 					end
 				CALC_DISP: 
 					begin
-					ALU_A <= 2'b01;
-					ALU_B <= 2'b01;
+					ALUA_S <= 2'b01;
+					ALUB_S <= 2'b01;
 					PC_S <= 1;
 					PC_EN <= 1;
                end
@@ -204,7 +203,7 @@ module controller(input            clk, reset,
 					end
 				CALC_RLINK:
 					begin
-					ALU_A <= 2'b01;
+					ALUA_S <= 2'b01;
 					ALU_OUT_EN <= 1;
 					end
              WR_RLINK_J:

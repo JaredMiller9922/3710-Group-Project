@@ -1,0 +1,30 @@
+// A separate module to control the function that 
+// that ALU is performing based on the opcode
+module CPU (
+	input clk,                  // 50MHz clock
+	input reset,                // active-low reset
+	input [7:0] memdata,        // data that is read from memory
+   output memwrite,            // write-enable to memory
+   output [7:0] adr,           // address to memory
+   output [7:0] writedata      // write data to memory
+	);
+
+   always @(*)
+      case(opcode) // I-Type Instructions
+         4'b0101: alucont <= 3'b000; // add (for addi)
+         4'b1001: alucont <= 3'b001; // sub (for subi)
+			4'b0001: alucont <= 3'b010; // and (for andi)
+			4'b0011: alucont <= 3'b011; // xor (for xori)
+			4'b0010: alucont <= 3'b100; // or  (for ori)
+			4'b1011: alucont <= 3'b101; // comp (for compi)
+         default: case(opext)       // R-Type instructions
+                     4'b0101: alucont <= 3'b000; // add (for add)
+                     4'b1001: alucont <= 3'b001; // subtract (for sub)
+                     4'b0001: alucont <= 3'b010; // logical and (for and)
+                     4'b0011: alucont <= 3'b011; // logical xor (for xor)
+							4'b0010: alucont <= 3'b100; // logical or (for or)
+							4'b1011: alucont <= 3'b101; // compare
+                     default: alucont <= 3'b110; // should never happen
+                  endcase
+      endcase
+endmodule

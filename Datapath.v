@@ -3,7 +3,7 @@ module datapath #(parameter WIDTH = 16, REGBITS = 3, IMML = 8, REG_ADD = 4, PSRL
 					  (input clk, reset,
 					   input PC_S, MEM_S, 										// Selector bits for all mux2
 						input [1:0] WD_S, ALUA_S, ALUB_S,	   			// Selector bits for all mux4
-						input INST_EN, ALU_OUT_EN, MEM_REG_EN, PC_EN,	// Flopenr bits
+						input INSTR_EN, ALU_OUT_EN, MEM_REG_EN, PC_EN,	// Flopenr bits
 						input PSR_EN,												// Flopenr bits
 						
 						input SE_SIGN, REG_WR, 									// Control Signals
@@ -36,7 +36,7 @@ module datapath #(parameter WIDTH = 16, REGBITS = 3, IMML = 8, REG_ADD = 4, PSRL
 	
 	// datapath registers
 	flopenr #(WIDTH) pcreg(clk, reset, PC_EN, PC_OUT, PC);
-	flopenr #(WIDTH) instr_reg(clk, reset, INST_EN, MEM_OUT, INSTR);
+	flopenr #(WIDTH) instr_reg(clk, reset, INSTR_EN, MEM_OUT, INSTR);
 	flopenr #(WIDTH) alu_out(clk, reset, ALU_OUT_EN, ALU_RES, ALU_OUT_VAL);
 	flopenr #(WIDTH) mem_data_reg(clk, reset, MEM_REG_EN, MEM_OUT, MEM_DATA_OUT);
 	flopenr #(WIDTH) psr_reg(clk, reset, PSR_EN, PSR, PSR_OUT);
