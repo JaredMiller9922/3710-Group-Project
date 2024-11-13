@@ -10,7 +10,8 @@ module datapath #(parameter WIDTH = 16, REGBITS = 3, IMML = 8, REG_ADD = 4, PSRL
 						input [WIDTH-1:0] MEM_OUT,								// Inputs for MEM_OUT and INSTR
 						
 						output [WIDTH-1:0] Rsrc, MEM_ADDR,					// Values that allow memory access
-						output [PSRL-1:0] PSR_OUT
+						output [PSRL-1:0] PSR_OUT,
+						output [REG_ADD-1:0] OP_CODE, OP_EXT, Rdest_addr
 );
 
 	// Create localparams
@@ -18,12 +19,12 @@ module datapath #(parameter WIDTH = 16, REGBITS = 3, IMML = 8, REG_ADD = 4, PSRL
 	localparam CONST_ONE = 16'b0;
 	
 	// Create wires
-	wire [WIDTH-1:0] IMM_EXT, PC_OUT, PC, Rdest, ALU_RES, WD, ALUA_OUT, ALUB_OUT, MEM_DATA_OUT, ALU_OUT_VAL, INSTR, rd1, rd2;
+	wire [WIDTH-1:0] IMM_EXT, PC_OUT, PC, Rdest, ALU_RES, WD, ALUA_OUT, ALUB_OUT, MEM_DATA_OUT, ALU_OUT_VAL, INSTR; //, rd1, rd2;
 	wire [REGBITS-1:0] alucont;
 	wire [PSRL-1:0] PSR;
 	
 	// Create wires for INSTRuction decoding
-	wire[REG_ADD-1:0] Rsrc_addr, Rdest_addr, OP_CODE, OP_EXT;
+	wire[REG_ADD-1:0] Rsrc_addr;  //, Rdest_addr;
 	wire[IMML-1:0] IMM;
 	
 	// Setting INSTRuction fields
@@ -42,19 +43,19 @@ module datapath #(parameter WIDTH = 16, REGBITS = 3, IMML = 8, REG_ADD = 4, PSRL
 	flopenr #(WIDTH) alu_out(clk, reset, ALU_OUT_EN, ALU_RES, ALU_OUT_VAL);
 	flopenr #(WIDTH) mem_data_reg(clk, reset, MEM_REG_EN, MEM_OUT, MEM_DATA_OUT);
 	flopenr #(WIDTH) psr_reg(clk, reset, PSR_EN, PSR, PSR_OUT);
-	flopr   #(WIDTH) rsrc(clk, reset, rd1, Rsrc);	
-   flopr   #(WIDTH) rdest(clk, reset, rd2, Rdest);
+	//flopr   #(WIDTH) rsrc(clk, reset, rd1, Rsrc);	
+   //flopr   #(WIDTH) rdest(clk, reset, rd2, Rdest);
 	
 	// datapath muxes all of the _s variables are control signals
 	mux2 #(WIDTH) mem_mux(Rdest, PC_OUT, MEM_S, MEM_ADDR);
-	mux2 #(WIDTH) pc_mux(Rsrc, alu_out, PC_S, PC_OUT);
-	mux4 #(WIDTH) wd_mux(IMM_EXT, Rsrc, MEM_OUT, alu_out, WD_S, WD); // CONST_ZERO is a placeholder for no connection
+	mux2 #(WIDTH) pc_mux(Rsrc, ALU_RES, PC_S, PC_OUT);
+	mux4 #(WIDTH) wd_mux(IMM_EXT, Rsrc, MEM_OUT, ALU_OUT_VAL, WD_S, WD); // CONST_ZERO is a placeholder for no connection
 	mux4 #(WIDTH) alua_mux(Rsrc, PC_OUT, IMM_EXT, CONST_ZERO, ALUA_S, ALUA_OUT); // CONST_ZERO is a placeholder for no connection
-	mux4 #(WIDTH) alub_mux(Rdest, IMM_EXT, CONST_ONE, CONST_ONE, ALUB_S, ALUB_OUT);
+	mux4 #(WIDTH) alub_mux(Rdest, IMM_EXT, CONST_ONE, CONST_ZERO, ALUB_S, ALUB_OUT);
 	
 	// Instantiate the register file, the alu, the alucont
-   regfile    #(WIDTH,REGBITS) rf(clk, REG_WR, Rsrc_addr, Rdest_addr, Rdest, WD, rd1, rd2);
-   alu        #(WIDTH) 			 alunit(Rsrc, Rdest, alucont, ALU_RES, PSR);
+   regfile    #(WIDTH,REGBITS) rf(clk, REG_WR, Rsrc_addr, Rdest_addr, Rdest_addr, WD, Rsrc, Rdest);
+   alu        #(WIDTH) 			 alunit(ALUA_OUT, ALUB_OUT, alucont, ALU_RES, PSR);
 	alucontrol alu_cont(OP_CODE, OP_EXT, alucont);
 						
 endmodule 

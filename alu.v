@@ -47,6 +47,10 @@ module alu #(parameter WIDTH = 16)
 					PSR[3] <= (Rsrc - Rdest == 0);
 					PSR[4] <= (Rdest < Rsrc);
 				end
+				3'b110: // MOV
+            begin
+               result <= Rsrc;
+            end
             default:
 				begin
 					result <= 0; // Should never happen
