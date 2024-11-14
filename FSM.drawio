@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.8.4">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.8.6">
   <diagram name="Page-1" id="N74kqfwAAFA2t6-CvJYL">
-    <mxGraphModel dx="1433" dy="1789" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1843" dy="1986" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -145,7 +145,7 @@
         <mxCell id="yPUFR9ab5_41f311fUdS-43" value="LB_LOAD [0110]" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#6c8ebf;fillColor=#dae8fc;" parent="1" vertex="1">
           <mxGeometry x="750" y="600" width="110" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="yPUFR9ab5_41f311fUdS-44" value="&lt;div&gt;&lt;div&gt;WD_S = 10&lt;/div&gt;&lt;div&gt;ALU_A = 00&lt;/div&gt;&lt;div&gt;&amp;nbsp;ALU_B = 00&lt;/div&gt;&lt;div&gt;PC_S = 0&lt;/div&gt;&lt;div&gt;PC_EN = 0&lt;/div&gt;&lt;div&gt;MEM_S = 0&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;REG_WR_EN = 0&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;INSTR_EN = 0&lt;/div&gt;&lt;div&gt;ALU_OUT_EN = 0&lt;br&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;MEM_REG_EN = 0&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;MEM_WR_S = 0&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;PSR_EN = 0&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;/span&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+        <mxCell id="yPUFR9ab5_41f311fUdS-44" value="&lt;div&gt;&lt;div&gt;WD_S = 10&lt;/div&gt;&lt;div&gt;ALU_A = 00&lt;/div&gt;&lt;div&gt;&amp;nbsp;ALU_B = 00&lt;/div&gt;&lt;div&gt;PC_S = 0&lt;/div&gt;&lt;div&gt;PC_EN = 0&lt;/div&gt;&lt;div&gt;MEM_S = 0&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;REG_WR_EN = 1&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;INSTR_EN = 0&lt;/div&gt;&lt;div&gt;ALU_OUT_EN = 0&lt;br&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;MEM_REG_EN = 0&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;MEM_WR_S = 0&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;PSR_EN = 0&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;/span&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="790" y="630" width="180" height="180" as="geometry" />
         </mxCell>
         <mxCell id="yPUFR9ab5_41f311fUdS-45" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="yPUFR9ab5_41f311fUdS-36" target="yPUFR9ab5_41f311fUdS-44" edge="1">
