@@ -199,6 +199,7 @@ module controller(input            clk, reset,
 				CALC_RLINK:
 					begin
 					ALUA_S <= 2'b01;
+					ALUB_S <= 2'b10;
 					ALU_OUT_EN <= 1;
 					end
              WR_RLINK_J:

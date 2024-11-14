@@ -16,12 +16,13 @@ module datapath #(parameter WIDTH = 16, REGBITS = 3, IMML = 8, REG_ADD = 4, PSRL
 
 	// Create localparams
 	localparam CONST_ZERO = 16'b0;
-	localparam CONST_ONE = 16'b0;
+	localparam CONST_ONE = 16'b1;
 	
 	// Create wires
 	wire [WIDTH-1:0] IMM_EXT, PC_OUT, PC, Rdest, ALU_RES, WD, ALUA_OUT, ALUB_OUT, MEM_DATA_OUT, ALU_OUT_VAL, INSTR, rd1, rd2;
 	wire [REG_ADD-1:0] alucont;
 	wire [PSRL-1:0] PSR;
+	wire [REG_ADD-1:0] op_cont;
 	
 	// Create wires for INSTRuction decoding
 	wire[REG_ADD-1:0] Rsrc_addr;  //, Rdest_addr;
@@ -47,6 +48,9 @@ module datapath #(parameter WIDTH = 16, REGBITS = 3, IMML = 8, REG_ADD = 4, PSRL
    flopr   #(WIDTH) rdest(clk, reset, rd2, Rdest);
 	
 	// datapath muxes all of the _s variables are control signals
+	
+	mux2 #(WIDTH) pc_update_mux(OP_CODE, 4'b0101, PC_EN, op_cont);
+	
 	mux2 #(WIDTH) mem_mux(Rdest, PC_OUT, MEM_S, MEM_ADDR);
 	mux2 #(WIDTH) pc_mux(Rsrc, ALU_RES, PC_S, PC);
 	mux4 #(WIDTH) wd_mux(IMM_EXT, Rsrc, MEM_OUT, ALU_OUT_VAL, WD_S, WD); // CONST_ZERO is a placeholder for no connection
@@ -56,6 +60,6 @@ module datapath #(parameter WIDTH = 16, REGBITS = 3, IMML = 8, REG_ADD = 4, PSRL
 	// Instantiate the register file, the alu, the alucont
    regfile    #(WIDTH,REGBITS) rf(clk, REG_WR, Rsrc_addr, Rdest_addr, Rdest_addr, WD, rd1, rd2);
    alu        #(WIDTH) 			 alunit(ALUA_OUT, ALUB_OUT, alucont, ALU_RES, PSR);
-	alucontrol alu_cont(OP_CODE, OP_EXT, alucont);
+	alucontrol alu_cont(op_cont, OP_EXT, alucont);
 						
 endmodule 

@@ -1,7 +1,7 @@
 module GroupProject3710 #(parameter WIDTH = 16, REGBITS = 4) (
 	input clk, reset,
-	input [9:0] switches,
-	output [9:0] LEDs_a, LEDs_b
+	input [7:0] switches,
+	output [7:0] LEDs_a, LEDs_b
 );
 
 	wire we_a, we_b;
