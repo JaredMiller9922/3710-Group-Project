@@ -21,7 +21,7 @@ module GroupProject3710 #(parameter WIDTH = 16, REGBITS = 4) (
 
 
 	// Instantiate bram
-	bram MEM (
+	bram mem (
 		.data_a(data_a),
 		.data_b(data_b),
 		.addr_a(addr_a), 
