@@ -25,7 +25,7 @@ MOV %r10 %r5		 # move r10 to r5        # %r5 = %r4 - %r5
 
 # Store f1 in memory at address (128 + n)
 # Assuming we have a way to handle memory with an immediate offset
-MOVI $-128 %r7     # Load base address 128 into %r7
+MOVI $127 %r7     # Load base address 128 into %r7
 ADD %r3 %r7        # Add offset n (stored in %r3) to base address
 STOR %r4 %r7       # Store %r4 (f1) in memory at computed address
 

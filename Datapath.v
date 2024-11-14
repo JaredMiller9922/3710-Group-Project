@@ -1,5 +1,5 @@
 // This is the datapath module
-module datapath #(parameter WIDTH = 16, REGBITS = 3, IMML = 8, REG_ADD = 4, PSRL = 5)
+module datapath #(parameter WIDTH = 16, REGBITS = 4, IMML = 8, REG_ADD = 4, PSRL = 5)
 					  (input clk, reset,
 					   input PC_S, MEM_S, 										// Selector bits for all mux2
 						input [1:0] WD_S, ALUA_S, ALUB_S,	   			// Selector bits for all mux4

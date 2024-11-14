@@ -169,7 +169,6 @@ module controller(input            clk, reset,
 					ANDI:		SE_SIGN <= 0;
 					ORI:		SE_SIGN <= 0;
 					XORI:		SE_SIGN <= 0;
-					MOVI:		SE_SIGN <= 0;
 					default: SE_SIGN <= 1; // should happen
             endcase
             end

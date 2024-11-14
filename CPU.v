@@ -1,6 +1,6 @@
 // A separate module to control the function that 
 // that ALU is performing based on the opcode
-module CPU #(parameter WIDTH = 16, REGBITS = 3, IMM = 8, REG_ADD = 4, PSRL = 5)
+module CPU #(parameter WIDTH = 16, REGBITS = 4, IMM = 8, REG_ADD = 4, PSRL = 5)
 	(
 	input clk,                  	// 50MHz clock
 	input reset,                	// active-low reset

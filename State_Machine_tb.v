@@ -1,7 +1,7 @@
 module State_Machine_tb;
 	
 	
-	parameter WIDTH = 16, REGBITS = 3, IMM = 8, REG_ADD = 4, PSRL = 5;
+	parameter WIDTH = 16, REGBITS = 4, IMM = 8, REG_ADD = 4, PSRL = 5;
 	
 	// Inputs
 	reg clk50MHz;
@@ -60,6 +60,8 @@ module State_Machine_tb;
 	  reset = 1;
 	  
 	  
+	  
+
 	  
 	  // 1101000100000101 MOVI $5 %r1
 	  mem_out = 16'b1101000100000101;
