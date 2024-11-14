@@ -27,7 +27,7 @@ module CPU #(parameter WIDTH = 16, REGBITS = 3, IMM = 8, REG_ADD = 4, PSRL = 5)
 				  branch_cond,
 				  PSR_OUT,
 				  WD_S, ALUA_S, ALUB_S,
-				  PC_S, PC_EN, REG_WR, INSTR_EN, ALU_OUT_EN, MEM_REG_EN, MEM_WR_S, MEM_S, SE_SIGN
+				  PC_S, PC_EN, REG_WR, INSTR_EN, ALU_OUT_EN, MEM_REG_EN, MEM_WR_S, MEM_S, SE_SIGN, PSR_EN
 				  );
 				  
 	datapath dp(

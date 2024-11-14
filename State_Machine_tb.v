@@ -24,6 +24,23 @@ module State_Machine_tb;
 		mem_addr,           // address to memory
 		writedata      // write data to memory
 	);
+	
+	/*// Instantiate bram
+	bram MEM (
+		.data_a(writedata),
+		.data_b(data_b),
+		.addr_a(mem_addr), 
+		.addr_b(addr_b),
+		.we_a(memwrite), 
+		.we_b(we_b), 
+		.clk(~clk), // clk or ~clk
+		.q_a(mem_out), // output
+		.q_b(q_b)  // output
+	);*/
+	
+	
+	
+	
 
 	// Clock generation
 	initial begin
@@ -317,6 +334,267 @@ module State_Machine_tb;
 	  
 	  
 	  
+	  
+	  // 1111001100000101 LUI $5 %R3
+	  mem_out = 16'b1111001100000101;
+	  $display("Running: LUI $5 R3");
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  $display("Value at register1: %b", computation.dp.rf.RAM[1]);
+	  
+	  
+	  
+	  
+	  
+	  // 1101010000001000 MOVI $8 %r4
+	  mem_out = 16'b1101010000001000;
+	  $display("Running: MOVI $8 r4");
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  $display("Value at register4: %d", computation.dp.rf.RAM[4]);
+	  
+	  
+	  
+	  
+	  
+	  // 1101010100000110 MOVI $6 %r5
+	  mem_out = 16'b1101010100000110;
+	  $display("Running: MOVI $6 r5");
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  $display("Value at register5: %d", computation.dp.rf.RAM[5]);
+	  
+	  
+	  
+	  
+	  
+	  
+	  // 1101011011111100 MOVI $-4 %r6
+	  mem_out = 16'b1101011011111100;
+	  $display("Running: MOVI $-4 r6");
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  $display("Value at register6: %d", computation.dp.rf.RAM[6]);
+	  
+	  
+	  
+	  
+	  // 0000010110110101 CMP %r5 %r5
+	  mem_out = 16'b0000010110110101;
+	  $display("Running: CMP r5 r5");
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  $display("Flags: %b", computation.dp.PSR_OUT);
+	  
+	  
+	  
+	  
+	  
+	  // 0000010110110100 CMP %r4 %r5
+	  mem_out = 16'b0000010110110100;
+	  $display("Running: CMP r4 r5");
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  $display("Flags: %b", computation.dp.PSR_OUT);
+	  
+	  
+	  
+	  
+	  
+	  
+	  // 1011010100001001 CMPI $9 %r5
+	  mem_out = 16'b1011010100001001;
+	  $display("Running: CMPI $9 r5");
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  $display("Flags: %b", computation.dp.PSR_OUT);
+	  
+	  
+	  
+	  
+	  
+	  // 1011011011111011 CMPI $-5 %r6
+	  mem_out = 16'b1011011011111011;
+	  $display("Running: CMPI $-5 r6");
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  $display("Flags: %b", computation.dp.PSR_OUT);
+
+	  
+	  
+	  
+	  // 1100000000000100 BEQ $4
+	  mem_out = 16'b1100000000000100;
+	  $display("Running: BEQ $4");
+	  $display("Flags: %b", computation.dp.PSR_OUT);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  $display("PC: %b", computation.dp.PC_OUT);
+	  
+	  
+	  
+	  
+	  
+	  
+	  // 0000010110110101 CMP %r5 %r5
+	  mem_out = 16'b0000010110110101;
+	  $display("Running: CMP r5 r5");
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  $display("Flags: %b", computation.dp.PSR_OUT);
+	  
+	  
+	  
+	  
+	  
+	  
+	  // 1100000000000100 BEQ $4
+	  mem_out = 16'b1100000000000100;
+	  $display("Running: BEQ $4");
+	  $display("Flags: %b", computation.dp.PSR_OUT);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  $display("PC: %b", computation.dp.PC_OUT);
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  /*// 0100010000000101 LOAD %r4 %r5
+	  mem_out = 16'b0100010000000101;
+	  $display("Running: LOAD r4 r5");
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  $display("Value at register5: %d", computation.dp.rf.RAM[5]);
+	  
+	  
+	  
+	  
+	  // 0100010001000101 STOR %r4 %r5
+	  mem_out = 16'b0100010001000101;
+	  $display("Running: STOR r4 r5");
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  #10
+	  $display("Current state is: %b", computation.cont.state);
+	  $display("Value at register6: %d", computation.dp.rf.RAM[6]);*/
 	  
 	  
 	  
