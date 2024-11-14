@@ -1,6 +1,6 @@
 module GroupProject3710 #(parameter WIDTH = 16, REGBITS = 4) (
 	input clk, reset,
-	input [7:0] switches,
+	input [15:0] switches,
 	output [7:0] LEDs_a, LEDs_b
 );
 
@@ -37,7 +37,7 @@ module GroupProject3710 #(parameter WIDTH = 16, REGBITS = 4) (
 	wire a_enable, b_enable, io_a, io_b;
 
 	// Memory-Mapped I/O for a
-	assign io_a = addr_a[9] & addr_a[8];
+	assign io_a = addr_a[15] & addr_a[14];
 	assign a_enable = io_a & we_a;
 
 	flopenr flop_a(~clk, reset, a_enable, data_a, LEDs_a); 

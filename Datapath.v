@@ -53,7 +53,7 @@ module datapath #(parameter WIDTH = 16, REGBITS = 4, IMML = 8, REG_ADD = 4, PSRL
 	
 	mux2 #(WIDTH) mem_mux(Rdest, PC_OUT, MEM_S, MEM_ADDR);
 	mux2 #(WIDTH) pc_mux(Rsrc, ALU_RES, PC_S, PC);
-	mux4 #(WIDTH) wd_mux(IMM_EXT, Rsrc, MEM_OUT, ALU_OUT_VAL, WD_S, WD); // CONST_ZERO is a placeholder for no connection
+	mux4 #(WIDTH) wd_mux(IMM_EXT, Rsrc, MEM_DATA_OUT, ALU_OUT_VAL, WD_S, WD); // CONST_ZERO is a placeholder for no connection
 	mux4 #(WIDTH) alua_mux(Rsrc, PC_OUT, IMM_EXT, CONST_ZERO, ALUA_S, ALUA_OUT); // CONST_ZERO is a placeholder for no connection
 	mux4 #(WIDTH) alub_mux(Rdest, IMM_EXT, CONST_ONE, CONST_ZERO, ALUB_S, ALUB_OUT);
 	

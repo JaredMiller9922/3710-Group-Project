@@ -110,4 +110,22 @@ set_global_assignment -name EDA_TEST_BENCH_FILE Datapath_Memory_tb.v -section_id
 set_global_assignment -name EDA_TEST_BENCH_FILE Datapath_tb.v -section_id Datapath_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE State_Machine_tb.v -section_id State_Machine_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE Fib_tb.v -section_id Fib_tb
+set_location_assignment PIN_AF14 -to clk
+set_location_assignment PIN_AA14 -to reset
+set_location_assignment PIN_W20 -to LEDs_a[7]
+set_location_assignment PIN_Y19 -to LEDs_a[6]
+set_location_assignment PIN_W19 -to LEDs_a[5]
+set_location_assignment PIN_W17 -to LEDs_a[4]
+set_location_assignment PIN_V18 -to LEDs_a[3]
+set_location_assignment PIN_V17 -to LEDs_a[2]
+set_location_assignment PIN_W16 -to LEDs_a[1]
+set_location_assignment PIN_V16 -to LEDs_a[0]
+set_location_assignment PIN_AC9 -to switches[7]
+set_location_assignment PIN_AE11 -to switches[6]
+set_location_assignment PIN_AD12 -to switches[5]
+set_location_assignment PIN_AD11 -to switches[4]
+set_location_assignment PIN_AF10 -to switches[3]
+set_location_assignment PIN_AF9 -to switches[2]
+set_location_assignment PIN_AC12 -to switches[1]
+set_location_assignment PIN_AB12 -to switches[0]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

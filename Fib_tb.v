@@ -4,11 +4,13 @@ module Fib_tb;
 // We set the clk and reset to reg because they will be used in an always block
 reg clk;
 reg reset;
+reg [15:0] switches;
 
 // Create an instance of the MiniMips
 GroupProject3710 uut (
 	.clk(clk),
-    .reset(reset)
+    .reset(reset),
+	 .switches(switches)
 );
 
 // Create a clock
@@ -21,6 +23,7 @@ initial begin
 initial begin
     // Initialize variables
     reset <= 0;  // Assert reset (active low)
+	 switches = 15'b10;
 
     // Hold reset for a few clock cycles
     #20 reset <= 1;  // De-assert reset (system comes out of reset)

@@ -179,6 +179,7 @@ module controller(input            clk, reset,
 				LB_LOAD:
 					begin
 					WD_S <= 2'b10;
+					REG_WR_EN <= 1;
 					end
             SB_MEM:
 					begin
