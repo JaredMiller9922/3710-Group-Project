@@ -20,7 +20,7 @@ module datapath #(parameter WIDTH = 16, REGBITS = 3, IMML = 8, REG_ADD = 4, PSRL
 	
 	// Create wires
 	wire [WIDTH-1:0] IMM_EXT, PC_OUT, PC, Rdest, ALU_RES, WD, ALUA_OUT, ALUB_OUT, MEM_DATA_OUT, ALU_OUT_VAL, INSTR, rd1, rd2;
-	wire [REGBITS-1:0] alucont;
+	wire [REG_ADD-1:0] alucont;
 	wire [PSRL-1:0] PSR;
 	
 	// Create wires for INSTRuction decoding
