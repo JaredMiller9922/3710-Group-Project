@@ -46,7 +46,7 @@ module CPU #(parameter WIDTH = 16, REGBITS = 4, IMM = 8, REG_ADD = 4, PSRL = 5)
 				.SE_SIGN(SE_SIGN), 			// Control Signals
 				.REG_WR(REG_WR), 		// Control Signals
 				.MEM_OUT(mem_out),			// Inputs for MEM_OUT and instr
-				.Rsrc(writedata), 			// Values that allow memory access
+				.Rdest(writedata), 			// Values that allow memory access
 				.MEM_ADDR(mem_addr),			// Values that allow memory access
 				.PSR_OUT(PSR_OUT),
 				.OP_CODE(OP_CODE),

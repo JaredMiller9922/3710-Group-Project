@@ -366,7 +366,7 @@ module State_Machine_tb;
 	  $display("Current state is: %b", computation.cont.state);
 	  #10
 	  $display("Current state is: %b", computation.cont.state);
-	  $display("Value at register1: %b", computation.dp.rf.RAM[1]);
+	  $display("Value at register3: %b", computation.dp.rf.RAM[3]);
 	  
 	  
 	  

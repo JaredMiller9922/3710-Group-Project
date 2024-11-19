@@ -19,13 +19,13 @@ BEQ .end           # if %r3 == %r6, go to .end
 ADD %r5 %r4        # %r4 = %r4 + %r5
 
 # Calculate f2 = f1 - f2
-MOV %r4 %r10		 # move r4 to r10
-SUB %r5 %r10		 # r10 = r10 - r5
-MOV %r10 %r5		 # move r10 to r5        # %r5 = %r4 - %r5
+MOV %r4 %r10         # move r4 to r10
+SUB %r5 %r10         # r10 = r10 - r5
+MOV %r10 %r5         # move r10 to r5        # %r5 = %r4 - %r5
 
 # Store f1 in memory at address (128 + n)
 # Assuming we have a way to handle memory with an immediate offset
-MOVI $127 %r7     # Load base address 128 into %r7
+MOVI $127 %r7      # Load base address 128 into %r7
 ADD %r3 %r7        # Add offset n (stored in %r3) to base address
 STOR %r4 %r7       # Store %r4 (f1) in memory at computed address
 
@@ -38,11 +38,11 @@ JUC %r12
 
 .end
 # Read from memory address 192 to get switch input
-MOVI $-64 %r7      # Load address 192 into %r7
+MOVI $-1 %r7       # Load address 192 into %r7
 LOAD %r3 %r7       # Load value at memory address 192 into %r3
 
 # Read the nth Fibonacci number from memory (128 + n)
-ADDI $-128 %r8     # Load base address 128 into %r8
+MOVI $127 %r8      # Load base address 128 into %r8
 ADD %r3 %r8        # Add n (stored in %r3) to base address
 LOAD %r4 %r8       # Load Fibonacci number at computed address into %r4
 

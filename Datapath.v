@@ -9,7 +9,7 @@ module datapath #(parameter WIDTH = 16, REGBITS = 4, IMML = 8, REG_ADD = 4, PSRL
 						input SE_SIGN, REG_WR, 									// Control Signals
 						input [WIDTH-1:0] MEM_OUT,								// Inputs for MEM_OUT and INSTR
 						
-						output [WIDTH-1:0] Rsrc, MEM_ADDR,					// Values that allow memory access
+						output [WIDTH-1:0] Rdest, MEM_ADDR,					// Values that allow memory access
 						output [PSRL-1:0] PSR_OUT,
 						output [REG_ADD-1:0] OP_CODE, OP_EXT, Rdest_addr
 );
@@ -19,7 +19,7 @@ module datapath #(parameter WIDTH = 16, REGBITS = 4, IMML = 8, REG_ADD = 4, PSRL
 	localparam CONST_ONE = 16'b1;
 	
 	// Create wires
-	wire [WIDTH-1:0] IMM_EXT, PC_OUT, PC, Rdest, ALU_RES, WD, ALUA_OUT, ALUB_OUT, MEM_DATA_OUT, ALU_OUT_VAL, INSTR, rd1, rd2;
+	wire [WIDTH-1:0] IMM_EXT, PC_OUT, PC, Rsrc, ALU_RES, WD, ALUA_OUT, ALUB_OUT, MEM_DATA_OUT, ALU_OUT_VAL, INSTR, rd1, rd2;
 	wire [REG_ADD-1:0] alucont;
 	wire [PSRL-1:0] PSR;
 	wire [REG_ADD-1:0] op_cont;
@@ -51,7 +51,7 @@ module datapath #(parameter WIDTH = 16, REGBITS = 4, IMML = 8, REG_ADD = 4, PSRL
 	
 	mux2 #(WIDTH) pc_update_mux(OP_CODE, 4'b0101, PC_EN, op_cont);
 	
-	mux2 #(WIDTH) mem_mux(Rdest, PC_OUT, MEM_S, MEM_ADDR);
+	mux2 #(WIDTH) mem_mux(Rsrc, PC_OUT, MEM_S, MEM_ADDR);
 	mux2 #(WIDTH) pc_mux(Rsrc, ALU_RES, PC_S, PC);
 	mux4 #(WIDTH) wd_mux(IMM_EXT, Rsrc, MEM_DATA_OUT, ALU_OUT_VAL, WD_S, WD); // CONST_ZERO is a placeholder for no connection
 	mux4 #(WIDTH) alua_mux(Rsrc, PC_OUT, IMM_EXT, CONST_ZERO, ALUA_S, ALUA_OUT); // CONST_ZERO is a placeholder for no connection

@@ -23,7 +23,7 @@ initial begin
 initial begin
     // Initialize variables
     reset <= 0;  // Assert reset (active low)
-	 switches = 15'b10;
+	 switches = 15'b111;
 
     // Hold reset for a few clock cycles
     #20 reset <= 1;  // De-assert reset (system comes out of reset)
