@@ -215,8 +215,8 @@ module State_Machine_tb;
 	  
 	  
 	  
-	  // 1101001100000011 MOVI $3 %r3
-	  mem_out = 16'b1101001100000011;
+	  // 1101001100000001 MOVI $3 %r3
+	  mem_out = 16'b1101001100000001;
 	  $display("PC: %b", computation.dp.PC_OUT);
 	  $display("Running: MOVI $3 r3");
 	  #10
@@ -230,6 +230,8 @@ module State_Machine_tb;
 	  #10
 	  $display("Current state is: %b", computation.cont.state);
 	  $display("Value at register3: %d", computation.dp.rf.RAM[3]);
+	  $display("Pos register3: %d", (-$signed(computation.dp.rf.RAM[3])));
+	  
 	  
 	  
 	  

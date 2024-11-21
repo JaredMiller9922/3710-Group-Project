@@ -38,6 +38,7 @@ module controller(input            clk, reset,
 	
 	
    parameter   RTYPE		=  4'b0000;
+	parameter   LSH		=  4'b1000;
    parameter   BCOND		=  4'b1100;
 	
 	parameter   ANDI		=  4'b0001;
@@ -77,6 +78,10 @@ module controller(input            clk, reset,
 										default: nextstate <= PURGATORY; // should never happen
 										endcase
                         RTYPE:   nextstate <= RTYPE_EX;
+								LSH:   case(op_ext)
+										4'b0100:      nextstate <= RTYPE_EX;	// LSH
+										default: nextstate <= ITYPE_EX; // should happen
+									endcase
 								BCOND: 											
 									begin
 										case(branch)

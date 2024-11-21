@@ -60,7 +60,7 @@ module alu #(parameter WIDTH = 16)
 					// if Ramount is negative shift left Ramount
 					if (Rsrc[WIDTH-1] == 1)
 					begin
-						result <= Rdest << Rsrc;
+						result <= Rdest << (-$signed(Rsrc));
 					end
 					else 
 					begin
