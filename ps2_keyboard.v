@@ -10,36 +10,44 @@ module ps2_keyboard(
     reg [3:0] bit_count;     // Count bits received
     reg ps2_clk_prev;        // Previous clock state for edge detection
     reg parity;              // Parity check
-    
-    // Synchronization and edge detection
+    reg new_data_latched;    // Latched version of new_data
+
     always @(posedge clk) begin
-        ps2_clk_prev <= ps2_clk;
+        ps2_clk_prev <= ps2_clk; // Synchronize ps2_clk
 
         // Falling edge detection on PS/2 clock
         if (ps2_clk_prev && !ps2_clk) begin
             if (bit_count == 0) begin
                 // Start bit detection
                 if (!ps2_data) begin
-                    bit_count <= 1;
+                    bit_count <= 1; // Start receiving bits
                 end
             end else if (bit_count < 11) begin
-                // Shift in data
+                // Shift in data (10 bits total: 8 data + parity + stop)
                 shift_reg <= {ps2_data, shift_reg[10:1]};
                 bit_count <= bit_count + 1;
             end else begin
                 // Complete frame received
-                bit_count <= 0;
-                // Extract 8-bit data and validate parity
-                scan_code <= shift_reg[8:1];
-                parity <= ~(^shift_reg[8:1]); // Odd parity
+                bit_count <= 0; // Reset bit count
+
+                // Extract 8-bit scan code and validate parity
+                scan_code <= shift_reg[8:1]; // Extract scan code
+                parity <= ~(^shift_reg[8:1]); // Calculate odd parity
                 if (parity == shift_reg[9]) begin
-                    new_data <= 1; // Valid data
+                    new_data <= 1; // Set new data flag if parity matches
                 end
             end
         end
 
-        // Clear new_data flag on read
+        // Latch new_data for one clock cycle
         if (new_data) begin
+            new_data_latched <= 1; // Latch new_data
+        end else begin
+            new_data_latched <= 0; // Clear latch
+        end
+
+        // Clear new_data signal on the next clock cycle
+        if (new_data_latched) begin
             new_data <= 0;
         end
     end
