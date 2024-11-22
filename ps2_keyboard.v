@@ -27,6 +27,15 @@ module ps2_keyboard(
 				 // Extract 8-bit scan code and validate parity
 				 scan_code <= shift_reg[8:1]; // Extract scan code
 				 parity <= ~(^shift_reg[8:1]); // Calculate odd parity
+				 
+				 // Scan codes that we want to accept as input for our game:
+				 // 		  		MAKE CODE								  BREAK CODE
+				 // LEFT:  11100000 01101011	-> E0 6B		11100000 11110000 01101011	-> E0 F0 6B
+				 // RIGHT: 11100000 01110100	-> E0 74		11100000 11110000 01110100	-> E0 F0 74
+				 // UP:    11100000 01110101	-> E0 75		11100000 11110000 01110101	-> E0 F0 75
+				 // DOWN:  11100000 01110010	-> E0 72		11100000 11110000 01110010	-> E0 F0 72
+				 // SPACE: 00101001				-> 29			11110000 00101001				-> F0 29
+				 // Any other key, we want to reject/not take it as input for the game.
 			end
 		end
     end
