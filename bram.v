@@ -16,7 +16,7 @@ module bram #(parameter DATA_WIDTH=16, parameter ADDR_WIDTH=10)
    // RAM with data on initialization to the FPGA
 	initial begin
 	$display("Loading memory");
-	$readmemb("C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/program.dat", ram);
+	$readmemb("program.dat", ram);
 	$display("done loading");
 	end
 
