@@ -17,7 +17,7 @@ module CPU #(parameter WIDTH = 16, REGBITS = 4, IMM = 8, REG_ADD = 4, PSRL = 5)
 	wire [4:0] PSR_OUT;
 	// TODO (JM): I commented this out but didn't delete it just in case Jesse wanted it
 	// output [1:0] WD_S, ALUA_S, ALUB_S <= 2'b00;
-	wire [1:0] WD_S, ALUA_S, ALUB_S;
+	wire [1:0] WD_S, ALUA_S, ALUB_S, MEM_DATA_S;
 	wire PC_S, PC_EN, REG_WR, INSTR_EN, ALU_OUT_EN, MEM_REG_EN, MEM_S, SE_SIGN, PSR_EN;
 	
 	controller cont(
@@ -26,7 +26,7 @@ module CPU #(parameter WIDTH = 16, REGBITS = 4, IMM = 8, REG_ADD = 4, PSRL = 5)
 				  OP_EXT,
 				  branch_cond,
 				  PSR_OUT,
-				  WD_S, ALUA_S, ALUB_S,
+				  WD_S, ALUA_S, ALUB_S, MEM_DATA_S,
 				  PC_S, PC_EN, REG_WR, INSTR_EN, ALU_OUT_EN, MEM_REG_EN, MEM_WR_S, MEM_S, SE_SIGN, PSR_EN
 				  );
 				  
@@ -44,9 +44,10 @@ module CPU #(parameter WIDTH = 16, REGBITS = 4, IMM = 8, REG_ADD = 4, PSRL = 5)
 				.PC_EN(PC_EN),					// Flopenr bits
 				.PSR_EN(PSR_EN),				// Flopenr bits
 				.SE_SIGN(SE_SIGN), 			// Control Signals
-				.REG_WR(REG_WR), 		// Control Signals
+				.REG_WR(REG_WR), 				// Control Signals
 				.MEM_OUT(mem_out),			// Inputs for MEM_OUT and instr
-				.Rdest(writedata), 			// Values that allow memory access
+				.MEM_DATA(writedata),
+				.MEM_DATA_S(MEM_DATA_S),   // Values that allow memory access
 				.MEM_ADDR(mem_addr),			// Values that allow memory access
 				.PSR_OUT(PSR_OUT),
 				.OP_CODE(OP_CODE),

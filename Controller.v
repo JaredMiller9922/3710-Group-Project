@@ -5,28 +5,29 @@ module controller(input            clk, reset,
 						input 	  [4:0] PSR,
 						// TODO (JM): I commented this out but didn't delete it just in case Jesse wanted it
                   // output [1:0] WD_S, ALUA_S, ALUB_S <= 2'b00;
-						output reg [1:0] WD_S, ALUA_S, ALUB_S,
+						output reg [1:0] WD_S, ALUA_S, ALUB_S, MEM_DATA_S,
 						output reg PC_S, PC_EN, REG_WR_EN, INSTR_EN, ALU_OUT_EN, MEM_REG_EN, MEM_WR_S, MEM_S, SE_SIGN, PSR_EN
 						);
 
 	// Paramaters used for state names allows for easy 
 	// changing of state encodings
-   parameter   FETCH			=  4'b0000;
-   parameter   DECODE  		=  4'b0001;
-   parameter   RTYPE_EX 	=  4'b0010;
-   parameter   ITYPE_EX 	=  4'b0011;
-   parameter   WRITE			=  4'b0100;
-   parameter   LB_MEM		=  4'b0101;
-   parameter   LB_LOAD 		=  4'b0110;
-   parameter   SB_MEM		=  4'b0111;
-   parameter   B_COND 		=  4'b1000;
-	parameter   J_COND 		=  4'b1001;
-   parameter   CALC_DISP	=  4'b1010;
-	parameter   JUMP			=  4'b1011;
-   parameter   CALC_RLINK	=  4'b1100;
-	parameter   WR_RLINK_J	=  4'b1101;
-	parameter   PC_UP			=  4'b1110;
-	parameter   PURGATORY	=  4'b1111;
+   parameter   FETCH			=  5'b00000;
+   parameter   DECODE  		=  5'b00001;
+   parameter   RTYPE_EX 	=  5'b00010;
+   parameter   ITYPE_EX 	=  5'b00011;
+   parameter   WRITE			=  5'b00100;
+   parameter   LB_MEM		=  5'b00101;
+   parameter   LB_LOAD 		=  5'b00110;
+   parameter   SB_MEM_R		=  5'b00111;
+   parameter   B_COND 		=  5'b01000;
+	parameter   J_COND 		=  5'b01001;
+   parameter   CALC_DISP	=  5'b01010;
+	parameter   JUMP			=  5'b01011;
+   parameter   CALC_RLINK	=  5'b01100;
+	parameter   WR_RLINK_J	=  5'b01101;
+	parameter   PC_UP			=  5'b01110;
+	parameter	SB_MEM_I		=  5'b01111;
+	parameter   PURGATORY	=  5'b11111;
 
 	// parameters used for instruction types 
    parameter   OP_EXT	=  4'b0100;
@@ -50,7 +51,7 @@ module controller(input            clk, reset,
 	
 	conditionCheck cond_check(branch_cond, PSR, branch);
 	
-   reg [3:0] state, nextstate;       // state register and nextstate value
+   reg [4:0] state, nextstate;       // state register and nextstate value
    reg       pcwrite, pcwritecond;   // Write to the PC? 
 
    // state register
@@ -64,8 +65,8 @@ module controller(input            clk, reset,
          case(state)
             FETCH:  nextstate <= DECODE;
             DECODE:  case(op)
-                        OP_EXT:	case(op_ext)	// TODO add op_ext
-										SB:		nextstate <= SB_MEM;
+                        OP_EXT:	case(op_ext)
+										SB:		nextstate <= SB_MEM_R;
 										LB:		nextstate <= LB_MEM;
 										JCOND:
 											begin
@@ -102,7 +103,7 @@ module controller(input            clk, reset,
 				WRITE:    nextstate <= PC_UP;
             LB_MEM:	nextstate <= LB_LOAD;
             LB_LOAD:	nextstate <= PC_UP;
-            SB_MEM:	nextstate <= PC_UP;
+            SB_MEM_R:	nextstate <= PC_UP;
             B_COND:	case(branch)
 									1'b1:      	nextstate <= CALC_DISP;
 									default: 	nextstate <= PC_UP; // should happen
@@ -130,6 +131,7 @@ module controller(input            clk, reset,
 			PC_S <= 0;
 			PC_EN <= 0;
 			MEM_S <= 0;
+			MEM_DATA_S <= 0;
 			REG_WR_EN <= 0;
 			INSTR_EN <= 0;
 			ALU_OUT_EN <= 0;
@@ -137,7 +139,6 @@ module controller(input            clk, reset,
 			MEM_WR_S <= 0;
 			SE_SIGN <= 1;
 			PSR_EN <= 0;
-				
 				
          case(state)
 			FETCH: 
@@ -187,9 +188,10 @@ module controller(input            clk, reset,
 					WD_S <= 2'b10;
 					REG_WR_EN <= 1;
 					end
-            SB_MEM:
+            SB_MEM_R:
 					begin
 					MEM_WR_S <= 1;
+					MEM_DATA_S <= 0;
 					end
 				CALC_DISP: 
 					begin

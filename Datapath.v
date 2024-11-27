@@ -1,7 +1,7 @@
 // This is the datapath module
 module datapath #(parameter WIDTH = 16, REGBITS = 4, IMML = 8, REG_ADD = 4, PSRL = 5)
 					  (input clk, reset,
-					   input PC_S, MEM_S, 										// Selector bits for all mux2
+					   input PC_S, MEM_S, MEM_DATA_S, 						// Selector bits for all mux2
 						input [1:0] WD_S, ALUA_S, ALUB_S,	   			// Selector bits for all mux4
 						input INSTR_EN, ALU_OUT_EN, MEM_REG_EN, PC_EN,	// Flopenr bits
 						input PSR_EN,												// Flopenr bits
@@ -9,7 +9,7 @@ module datapath #(parameter WIDTH = 16, REGBITS = 4, IMML = 8, REG_ADD = 4, PSRL
 						input SE_SIGN, REG_WR, 									// Control Signals
 						input [WIDTH-1:0] MEM_OUT,								// Inputs for MEM_OUT and INSTR
 						
-						output [WIDTH-1:0] Rdest, MEM_ADDR,					// Values that allow memory access
+						output [WIDTH-1:0] MEM_DATA, MEM_ADDR,				// Values that allow memory access
 						output [PSRL-1:0] PSR_OUT,
 						output [REG_ADD-1:0] OP_CODE, OP_EXT, Rdest_addr
 );
@@ -19,7 +19,7 @@ module datapath #(parameter WIDTH = 16, REGBITS = 4, IMML = 8, REG_ADD = 4, PSRL
 	localparam CONST_ONE = 16'b1;
 	
 	// Create wires
-	wire [WIDTH-1:0] IMM_EXT, PC_OUT, PC, Rsrc, ALU_RES, WD, ALUA_OUT, ALUB_OUT, MEM_DATA_OUT, ALU_OUT_VAL, INSTR, rd1, rd2;
+	wire [WIDTH-1:0] IMM_EXT, PC_OUT, PC, Rsrc, ALU_RES, WD, ALUA_OUT, ALUB_OUT, MEM_DATA_OUT, ALU_OUT_VAL, INSTR, Rdest, rd1, rd2;
 	wire [REG_ADD-1:0] alucont;
 	wire [PSRL-1:0] PSR;
 	wire [REG_ADD-1:0] op_cont;
@@ -50,7 +50,7 @@ module datapath #(parameter WIDTH = 16, REGBITS = 4, IMML = 8, REG_ADD = 4, PSRL
 	// datapath muxes all of the _s variables are control signals
 	
 	mux2 #(WIDTH) pc_update_mux(OP_CODE, 4'b0101, PC_EN, op_cont);
-	
+	mux2 #(WIDTH) mem_data_mux(Rdest, IMM_EXT, MEM_DATA_S, MEM_DATA);
 	mux2 #(WIDTH) mem_mux(Rsrc, PC_OUT, MEM_S, MEM_ADDR);
 	mux2 #(WIDTH) pc_mux(Rsrc, ALU_RES, PC_S, PC);
 	mux4 #(WIDTH) wd_mux(IMM_EXT, Rsrc, MEM_DATA_OUT, ALU_OUT_VAL, WD_S, WD); // CONST_ZERO is a placeholder for no connection
