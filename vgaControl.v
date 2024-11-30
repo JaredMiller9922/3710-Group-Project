@@ -86,16 +86,75 @@ module vgaControl #(parameter WIDTH = 16, parameter ADDR_WIDTH=10) (
     always @(posedge clk50MHz or negedge clr) begin
         if (clr == 0) begin
             clk25MHz <= 0;
-				address = 10'b0100000000;
+				address = 10'b0011111111;
 		  end
         else begin
             clk25MHz <= ~clk25MHz;
 			
 		
-				if (address == 10'b0100011110)
-					address <= 10'b0100000000;
-				else
-					address <= address + 1;
+				if (address == 10'b0100000001)
+					pos0 = memReadData;
+				else if (address == 10'b0100000010)
+					pos1 = memReadData;
+				else if (address == 10'b0100000011)
+					pos2 = memReadData;
+				else if (address == 10'b0100000100)
+					pos3 = memReadData;
+				else if (address == 10'b0100000101)
+					pos4 = memReadData;
+				else if (address == 10'b0100000110)
+					pos5 = memReadData;
+				else if (address == 10'b0100000111)
+					pos6 = memReadData;
+				else if (address == 10'b0100001000)
+					pos7 = memReadData;
+				else if (address == 10'b0100001001)
+					pos8 = memReadData;
+				else if (address == 10'b0100001010)
+					pos9 = memReadData;
+				else if (address == 10'b0100001011)
+					pos10 = memReadData;
+				else if (address == 10'b0100001100)
+					pos11 = memReadData;
+				else if (address == 10'b0100001101)
+					pos12 = memReadData;
+				else if (address == 10'b0100001110)
+					pos13 = memReadData;
+				else if (address == 10'b0100001111)
+					pos14 = memReadData;
+				else if (address == 10'b0100010000)
+					pos15 = memReadData;
+				else if (address == 10'b0100010001)
+					pos16 = memReadData;
+				else if (address == 10'b0100010010)
+					pos17 = memReadData;
+				else if (address == 10'b0100010011)
+					pos18 = memReadData;
+				else if (address == 10'b0100010100)
+					pos19 = memReadData;
+				else if (address == 10'b0100010101)
+					pos20 = memReadData;
+				else if (address == 10'b0100010110)
+					pos21 = memReadData;
+				else if (address == 10'b0100010111)
+					pos22 = memReadData;
+				else if (address == 10'b0100011000)
+					pos23 = memReadData;
+				else if (address == 10'b0100011001)
+					pos24 = memReadData;
+				else if (address == 10'b0100011010)
+					pos25 = memReadData;
+				else if (address == 10'b0100011011)
+					pos26 = memReadData;
+				else if (address == 10'b0100011100)
+					pos27 = memReadData;
+				else if (address == 10'b0100011101)
+					pos28 = memReadData;
+				else if (address == 10'b0100011110) begin
+					pos29 = memReadData;
+					address = 10'b0011111111;
+				end
+				address = address + 1;
 			end
 		
     end
@@ -103,7 +162,7 @@ module vgaControl #(parameter WIDTH = 16, parameter ADDR_WIDTH=10) (
 	 
 	 always @(address) 
 	 begin
-		
+		/*
 		//if (address == 10'b0100000000)
 			//pos0 = memReadData;
 		if (address == 10'b0100000001)
@@ -166,7 +225,7 @@ module vgaControl #(parameter WIDTH = 16, parameter ADDR_WIDTH=10) (
 			pos28 = memReadData;
 		else if (address == 10'b0100011110)
 			pos29 = memReadData;
-		
+		*/
 	 end
 	 
 	 
