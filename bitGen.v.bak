@@ -1,0 +1,15 @@
+module bitGen (
+    input bright,               // Active when in the display area
+    input [9:0] hCount,         // Current horizontal pixel position
+    input [9:0] vCount,         // Current vertical pixel position
+    input [2:0] switches,       // 3-bit input from DE1-SoC board switches
+    output reg [2:0] rgb        // RGB output
+);
+    always @(*) 
+	 begin
+        if (~bright)
+            rgb = 8'b00000000;   // Black if not in bright area
+        else
+            rgb = switches;      // Set color based on switches
+    end
+endmodule
