@@ -28,6 +28,9 @@ module datapath #(parameter WIDTH = 16, REGBITS = 4, IMML = 8, REG_ADD = 4, PSRL
 	wire[REG_ADD-1:0] Rsrc_addr;  //, Rdest_addr;
 	wire[IMML-1:0] IMM;
 	
+	// Create wire to store random number
+	wire[3:0] random_num;
+	
 	// Setting INSTRuction fields
 	assign Rsrc_addr = INSTR[3:0];
 	assign Rdest_addr = INSTR[11:8];
@@ -57,9 +60,9 @@ module datapath #(parameter WIDTH = 16, REGBITS = 4, IMML = 8, REG_ADD = 4, PSRL
 	mux4 #(WIDTH) alua_mux(Rsrc, PC_OUT, IMM_EXT, CONST_ZERO, ALUA_S, ALUA_OUT); // CONST_ZERO is a placeholder for no connection
 	mux4 #(WIDTH) alub_mux(Rdest, IMM_EXT, CONST_ONE, CONST_ZERO, ALUB_S, ALUB_OUT);
 	
-	// Instantiate the register file, the alu, the alucont
+	// Instantiate the register file, the alu, the alucont, and ran_gen
    regfile    #(WIDTH,REGBITS) rf(clk, REG_WR, Rsrc_addr, Rdest_addr, Rdest_addr, WD, rd1, rd2);
-   alu        #(WIDTH) 			 alunit(ALUA_OUT, ALUB_OUT, alucont, ALU_RES, PSR);
+   alu        #(WIDTH) 			 alunit(ALUA_OUT, ALUB_OUT, alucont, random_num, ALU_RES, PSR);
 	alucontrol alu_cont(op_cont, OP_EXT, alucont);
-						
+	random_gen ran_gen(clk, reset, 4'b0000, Rsrc_addr, random_num); 
 endmodule 

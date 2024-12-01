@@ -27,6 +27,7 @@ module alucontrol(input 	  [3:0] opcode,
 							4'b0010: alucont <= 4'b0100; // logical or (for or)
 							4'b1011: alucont <= 4'b0101; // compare
 							4'b1101: alucont <= 4'b0110; // mov
+							4'b0100: alucont <= 4'b1111; // MOVRI
                      default: alucont <= 4'b0000; // should never happen
                   endcase
       endcase

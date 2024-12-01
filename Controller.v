@@ -19,6 +19,7 @@ module controller(input            clk, reset,
    parameter   LB_MEM		=  5'b00101;
    parameter   LB_LOAD 		=  5'b00110;
    parameter   SB_MEM_R		=  5'b00111;
+	parameter	SB_MEM_I		=  5'b01111;
    parameter   B_COND 		=  5'b01000;
 	parameter   J_COND 		=  5'b01001;
    parameter   CALC_DISP	=  5'b01010;
@@ -26,7 +27,6 @@ module controller(input            clk, reset,
    parameter   CALC_RLINK	=  5'b01100;
 	parameter   WR_RLINK_J	=  5'b01101;
 	parameter   PC_UP			=  5'b01110;
-	parameter	SB_MEM_I		=  5'b01111;
 	parameter   PURGATORY	=  5'b11111;
 
 	// parameters used for instruction types 
@@ -46,6 +46,8 @@ module controller(input            clk, reset,
 	parameter   ORI		=  4'b0010;
 	parameter   XORI		=  4'b0011;
 	parameter   MOVI		=  4'b1101;
+	
+	parameter 	SBI		= 	4'b0111; // TODO (JM) Is this okay. It uses the space of ADDCI
 	
 	wire branch;
 	
@@ -97,13 +99,15 @@ module controller(input            clk, reset,
 									default: nextstate <= WRITE; // should happen
                      endcase
             ITYPE_EX:	case(op)
-									CMP:      nextstate <= PC_UP;
+									CMP:     nextstate <= PC_UP;
+									SBI: 		nextstate <= SB_MEM_I;
 									default: nextstate <= WRITE; // should happen
                      endcase
 				WRITE:    nextstate <= PC_UP;
             LB_MEM:	nextstate <= LB_LOAD;
             LB_LOAD:	nextstate <= PC_UP;
             SB_MEM_R:	nextstate <= PC_UP;
+				SB_MEM_I: 	nextstate <= PC_UP;
             B_COND:	case(branch)
 									1'b1:      	nextstate <= CALC_DISP;
 									default: 	nextstate <= PC_UP; // should happen
@@ -192,6 +196,11 @@ module controller(input            clk, reset,
 					begin
 					MEM_WR_S <= 1;
 					MEM_DATA_S <= 0;
+					end
+				SB_MEM_I:
+					begin
+					MEM_WR_S <= 1;
+					MEM_DATA_S <= 1;
 					end
 				CALC_DISP: 
 					begin
