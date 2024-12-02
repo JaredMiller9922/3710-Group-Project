@@ -1,6 +1,5 @@
 module GroupProject3710 #(parameter WIDTH = 16, REGBITS = 4) (
-	input clk, reset,
-	input [7:0] switches,
+	input clk, reset, ps2_clk, ps2_data,
 	output [7:0] LEDs_a, LEDs_b
 );
 
@@ -8,6 +7,7 @@ module GroupProject3710 #(parameter WIDTH = 16, REGBITS = 4) (
 	wire [WIDTH-1:0] data_a, data_b, readMemData_a, readMemData_b;
 	wire [WIDTH-1:0] addr_a, addr_b;
 	wire [WIDTH-1:0] q_a, q_b;
+	wire [WIDTH-1:0] keyboard_input;
 
 
 	CPU computation (
@@ -32,6 +32,14 @@ module GroupProject3710 #(parameter WIDTH = 16, REGBITS = 4) (
 		.q_a(q_a), // output
 		.q_b(q_b)  // output
 	);
+	
+	ps2_keyboard keyboard(
+		.clk(clk),
+		.ps2_clk(ps2_clk),
+		.ps2_data(ps2_data),
+		.reset(reset),
+		.keyboard_input(keyboard_input) // output
+	);
 
 
 	wire a_enable, b_enable, io_a, io_b;
@@ -41,14 +49,14 @@ module GroupProject3710 #(parameter WIDTH = 16, REGBITS = 4) (
 	assign a_enable = io_a & we_a;
 
 	flopenr flop_a(~clk, reset, a_enable, data_a, LEDs_a); 
-	mux2 mux_a(q_a, {8'b0, switches}, io_a, readMemData_a);
+	mux2 mux_a(q_a, keyboard_input, io_a, readMemData_a);
 
 	// Memory-Mapped I/O for b
-	assign io_b = addr_b[9] & addr_b[8];
+	assign io_b = addr_b[15] & addr_b[14];
 	assign b_enable = io_b & we_b;
 
 	flopenr flop_b(~clk, reset, b_enable, data_b, LEDs_b); 
-	mux2 mux_b(q_b, {8'b0, switches}, io_b, readMemData_b);
+	mux2 mux_b(q_b, keyboard_input, io_b, readMemData_b);
  
 
 endmodule
