@@ -5,8 +5,8 @@ module controller(input            clk, reset,
 						input 	  [4:0] PSR,
 						// TODO (JM): I commented this out but didn't delete it just in case Jesse wanted it
                   // output [1:0] WD_S, ALUA_S, ALUB_S <= 2'b00;
-						output reg [1:0] WD_S, ALUA_S, ALUB_S, MEM_DATA_S,
-						output reg PC_S, PC_EN, REG_WR_EN, INSTR_EN, ALU_OUT_EN, MEM_REG_EN, MEM_WR_S, MEM_S, SE_SIGN, PSR_EN
+						output reg [1:0] WD_S, ALUA_S, ALUB_S, MEM_DATA_S, MEM_S,
+						output reg PC_S, PC_EN, REG_WR_EN, INSTR_EN, ALU_OUT_EN, MEM_REG_EN, MEM_WR_S, SE_SIGN, PSR_EN
 						);
 
 	// Paramaters used for state names allows for easy 
@@ -168,7 +168,7 @@ module controller(input            clk, reset,
 			ALUB_S <= 2'b00;
 			PC_S <= 0;
 			PC_EN <= 0;
-			MEM_S <= 0;
+			MEM_S <= 2'b00;
 			MEM_DATA_S <= 0;
 			REG_WR_EN <= 0;
 			INSTR_EN <= 0;
@@ -181,7 +181,7 @@ module controller(input            clk, reset,
          case(state)
 			FETCH: 
 				begin
-				MEM_S <= 1;
+				MEM_S <= 2'b01;
 				INSTR_EN <= 1;
 				end
          DECODE: 
@@ -233,6 +233,7 @@ module controller(input            clk, reset,
 					end
 				SB_MEM_I:
 					begin
+					MEM_S <= 2'b10;
 					MEM_WR_S <= 1;
 					MEM_DATA_S <= 1;
 					end

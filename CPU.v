@@ -17,8 +17,8 @@ module CPU #(parameter WIDTH = 16, REGBITS = 4, IMM = 8, REG_ADD = 4, PSRL = 5)
 	wire [4:0] PSR_OUT;
 	// TODO (JM): I commented this out but didn't delete it just in case Jesse wanted it
 	// output [1:0] WD_S, ALUA_S, ALUB_S <= 2'b00;
-	wire [1:0] WD_S, ALUA_S, ALUB_S, MEM_DATA_S;
-	wire PC_S, PC_EN, REG_WR, INSTR_EN, ALU_OUT_EN, MEM_REG_EN, MEM_S, SE_SIGN, PSR_EN;
+	wire [1:0] WD_S, ALUA_S, ALUB_S, MEM_DATA_S, MEM_S;
+	wire PC_S, PC_EN, REG_WR, INSTR_EN, ALU_OUT_EN, MEM_REG_EN, SE_SIGN, PSR_EN;
 	
 	controller cont(
 				  clk, reset, 
@@ -26,8 +26,8 @@ module CPU #(parameter WIDTH = 16, REGBITS = 4, IMM = 8, REG_ADD = 4, PSRL = 5)
 				  OP_EXT,
 				  branch_cond,
 				  PSR_OUT,
-				  WD_S, ALUA_S, ALUB_S, MEM_DATA_S,
-				  PC_S, PC_EN, REG_WR, INSTR_EN, ALU_OUT_EN, MEM_REG_EN, MEM_WR_S, MEM_S, SE_SIGN, PSR_EN
+				  WD_S, ALUA_S, ALUB_S, MEM_DATA_S, MEM_S,
+				  PC_S, PC_EN, REG_WR, INSTR_EN, ALU_OUT_EN, MEM_REG_EN, MEM_WR_S, SE_SIGN, PSR_EN
 				  );
 				  
 	datapath dp(
