@@ -49,7 +49,7 @@ module GroupProject3710 #(parameter WIDTH = 16, REGBITS = 4, ADDR_WIDTH = 10) (
 		.reset(reset),
 		.keyboard_input(keyboard_input) // output
 	);
-	vgaControl (
+	vgaControl vga (
 		.clk50MHz(clk),            // System clock
 		.clr(reset),                 // Clear signal
 		.memReadData(q_b),

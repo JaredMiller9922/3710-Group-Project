@@ -9,8 +9,8 @@ reg [15:0] switches;
 // Create an instance of the MiniMips
 GroupProject3710 uut (
 	.clk(clk),
-    .reset(reset),
-	 .switches(switches)
+    .reset(reset) 	
+	 // .switches(switches)
 );
 
 // Create a clock
