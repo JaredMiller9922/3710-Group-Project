@@ -1,5 +1,6 @@
 module GroupProject3710 #(parameter WIDTH = 16, REGBITS = 4) (
 	input clk, reset, ps2_clk, ps2_data,
+	// input [7:0] switches,
 	output [7:0] LEDs_a, LEDs_b
 );
 
