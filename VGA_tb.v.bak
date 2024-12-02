@@ -1,0 +1,31 @@
+// tb_MiniMips
+module Fib_tb;
+
+// We set the clk and reset to reg because they will be used in an always block
+reg clk;
+reg reset;
+reg [15:0] switches;
+
+// Create an instance of the MiniMips
+
+// Create a clock
+initial begin
+	  clk = 0;
+	  forever #5 clk = ~clk; // 50MHz clock  # 10 every cycle
+	end
+
+// Test Sequence
+initial begin
+    // Initialize variables
+    reset <= 0;  // Assert reset (active low)
+	 switches = 15'b111;
+
+    // Hold reset for a few clock cycles
+    #20 reset <= 1;  // De-assert reset (system comes out of reset)
+    
+
+    
+end
+
+
+endmodule

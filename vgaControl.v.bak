@@ -1,0 +1,90 @@
+module vgaControl (
+    input clk50MHz,            // System clock
+    input clr,                 // Clear signal
+    input [2:0] switches,      // 3-bit input for color selection from DE1-SoC switches
+    input HAZ,                 // Hazards input
+    input LEFT,                // Left turn signal input
+    input RIGHT,               // Right turn signal input
+    output [7:0] VGA_R,        // VGA Red channel
+    output [7:0] VGA_G,        // VGA Green channel
+    output [7:0] VGA_B,        // VGA Blue channel
+    output VGA_HS,             // VGA Horizontal Sync
+    output VGA_VS,             // VGA Vertical Sync
+    output VGA_BLANK_N,        // VGA Blank
+    output VGA_SYNC_N,         // VGA Sync
+    output VGA_CLK             // VGA Clock
+);
+    wire hSync, vSync, bright;
+    wire [9:0] hCount, vCount;
+    wire [2:0] rgb;
+    wire [2:0] L, R;
+    reg clk25MHz;
+    
+    // Timeing module for VGA control
+    vgaTiming timing (
+        .clk50MHz(clk50MHz),
+        .clr(clr),
+        .hSync(hSync),
+        .vSync(vSync),
+        .bright(bright),
+        .hCount(hCount),
+        .vCount(vCount)
+    );
+
+    // This bit gen is for displaying the solid colors on the screen
+    bitGen_minimum bitgen (
+        .bright(bright),
+        .hCount(hCount),
+        .vCount(vCount),
+        .switches(switches),
+        .rgb(rgb)
+    );
+    
+    // This is the bitgen for displaying the tbird onto the screen
+    /*
+    TBird_bitGen_minimum tBirdGen (
+        .bright(bright),
+        .hCount(hCount),
+        .vCount(vCount),
+        .Left(L),
+        .Right(R),
+        .rgb(rgb)
+    );
+    
+    // Instantiate thunderbird lights control
+    thunder_bird_lights tbird (
+        .Clk(clk50MHz), 
+        .Clr(clr), 
+        .LEFT(LEFT), 
+        .RIGHT(RIGHT), 
+        .HAZ(HAZ),
+        .L(L),
+        .R(R)
+    );
+    */
+
+    // Generate 25MHz clock for VGA from 50MHz system clock
+    always @(posedge clk50MHz or negedge clr) begin
+        if (clr == 0)
+            clk25MHz <= 0;
+        else
+            clk25MHz <= ~clk25MHz;
+    end
+
+    // Assign RGB outputs to VGA pins
+    assign VGA_R = {8{rgb[0]}};
+    assign VGA_G = {8{rgb[1]}};
+    assign VGA_B = {8{rgb[2]}};
+    assign VGA_HS = hSync;
+    assign VGA_VS = vSync;
+    
+    // VGA_BLANK_N is high when in the bright region, otherwise low
+    assign VGA_BLANK_N = bright;
+
+    // VGA_SYNC_N tied to 0, as sync-on-green is not used
+    assign VGA_SYNC_N = 1'b0;
+
+    // VGA_CLK is the pixel clock (25MHz)
+    assign VGA_CLK = clk25MHz;
+
+endmodule
