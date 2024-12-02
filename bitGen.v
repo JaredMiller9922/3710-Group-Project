@@ -180,10 +180,10 @@ module bitGen #(parameter WIDTH = 16, POSNUM = 30) (
 							rgb = 8'b00000000;   // Black
 						end
 						else if (hCount[5:3] == 3'b011) begin
-							rgb = 8'b00000111;   // White
+							rgb = 8'b00000000;   // Black
 						end
 						else if (hCount[5:3] == 3'b100) begin
-							rgb = 8'b00000111;   // White
+							rgb = 8'b00000000;   // Black
 						end
 						else if (hCount[5:3] == 3'b101) begin
 							rgb = 8'b00000000;   // Black
@@ -205,16 +205,16 @@ module bitGen #(parameter WIDTH = 16, POSNUM = 30) (
 							rgb = 8'b00000000;   // Black
 						end
 						else if (hCount[5:3] == 3'b010) begin
-							rgb = 8'b00000111;   // White
+							rgb = 8'b00000000;   // Black
 						end
 						else if (hCount[5:3] == 3'b011) begin
-							rgb = 8'b00000001;   // Blue
+							rgb = 8'b00000000;   // Black
 						end
 						else if (hCount[5:3] == 3'b100) begin
-							rgb = 8'b00000001;   // Blue
+							rgb = 8'b00000000;   // Black
 						end
 						else if (hCount[5:3] == 3'b101) begin
-							rgb = 8'b00000111;   // White
+							rgb = 8'b00000000;   // Black
 						end
 						else if (hCount[5:3] == 3'b110) begin
 							rgb = 8'b00000000;   // Black
@@ -233,16 +233,16 @@ module bitGen #(parameter WIDTH = 16, POSNUM = 30) (
 							rgb = 8'b00000000;   // Black
 						end
 						else if (hCount[5:3] == 3'b010) begin
-							rgb = 8'b00000111;   // White
+							rgb = 8'b00000000;   // Black
 						end
 						else if (hCount[5:3] == 3'b011) begin
-							rgb = 8'b00000001;   // Blue
+							rgb = 8'b00000111;   // White
 						end
 						else if (hCount[5:3] == 3'b100) begin
-							rgb = 8'b00000001;   // Blue
+							rgb = 8'b00000111;   // White
 						end
 						else if (hCount[5:3] == 3'b101) begin
-							rgb = 8'b00000111;   // White
+							rgb = 8'b00000000;   // Black
 						end
 						else if (hCount[5:3] == 3'b110) begin
 							rgb = 8'b00000000;   // Black
@@ -255,13 +255,13 @@ module bitGen #(parameter WIDTH = 16, POSNUM = 30) (
 					else if (vCount[5:3] == 3'b011) begin
 						
 						if (hCount[5:3] == 3'b000) begin
-							rgb = 8'b00000111;   // White
+							rgb = 8'b00000000;   // Black
 						end
 						else if (hCount[5:3] == 3'b001) begin
-							rgb = 8'b00000111;   // White
+							rgb = 8'b00000000;   // Black
 						end
 						else if (hCount[5:3] == 3'b010) begin
-							rgb = 8'b00000001;   // Blue
+							rgb = 8'b00000111;   // White
 						end
 						else if (hCount[5:3] == 3'b011) begin
 							rgb = 8'b00000001;   // Blue
@@ -270,20 +270,20 @@ module bitGen #(parameter WIDTH = 16, POSNUM = 30) (
 							rgb = 8'b00000001;   // Blue
 						end
 						else if (hCount[5:3] == 3'b101) begin
-							rgb = 8'b00000001;   // Blue
+							rgb = 8'b00000111;   // White
 						end
 						else if (hCount[5:3] == 3'b110) begin
-							rgb = 8'b00000111;   // White
+							rgb = 8'b00000000;   // Black
 						end
 						else if (hCount[5:3] == 3'b111) begin
-							rgb = 8'b00000111;   // White
+							rgb = 8'b00000000;   // Black
 						end
 						
 					end
 					else if (vCount[5:3] == 3'b100) begin
 						
 						if (hCount[5:3] == 3'b000) begin
-							rgb = 8'b00000111;   // White
+							rgb = 8'b00000000;   // Black
 						end
 						else if (hCount[5:3] == 3'b001) begin
 							rgb = 8'b00000111;   // White
@@ -304,7 +304,7 @@ module bitGen #(parameter WIDTH = 16, POSNUM = 30) (
 							rgb = 8'b00000111;   // White
 						end
 						else if (hCount[5:3] == 3'b111) begin
-							rgb = 8'b00000111;   // White
+							rgb = 8'b00000000;   // Black
 						end
 						
 					end
@@ -314,10 +314,10 @@ module bitGen #(parameter WIDTH = 16, POSNUM = 30) (
 							rgb = 8'b00000000;   // Black
 						end
 						else if (hCount[5:3] == 3'b001) begin
-							rgb = 8'b00000000;   // Black
+							rgb = 8'b00000111;   // White
 						end
 						else if (hCount[5:3] == 3'b010) begin
-							rgb = 8'b00000111;   // White
+							rgb = 8'b00000001;   // Blue
 						end
 						else if (hCount[5:3] == 3'b011) begin
 							rgb = 8'b00000001;   // Blue
@@ -326,10 +326,10 @@ module bitGen #(parameter WIDTH = 16, POSNUM = 30) (
 							rgb = 8'b00000001;   // Blue
 						end
 						else if (hCount[5:3] == 3'b101) begin
-							rgb = 8'b00000111;   // White
+							rgb = 8'b00000001;   // Blue
 						end
 						else if (hCount[5:3] == 3'b110) begin
-							rgb = 8'b00000000;   // Black
+							rgb = 8'b00000111;   // White
 						end
 						else if (hCount[5:3] == 3'b111) begin
 							rgb = 8'b00000000;   // Black
@@ -345,16 +345,16 @@ module bitGen #(parameter WIDTH = 16, POSNUM = 30) (
 							rgb = 8'b00000000;   // Black
 						end
 						else if (hCount[5:3] == 3'b010) begin
-							rgb = 8'b00000100;   // Red
+							rgb = 8'b00000111;   // White
 						end
 						else if (hCount[5:3] == 3'b011) begin
-							rgb = 8'b00000000;   // Black
+							rgb = 8'b00000001;   // Blue
 						end
 						else if (hCount[5:3] == 3'b100) begin
-							rgb = 8'b00000000;   // Black
+							rgb = 8'b00000001;   // Blue
 						end
 						else if (hCount[5:3] == 3'b101) begin
-							rgb = 8'b00000100;   // Red
+							rgb = 8'b00000111;   // White
 						end
 						else if (hCount[5:3] == 3'b110) begin
 							rgb = 8'b00000000;   // Black
@@ -548,10 +548,10 @@ module bitGen #(parameter WIDTH = 16, POSNUM = 30) (
 							rgb = 8'b00000000;   // Black
 						end
 						else if (hCount[5:3] == 3'b011) begin
-							rgb = 8'b00000001;   // Blue
+							rgb = 8'b00000100;   // Red
 						end
 						else if (hCount[5:3] == 3'b100) begin
-							rgb = 8'b00000001;   // Blue
+							rgb = 8'b00000100;   // Red
 						end
 						else if (hCount[5:3] == 3'b101) begin
 							rgb = 8'b00000000;   // Black
@@ -576,10 +576,10 @@ module bitGen #(parameter WIDTH = 16, POSNUM = 30) (
 							rgb = 8'b00000000;   // Black
 						end
 						else if (hCount[5:3] == 3'b011) begin
-							rgb = 8'b00000001;   // Blue
+							rgb = 8'b00000000;   // Black
 						end
 						else if (hCount[5:3] == 3'b100) begin
-							rgb = 8'b00000001;   // Blue
+							rgb = 8'b00000000;   // Black
 						end
 						else if (hCount[5:3] == 3'b101) begin
 							rgb = 8'b00000000;   // Black
@@ -604,10 +604,10 @@ module bitGen #(parameter WIDTH = 16, POSNUM = 30) (
 							rgb = 8'b00000000;   // Black
 						end
 						else if (hCount[5:3] == 3'b011) begin
-							rgb = 8'b00000100;   // Red
+							rgb = 8'b00000000;   // Black
 						end
 						else if (hCount[5:3] == 3'b100) begin
-							rgb = 8'b00000100;   // Red
+							rgb = 8'b00000000;   // Black
 						end
 						else if (hCount[5:3] == 3'b101) begin
 							rgb = 8'b00000000;   // Black
