@@ -5,7 +5,7 @@ class Assembler():
     labels = {}
     jpoint_instrs = {}
     RType = ['ADD', 'ADDU', 'ADDC', 'ADDCU', 'SUB', 'CMP', 'CMPU', 'AND', 'OR', 'XOR', 'MOV']
-    Immediates = ['ADDI', 'ADDUI', 'ADDCI', 'ADDCUI', 'SUBI', 'CMPI', 'CMPUI', 'ANDI', 'ORI', 'XORI', 'MOVI']
+    Immediates = ['ADDI', 'ADDUI', 'ADDCUI', 'SUBI', 'CMPI', 'CMPUI', 'ANDI', 'ORI', 'XORI', 'MOVI', 'STORI']
     Shift = ['LSH', 'RSH', 'ALSH', 'ARSH']
     ImmdShift = ['LSHI', 'RSHI', 'ALSHI', 'ARSHI']
     Branch = ['BEQ', 'BNE', 'BGE', 'BCS', 'BCC', 'BHI', 'BLS', 'BLO', 'BHS', 'BGT', 'BLE', 'BFS', 'BFC', 'BLT', 'BUC']
@@ -156,6 +156,10 @@ class Assembler():
     def UC():
         return '1110'
 
+    @staticmethod
+    def STORI():
+        return '0111'
+
     switcher = {
         'ADD': ADD,
         'ADDU': ADDU,
@@ -170,7 +174,7 @@ class Assembler():
         'MOV': MOV,
         'ADDI': ADD,
         'ADDUI': ADDU,
-        'ADDCI': ADDC,
+        'STORI': STORI,
         'ADDCUI': ADDCUI,
         'SUBI': SUB,
         'CMPI': CMP,
