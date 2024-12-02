@@ -17,6 +17,8 @@ module GroupProject3710 #(parameter WIDTH = 16, REGBITS = 4, ADDR_WIDTH = 10) (
 	wire [ADDR_WIDTH-1:0] addr_a, addr_b;
 	wire [WIDTH-1:0] q_a, q_b;
 	wire [WIDTH-1:0] keyboard_input;
+	
+	assign LEDs_a = keyboard_input;
 
 
 	CPU computation (
@@ -71,7 +73,7 @@ module GroupProject3710 #(parameter WIDTH = 16, REGBITS = 4, ADDR_WIDTH = 10) (
 	assign io_a = addr_a[9] & addr_a[8];
 	assign a_enable = io_a & we_a;
 
-	flopenr flop_a(~clk, reset, a_enable, data_a, LEDs_a); 
+	//flopenr flop_a(~clk, reset, a_enable, data_a, LEDs_a); 
 	mux2 mux_a(q_a, keyboard_input, io_a, readMemData_a);
 
 	// Memory-Mapped I/O for b
