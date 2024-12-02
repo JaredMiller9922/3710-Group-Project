@@ -102,9 +102,6 @@ set_global_assignment -name VERILOG_FILE Fib_tb.v
 set_global_assignment -name EDA_TEST_BENCH_NAME Fib_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Fib_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Fib_tb -section_id Fib_tb
-set_location_assignment PIN_AF9 -to switches[2]
-set_location_assignment PIN_AC12 -to switches[1]
-set_location_assignment PIN_AB12 -to switches[0]
 set_global_assignment -name VERILOG_FILE vgaTiming.v
 set_global_assignment -name VERILOG_FILE vgaControl.v
 set_global_assignment -name VERILOG_FILE bitGen.v
@@ -142,15 +139,7 @@ set_global_assignment -name EDA_TEST_BENCH_NAME VGA_tb -section_id eda_simulatio
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id VGA_tb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "100 ns" -section_id VGA_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME VGA_tb -section_id VGA_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE ALU_Regfile_tb.v -section_id ALU_Regfile_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE Datapath_Memory_tb.v -section_id Datapath_Memory_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE Datapath_tb.v -section_id Datapath_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE State_Machine_tb.v -section_id State_Machine_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE Fib_tb.v -section_id Fib_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE VGA_tb.v -section_id VGA_tb
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_AF14 -to clk
 set_location_assignment PIN_AA15 -to reset
 set_location_assignment PIN_W20 -to LEDs_a[7]
@@ -179,4 +168,6 @@ set_global_assignment -name VERILOG_FILE ps2_keyboard.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_AD7 -to ps2_clk
+set_location_assignment PIN_AE7 -to ps2_data
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

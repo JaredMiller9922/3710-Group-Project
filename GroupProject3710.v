@@ -48,7 +48,7 @@ module GroupProject3710 #(parameter WIDTH = 16, REGBITS = 4, ADDR_WIDTH = 10) (
 		.ps2_data(ps2_data),
 		.reset(reset),
 		.keyboard_input(keyboard_input) // output
-	
+	);
 	vgaControl (
 		.clk50MHz(clk),            // System clock
 		.clr(reset),                 // Clear signal
@@ -75,7 +75,7 @@ module GroupProject3710 #(parameter WIDTH = 16, REGBITS = 4, ADDR_WIDTH = 10) (
 	mux2 mux_a(q_a, keyboard_input, io_a, readMemData_a);
 
 	// Memory-Mapped I/O for b
-	assign io_b = addr_b[15] & addr_b[14];
+	assign io_b = addr_b[9] & addr_b[8];
 	assign b_enable = io_b & we_b;
 
 	flopenr flop_b(~clk, reset, b_enable, data_b, LEDs_b); 
