@@ -27,6 +27,7 @@ module controller(input            clk, reset,
    parameter   CALC_RLINK	=  5'b01100;
 	parameter   WR_RLINK_J	=  5'b01101;
 	parameter   PC_UP			=  5'b01110;
+	parameter 	WAIT			=  5'b10000;
 	parameter   PURGATORY	=  5'b11111;
 
 	// parameters used for instruction types 
@@ -36,6 +37,7 @@ module controller(input            clk, reset,
 	parameter   JCOND		=  4'b1100;
 	parameter   JAL		=  4'b1000;
 	parameter   CMP		=  4'b1011;
+	parameter 	WA			=  4'b1111;
 	
 	
    parameter   RTYPE		=  4'b0000;
@@ -55,7 +57,29 @@ module controller(input            clk, reset,
 	
    reg [4:0] state, nextstate;       // state register and nextstate value
    reg       pcwrite, pcwritecond;   // Write to the PC? 
-
+	reg [3:0] wait_counter;
+	reg 		 wait_flag;
+	
+	// Logic for controlling the wait instruction
+	always @(posedge clk or negedge reset) begin
+		if (!reset) begin
+			wait_counter <= 0;
+			wait_flag <= 0;
+		end 
+		else if (state == WAIT) begin
+			if (wait_counter == 4'b1111) begin // Adjust the duration as needed
+				wait_flag <= 1; // Signal that WAIT is done
+			end else begin
+				wait_counter <= wait_counter + 1;
+				wait_flag <= 0;
+			end
+		end 
+		else begin
+			wait_counter <= 0; // Reset counter when leaving WAIT state
+			wait_flag <= 0;
+		end
+	end
+	
    // state register
    always @(posedge clk)
       if(~reset) state <= FETCH;
@@ -96,6 +120,7 @@ module controller(input            clk, reset,
                      endcase
             RTYPE_EX:  case(op_ext)
 									CMP:      nextstate <= PC_UP;
+									WA:     	 nextstate <= WAIT;
 									default: nextstate <= WRITE; // should happen
                      endcase
             ITYPE_EX:	case(op)
@@ -121,6 +146,15 @@ module controller(input            clk, reset,
 				CALC_RLINK: nextstate <= WR_RLINK_J;
             WR_RLINK_J: nextstate <= FETCH;
 				PC_UP: nextstate <= FETCH;
+				WAIT:
+					begin
+					// if we are done waiting go to pc_up
+						if (wait_flag)
+							nextstate <= PC_UP;
+					// if we aren't done waiting 
+						else
+							nextstate <= WAIT;
+					end
             default: nextstate <= PURGATORY; // should never happen
          endcase
       end
