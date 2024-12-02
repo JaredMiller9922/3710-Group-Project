@@ -35,15 +35,15 @@ module GroupProject3710 #(parameter WIDTH = 16, REGBITS = 4, ADDR_WIDTH = 10) (
 		.addr_a(addr_a), 
 		.addr_b(addr_b),
 		.we_a(we_a), 
-		.we_b(we_b), 
+		.we_b(0), 
 		.clk(~clk), // clk or ~clk
 		.q_a(q_a), // output
 		.q_b(q_b)  // output
 	);
 	
-	/*
+	
 	vgaControl (
-		.clk(clk50MHz),            // System clock
+		.clk50MHz(clk),            // System clock
 		.clr(reset),                 // Clear signal
 		.memReadData(q_b),
 		.VGA_R(VGA_R),        // VGA Red channel
@@ -55,13 +55,13 @@ module GroupProject3710 #(parameter WIDTH = 16, REGBITS = 4, ADDR_WIDTH = 10) (
 		.VGA_SYNC_N(VGA_SYNC_N),         // VGA Sync
 		.VGA_CLK(VGA_CLK),             // VGA Clock
 		.address(addr_b)
-	);*/
+	);
 
 
 	wire a_enable, b_enable, io_a, io_b;
 
 	// Memory-Mapped I/O for a
-	assign io_a = addr_a[15] & addr_a[14];
+	assign io_a = addr_a[9] & addr_a[8];
 	assign a_enable = io_a & we_a;
 
 	flopenr flop_a(~clk, reset, a_enable, data_a, LEDs_a); 

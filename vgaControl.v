@@ -1,6 +1,7 @@
 module vgaControl #(parameter WIDTH = 16, parameter ADDR_WIDTH=10) (
     input clk50MHz,            // System clock
     input clr,                 // Clear signal
+	 input [WIDTH-1:0] memReadData,	// Value read from memory
     output [7:0] VGA_R,        // VGA Red channel
     output [7:0] VGA_G,        // VGA Green channel
     output [7:0] VGA_B,        // VGA Blue channel
@@ -15,7 +16,7 @@ module vgaControl #(parameter WIDTH = 16, parameter ADDR_WIDTH=10) (
     wire [9:0] hCount, vCount;
     wire [2:0] rgb;
     wire [2:0] L, R;
-	 wire [WIDTH-1:0] memReadData;
+	 //wire [WIDTH-1:0] memReadData;
 	 
 	 reg [15:0] pos0, pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9;
 	 reg [15:0] pos10, pos11, pos12, pos13, pos14, pos15, pos16, pos17, pos18, pos19;
@@ -46,13 +47,13 @@ module vgaControl #(parameter WIDTH = 16, parameter ADDR_WIDTH=10) (
 		rgb
 	);
 
-	
+	/*
 	bram mem (
 		.addr_b(address),
 		.we_b(0), 
 		.clk(clk50MHz), // clk or ~clk
 		.q_b(memReadData)  // output
-	);
+	);*/
     
     // This is the bitgen for displaying the tbird onto the screen
     /*
@@ -92,66 +93,68 @@ module vgaControl #(parameter WIDTH = 16, parameter ADDR_WIDTH=10) (
             clk25MHz <= ~clk25MHz;
 			
 		
-				if (address == 10'b0100000001)
+				if (address == 10'b0100000000)
 					pos0 = memReadData;
-				else if (address == 10'b0100000010)
+				else if (address == 10'b0100000001)
 					pos1 = memReadData;
-				else if (address == 10'b0100000011)
+				else if (address == 10'b0100000010)
 					pos2 = memReadData;
-				else if (address == 10'b0100000100)
+				else if (address == 10'b0100000011)
 					pos3 = memReadData;
-				else if (address == 10'b0100000101)
+				else if (address == 10'b0100000100)
 					pos4 = memReadData;
-				else if (address == 10'b0100000110)
+				else if (address == 10'b0100000101)
 					pos5 = memReadData;
-				else if (address == 10'b0100000111)
+				else if (address == 10'b0100000110)
 					pos6 = memReadData;
-				else if (address == 10'b0100001000)
+				else if (address == 10'b0100000111)
 					pos7 = memReadData;
-				else if (address == 10'b0100001001)
+				else if (address == 10'b0100001000)
 					pos8 = memReadData;
-				else if (address == 10'b0100001010)
+				else if (address == 10'b0100001001)
 					pos9 = memReadData;
-				else if (address == 10'b0100001011)
+				else if (address == 10'b0100001010)
 					pos10 = memReadData;
-				else if (address == 10'b0100001100)
+				else if (address == 10'b0100001011)
 					pos11 = memReadData;
-				else if (address == 10'b0100001101)
+				else if (address == 10'b0100001100)
 					pos12 = memReadData;
-				else if (address == 10'b0100001110)
+				else if (address == 10'b0100001101)
 					pos13 = memReadData;
-				else if (address == 10'b0100001111)
+				else if (address == 10'b0100001110)
 					pos14 = memReadData;
-				else if (address == 10'b0100010000)
+				else if (address == 10'b0100001111)
 					pos15 = memReadData;
-				else if (address == 10'b0100010001)
+				else if (address == 10'b0100010000)
 					pos16 = memReadData;
-				else if (address == 10'b0100010010)
+				else if (address == 10'b0100010001)
 					pos17 = memReadData;
-				else if (address == 10'b0100010011)
+				else if (address == 10'b0100010010)
 					pos18 = memReadData;
-				else if (address == 10'b0100010100)
+				else if (address == 10'b0100010011)
 					pos19 = memReadData;
-				else if (address == 10'b0100010101)
+				else if (address == 10'b0100010100)
 					pos20 = memReadData;
-				else if (address == 10'b0100010110)
+				else if (address == 10'b0100010101)
 					pos21 = memReadData;
-				else if (address == 10'b0100010111)
+				else if (address == 10'b0100010110)
 					pos22 = memReadData;
-				else if (address == 10'b0100011000)
+				else if (address == 10'b0100010111)
 					pos23 = memReadData;
-				else if (address == 10'b0100011001)
+				else if (address == 10'b0100011000)
 					pos24 = memReadData;
-				else if (address == 10'b0100011010)
+				else if (address == 10'b0100011001)
 					pos25 = memReadData;
-				else if (address == 10'b0100011011)
+				else if (address == 10'b0100011010)
 					pos26 = memReadData;
-				else if (address == 10'b0100011100)
+				else if (address == 10'b0100011011)
 					pos27 = memReadData;
-				else if (address == 10'b0100011101)
+				else if (address == 10'b0100011100)
 					pos28 = memReadData;
-				else if (address == 10'b0100011110) begin
+				else if (address == 10'b0100011101)
 					pos29 = memReadData;
+				else if (address == 10'b0100011110) begin
+					//pos30 = memReadData;
 					address = 10'b0011111111;
 				end
 				address = address + 1;
