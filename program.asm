@@ -94,3 +94,7 @@ ORI $4 %r7     # Makes so we don't overwrite next location
 STOR %r7 %r6   # Store the and'ed value of the grid location at the location
 
 BUC .main
+
+.e_act_check
+
+.e_act

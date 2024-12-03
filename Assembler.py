@@ -5,7 +5,7 @@ class Assembler():
     labels = {}
     jpoint_instrs = {}
     RType = ['ADD', 'ADDU', 'ADDC', 'ADDCU', 'SUB', 'CMP', 'CMPU', 'AND', 'OR', 'XOR', 'MOV', 'WAIT']
-    Immediates = ['ADDI', 'ADDUI', 'ADDCUI', 'SUBI', 'CMPI', 'CMPUI', 'ANDI', 'ORI', 'XORI', 'MOVI', 'STORI']
+    Immediates = ['ADDI', 'ADDUI', 'ADDCUI', 'SUBI', 'CMPI', 'CMPUI', 'ANDI', 'ORI', 'XORI', 'MOVI', 'STORI', 'MOVRI']
     Shift = ['LSH', 'RSH', 'ALSH', 'ARSH']
     ImmdShift = ['LSHI', 'RSHI', 'ALSHI', 'ARSHI']
     Branch = ['BEQ', 'BNE', 'BGE', 'BCS', 'BCC', 'BHI', 'BLS', 'BLO', 'BHS', 'BGT', 'BLE', 'BFS', 'BFC', 'BLT', 'BUC']
@@ -15,6 +15,10 @@ class Assembler():
     @staticmethod
     def WAIT():
         return '0000'
+
+    @staticmethod
+    def MOVRI():
+        return '0110'
 
     @staticmethod
     def ADD():
@@ -187,6 +191,7 @@ class Assembler():
         'ORI': OR,
         'XORI': XOR,
         'MOVI': MOV,
+        'MOVRI' : MOVRI,
         'LSH': LSH,
         'LSHI': LSHI,
         'RSH': RSH,

@@ -1,24 +1,24 @@
 module random_gen (
     input clk,           // Clock signal
     input reset,         // Active low reset signal
-    input [3:0] min,     // Minimum value of range
-    input [3:0] max,     // Maximum value of range
-    output reg [3:0] random_number // Random number in range [min, max]
+    input [7:0] min,     // Minimum value of range
+    input [7:0] max,     // Maximum value of range
+    output reg [7:0] random_number // Random number in range [min, max]
 );
 
-    reg [3:0] lfsr;      // 4-bit LFSR
+    reg [7:0] lfsr;      // 8-bit LFSR
     wire feedback;       // Feedback wire
-    reg [3:0] scaled_random; // Random value scaled to the range [min, max]
+    reg [7:0] scaled_random; // Random value scaled to the range [min, max]
 
-    // Feedback logic for LFSR (x^4 + x^3 + 1)
-    assign feedback = lfsr[3] ^ lfsr[2];
+    // Feedback logic for LFSR (x^8 + x^6 + x^5 + x^4 + 1)
+    assign feedback = lfsr[7] ^ lfsr[5] ^ lfsr[4] ^ lfsr[3];
 
     // LFSR logic
     always @(posedge clk or negedge reset) begin
         if (~reset)
-            lfsr <= 4'b0001; // Initialize to a non-zero seed
+            lfsr <= 8'b00000001; // Initialize to a non-zero seed
         else
-            lfsr <= {lfsr[2:0], feedback}; // Shift and insert feedback
+            lfsr <= {lfsr[6:0], feedback}; // Shift and insert feedback
     end
 
     // Scale the LFSR output to the range [min, max]
@@ -38,4 +38,3 @@ module random_gen (
     end
 
 endmodule
-

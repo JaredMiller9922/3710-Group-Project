@@ -3,7 +3,7 @@
 module alu #(parameter WIDTH = 16)
             (input      [WIDTH-1:0] Rsrc, Rdest, 
              input      [3:0]       alucont,
-				 input 		[3:0]			random_num,
+				 input 		[7:0]			random_num,
              output reg [WIDTH-1:0] result,
              output reg [4:0] PSR // C F L Z N
              );						  // 0 1 2 3 4 
@@ -83,7 +83,7 @@ module alu #(parameter WIDTH = 16)
 				begin 
 					result <= {Rdest[15-8], 8'b00000000};
 				end
-				4'b1111: // RANI
+				4'b1010: // MOVRI
 				begin
 					result <= random_num;
 				end

@@ -29,7 +29,7 @@ module datapath #(parameter WIDTH = 16, REGBITS = 4, IMML = 8, REG_ADD = 4, PSRL
 	wire[IMML-1:0] IMM;
 	
 	// Create wire to store random number
-	wire[3:0] random_num;
+	wire[7:0] random_num;
 	
 	// Setting INSTRuction fields
 	assign Rsrc_addr = INSTR[3:0];
@@ -64,5 +64,5 @@ module datapath #(parameter WIDTH = 16, REGBITS = 4, IMML = 8, REG_ADD = 4, PSRL
    regfile    #(WIDTH,REGBITS) rf(clk, REG_WR, Rsrc_addr, Rdest_addr, Rdest_addr, WD, rd1, rd2);
    alu        #(WIDTH) 			 alunit(ALUA_OUT, ALUB_OUT, alucont, random_num, ALU_RES, PSR);
 	alucontrol alu_cont(op_cont, OP_EXT, alucont);
-	random_gen ran_gen(clk, reset, 4'b0000, Rsrc_addr, random_num); 
+	random_gen ran_gen(clk, reset, 8'b00000000, IMM, random_num); 
 endmodule 
