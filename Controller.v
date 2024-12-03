@@ -37,8 +37,6 @@ module controller(input            clk, reset,
 	parameter   JCOND		=  4'b1100;
 	parameter   JAL		=  4'b1000;
 	parameter   CMP		=  4'b1011;
-	parameter 	WA			=  4'b1111;
-	
 	
    parameter   RTYPE		=  4'b0000;
 	parameter   LSH		=  4'b1000;
@@ -48,6 +46,7 @@ module controller(input            clk, reset,
 	parameter   ORI		=  4'b0010;
 	parameter   XORI		=  4'b0011;
 	parameter   MOVI		=  4'b1101;
+	parameter 	WA			=  4'b0000;
 	
 	parameter 	SBI		= 	4'b0111; // TODO (JM) Is this okay. It uses the space of ADDCI
 	
@@ -57,17 +56,17 @@ module controller(input            clk, reset,
 	
    reg [4:0] state, nextstate;       // state register and nextstate value
    reg       pcwrite, pcwritecond;   // Write to the PC? 
-	reg [64:0] wait_counter;
+	reg [28:0] wait_counter;
 	reg 		 wait_flag;
 	
 	// Logic for controlling the wait instruction
 	always @(posedge clk or negedge reset) begin
-		if (!reset) begin
+		if (~reset) begin
 			wait_counter <= 0;
 			wait_flag <= 0;
 		end 
 		else if (state == WAIT) begin
-			if (wait_counter == {64{1'b1}}) begin // Adjust the duration as needed
+			if (wait_counter == {28{1'b1}}) begin // Adjust the duration as needed
 				wait_flag <= 1; // Signal that WAIT is done
 			end else begin
 				wait_counter <= wait_counter + 1;
