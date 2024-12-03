@@ -851,5 +851,72 @@ module bitGen #(parameter WIDTH = 16, POSNUM = 30) (
 					
 				end
 				
+				
+				
+				
+				
+				
+				
+				// Bullet 0
+				if (currentGlyph[2] == 5'b1) begin
+					if (vCount[5:3] == 3'b000) begin
+						
+						if (hCount[5:3] == 3'b000) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b001) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b010) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b011) begin
+							rgb = 8'b00000011;   // Cyan
+						end
+						else if (hCount[5:3] == 3'b100) begin
+							rgb = 8'b00000011;   // Cyan
+						end
+						else if (hCount[5:3] == 3'b101) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b110) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b111) begin
+							rgb = 8'b00000000;   // Black
+						end
+						
+					end
+					else if (vCount[5:3] == 3'b001) begin
+						
+						if (hCount[5:3] == 3'b000) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b001) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b010) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b011) begin
+							rgb = 8'b00000011;   // Cyan
+						end
+						else if (hCount[5:3] == 3'b100) begin
+							rgb = 8'b00000011;   // Cyan
+						end
+						else if (hCount[5:3] == 3'b101) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b110) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b111) begin
+							rgb = 8'b00000000;   // Black
+						end
+						
+					end
+					
+				end
+				
     end
 endmodule

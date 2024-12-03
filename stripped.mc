@@ -21,6 +21,11 @@ CMPI $2 %r4
 BEQ .p_right 
 CMPI $5 %r4 
 BEQ .p_fire 
+MOV %r1 %r9 
+STORI $2 %r9 
+ADDI $1 %r9 
+CMP %r14 %r9 
+BGE .grid_loop 
 BUC .main 
 CMP %r2 %r13 
 BEQ .main 
@@ -43,6 +48,4 @@ SUBI $1 %r6
 LOAD %r7 %r6 
 ORI $4 %r7 
 STOR %r7 %r6 
-STORI $1 %r13 
-STORI $1 %r14 
 BUC .main 

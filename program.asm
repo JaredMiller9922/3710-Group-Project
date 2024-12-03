@@ -32,6 +32,16 @@ BEQ .p_right
 CMPI $5 %r4    # Player has fired
 BEQ .p_fire
 
+# Loop Through all grid cells   r14 is Grid End
+MOV %r1 %r9		# Start of Grid
+.grid_loop
+# Check Some stuff
+# Update values
+STORI $2 %r9	# Temp Writes guy 2 at every location
+ADDI $1 %r9		# Increment current Grid Location
+CMP %r14 %r9	# Check if last Grid Location
+BGE .grid_loop	# Branch if at End of Grid
+
 
 BUC .main      # Redo Loop main
 
