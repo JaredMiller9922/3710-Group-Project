@@ -57,7 +57,7 @@ module controller(input            clk, reset,
 	
    reg [4:0] state, nextstate;       // state register and nextstate value
    reg       pcwrite, pcwritecond;   // Write to the PC? 
-	reg [32:0] wait_counter;
+	reg [64:0] wait_counter;
 	reg 		 wait_flag;
 	
 	// Logic for controlling the wait instruction
@@ -67,7 +67,7 @@ module controller(input            clk, reset,
 			wait_flag <= 0;
 		end 
 		else if (state == WAIT) begin
-			if (wait_counter == {32{1'b1}}) begin // Adjust the duration as needed
+			if (wait_counter == {64{1'b1}}) begin // Adjust the duration as needed
 				wait_flag <= 1; // Signal that WAIT is done
 			end else begin
 				wait_counter <= wait_counter + 1;
