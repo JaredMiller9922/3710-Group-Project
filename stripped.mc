@@ -10,13 +10,13 @@ STORI $2 %r5
 MOVI $-1 %r3 
 LOAD %r4 %r3 
 CMPI $1 %r4 
-BEQ $16 
+BEQ .p_left 
 CMPI $2 %r4 
-BEQ $19 
-BUC $9 
+BEQ .p_right 
+BUC .main 
 SUBI $6 %r2 
 STORI $1 %r2 
-BUC $9 
+BUC .main 
 ADDI $6 %r2 
 STORI $1 %r2 
-BUC $9 
+BUC .main 

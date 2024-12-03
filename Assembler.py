@@ -213,17 +213,28 @@ class Assembler():
         return func()
     
     def replaceLabel(self, label):
-        def r(l):
-           if (l[0] == '.'):
-                  return '$' + str(self.labels[l])
-           else:
-                  return l
-
-        if (label.startswith('JPT')):
+        branch_instructions = {'BEQ', 'BNE', 'BGE', 'BCS', 'BCC', 'BHI', 'BLS', 'BLO', 'BHS', 'BGT', 'BLE', 'BFS', 'BFC', 'BLT', 'BUC'}
+        # Get the instruction mnemonic (first word in the line)
+        if not label.strip():
             return label
         else:
-            m = map(r, label.split())
-            return ' '.join(m)
+            instruction = label.strip().split()[0]
+
+            if (instruction in branch_instructions):
+                return label
+
+            else:
+                def r(l):
+                    if (l[0] == '.'):
+                            return '$' + str(self.labels[l])
+                    else:
+                            return l
+
+                if (label.startswith('JPT')):
+                    return label
+                else:
+                    m = map(r, label.split())
+                    return ' '.join(m)
         
     def __init__(self, args):
         # find the labels and their addresses
@@ -376,6 +387,7 @@ class Assembler():
                             wf.write(data + '\n')
                         else:
                             sys.exit('Syntax Error: Branch operations need a displacement or label')
+                        print("Your Displacement Value is: " + Displacement)
                     else:
                         sys.exit('Syntax Error: Branch operations need one arg')
                 elif (instr in self.Jump):
