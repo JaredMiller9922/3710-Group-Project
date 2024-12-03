@@ -10,6 +10,8 @@ MOV %r13 %r14
 ADDI $24 %r14  # r14 = Upper Bound Start $285
 STORI $1 %r2 
 
+WAIT %r0 %r0   # TODO: Remove For waiting only
+
 # set initial enemy location
 MOVI $12 %r5
 ADD %r1 %r5    # r5 = Enemy Location
@@ -26,12 +28,15 @@ BEQ .p_left
 CMPI $2 %r4    # Player has moved right
 BEQ .p_right
 
+WAIT %r0 %r0   # For waiting only
+
 BUC .main      # Redo Loop main
 
 # TODO: Currently overwrites the entire bit sequence
 # TODO: Remove me from current grid square
 .p_left
 STORI $0 %r3   # Clear MM-IO
+STORI $0 %r4   # Clear MM-IO
 CMP %r2 %r13   # Checks if player is at left boundary
 BEQ .main
 
@@ -44,6 +49,7 @@ BUC .main      # Redo Loop
 # TODO: Remove me from current grid square
 .p_right
 STORI $0 %r3   # Clear MM-IO
+STORI $0 %r4   # Clear MM-IO
 CMP %r2 %r14   # Checks if player is at right boundary
 BEQ .main
 

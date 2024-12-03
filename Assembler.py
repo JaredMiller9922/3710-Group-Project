@@ -4,13 +4,17 @@ import argparse
 class Assembler():
     labels = {}
     jpoint_instrs = {}
-    RType = ['ADD', 'ADDU', 'ADDC', 'ADDCU', 'SUB', 'CMP', 'CMPU', 'AND', 'OR', 'XOR', 'MOV']
+    RType = ['ADD', 'ADDU', 'ADDC', 'ADDCU', 'SUB', 'CMP', 'CMPU', 'AND', 'OR', 'XOR', 'MOV', 'WAIT']
     Immediates = ['ADDI', 'ADDUI', 'ADDCUI', 'SUBI', 'CMPI', 'CMPUI', 'ANDI', 'ORI', 'XORI', 'MOVI', 'STORI']
     Shift = ['LSH', 'RSH', 'ALSH', 'ARSH']
     ImmdShift = ['LSHI', 'RSHI', 'ALSHI', 'ARSHI']
     Branch = ['BEQ', 'BNE', 'BGE', 'BCS', 'BCC', 'BHI', 'BLS', 'BLO', 'BHS', 'BGT', 'BLE', 'BFS', 'BFC', 'BLT', 'BUC']
     Jump = ['JEQ', 'JNE', 'JGE', 'JCS', 'JCC', 'JHI', 'JLS', 'JLO', 'JHS', 'JGT', 'JLE', 'JFS', 'JFC', 'JLT', 'JUC']
     REGISTERS = ['%r0', '%r1', '%r2', '%r3', '%r4', '%r5', '%r6', '%r7', '%r8', '%r9', '%r10', '%r11', '%r12', '%r13', '%r14', '%r15']
+
+    @staticmethod
+    def WAIT():
+        return '0000'
 
     @staticmethod
     def ADD():
@@ -191,6 +195,7 @@ class Assembler():
         'ALSHI': ALSHI,
         'ARSH': ARSH,
         'ARSHI': ARSHI,
+        'WAIT' : WAIT,
         'EQ' : EQ,
         'NE' : NE,
         'GE' : GE,
