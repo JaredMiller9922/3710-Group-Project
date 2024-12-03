@@ -18,6 +18,7 @@ module bram #(parameter DATA_WIDTH=16, parameter ADDR_WIDTH=10)
 	$display("Loading memory");
 	// $readmemb("C:/Users/Jesse/Documents/GitHub/ECE 3710/3710-Group-Project/program.dat", ram);
 	$readmemb("C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/program.dat", ram);
+	// $readmemb("C:/Users/jared/Desktop/Fall 2024/3710-Group-Project/test.dat", ram);
 	$display("done loading");
 	end
 
