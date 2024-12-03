@@ -19,6 +19,7 @@ STORI $2 %r5
 
 # main game loop
 .main
+WAIT %r0 %r0   # For waiting only
 MOVI $-1 %r3   # r3 = MM-IO Location
 LOAD %r4 %r3   # r4 = MM-IO Value 
 
@@ -28,7 +29,6 @@ BEQ .p_left
 CMPI $2 %r4    # Player has moved right
 BEQ .p_right
 
-WAIT %r0 %r0   # For waiting only
 
 BUC .main      # Redo Loop main
 

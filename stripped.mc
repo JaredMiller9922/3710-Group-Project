@@ -12,13 +12,13 @@ WAIT %r0 %r0
 MOVI $12 %r5 
 ADD %r1 %r5 
 STORI $2 %r5 
+WAIT %r0 %r0 
 MOVI $-1 %r3 
 LOAD %r4 %r3 
 CMPI $1 %r4 
 BEQ .p_left 
 CMPI $2 %r4 
 BEQ .p_right 
-WAIT %r0 %r0 
 BUC .main 
 STORI $0 %r3 
 STORI $0 %r4 
