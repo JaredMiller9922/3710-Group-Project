@@ -12,7 +12,7 @@ module alu #(parameter WIDTH = 16)
 	reg carry;
 
    always@(*) begin
-		PSR = 5'b0;
+		//PSR = 5'b0;
 		carry = 0;
 		
       case(alucont)
