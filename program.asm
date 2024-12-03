@@ -35,8 +35,6 @@ BUC .main      # Redo Loop main
 # TODO: Currently overwrites the entire bit sequence
 # TODO: Remove me from current grid square
 .p_left
-STORI $0 %r3   # Clear MM-IO
-STORI $0 %r4   # Clear MM-IO
 CMP %r2 %r13   # Checks if player is at left boundary
 BEQ .main
 
@@ -48,8 +46,6 @@ BUC .main      # Redo Loop
 # TODO: Currently overwrites the entire bit sequence
 # TODO: Remove me from current grid square
 .p_right
-STORI $0 %r3   # Clear MM-IO
-STORI $0 %r4   # Clear MM-IO
 CMP %r2 %r14   # Checks if player is at right boundary
 BEQ .main
 

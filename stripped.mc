@@ -20,16 +20,12 @@ BEQ .p_left
 CMPI $2 %r4 
 BEQ .p_right 
 BUC .main 
-STORI $0 %r3 
-STORI $0 %r4 
 CMP %r2 %r13 
 BEQ .main 
 STORI $0 %r2 
 SUBI $6 %r2 
 STORI $1 %r2 
 BUC .main 
-STORI $0 %r3 
-STORI $0 %r4 
 CMP %r2 %r14 
 BEQ .main 
 STORI $0 %r2 
