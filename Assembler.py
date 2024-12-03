@@ -387,7 +387,6 @@ class Assembler():
                             wf.write(data + '\n')
                         else:
                             sys.exit('Syntax Error: Branch operations need a displacement or label')
-                        print("Your Displacement Value is: " + Displacement)
                     else:
                         sys.exit('Syntax Error: Branch operations need one arg')
                 elif (instr in self.Jump):

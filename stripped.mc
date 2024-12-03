@@ -13,25 +13,22 @@ ADD %r1 %r5
 STORI $2 %r5 
 MOVI $-1 %r3 
 LOAD %r4 %r3 
-MOVI $23 %r5 
 CMPI $1 %r4 
-JEQ %r5 
-MOVI $30 %r5 
+BEQ .p_left 
 CMPI $2 %r4 
-JEQ %r5 
-MOVI $13 %r5 
-JUC %r5 
-MOVI $13 %r5 
+BEQ .p_right 
+BUC .main 
+STORI $0 %r3 
 CMP %r2 %r13 
-JEQ %r5 
+BEQ .main 
+STORI $0 %r2 
 SUBI $6 %r2 
 STORI $1 %r2 
-MOVI $13 %r5 
-JUC %r5 
-MOVI $13 %r5 
+BUC .main 
+STORI $0 %r3 
 CMP %r2 %r14 
-JEQ %r5 
+BEQ .main 
+STORI $0 %r2 
 ADDI $6 %r2 
 STORI $1 %r2 
-MOVI $13 %r5 
-JUC %r5 
+BUC .main 
