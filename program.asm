@@ -37,7 +37,24 @@ MOV %r1 %r9		# Start of Grid
 .grid_loop
 # Check Some stuff
 # Update values
-STORI $2 %r9	# Temp Writes guy 2 at every location
+LOAD %r10 %r9	# Load value of grid cell into %r10
+MOVI $4 %r11	# Move 100 into %r11
+AND %r10 %r11	# AND to get just bullet value
+CMPI $4 %r11
+BNE .after_bullet	# Update bullet if there is one
+
+
+MOV %r9 %r11	# Current location Value = %r11
+XORI  $4 %r10	# 
+STOR %r10 %r11   # Removes Bullet from current location   TODO: Change to not overwrite
+SUBI $1 %r11    # Moves Bullet up
+LOAD %r8 %r11   # Next location contents
+ORI  $4 %r8    # Or Bullet bit and next location contents so you don't overwrite
+STOR %r8 %r11   # Update Bullet location
+
+.after_bullet
+
+#STORI $2 %r9	# Temp Writes guy 2 at every location
 ADDI $1 %r9		# Increment current Grid Location
 CMP %r14 %r9	# Check if last Grid Location
 BGE .grid_loop	# Branch if at End of Grid

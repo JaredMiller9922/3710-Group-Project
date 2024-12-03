@@ -22,7 +22,18 @@ BEQ .p_right
 CMPI $5 %r4 
 BEQ .p_fire 
 MOV %r1 %r9 
-STORI $2 %r9 
+LOAD %r10 %r9 
+MOVI $4 %r11 
+AND %r10 %r11 
+CMPI $4 %r11 
+BNE .after_bullet 
+MOV %r9 %r11 
+XORI $4 %r10 
+STOR %r10 %r11 
+SUBI $1 %r11 
+LOAD %r8 %r11 
+ORI $4 %r8 
+STOR %r8 %r11 
 ADDI $1 %r9 
 CMP %r14 %r9 
 BGE .grid_loop 
