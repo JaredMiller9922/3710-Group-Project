@@ -268,9 +268,9 @@ class Assembler():
                        
                     count = 0
                     # reduce to shift for 8-bit immediate
-                    while labelAddress > 127:
-                       labelAddress /= 2
-                       count += 1
+                    #while labelAddress > 127:
+                    #   labelAddress //= 2
+                    #   count += 1
 
                     label = parts.pop(0)
 
@@ -377,6 +377,7 @@ class Assembler():
                         Disp = parts.pop(0)
                         if (Disp[0] in '$'):
                             dispInt = int(Disp.replace('$', ''))
+                            print(Disp, " : ", dispInt)
                             if ((dispInt > 255) or (-255 > dispInt)):
                                 sys.exit('Syntax Error: Branch can not be larger then 255 or less then -255')
                             elif (dispInt >= 0): 
@@ -387,6 +388,7 @@ class Assembler():
                             wf.write(data + '\n')
                         elif (Disp[0] == '.'):
                             dispInt = self.labels[Disp] - address
+                            print(Disp, " : ", self.labels[Disp], " : ", address)
                             if ((dispInt > 255) or (-255 > dispInt)):
                                 sys.exit('Syntax Error: Branch can not be larger then 255 or less then -255')
                             elif (dispInt >= 0): 

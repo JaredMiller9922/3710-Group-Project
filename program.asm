@@ -76,6 +76,31 @@ BUC .after_player_bullet
 SUBI $1 %r11    # Moves Bullet up
 LOAD %r8 %r11   # Next location contents
 ORI  $4 %r8    # Or Bullet bit and next location contents so you don't overwrite
+
+
+# Check Boundaries For Player Bullets
+MOV %r1 %r10        
+SUBI $1 %r10
+CMP %r10 %r11
+BEQ .after_player_bullet
+
+ADDI $6 %r10
+CMP %r10 %r11
+BEQ .after_player_bullet
+
+ADDI $6 %r10
+CMP %r10 %r11
+BEQ .after_player_bullet
+
+ADDI $6 %r10
+CMP %r10 %r11
+BEQ .after_player_bullet
+
+ADDI $6 %r10
+CMP %r10 %r11
+BEQ .after_player_bullet
+
+
 STOR %r8 %r11   # Update Bullet location
 
 .after_player_bullet
@@ -100,6 +125,33 @@ LOAD %r8 %r11		# Next location contents
 ORI  $8 %r8			# Or Bullet bit and next location contents so you don't overwrite
 OR   %r15 %r8		# Or in the universial bit 
 XORI $16 %r8		# XOR with b'10000 to move in not Universial Enemy Bullet bit
+
+
+
+# Check Boundaries For Enemy Bullets
+MOV %r1 %r10        
+ADDI $6 %r10
+CMP %r10 %r11
+BEQ .after_enemy_bullet
+
+ADDI $6 %r10
+CMP %r10 %r11
+BEQ .after_enemy_bullet
+
+ADDI $6 %r10
+CMP %r10 %r11
+BEQ .after_enemy_bullet
+
+ADDI $6 %r10
+CMP %r10 %r11
+BEQ .after_enemy_bullet
+
+ADDI $6 %r10
+CMP %r10 %r11
+BEQ .after_enemy_bullet
+
+
+
 STOR %r8 %r11		# Update Bullet location
 
 .after_enemy_bullet

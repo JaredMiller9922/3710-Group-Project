@@ -43,6 +43,22 @@ BUC .after_player_bullet
 SUBI $1 %r11 
 LOAD %r8 %r11 
 ORI $4 %r8 
+MOV %r1 %r10 
+SUBI $1 %r10 
+CMP %r10 %r11 
+BEQ .after_player_bullet 
+ADDI $6 %r10 
+CMP %r10 %r11 
+BEQ .after_player_bullet 
+ADDI $6 %r10 
+CMP %r10 %r11 
+BEQ .after_player_bullet 
+ADDI $6 %r10 
+CMP %r10 %r11 
+BEQ .after_player_bullet 
+ADDI $6 %r10 
+CMP %r10 %r11 
+BEQ .after_player_bullet 
 STOR %r8 %r11 
 LOAD %r10 %r9 
 MOVI $24 %r11 
@@ -61,6 +77,22 @@ LOAD %r8 %r11
 ORI $8 %r8 
 OR %r15 %r8 
 XORI $16 %r8 
+MOV %r1 %r10 
+ADDI $6 %r10 
+CMP %r10 %r11 
+BEQ .after_enemy_bullet 
+ADDI $6 %r10 
+CMP %r10 %r11 
+BEQ .after_enemy_bullet 
+ADDI $6 %r10 
+CMP %r10 %r11 
+BEQ .after_enemy_bullet 
+ADDI $6 %r10 
+CMP %r10 %r11 
+BEQ .after_enemy_bullet 
+ADDI $6 %r10 
+CMP %r10 %r11 
+BEQ .after_enemy_bullet 
 STOR %r8 %r11 
 ADDI $1 %r9 
 CMP %r14 %r9 
