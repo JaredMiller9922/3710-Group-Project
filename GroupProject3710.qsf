@@ -141,14 +141,6 @@ set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "100 ns" -section_id VGA_
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME VGA_tb -section_id VGA_tb
 set_location_assignment PIN_AF14 -to clk
 set_location_assignment PIN_AA15 -to reset
-set_location_assignment PIN_W20 -to LEDs_a[7]
-set_location_assignment PIN_Y19 -to LEDs_a[6]
-set_location_assignment PIN_W19 -to LEDs_a[5]
-set_location_assignment PIN_W17 -to LEDs_a[4]
-set_location_assignment PIN_V18 -to LEDs_a[3]
-set_location_assignment PIN_V17 -to LEDs_a[2]
-set_location_assignment PIN_W16 -to LEDs_a[1]
-set_location_assignment PIN_V16 -to LEDs_a[0]
 set_global_assignment -name VERILOG_FILE random_gen.v
 set_global_assignment -name VERILOG_FILE ps2_keyboard.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
