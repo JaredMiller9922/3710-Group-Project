@@ -156,6 +156,17 @@ STOR %r8 %r11		# Update Bullet location
 
 .after_enemy_bullet
 
+
+
+# Enemy Actions
+LOAD %r10 %r9	# Load value of grid cell into %r10
+ANDI $2 %r10    # Mask Enemy Bit
+CMPI $2 %r10    # Compare with value of grid cell
+BEQ .e_action_check   # if is Enemy
+
+
+.after_enemy_check
+
 ADDI $1 %r9		# Increment current Grid Location
 CMP %r14 %r9	# Check if last Grid Location
 BGE .grid_loop	# Branch if at End of Grid
@@ -244,3 +255,75 @@ JEQ  %r9               #.after_spawn       There was already an enemy here don't
 ORI $2 %r11   # There wasn't an enemy here so spawn w/o overwriting
 STOR %r11 %r10
 JUC  %r9               #.after_spawn      TODO: Where does Jesse Go
+
+
+
+
+
+
+
+
+
+.e_action_check # Should the enemy act
+MOVRI $8 %r10  # Choose one of the 3 spawn locations
+
+CMPI $0 %r10
+BNE $3         # This should jump past the next instruction
+MOVI $0 %r11
+BUC .e_fire
+
+CMPI $1 %r10
+BNE $3         # This should jump past the next instruction
+MOVI $-6 %r11
+BUC .e_left
+
+CMPI $2 %r10
+BNE $3         # This should jump past the next instruction
+MOVI $6 %r11
+BUC .e_right
+
+.e_left
+# %r9 Contains current grid location
+MOV %r9 %r10 # Current grid location
+# Check if current posistion is boundary
+CMP %r1 %r10   # 256 = top left boundary
+BEQ .after_enemy_check     # TODO: Ask Jesse
+BUC .e_move
+
+.e_right
+# %r9 Contains current grid location
+MOV %r9 %r10 # Current grid location
+
+MOV %r1 %r12  # Set top right boundary
+ADDI $24 %r12
+
+CMP %r12 %r10    # 280 = top left boundary
+BEQ .after_enemy_check     # TODO: Ask Jesse
+BUC .e_move
+
+# Move enemy
+.e_move
+ADD %r11 %r10 # Next location
+
+# Does the next location contain an enemy?
+MOVI $2 %r12   # Make sure there isn't already an enemy here
+LOAD %r11 %r11
+AND %r11 %r12
+
+CMPI $2 %r12
+BEQ .after_enemy_check     # TODO: Ask Jesse
+# Move enemy
+STORI $0 %r9    # TODO: Hopefully we don't have to keep information
+LOAD %r12 %r10 # Load next location conntents
+ORI $2 %r12    # Add enemy to next location
+STOR %r12 %r10 # Store new contents at next location
+BUC .after_enemy_check
+
+.e_fire
+MOV %r9 %r6
+SUBI $0 %r6    # %r6 bullet location
+LOAD %r7 %r6   # %r7 bullet location contents
+ORI $8 %r7     # Makes so we don't overwrite next location 
+STOR %r7 %r6   # Store the and'ed value of the grid location at the location
+
+BUC .after_enemy_check

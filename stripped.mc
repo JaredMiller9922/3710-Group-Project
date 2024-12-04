@@ -94,6 +94,10 @@ ADDI $6 %r10
 CMP %r10 %r11 
 BEQ .after_enemy_bullet 
 STOR %r8 %r11 
+LOAD %r10 %r9 
+ANDI $2 %r10 
+CMPI $2 %r10 
+BEQ .e_action_check 
 ADDI $1 %r9 
 CMP %r14 %r9 
 BGE .grid_loop 
@@ -155,3 +159,43 @@ JEQ %r9
 ORI $2 %r11 
 STOR %r11 %r10 
 JUC %r9 
+MOVRI $8 %r10 
+CMPI $0 %r10 
+BNE $3 
+MOVI $0 %r11 
+BUC .e_fire 
+CMPI $1 %r10 
+BNE $3 
+MOVI $-6 %r11 
+BUC .e_left 
+CMPI $2 %r10 
+BNE $3 
+MOVI $6 %r11 
+BUC .e_right 
+MOV %r9 %r10 
+CMP %r1 %r10 
+BEQ .after_enemy_check 
+BUC .e_move 
+MOV %r9 %r10 
+MOV %r1 %r12 
+ADDI $24 %r12 
+CMP %r12 %r10 
+BEQ .after_enemy_check 
+BUC .e_move 
+ADD %r11 %r10 
+MOVI $2 %r12 
+LOAD %r11 %r11 
+AND %r11 %r12 
+CMPI $2 %r12 
+BEQ .after_enemy_check 
+STORI $0 %r9 
+LOAD %r12 %r10 
+ORI $2 %r12 
+STOR %r12 %r10 
+BUC .after_enemy_check 
+MOV %r9 %r6 
+SUBI $0 %r6 
+LOAD %r7 %r6 
+ORI $8 %r7 
+STOR %r7 %r6 
+BUC .after_enemy_check 
