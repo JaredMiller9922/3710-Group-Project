@@ -2,7 +2,7 @@ module GroupProject3710 #(parameter WIDTH = 16, REGBITS = 4, ADDR_WIDTH = 10) (
 	input clk, reset, ps2_clk, ps2_data,
 	// input [7:0] switches,
 	output [6:0] seg1, seg0,	// score segs
-	output [7:0] LEDs_a, LEDs_b,
+	//output [7:0] LEDs_a, LEDs_b,
 	output [7:0] VGA_R,        // VGA Red channel
 	output [7:0] VGA_G,        // VGA Green channel
 	output [7:0] VGA_B,        // VGA Blue channel
@@ -81,7 +81,7 @@ module GroupProject3710 #(parameter WIDTH = 16, REGBITS = 4, ADDR_WIDTH = 10) (
 	assign io_a = addr_a[9] & addr_a[8];
 	assign a_enable = io_a & we_a;
 
-	flopenr flop_a(~clk, reset, a_enable, data_a, LEDs_a); 
+	flopenr flop_a(~clk, reset, a_enable, data_a, score); 
 	mux2 mux_a(q_a, keyboard_input, io_a, readMemData_a);
 
 	/*

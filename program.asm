@@ -35,7 +35,7 @@ BUC .after_spawn      # TODO: Ask Jesse where this should go
 
 MOVI $-1 %r4   # r4 = MM-IO Location
 LOAD %r4 %r4   # r4 = MM-IO Value 
-STORI $3 %r4   # Store player score to MM-IO
+
 
 CMPI $1 %r4    # Player has moved left
 BEQ .p_left
@@ -82,7 +82,6 @@ STORI $0 %r11   # Remove Enemy
 ADDI $1 %r3		# Increase Score
 
 MOVI $-1 %r4   # r4 = MM-IO Location
-LOAD %r4 %r4   # r4 = MM-IO Value 
 STOR %r3 %r4   # Store player score to MM-IO
 
 BUC .after_player_bullet
