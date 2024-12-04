@@ -167,7 +167,7 @@ module bitGen #(parameter WIDTH = 16, POSNUM = 30) (
 		
 		
 				// Glyph 0
-				if (currentGlyph[4:0] == 5'b00001) begin
+				if (currentGlyph[1:0] == 2'b01) begin
 					if (vCount[5:3] == 3'b000) begin
 						
 						if (hCount[5:3] == 3'b000) begin
@@ -395,7 +395,7 @@ module bitGen #(parameter WIDTH = 16, POSNUM = 30) (
 					
 				end
 				// Glyph 1
-				else if (currentGlyph[4:0] == 5'b00010) begin
+				else if (currentGlyph[1:0] == 2'b10) begin
 					if (vCount[5:3] == 3'b000) begin
 						
 						if (hCount[5:3] == 3'b000) begin
@@ -623,7 +623,7 @@ module bitGen #(parameter WIDTH = 16, POSNUM = 30) (
 					
 				end
 				// Glyph 2
-				else if (currentGlyph[4:0] == 5'b00011) begin
+				else if (currentGlyph[1:0] == 2'b11) begin
 					if (vCount[5:3] == 3'b000) begin
 						
 						if (hCount[5:3] == 3'b000) begin
@@ -858,7 +858,7 @@ module bitGen #(parameter WIDTH = 16, POSNUM = 30) (
 				
 				
 				// Bullet 0
-				if (currentGlyph[2] == 5'b1) begin
+				if (currentGlyph[2] == 1'b1) begin
 					if (vCount[5:3] == 3'b000) begin
 						
 						if (hCount[5:3] == 3'b000) begin
@@ -903,6 +903,311 @@ module bitGen #(parameter WIDTH = 16, POSNUM = 30) (
 						end
 						else if (hCount[5:3] == 3'b100) begin
 							rgb = 8'b00000011;   // Cyan
+						end
+						else if (hCount[5:3] == 3'b101) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b110) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b111) begin
+							rgb = 8'b00000000;   // Black
+						end
+						
+					end
+					
+				end
+				
+				
+				
+				
+				
+				// Bullet 1
+				if (currentGlyph[3] == 1'b1) begin
+					if (vCount[5:3] == 3'b110) begin
+						
+						if (hCount[5:3] == 3'b000) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b001) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b010) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b011) begin
+							rgb = 8'b00000100;   // Red
+						end
+						else if (hCount[5:3] == 3'b100) begin
+							rgb = 8'b00000100;   // Red
+						end
+						else if (hCount[5:3] == 3'b101) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b110) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b111) begin
+							rgb = 8'b00000000;   // Black
+						end
+						
+					end
+					else if (vCount[5:3] == 3'b111) begin
+						
+						if (hCount[5:3] == 3'b000) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b001) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b010) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b011) begin
+							rgb = 8'b00000100;   // Red
+						end
+						else if (hCount[5:3] == 3'b100) begin
+							rgb = 8'b00000100;   // Red
+						end
+						else if (hCount[5:3] == 3'b101) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b110) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b111) begin
+							rgb = 8'b00000000;   // Black
+						end
+						
+					end
+					
+				end
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				// Glyph 2
+				else if (currentGlyph[1:0] == 2'b10 && currentGlyph[2] == 1'b1) begin
+					if (vCount[5:3] == 3'b000) begin
+						
+						if (hCount[5:3] == 3'b000) begin
+							rgb = 8'b00000110;   // Yellow
+						end
+						else if (hCount[5:3] == 3'b001) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b010) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b011) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b100) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b101) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b110) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b111) begin
+							rgb = 8'b00000110;   // Yellow
+						end
+						
+					end
+					else if (vCount[5:3] == 3'b001) begin
+						
+						if (hCount[5:3] == 3'b000) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b001) begin
+							rgb = 8'b00000110;   // Yellow
+						end
+						else if (hCount[5:3] == 3'b010) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b011) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b100) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b101) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b110) begin
+							rgb = 8'b00000110;   // Yellow
+						end
+						else if (hCount[5:3] == 3'b111) begin
+							rgb = 8'b00000000;   // Black
+						end
+						
+					end
+					else if (vCount[5:3] == 3'b010) begin
+						
+						if (hCount[5:3] == 3'b000) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b001) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b010) begin
+							rgb = 8'b00000110;   // Yellow
+						end
+						else if (hCount[5:3] == 3'b011) begin
+							rgb = 8'b00000110;   // Yellow
+						end
+						else if (hCount[5:3] == 3'b100) begin
+							rgb = 8'b00000110;   // Yellow
+						end
+						else if (hCount[5:3] == 3'b101) begin
+							rgb = 8'b00000110;   // Yellow
+						end
+						else if (hCount[5:3] == 3'b110) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b111) begin
+							rgb = 8'b00000000;   // Black
+						end
+						
+					end
+					else if (vCount[5:3] == 3'b011) begin
+						
+						if (hCount[5:3] == 3'b000) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b001) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b010) begin
+							rgb = 8'b00000110;   // Yellow
+						end
+						else if (hCount[5:3] == 3'b011) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b100) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b101) begin
+							rgb = 8'b00000110;   // Yellow
+						end
+						else if (hCount[5:3] == 3'b110) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b111) begin
+							rgb = 8'b00000000;   // Black
+						end
+						
+					end
+					else if (vCount[5:3] == 3'b100) begin
+						
+						if (hCount[5:3] == 3'b000) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b001) begin
+							rgb = 8'b00000110;   // Yellow
+						end
+						else if (hCount[5:3] == 3'b010) begin
+							rgb = 8'b00000111;   // White
+						end
+						else if (hCount[5:3] == 3'b011) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b100) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b101) begin
+							rgb = 8'b00000111;   // White
+						end
+						else if (hCount[5:3] == 3'b110) begin
+							rgb = 8'b00000110;   // Yellow
+						end
+						else if (hCount[5:3] == 3'b111) begin
+							rgb = 8'b00000000;   // Black
+						end
+						
+					end
+					else if (vCount[5:3] == 3'b101) begin
+						
+						if (hCount[5:3] == 3'b000) begin
+							rgb = 8'b00000110;   // Yellow
+						end
+						else if (hCount[5:3] == 3'b001) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b010) begin
+							rgb = 8'b00000111;   // White
+						end
+						else if (hCount[5:3] == 3'b011) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b100) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b101) begin
+							rgb = 8'b00000111;   // White
+						end
+						else if (hCount[5:3] == 3'b110) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b111) begin
+							rgb = 8'b00000110;   // Yellow
+						end
+						
+					end
+					else if (vCount[5:3] == 3'b110) begin
+						
+						if (hCount[5:3] == 3'b000) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b001) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b010) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b011) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b100) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b101) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b110) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b111) begin
+							rgb = 8'b00000000;   // Black
+						end
+						
+					end
+					else if (vCount[5:3] == 3'b111) begin
+						
+						if (hCount[5:3] == 3'b000) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b001) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b010) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b011) begin
+							rgb = 8'b00000000;   // Black
+						end
+						else if (hCount[5:3] == 3'b100) begin
+							rgb = 8'b00000000;   // Black
 						end
 						else if (hCount[5:3] == 3'b101) begin
 							rgb = 8'b00000000;   // Black

@@ -64,5 +64,5 @@ module datapath #(parameter WIDTH = 16, REGBITS = 4, IMML = 8, REG_ADD = 4, PSRL
    regfile    #(WIDTH,REGBITS) rf(clk, REG_WR, Rsrc_addr, Rdest_addr, Rdest_addr, WD, rd1, rd2);
    alu        #(WIDTH) 			 alunit(ALUA_OUT, ALUB_OUT, alucont, random_num, ALU_RES, PSR);
 	alucontrol alu_cont(op_cont, OP_EXT, alucont);
-	random_gen ran_gen(clk, reset, 8'b00000000, IMM, random_num); 
+	random_gen ran_gen(clk, reset, 8'b00000000, IMM_EXT, random_num); 
 endmodule 
