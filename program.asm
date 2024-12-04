@@ -24,7 +24,7 @@ WAIT %r0 %r0   # For waiting only
 
 
 # Check E Spawn
-MOVRI $25 %r10  # Store a random value 
+MOVRI $4 %r10  # Store a random value 
 CMPI  $4 %r10  # Check if we should spawn an enemy
 BEQ .e_spawn_check
 BUC .after_spawn      # TODO: Ask Jesse where this should go
@@ -60,6 +60,19 @@ BNE .after_player_bullet	# Update bullet if there is one
 MOV %r9 %r11	# Current location Value = %r11
 XORI  $4 %r10	# Remove the Bullet
 STOR %r10 %r11   # Removes Bullet from current location 
+
+
+
+ANDI $2 %r10    # Mask Enemy Bit
+CMPI $2 %r10    # Compare with value of grid cell
+BNE .player_bullet_continue   # if No Collision
+# Enemy Exists: Collision
+STORI $0 %r11   # Remove Enemy
+BUC .after_player_bullet
+
+
+
+.player_bullet_continue
 SUBI $1 %r11    # Moves Bullet up
 LOAD %r8 %r11   # Next location contents
 ORI  $4 %r8    # Or Bullet bit and next location contents so you don't overwrite
@@ -173,8 +186,9 @@ LOAD %r11 %r10 # Load the current contents of spawn location
 MOVI $2 %r12   # Make sure there isn't already an enemy here
 AND %r11 %r12
 
+MOVI $20 %r9
 CMPI $2 %r12
-BEQ .after_spawn      # There was already an enemy here don't spawn
+JEQ  %r9               #.after_spawn       There was already an enemy here don't spawn
 ORI $2 %r11   # There wasn't an enemy here so spawn w/o overwriting
 STOR %r11 %r10
-BUC .after_spawn      # TODO: Where does Jesse Go
+JUC  %r9               #.after_spawn      TODO: Where does Jesse Go
