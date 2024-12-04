@@ -9,6 +9,7 @@ MOV %r13 %r14
 ADDI $24 %r14 
 STORI $1 %r2 
 MOVI $16 %r15 
+MOVI $0 %r3 
 WAIT %r0 %r0 
 MOVI $12 %r5 
 ADD %r1 %r5 
@@ -18,8 +19,9 @@ MOVRI $4 %r10
 CMPI $4 %r10 
 BEQ .e_spawn_check 
 BUC .after_spawn 
-MOVI $-1 %r3 
-LOAD %r4 %r3 
+MOVI $-1 %r4 
+LOAD %r4 %r4 
+STORI $3 %r4 
 CMPI $1 %r4 
 BEQ .p_left 
 CMPI $2 %r4 
@@ -39,6 +41,10 @@ ANDI $2 %r10
 CMPI $2 %r10 
 BNE .player_bullet_continue 
 STORI $0 %r11 
+ADDI $1 %r3 
+MOVI $-1 %r4 
+LOAD %r4 %r4 
+STOR %r3 %r4 
 BUC .after_player_bullet 
 SUBI $1 %r11 
 LOAD %r8 %r11 

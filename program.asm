@@ -10,6 +10,7 @@ MOV %r13 %r14
 ADDI $24 %r14  # r14 = Upper Bound Start $285
 STORI $1 %r2 
 MOVI $16 %r15	# Universal Enemy Bullet Update Value Default: b'10000
+MOVI $0 %r3		# Player score
 
 WAIT %r0 %r0   # TODO: Remove For waiting only
 
@@ -32,8 +33,9 @@ BUC .after_spawn      # TODO: Ask Jesse where this should go
 
 .after_spawn
 
-MOVI $-1 %r3   # r3 = MM-IO Location
-LOAD %r4 %r3   # r4 = MM-IO Value 
+MOVI $-1 %r4   # r4 = MM-IO Location
+LOAD %r4 %r4   # r4 = MM-IO Value 
+STORI $3 %r4   # Store player score to MM-IO
 
 CMPI $1 %r4    # Player has moved left
 BEQ .p_left
@@ -76,6 +78,13 @@ CMPI $2 %r10    # Compare with value of grid cell
 BNE .player_bullet_continue   # if No Collision
 # Enemy Exists: Collision
 STORI $0 %r11   # Remove Enemy
+
+ADDI $1 %r3		# Increase Score
+
+MOVI $-1 %r4   # r4 = MM-IO Location
+LOAD %r4 %r4   # r4 = MM-IO Value 
+STOR %r3 %r4   # Store player score to MM-IO
+
 BUC .after_player_bullet
 
 

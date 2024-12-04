@@ -1,6 +1,7 @@
 module GroupProject3710 #(parameter WIDTH = 16, REGBITS = 4, ADDR_WIDTH = 10) (
 	input clk, reset, ps2_clk, ps2_data,
 	// input [7:0] switches,
+	output [6:0] seg1, seg0,	// score segs
 	output [7:0] LEDs_a, LEDs_b,
 	output [7:0] VGA_R,        // VGA Red channel
 	output [7:0] VGA_G,        // VGA Green channel
@@ -17,8 +18,9 @@ module GroupProject3710 #(parameter WIDTH = 16, REGBITS = 4, ADDR_WIDTH = 10) (
 	wire [ADDR_WIDTH-1:0] addr_a, addr_b;
 	wire [WIDTH-1:0] q_a, q_b;
 	wire [WIDTH-1:0] keyboard_input;
+	wire [7:0] score;
 	
-	assign LEDs_a = keyboard_input;
+	//assign LEDs_a = keyboard_input;
 
 
 	CPU computation (
@@ -40,8 +42,8 @@ module GroupProject3710 #(parameter WIDTH = 16, REGBITS = 4, ADDR_WIDTH = 10) (
 		.we_a(we_a), 
 		.we_b(0), 
 		.clk(~clk), // clk or ~clk
-		.q_a(q_a), // output
-		.q_b(q_b)  // output
+		.q_a(q_a),  // output
+		.q_b(q_b)   // output
 	);
 	
 	ps2_keyboard keyboard(
@@ -53,18 +55,24 @@ module GroupProject3710 #(parameter WIDTH = 16, REGBITS = 4, ADDR_WIDTH = 10) (
 	);
 	vgaControl vga (
 		.clk50MHz(clk),            // System clock
-		.clr(reset),                 // Clear signal
+		.clr(reset),               // Clear signal
 		.memReadData(q_b),
-		.VGA_R(VGA_R),        // VGA Red channel
-		.VGA_G(VGA_G),        // VGA Green channel
-		.VGA_B(VGA_B),        // VGA Blue channel
-		.VGA_HS(VGA_HS),             // VGA Horizontal Sync
-		.VGA_VS(VGA_VS),             // VGA Vertical Sync
-		.VGA_BLANK_N(VGA_BLANK_N),        // VGA Blank
-		.VGA_SYNC_N(VGA_SYNC_N),         // VGA Sync
-		.VGA_CLK(VGA_CLK),             // VGA Clock
+		.VGA_R(VGA_R),        		// VGA Red channel
+		.VGA_G(VGA_G),        		// VGA Green channel
+		.VGA_B(VGA_B),        		// VGA Blue channel
+		.VGA_HS(VGA_HS),           // VGA Horizontal Sync
+		.VGA_VS(VGA_VS),           // VGA Vertical Sync
+		.VGA_BLANK_N(VGA_BLANK_N), // VGA Blank
+		.VGA_SYNC_N(VGA_SYNC_N),   // VGA Sync
+		.VGA_CLK(VGA_CLK),         // VGA Clock
 		.address(addr_b)
 	);
+	
+   seven_seg_display score_display(
+		 .score(score[6:0]), // Input score in decimal (range 0-99)
+		 .seg1(seg1),   // Seven-segment output for tens digit
+		 .seg0(seg0)    // Seven-segment output for ones digit
+	 );
 
 
 	wire a_enable, b_enable, io_a, io_b;
@@ -73,15 +81,17 @@ module GroupProject3710 #(parameter WIDTH = 16, REGBITS = 4, ADDR_WIDTH = 10) (
 	assign io_a = addr_a[9] & addr_a[8];
 	assign a_enable = io_a & we_a;
 
-	//flopenr flop_a(~clk, reset, a_enable, data_a, LEDs_a); 
+	flopenr flop_a(~clk, reset, a_enable, data_a, LEDs_a); 
 	mux2 mux_a(q_a, keyboard_input, io_a, readMemData_a);
 
+	/*
 	// Memory-Mapped I/O for b
 	assign io_b = addr_b[9] & addr_b[8];
 	assign b_enable = io_b & we_b;
 
 	flopenr flop_b(~clk, reset, b_enable, data_b, LEDs_b); 
 	mux2 mux_b(q_b, keyboard_input, io_b, readMemData_b);
+	*/
  
 
 endmodule
