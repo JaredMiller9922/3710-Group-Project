@@ -37,6 +37,24 @@ MOVI $-1 %r4   # r4 = MM-IO Location
 LOAD %r4 %r4   # r4 = MM-IO Value 
 
 
+
+# Reset score if player collides with enemy bullet
+LOAD %r10 %r2   # Load Player Location
+ANDI $9 %r10    # Mask Player Bit and Enemy Bullet Bit
+CMPI $9 %r10    # Compare with value of grid cell
+BNE .input   # if No Collision
+# Enemy Exists: Collision
+STORI $0 %r2   # Remove Player
+MOVI $17 %r2    # Player offset from start grid
+ADD %r1 %r2    # r2 = Player Location
+STORI $1 %r2    # Add Player to middle
+
+MOVI $0 %r3		# Remove Score
+MOVI $-1 %r4   # r4 = MM-IO Location
+STOR %r3 %r4   # Store player score to MM-IO
+
+.input
+
 CMPI $1 %r4    # Player has moved left
 BEQ .p_left
 
@@ -45,6 +63,7 @@ BEQ .p_right
 
 CMPI $5 %r4    # Player has fired
 BEQ .p_fire
+
 
 
 .secondary
@@ -165,6 +184,10 @@ BEQ .after_enemy_bullet
 ADDI $6 %r10
 CMP %r10 %r11
 BEQ .after_enemy_bullet
+
+
+
+
 
 
 

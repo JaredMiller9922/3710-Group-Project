@@ -21,6 +21,17 @@ BEQ .e_spawn_check
 BUC .after_spawn 
 MOVI $-1 %r4 
 LOAD %r4 %r4 
+LOAD %r10 %r2 
+ANDI $9 %r10 
+CMPI $9 %r10 
+BNE .input 
+STORI $0 %r2 
+MOVI $17 %r2 
+ADD %r1 %r2 
+STORI $1 %r2 
+MOVI $0 %r3 
+MOVI $-1 %r4 
+STOR %r3 %r4 
 CMPI $1 %r4 
 BEQ .p_left 
 CMPI $2 %r4 
