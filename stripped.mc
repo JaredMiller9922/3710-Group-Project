@@ -161,14 +161,14 @@ STOR %r11 %r10
 JUC %r9 
 MOVRI $8 %r10 
 CMPI $0 %r10 
-BNE $3 
+BNE .after_enemy_check 
 MOVI $0 %r11 
 BUC .e_fire 
-CMPI $1 %r10 
+CMPI $0 %r10 
 BNE $3 
 MOVI $-6 %r11 
 BUC .e_left 
-CMPI $2 %r10 
+CMPI $0 %r10 
 BNE $3 
 MOVI $6 %r11 
 BUC .e_right 

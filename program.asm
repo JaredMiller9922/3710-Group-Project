@@ -19,6 +19,7 @@ ADD %r1 %r5    # r5 = Enemy Location
 STORI $2 %r5 
 
 # main game loop
+#MOVI $3 %r5  # Store a random value
 .main
 WAIT %r0 %r0   # For waiting only
 
@@ -43,7 +44,14 @@ BEQ .p_right
 CMPI $5 %r4    # Player has fired
 BEQ .p_fire
 
+
 .secondary
+#WAIT %r0 %r0   # For waiting only
+#SUBI $1 %r5
+#CMPI $0 %r5
+#BNE .main
+
+
 
 # Loop Through all grid cells   r14 is Grid End
 MOV %r1 %r9		# Start of Grid
@@ -268,16 +276,16 @@ JUC  %r9               #.after_spawn      TODO: Where does Jesse Go
 MOVRI $8 %r10  # Choose one of the 3 spawn locations
 
 CMPI $0 %r10
-BNE $3         # This should jump past the next instruction
+BNE .after_enemy_check         # This should jump past the next instruction
 MOVI $0 %r11
 BUC .e_fire
 
-CMPI $1 %r10
+CMPI $0 %r10
 BNE $3         # This should jump past the next instruction
 MOVI $-6 %r11
 BUC .e_left
 
-CMPI $2 %r10
+CMPI $0 %r10
 BNE $3         # This should jump past the next instruction
 MOVI $6 %r11
 BUC .e_right
