@@ -55,13 +55,13 @@ STOR %r3 %r4   # Store player score to MM-IO
 
 .input
 
-CMPI $1 %r4    # Player has moved left
+CMPI $28 %r4    # Player has moved left
 BEQ .p_left
 
-CMPI $2 %r4    # Player has moved right
+CMPI $35 %r4    # Player has moved right
 BEQ .p_right
 
-CMPI $5 %r4    # Player has fired
+CMPI $41 %r4    # Player has fired
 BEQ .p_fire
 
 
@@ -250,8 +250,8 @@ BUC .secondary
 
 
 .e_spawn_check
-WAIT %r0 %r0   # TODO: Remove For waiting only
-WAIT %r0 %r0   # TODO: Remove For waiting only
+#WAIT %r0 %r0   # TODO: Remove For waiting only
+#WAIT %r0 %r0   # TODO: Remove For waiting only
 
 MOVRI $4 %r10  # Choose one of the five spawn locations
 

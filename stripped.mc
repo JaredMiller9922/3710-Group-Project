@@ -32,11 +32,11 @@ STORI $1 %r2
 MOVI $0 %r3 
 MOVI $-1 %r4 
 STOR %r3 %r4 
-CMPI $1 %r4 
+CMPI $28 %r4 
 BEQ .p_left 
-CMPI $2 %r4 
+CMPI $35 %r4 
 BEQ .p_right 
-CMPI $5 %r4 
+CMPI $41 %r4 
 BEQ .p_fire 
 MOV %r1 %r9 
 LOAD %r10 %r9 
@@ -140,8 +140,6 @@ LOAD %r7 %r6
 ORI $4 %r7 
 STOR %r7 %r6 
 BUC .secondary 
-WAIT %r0 %r0 
-WAIT %r0 %r0 
 MOVRI $4 %r10 
 CMPI $0 %r10 
 BNE $3 

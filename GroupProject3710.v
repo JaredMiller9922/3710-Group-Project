@@ -1,5 +1,7 @@
 module GroupProject3710 #(parameter WIDTH = 16, REGBITS = 4, ADDR_WIDTH = 10) (
     input clk, reset, ps2_clk, ps2_data,
+	 input left_button, right_button, shoot_button,
+	 output [7:0] LEDS,
     output [6:0] seg1, seg0,   // score segs
     output [7:0] VGA_R,        // VGA Red channel
     output [7:0] VGA_G,        // VGA Green channel
@@ -16,7 +18,11 @@ module GroupProject3710 #(parameter WIDTH = 16, REGBITS = 4, ADDR_WIDTH = 10) (
     wire [ADDR_WIDTH-1:0] addr_a, addr_b;
     wire [WIDTH-1:0] q_a, q_b;
     wire [WIDTH-1:0] keyboard_input;
+	 reg [WIDTH-1:0] button_input;
     wire [7:0] score;
+	 
+	 //assign LEDS = keyboard_input;
+	 assign keyboard_input = LEDS;
 
     CPU computation (
         .clk(clk),              // 50MHz clock
@@ -45,8 +51,22 @@ module GroupProject3710 #(parameter WIDTH = 16, REGBITS = 4, ADDR_WIDTH = 10) (
         .ps2_clk(ps2_clk),
         .ps2_data(ps2_data),
         .reset(reset),
-        .keyboard_input(keyboard_input) // output
+        //.keyboard_input(keyboard_input), // output
+		  .LEDS(LEDS)
     );
+	 
+	 // This is for the FPGA button to work
+	 always @(*) begin
+		 if (~left_button) begin
+			  button_input <= 28;
+		 end else if (~right_button) begin 
+			  button_input <= 35;
+		 end else if (~shoot_button)begin
+			  button_input <= 41;
+		 end else begin
+			  button_input <= 0;
+		 end
+	 end	 
 
     vgaControl vga (
         .clk50MHz(clk),            // System clock
@@ -76,6 +96,6 @@ module GroupProject3710 #(parameter WIDTH = 16, REGBITS = 4, ADDR_WIDTH = 10) (
     assign a_enable = io_a & we_a;
 
     flopenr flop_a(~clk, reset, a_enable, data_a, score); 
-    mux2 mux_a(q_a, keyboard_input, io_a, readMemData_a);
+    mux2 mux_a(q_a, keyboard_input | button_input, io_a, readMemData_a);
 
 endmodule
