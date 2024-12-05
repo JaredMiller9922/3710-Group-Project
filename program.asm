@@ -43,7 +43,7 @@ LOAD %r10 %r2   # Load Player Location
 ANDI $9 %r10    # Mask Player Bit and Enemy Bullet Bit
 CMPI $9 %r10    # Compare with value of grid cell
 BNE .input   # if No Collision
-# Enemy Exists: Collision
+# Player Exists: Collision
 STORI $0 %r2   # Remove Player
 MOVI $17 %r2    # Player offset from start grid
 ADD %r1 %r2    # r2 = Player Location

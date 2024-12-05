@@ -995,7 +995,7 @@ module bitGen #(parameter WIDTH = 16, POSNUM = 30) (
 				
 				
 				// Explosion
-				else if ((currentGlyph[1:0] == 2'b10 && currentGlyph[2] == 1'b1) || (currentGlyph[0] == 1'b1 && currentGlyph[3] == 1'b1)) begin
+				if ((currentGlyph[1] == 1'b1 && currentGlyph[2] == 1'b1) || (currentGlyph[0] == 1'b1 && currentGlyph[3] == 1'b1)) begin
 					if (vCount[5:3] == 3'b000) begin
 						
 						if (hCount[5:3] == 3'b000) begin
