@@ -10,7 +10,8 @@ module GroupProject3710 #(parameter WIDTH = 16, REGBITS = 4, ADDR_WIDTH = 10) (
     output VGA_VS,             // VGA Vertical Sync
     output VGA_BLANK_N,        // VGA Blank
     output VGA_SYNC_N,         // VGA Sync
-    output VGA_CLK             // VGA Clock
+    output VGA_CLK,            // VGA Clock
+	 output reg PAP_h			 // Pack a punch high signal 
 );
 
     wire we_a, we_b;
@@ -67,7 +68,22 @@ module GroupProject3710 #(parameter WIDTH = 16, REGBITS = 4, ADDR_WIDTH = 10) (
 			  button_input <= 0;
 		 end
 	 end	 
+	 
+	// Pack A Punch Logic
+	always @(posedge clk or negedge reset) begin
+		if (!reset) begin
+			PAP_h <= 0; // Initialize PAP_h to 0 on reset
+		end else begin
+      if (score == 1) begin
+          PAP_h <= 1;
+      end else begin
+          PAP_h <= 0;
+      end
+		end
+	end
 
+	
+	
     vgaControl vga (
         .clk50MHz(clk),            // System clock
         .clr(reset),               // Clear signal
